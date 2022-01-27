@@ -1,12 +1,14 @@
 import './App.css';
+import React from 'react';
+import Navbar from "./Navbar";
+import Dashboard from "./Dashboard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        LearnSort
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Dashboard />
+    </>
   );
 }
 
