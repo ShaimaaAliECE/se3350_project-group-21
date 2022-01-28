@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
+.NavbarItems {
+    background: #36454F;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+    justify-content: end;
+}
+
+.nav-links {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-links:hover {
+    background-color: #ffffff;
+    color: #36454F;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+
+.navbar-logo {
+    color: #ffffff;
+    justify-self: start;
+    margin-left: 2vw;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+}

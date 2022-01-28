@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 
 function Dashboard() {
-    // const [click] = useState(false);
-    
-
     // put dashboard contents under return
     return (
         <div>
