@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 
-function Navbar() {
-    // const [click] = useState(false);
-    
+function Dashboard() {
 
     // put dashboard contents under return
     return (
@@ -14,4 +12,4 @@ function Navbar() {
     );
 }
 
-export default Navbar
+export default Dashboard
