@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
+import {  Link } from "react-router-dom";
 
 function Navbar() {
     // const [click] = useState(false);
 
     return (
-        <>
-            <h1>
-                testing navbar
-            </h1>
-        </>
+      <div>
+         <li>
+            <Link to="/">Dashboard</Link>
+         </li>
+         <li>
+            <Link to="/levels">Levels</Link>
+         </li>
+      </div>
     );
 }
 
-export default Navbar
+export default Navbar;
