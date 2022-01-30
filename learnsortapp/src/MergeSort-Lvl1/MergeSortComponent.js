@@ -4,8 +4,8 @@ import { Partition } from './Partition';
 
 export default class MergeSortComponent extends Component {
 
-    // Random number generator will go here
-  unsorted = [55, 1, 2, 4, 9, 77, 3, 65, -1, 999];
+  // Random number generator 
+  unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
 
   constructor() {
     super();
