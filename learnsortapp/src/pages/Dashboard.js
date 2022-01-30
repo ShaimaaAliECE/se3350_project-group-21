@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
     // put dashboard contents under return
     return (
         <div>
             <h1>
-                testing dashboard
+                <Link to='/Levels'>Go to Merge Sort Levels</Link>  
             </h1>
         </div>
     );
