@@ -1,14 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Levels() {
-    // const [click] = useState(false);
-    
-    // put dashboard contents under return
     return (
         <div>
-            <h1>
-                testing levels
-            </h1>
+            <form action="/Level1">
+                <input type="submit" value="Go to Level 1" />
+            </form>
         </div>
     );
 }

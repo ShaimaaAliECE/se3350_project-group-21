@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+}
+
+.nav-links {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    font-family: 'Nunito', sans-serif;
+}
