@@ -10,18 +10,24 @@ export default class MergeSortComponent extends Component {
   constructor() {
     super();
 
+    // create references for partitions and mergesort
     this.state = {partitions:  []};
     this.mergeSort1 = new MergeSort();
   }
 
+  // will be called after the component is rendered
   componentDidMount() {
+    // make a partition of the current unsorted array
     let partition = new Partition(0, this.unsorted);
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});   
   }
 
   render() {
+    // more styling, again it could use some work
+    // get each partition and map each node 
     let fragments = this.state.partitions.map((node, i1) => {
+      // for each fragment row
         return <div key={i1} className="fragment-row" >
                 {
                   node.fragments.map((numbers, i2) =>
@@ -36,14 +42,18 @@ export default class MergeSortComponent extends Component {
                   </span>
                   )
                 }
+                
+                {/* will either be "split from" or "merged from" */}
                 <span>{node.descr}</span>
 
+                {/* will display the first half of each row (before "split from" or "merged from") */}
                 <span className={node.show}>
                   {(node.part1 || []).map((n, index) => {
                     return <span key={index} className="number">{n}</span>
                   })}
                 </span>
               
+                {/* will display the second half of each row (after "split from" or "merged from") */}
                 <span className="group">
                   {(node.part2 || []).map((n, index) => {
                     return <span key={index} className="number">{n}</span>
@@ -51,6 +61,8 @@ export default class MergeSortComponent extends Component {
                 </span>
               </div>
     });
+    
+    // will show the initial values (created by random number generator)
     return (
       <div>
         <h4>Merge Sort</h4>
