@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 function Levels() {
     return (
         <div>
-            <form action="/Level1">
-                <input type="submit" value="Go to Level 1" />
-            </form>
+            <Link to='/Level1'>Go to Level 1</Link>
         </div>
     );
 }

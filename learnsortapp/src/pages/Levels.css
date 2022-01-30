@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
 
-.nav-menu {
+.level-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
@@ -9,7 +9,7 @@
     width: 80vw;
 }
 
-.nav-links {
+.level-links {
     color: #ffffff;
     text-decoration: none;
     padding: 0.2rem 1rem;

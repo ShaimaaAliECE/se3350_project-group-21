@@ -1,4 +1,4 @@
-export const MenuItems = [
+export const LevelItems = [
     {
         title: 'Level 1',
         url: '/MergeSortComponent',
