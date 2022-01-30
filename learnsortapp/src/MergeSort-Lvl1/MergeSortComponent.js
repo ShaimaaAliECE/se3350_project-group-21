@@ -35,7 +35,8 @@ export default class MergeSortComponent extends Component {
                     <span className="group" key={i2}>
                     {
                       numbers.map((number, index) => {
-                        return <span key={index} className="number">{number}</span>
+                        {/* will display the first half of each row (before "split from" or "merged from") */}
+                        return <span key={index} className="number"> {number} </span>
                       })
                     }
                     </span>
@@ -46,17 +47,17 @@ export default class MergeSortComponent extends Component {
                 {/* will either be "split from" or "merged from" */}
                 <span>{node.descr}</span>
 
-                {/* will display the first half of each row (before "split from" or "merged from") */}
+                {/* will display the first half of the right side (after "split from" or "merged from") */}
                 <span className={node.show}>
                   {(node.part1 || []).map((n, index) => {
-                    return <span key={index} className="number">{n}</span>
+                    return <span key={index} className="number"> {n} </span>
                   })}
                 </span>
               
-                {/* will display the second half of each row (after "split from" or "merged from") */}
+                {/* will display the second half of the right side (after "split from" or "merged from") */}
                 <span className="group">
                   {(node.part2 || []).map((n, index) => {
-                    return <span key={index} className="number">{n}</span>
+                    return <span key={index} className="number"> {n} </span>
                   })}
                 </span>
               </div>
@@ -69,6 +70,7 @@ export default class MergeSortComponent extends Component {
         <div className="fragment-row">
           <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
         </div>
+        {/* displays all of the merge sort rows */}
         {fragments}
       </div>
     );

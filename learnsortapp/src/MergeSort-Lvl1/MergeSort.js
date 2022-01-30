@@ -70,7 +70,7 @@ export class MergeSort { // Will act as our merge sort algo
     
       // create the right side of the output (will be the nodes that make up the current partition)
       this.partitions[nodeIndex].part2 = part.left;
-      this.partitions[nodeIndex].descr = 'split from ';
+      this.partitions[nodeIndex].descr = ' split from ';
       this.partitions[nodeIndex].show = 'hide';
     }  
     else {
@@ -78,7 +78,7 @@ export class MergeSort { // Will act as our merge sort algo
       let node = {parentId: res.parentId, fragments: []};
       
       node.part1 = part.left;
-      node.descr = 'merged from ';
+      node.descr = ' merged from ';
       node.part2 = part.right;
       node.show = 'group';
       
