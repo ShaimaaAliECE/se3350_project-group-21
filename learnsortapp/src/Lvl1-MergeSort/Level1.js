@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Level1() {
     // put dashboard contents under return
     return (
-        <>
+        <div class="contents">
             <div class = "Rectangle15">
                 <h3 class = "MergeSortText">Merge Sort</h3>
             </div>
@@ -24,15 +24,14 @@ function Level1() {
                     <p>Space Complexity: O(nlogn)</p>
                     <p>Time Complexity: O(n)</p>
                 </div>
+               {/* button that will take you to the merge sort animation */}
+               <Link to='/MergeSortComponent'>
+                  <div class = "ContinueBox">
+                     <h3 class = "ContinueText">Generate Numbers and Start!</h3>
+                  </div>
+               </Link>
             </div>
-
-            {/* button that will take you to the merge sort animation */}
-            <Link to='/MergeSortComponent'>
-                <div class = "ContinueBox">
-                    <h3 class = "ContinueText">Generate Numbers and Start!</h3>
-                </div>
-            </Link>
-    </>
+    </div>
     );
 }
 

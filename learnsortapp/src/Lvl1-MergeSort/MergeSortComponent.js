@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
+import './Level1.css';
 
 export default class MergeSortComponent extends Component {
 
@@ -64,18 +65,18 @@ export default class MergeSortComponent extends Component {
     });
       return (
         <>
-        <div>
-          <div class = "Rectangle15">
-            <h3 class = "MergeSortText">Merge Sort</h3>
-          </div>
-          <div className="fragment-row">
-            {/* // will show the initial values (created by random number generator) */}
-            <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
-          </div>
-          {/* this is where the rows of the output are printed
-          each fragment is a row of the output, e.g. fragments[0] is row 1... */}
-          {fragments}
-        </div>
+            <div class="contents">
+               <div class = "Rectangle15">
+                  <h3 class = "MergeSortText">Merge Sort</h3>
+               </div>
+            </div>
+            <div className="fragment-row">
+               {/* // will show the initial values (created by random number generator) */}
+               <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
+            </div>
+            {/* this is where the rows of the output are printed
+            each fragment is a row of the output, e.g. fragments[0] is row 1... */}
+            {fragments}
         </>
         );
   }
