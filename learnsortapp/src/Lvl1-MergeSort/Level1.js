@@ -29,7 +29,7 @@ function Level1() {
             {/* button that will take you to the merge sort animation */}
             <Link to='/MergeSortComponent'>
                 <div class = "ContinueBox">
-                    <h3 class = "ContinueText">Continue</h3>
+                    <h3 class = "ContinueText">Generate Numbers and Start!</h3>
                 </div>
             </Link>
     </>

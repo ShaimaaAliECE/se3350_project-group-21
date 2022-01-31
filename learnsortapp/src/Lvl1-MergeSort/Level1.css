@@ -54,16 +54,16 @@ border-radius: 20px;
 .ContinueText{
 
 position: absolute;
-width: 168px;
-height: 53px;
+width: 100px;
+height: 20px;
 left: 12px;
-top: -30px;
+top: 0px;
 
 font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
-font-size: 20px;
-line-height: 32px;
+font-size: 10px;
+line-height: 10px;
 display: flex;
 align-items: center;
 text-align: center;
