@@ -4,17 +4,17 @@ import './Home.css'
 
 function Home() {
     return (
-        <>
-        <div class="Rectangle17"></div>
-        <div class="Rectangle18">
-          <h3 class="WelcomeText">Welcome to LearnSort!</h3>
-        </div>
-        <Link to='/dashboard'>
-        <div class="Rectangle162">
-          <h3 class = "StartText">Start</h3>
-        </div>
-        </Link>
-        </>
+         <div className="contents">
+            <div class="Rectangle17"></div>
+            <div class="Rectangle18">
+               <h3 class="WelcomeText">Welcome to LearnSort!</h3>
+            </div>
+            <Link to='/dashboard'>
+            <div class="Rectangle162">
+               <h3 class = "StartText">Start</h3>
+            </div>
+            </Link>
+         </div>
     );
 }
 
