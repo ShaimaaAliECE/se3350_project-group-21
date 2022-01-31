@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import Levels from './pages/Levels';
 import Level1 from './MergeSort-Lvl1/Level1';
 import MergeSortComponent from './MergeSort-Lvl1/MergeSortComponent';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -13,12 +14,13 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+          <Route path = '/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/Levels' element={<Levels />} />
           <Route path='/Level1' element={<Level1 />} />
           <Route path='/MergeSortComponent' element={<MergeSortComponent />} />
+          <Route path='/Home' element={<Home />} />
         </Routes>
-
       </Router>
       </>
   );

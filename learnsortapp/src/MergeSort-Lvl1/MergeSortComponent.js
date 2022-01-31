@@ -70,9 +70,9 @@ export default class MergeSortComponent extends Component {
         <div className="fragment-row">
           <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
         </div>
-        {/* displays all of the merge sort rows */}
         {fragments}
       </div>
+      
     );
   }
 }
