@@ -1,17 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+.Rectangle15{
 
-.level-menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 20px;
-    list-style: none;
-    text-align: center;
-    width: 80vw;
+position: absolute;
+width: 474px;
+height: 40px;
+left: 415px;
+top: 100px;
+
+background: rgba(250, 153, 28, 0.35);
 }
 
-.level-links {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.2rem 1rem;
-    font-family: 'Nunito', sans-serif;
+.MergeSortText{
+
+position: absolute;
+width: 500px;
+height: 88px;
+left: 100px;
+top: -60px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 59px;
+
+color: #000000;
+}
+
+
+.Rectangle1{
+
+position: absolute;
+width: 545px;
+height: 634px;
+left: 370px;
+top: 200px;
+
+background: #032539;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 45px 0px;
+}
+
+.Rectangle2{
+
+position: absolute;
+width: 215px;
+height: 61px;
+left: 170px;
+top: 20px;
+
+background: #FBF3F2;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+}
+
+.Level1Text{
+
+position: absolute;
+width: 168px;
+height: 38px;
+left: 70px;
+top: -12px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
 }

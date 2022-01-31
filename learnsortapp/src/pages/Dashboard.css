@@ -1,0 +1,168 @@
+.Rectangle8{
+
+position: absolute;
+width: 200px;
+height: 177px;
+left: 171px;
+top: 300px;
+
+background: linear-gradient(180deg, #050343 0%, #050447 42.59%, rgba(244, 209, 192, 0) 99.89%);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 40px;
+}
+
+.MergeSortText1{
+
+position: absolute;
+width: 136px;
+height: 32px;
+left: 35px;
+top: -10px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #ffffff;
+}
+
+
+.Rectangle11{
+
+position: absolute;
+width: 200px;
+height: 50px;
+left: 0px;
+top: 127px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.SixLevelsText{
+
+position: absolute;
+width: 236px;
+height: 63px;
+left: 50px;
+top: -48px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+
+
+.Ellipse1{
+
+position: absolute;
+width: 77px;
+height: 75px;
+left: 391px;
+top: 663px;
+
+background: #C4C4C4;
+}
+
+.Ellipse2{
+
+position: absolute;
+width: 52px;
+height: 49px;
+left: 404px;
+top: 677px;
+
+background: #FFFFFF;
+}
+
+.Polygon1{
+
+position: absolute;
+width: 29px;
+height: 28px;
+left: 444px;
+top: 685px;
+
+background: #000000;
+transform: rotate(90deg);
+}
+
+.Rectangle12{
+
+position: absolute;
+width: 668px;
+height: 35px;
+left: 300px;
+top:200px;
+
+background: #C4C4C4;
+border-radius: 36px;
+
+}
+
+.Search{
+
+position: absolute;
+width: 175px;
+height: 38px;
+left: 50px;
+top: -25px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+}
+
+
+.Title{
+
+position: absolute;
+width: 514px;
+height: 68px;
+left: 400px;
+top: 75px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 42px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+}
+
+.arrow-right {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    left: 160px;
+    top: 10px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    
+    border-left: 20px solid #050343;
+  }
