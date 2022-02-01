@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
+import { Button } from './Button';
 import './Level1.css';
 
 export default class MergeSortComponent extends Component {
@@ -14,15 +15,26 @@ export default class MergeSortComponent extends Component {
     // create references for partitions and mergesort
     this.state = {partitions:  []};
     this.mergeSort1 = new MergeSort();
+    this.forward = { render: false}
+    this.nextStep = this.nextStep.bind(this);
+    
+  }
+
+  nextStep(){
+    let partition = new Partition(0, this.unsorted);
+    this.mergeSort1.mergeSort(partition);
+    this.setState({partitions: this.mergeSort1.partitions});  
   }
 
   // will be called after the component is rendered
-  componentDidMount() {
+ /* componentDidMount() {
     // make a partition of the current unsorted array
     let partition = new Partition(0, this.unsorted);
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});   
-  }
+  }*/
+
+  
 
   render() {
     // more styling, again it could use some work
@@ -73,6 +85,10 @@ export default class MergeSortComponent extends Component {
             <div className="fragment-row">
                {/* // will show the initial values (created by random number generator) */}
                <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
+               <br/>
+               <button onClick={this.nextStep}>Next</button>
+               
+               
             </div>
             {/* this is where the rows of the output are printed
             each fragment is a row of the output, e.g. fragments[0] is row 1... */}
