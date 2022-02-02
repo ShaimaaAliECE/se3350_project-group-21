@@ -8,9 +8,10 @@ function Level1() {
     // put dashboard contents under return
     return (
         <div class="contents">
-            <div class = "Rectangle15">
-                <h3 class = "MergeSortText">Merge Sort</h3>
-            </div>
+           
+            <h1 class = "sort-title">MergeSort</h1>
+            <h2 class = "sort-title-background" />
+
             {/* info about the specific algorithm */}
             <div class = "Outline">
                 <div class = "BackgroundRectangle">
@@ -24,10 +25,11 @@ function Level1() {
                     <p>Space Complexity: O(nlogn)</p>
                     <p>Time Complexity: O(n)</p>
                 </div>
+
                {/* button that will take you to the merge sort animation */}
-               <Link to='/MergeSortComponent'>
+               <Link to='/MergeSortComponent' class = "continue-link">
                   <div class = "ContinueBox">
-                     <h3 class = "ContinueText">Generate Numbers and Start!</h3>
+                     <h3 class = "ContinueText">Start!</h3>
                   </div>
                </Link>
             </div>
