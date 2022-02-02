@@ -7,6 +7,7 @@ import Levels from './pages/Levels';
 import Level1 from './Lvl1-MergeSort/Level1';
 import MergeSortComponent from './Lvl1-MergeSort/MergeSortComponent';
 import Home from './pages/Home';
+import Instructions from './pages/Instructions'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           {/* <Route path='/MergeSortComponent' element={<MergeSortComponent />} /> */}
           <Route path='/Home' element={<Home />} />
           <Route path='/MergeSortComponent' element={<MergeSortComponent />} />
+          <Route path='/Instructions' element={<Instructions />} />
         </Routes>
       </Router>
       </>
