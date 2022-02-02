@@ -34,14 +34,16 @@
 }
 
 .your-values {
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .continue-button {
     position: absolute;
-    left: 830px;
-    top: 310px;
+    left: 850px;
+    top: 335px;
     width: 125px;
     height: 40px;
     background: #FA991C;
@@ -50,6 +52,7 @@
     padding-top: 10px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 .continue-button:hover { 

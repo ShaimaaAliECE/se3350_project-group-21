@@ -17,7 +17,6 @@ export default class MergeSortComponent extends Component {
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
-    
   }
 
   nextStep(){
@@ -87,27 +86,49 @@ export default class MergeSortComponent extends Component {
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
   
               <div class = "Outline">
-                <div class = "BackgroundRectangle">
-
-                  <div className="fragment-row">
+                  
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
                       <strong>Your Values:
                       <br/><br/>{ this.unsorted.join(' ') }</strong>
-                     
                     </div>
-
-                  
-                  </div>
+                    
+                    {fragments[1]}
+                    {fragments[9]}
+                    <br/><br/><br/>
+                    {fragments[2]}
+                    {fragments[4]}
+                    <br/>
+                    {fragments[3]}
+                    <br/>
+                    {fragments[5]}
+                    <br/>
+                    {fragments[7]}
+                    <br/>
+                    {fragments[8]}
+                    <br/><br/><br/>
+                    {fragments[10]}
+                    {fragments[12]}
+                    <br/>
+                    {fragments[11]}
+                    <br/>
+                    {fragments[13]}
+                    <br/>
+                    {fragments[15]}
+                    <br/>
+                    {fragments[16]}
+                    <br/><br/><br/>
+                    {fragments[17]}
 
                   <div onClick={this.nextStep} className="continue-button">Continue</div>
+              
                 </div>
-              </div>
+               
             </div>
 
             {/* this is where the rows of the output are printed
             each fragment is a row of the output, e.g. fragments[0] is row 1... */}
-            {fragments}
+            {/* {fragments} */}
         </>
         );
   }
