@@ -8,11 +8,8 @@
 
  .sort-title{
     position: absolute;
-    width: 500px;
-    height: 88px;
-    left: 500px;
-    top: 0px;
-   
+    width: auto;
+    margin: auto;
     
     font-family: Montserrat;
     font-style: normal;
@@ -27,8 +24,8 @@
     position: absolute;
     width: 474px;
     height: 40px;
-    left: 505px;
-    top: 20px;
+    left: 510px;
+    top: 5px;
 
     background: rgba(250, 153, 28, 0.35); 
  }
