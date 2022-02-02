@@ -11,7 +11,7 @@ function Home() {
             </div>
             <Link to='/dashboard'>
             <div class="Rectangle162">
-               <h3 class = "StartText">Start</h3>
+               <h3 class = "StartText">Start Now</h3>
             </div>
             </Link>
          </div>

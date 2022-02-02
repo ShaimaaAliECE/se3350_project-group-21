@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
 .contents {
    justify-content: center;
    display: flex;
@@ -10,7 +12,7 @@
    width: 800px;
    height: 130px;
    top: 180px;
-   
+ 
    border: 5px solid #032539;
    box-sizing: border-box;
 }
@@ -21,7 +23,7 @@
    width: 800px;
    height: 130px;
    top: 200px;
-   margin-left: 30px;
+   margin-left: 40px;
    
    border: 5px solid #1C768F;
    box-sizing: border-box;
@@ -32,10 +34,10 @@
    position: absolute;
    width: 939px;
    height: 88px;
-   left: 100px;
+   left: 85px;
    top: -40px;
    
-   font-family: Montserrat;
+   font-family: 'Montserrat', sans-serif;
    font-style: normal;
    font-weight: bold;
    font-size: 50px;
@@ -52,7 +54,7 @@
    width: 244px;
    height: 71px;
    top: 400px;
-   margin-left:-100px;
+   margin-left:-130px;
    
    background: #1C768F;
    border-radius: 80px;
@@ -61,16 +63,27 @@
 .StartText{
    
    position: absolute;
-   width: 134px;
+   width: 200px;
    height: 35px;
-   left: 90px;
+   left: 54px;
    top: -12px;
    
-   font-family: Roboto;
+   font-family: 'Nunito', sans-serif;
    font-style: normal;
    font-weight: 600;
    font-size: 30px;
    line-height: 35px;
-   
    color: #FFFFFF;
+}
+
+.Rectangle162:hover {
+   position: absolute;
+   width: 244px;
+   height: 71px;
+   top: 400px;
+   margin-left:-130px;
+   
+   background:  #032539;
+   border-radius: 80px;
+   transition: all 0.2s ease-out;
 }
