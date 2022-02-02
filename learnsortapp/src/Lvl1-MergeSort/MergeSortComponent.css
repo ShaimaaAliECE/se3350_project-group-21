@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
+.contents {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+ }
+
+ .sort-title{
+    position: absolute;
+    width: 500px;
+    height: 88px;
+    left: 500px;
+    top: 0px;
+   
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    
+    color: #000000;
+ }
+
+ .sort-title-background{
+    position: absolute;
+    width: 474px;
+    height: 40px;
+    left: 505px;
+    top: 20px;
+
+    background: rgba(250, 153, 28, 0.35); 
+ }
+
+.gen-num-button {
+
+    position: absolute;
+    width: 280px;
+    height: 30px;
+    top: 165px;
+  
+    background: #032539;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+    
+    color: #FBF3F2;
+}
+
+.gen-num-button:hover {
+    
+    background-color: #ffffff;
+    color: #032539;
+    border: 1px solid;
+    border-color: #032539;
+    transition: ease-out;
+}
+
+.your-values {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.randomNum{
+    position: relative;
+    width: 290px;
+    height: 40px;
+    margin-left: 350px;
+    padding-top: 11px;
+    align-items: center;
+    text-align: center;
+
+    background: #F1F1F1;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+ 
+
+.continue-button {
+    position: absolute;
+    bottom: 23px;
+    right: 25px;
+    width: 125px;
+    height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.continue-button:hover { 
+
+    background: black;
+    color: #FA991C;
+    transition: all 0.2s ease-out;
+}
+
+.blueBox{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 1000px;
+    height: 450px;
+    margin-top: 800px;
+    border: 6px solid #1C768F;
+    box-sizing: border-box;
+}

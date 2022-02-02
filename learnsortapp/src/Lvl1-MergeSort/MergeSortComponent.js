@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
-import './Level1.css';
+import './MergeSortComponent.css'
 
 export default class MergeSortComponent extends Component {
 
@@ -16,7 +16,6 @@ export default class MergeSortComponent extends Component {
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
-    
   }
 
   randomNum(){
@@ -39,8 +38,6 @@ export default class MergeSortComponent extends Component {
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});   
   }*/
-
-  
 
   render() {
     // more styling, again it could use some work
@@ -76,36 +73,68 @@ export default class MergeSortComponent extends Component {
               </div>
               
     });
-    
+
+
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
       return (
         <>
             <div class="contents">
-               <div class = "Rectangle15">
-                  <h3 class = "MergeSortText">Merge Sort</h3>
-               </div>
-               <button className='btn' onClick={this.unsorted.join(' ')}>Generate Numbers</button>
-            </div>            
-            <div className="fragment-row">
-               {/* // will show the initial values (created by random number generator) */}
-               <div className="values"> 
-               Your Values <br/>
-               </div>
-               <div className='randomNum'>
-               { this.unsorted.join(', ') }
-               
-               
-               <br/>
-               </div>
-               
-               <button className="forward" onClick={this.nextStep}>Next</button>
-               {/* this is where the rows of the output are printed
-               each fragment is a row of the output, e.g. fragments[0] is row 1... */}
-               
-               {fragments}
-               
-            </div>
-            
+
+
+              <h1 class = "sort-title">MergeSort</h1>
+              <h2 class = "sort-title-background" />
+              
+              <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
+  
+              <div class = "blueBox">
+                  
+                    {/* // will show the initial values (created by random number generator) */}
+                    <div className="your-values">
+                      Your Values:
+                      <br/><br/>
+                    </div>
+                    <div className='randomNum'> { this.unsorted.join(', ') } </div>
+                    
+                    {fragments[1]}
+                    {fragments[9]}
+                    <br/><br/><br/>
+                    {fragments[2]}
+                    {fragments[4]}
+                    <br/>
+                    {fragments[3]}
+                    <br/>
+                    {fragments[5]}
+                    <br/>
+                    {fragments[7]}
+                    <br/>
+                    {fragments[8]}
+                    <br/><br/><br/>
+                    {fragments[10]}
+                    {fragments[12]}
+                    <br/>
+                    {fragments[11]}
+                    <br/>
+                    {fragments[13]}
+                    <br/>
+                    {fragments[15]}
+                    <br/>
+                    {fragments[16]}
+                    <br/><br/><br/>
+                    {fragments[17]}
+
+                  <div onClick={this.nextStep} className="continue-button">Continue</div>
+              
+                </div>
+
+                </div>
+            {/* this is where the rows of the output are printed
+            each fragment is a row of the output, e.g. fragments[0] is row 1... */}
+            {/* {fragments} */}
         </>
         );
+  
   }
 }

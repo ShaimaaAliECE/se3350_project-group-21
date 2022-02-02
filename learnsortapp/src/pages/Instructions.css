@@ -1,0 +1,49 @@
+.instructions-contents {
+   justify-content: center;
+   display: flex;
+   align-items: center;
+}
+
+.instructions-title-background {
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgba(250, 153, 28, 0.35);
+   height: 30px;
+   width: 350px;
+   position: absolute;
+   z-index: -1;
+   margin-top: 80px;
+}
+
+.instructions-title { 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   padding-top: 40px;
+}
+
+.instructions-Outline {
+   margin-left: auto;
+   margin-right: auto;
+   position: absolute;
+   width: 1000px;
+   height: 650px;
+   margin-top: 825px;
+   border: 6px solid #1C768F;
+   box-sizing: border-box;
+}
+
+.instructions-BackgroundRectangle {
+   margin-top: 17.5px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 950px;
+   height: 600px;
+   background: #FBF3F2;
+   text-align: center;
+   box-sizing: border-box;
+   padding: 10px;
+}
