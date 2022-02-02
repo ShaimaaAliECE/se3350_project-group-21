@@ -39,8 +39,9 @@
 }
 
 .continue-button {
-    margin-left: 800px;
-    margin-top: 270px;
+    position: absolute;
+    left: 830px;
+    top: 310px;
     width: 125px;
     height: 40px;
     background: #FA991C;

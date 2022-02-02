@@ -92,8 +92,9 @@ export default class MergeSortComponent extends Component {
                   <div className="fragment-row">
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
-                      <strong>Your Values: { this.unsorted.join(' ') }</strong>
-                      <br/>
+                      <strong>Your Values:
+                      <br/><br/>{ this.unsorted.join(' ') }</strong>
+                     
                     </div>
 
                   
