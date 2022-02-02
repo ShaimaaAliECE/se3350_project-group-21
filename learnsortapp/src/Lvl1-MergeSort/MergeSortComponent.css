@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
+.gen-num-button {
+    margin-left: 780px;
+    position: absolute;
+    background-color: #032539;
+    margin-top: 100px;
+    width: 220px;
+    height: 30px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #032539;
+}
+
+.gen-num-button:hover {
+    margin-left: 780px;
+    position: absolute;
+    background-color: #ffffff;
+    margin-top: 100px;
+    width: 220px;
+    height: 30px;
+    border-radius: 20px;
+    color: #032539;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: #032539;
+    transition: all 0.2s ease-out;
+}
+
+.your-values {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.continue-button {
+    margin-left: 800px;
+    margin-top: 270px;
+    width: 125px;
+    height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.continue-button:hover { 
+    background: black;
+    color: #FA991C;
+    transition: all 0.2s ease-out;
+}

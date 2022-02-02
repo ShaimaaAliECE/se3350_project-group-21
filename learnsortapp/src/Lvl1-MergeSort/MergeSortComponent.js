@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
-import { Button } from './Button';
 import './Level1.css';
+import './MergeSortComponent.css'
 
 export default class MergeSortComponent extends Component {
 
@@ -33,8 +33,6 @@ export default class MergeSortComponent extends Component {
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});   
   }*/
-
-  
 
   render() {
     // more styling, again it could use some work
@@ -75,21 +73,37 @@ export default class MergeSortComponent extends Component {
                 </span>
               </div>
     });
+
+    function refreshPage() {
+      window.location.reload(false);
+    }
+    
       return (
         <>
             <div class="contents">
-               <div class = "Rectangle15">
-                  <h3 class = "MergeSortText">Merge Sort</h3>
-               </div>
+              <h1 class = "sort-title">MergeSort</h1>
+              <h2 class = "sort-title-background" />
+              
+              <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
+  
+              <div class = "Outline">
+                <div class = "BackgroundRectangle">
+
+                  <div className="fragment-row">
+                    {/* // will show the initial values (created by random number generator) */}
+                    <div className="your-values">
+                      <strong>Your Values: { this.unsorted.join(' ') }</strong>
+                      <br/>
+                    </div>
+
+                  
+                  </div>
+
+                  <div onClick={this.nextStep} className="continue-button">Continue</div>
+                </div>
+              </div>
             </div>
-            <div className="fragment-row">
-               {/* // will show the initial values (created by random number generator) */}
-               <strong>Sample Numbers: { this.unsorted.join(' ') }</strong>
-               <br/>
-               <button onClick={this.nextStep}>Next</button>
-               
-               
-            </div>
+
             {/* this is where the rows of the output are printed
             each fragment is a row of the output, e.g. fragments[0] is row 1... */}
             {fragments}
