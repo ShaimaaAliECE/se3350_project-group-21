@@ -9,7 +9,7 @@
    position: absolute;
    width: 475px;
    height: 40px;
-   top: 75px;
+   top: 103px;
    
    background: rgba(250, 153, 28, 0.35);
    }
@@ -20,7 +20,7 @@
    width: 500px;
    height: 88px;
    left: 100px;
-   top: -60px;
+   top: -76px;
    
    font-family: Montserrat;
    font-style: normal;
@@ -100,6 +100,98 @@
    font-size: 34px;
    line-height: 41px;
    display: flex;
+   align-items: center;
+   text-align: center;
+
+   color: #000000;
+}
+
+.fragment-row{
+   position: absolute;
+   width: 1280px;
+   height: 810px;
+   margin-left: 100px;
+   margin-right: 20px;
+   top: 340px;
+
+   border: 10px solid #1C768F;
+   box-sizing: border-box;
+
+}
+
+.btn{
+   position: absolute;
+   width: 382px;
+   height: 61px;
+   left: 550px;
+   top: 200px;
+
+   background: #032539;
+   border-radius: 20px;
+
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 28px;
+   align-items: center;
+   text-align: center;
+
+color: #FBF3F2;
+}
+
+.fragment{
+   position: relative;
+   
+}
+
+.values{
+   position: relative;
+   padding: 15px 550px;
+
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 28px;
+   display: flex;
+   align-items: center;
+   text-align: center;
+
+}
+
+.randomNum{
+   position: relative;
+   width: 290px;
+   height: 40px;
+   margin-left: 470px;
+   padding-top: 11px;
+   align-items: center;
+   text-align: center;
+
+
+   background: #F1F1F1;
+   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.forward{
+   position:absolute;
+   bottom: 43px;
+   right: 38px;
+   width: 187px;
+   height: 61px;
+   
+   
+   background: #FA991C;
+   border-radius: 20px;
+
+   font-family: Roboto;
+   font-style: bold;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 26px;
+   line-height: 32px;
+   
    align-items: center;
    text-align: center;
 
