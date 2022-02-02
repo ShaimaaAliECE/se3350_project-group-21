@@ -1,244 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
 .contents {
    justify-content: center;
    display: flex;
    align-items: center;
 }
 
-
-.Rectangle15{
-
+.sort-title-background {
+   margin-left: auto;
+   margin-right: auto;
+   background-color: rgba(250, 153, 28, 0.35);
+   height: 30px;
+   width: 350px;
    position: absolute;
-   width: 475px;
-   height: 40px;
-   top: 75px;
-
-   background: rgba(250, 153, 28, 0.35);
+   z-index: -1;
+   margin-top: 80px;
 }
 
-.MergeSortText{
-
-   position: absolute;
-   width: 500px;
-   height: 88px;
-   left: 100px;
-   top: -60px;
-
-   font-family: Montserrat;
+.sort-title { 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 28px;
    font-style: normal;
-   font-weight: bold;
-   font-size: 48px;
-   line-height: 59px;
-
-   color: #000000;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   padding-top: 40px;
 }
 
-
-.Rectangle1{
-
+.sort-levels-box {
+   margin-left: auto;
+   margin-right: auto;
    position: absolute;
-   width: 545px;
-   height: 500px;
-   top: 140px;
-
+   height: 450px;
+   width: 400px;
    background: #032539;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   margin-top: 600px;
    border-radius: 45px 0px;
 }
 
-.Rectangle2{
-
-   position: absolute;
-   width: 215px;
-   height: 61px;
-   left: 170px;
-   top: 20px;
-
+.level-box {
+   margin-left: auto;
+   margin-right: auto;
+   position: flex;
+   margin-top: 30px;
+   height: 55px;
+   width: 200px;
    background: #FBF3F2;
-   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 20px;
+   margin-bottom: -19px;
+   box-shadow: inset 0 0 2px #000000;
 }
 
-.Level1Text{
-
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 70px;
-   top: -12px;
-
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
+.level-text {
+   font-family: 'Nunito', sans-serif;
+   font-size: 18px;
    text-align: center;
-
-   color: #000000;
+   padding-top: 15px;
+   color: black;
 }
 
-.RectangleLvl2{
-
-    position: absolute;
-    width: 215px;
-    height: 61px;
-    left: 170px;
-    top: 100px;
-    
-    background: #FBF3F2;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-    
-.Level2Text{
-    
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 23px;
-   top: -12px;
-   
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-   
-   color: #000000;
+.sort-levels {
+   color: black;
+   text-decoration: none;
 }
 
-.RectangleLvl3{
-
-   position: absolute;
-   width: 215px;
-   height: 61px;
-   left: 170px;
-   top: 180px;
-   
-   background: #FBF3F2;
-   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-   border-radius: 20px;
-}
-
-.Level3Text{
-
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 23px;
-   top: -12px;
-
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-
-   color: #000000;
-}
-
-.RectangleLvl4{
-
-   position: absolute;
-   width: 215px;
-   height: 61px;
-   left: 170px;
-   top: 260px;
-
-   background: #FBF3F2;
-   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-   border-radius: 20px;
-}
-
-.Level4Text{
-
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 23px;
-   top: -12px;
-
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-
-   color: #000000;
-}
-
-.RectangleLvl5{
-
-   position: absolute;
-   width: 215px;
-   height: 61px;
-   left: 170px;
-   top: 340px;
-
-   background: #FBF3F2;
-   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-   border-radius: 20px;
-}
-
-.Level5Text{
-
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 23px;
-   top: -12px;
-
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-
-   color: #000000;
-}
-
-.RectangleLvlCustom{
-
-   position: absolute;
-   width: 215px;
-   height: 61px;
-   left: 170px;
-   top: 420px;
-
-   background: #FBF3F2;
-   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-   border-radius: 20px;
-}
-
-.LevelCustomText{
-
-   position: absolute;
-   width: 168px;
-   height: 38px;
-   left: 23px;
-   top: -12px;
-
-   font-family: Roboto;
-   font-style: normal;
-   font-weight: 600;
-   font-size: 24px;
-   line-height: 28px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-
-   color: #000000;
+.level-box:hover {
+   transform: scale(1.1);
+   transition: all 0.2s ease-out;
 }
