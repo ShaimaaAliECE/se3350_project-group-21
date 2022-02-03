@@ -12,16 +12,16 @@ export default class MergeSortComponent extends Component {
     super();
 
     // create references for partitions and mergesort
-    this.state = {partitions:  [], show:false};
+    this.state = {partitions:  [], show:false, arrayIndex:0};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
+
   }
 
   randomNum(){
     let r = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
     return r;
-
   }
 
   nextStep(){
@@ -33,6 +33,14 @@ export default class MergeSortComponent extends Component {
     document.getElementById('test-button').style.display =  'none'; 
 
     document.getElementById('next-button').style.display = 'block'; 
+
+  }
+
+  IncrementItem = () => {
+    this.setState({ arrayIndex: this.state.arrayIndex + 1 });
+
+    let elementID = "test" + this.state.arrayIndex;
+    document.getElementById(elementID).style.display = 'block'; 
   }
 
   // will be called after the component is rendered
@@ -83,6 +91,25 @@ export default class MergeSortComponent extends Component {
       window.location.reload(false);
     }
 
+    // steps in correct order
+    let stepsArray = new Array();
+    stepsArray[0] = fragments[1];
+    stepsArray[1] = fragments[9];
+    stepsArray[2] = fragments[2];
+    stepsArray[3] = fragments[4];
+    stepsArray[4] = fragments[3];
+    stepsArray[5] = fragments[5];
+    stepsArray[6] = fragments[7];
+    stepsArray[7] = fragments[8];
+    stepsArray[8] = fragments[10];
+    stepsArray[9] = fragments[12];
+    stepsArray[10] = fragments[11];
+    stepsArray[11] = fragments[13];
+    stepsArray[12] = fragments[15];
+    stepsArray[13] = fragments[16];
+    stepsArray[14] = fragments[17];
+
+
       return (
         <>
             <div class="contents">
@@ -100,48 +127,42 @@ export default class MergeSortComponent extends Component {
                     </div>
                     <div className='randomNum'> { this.unsorted.join(', ') } </div>
                     
-                   
+                  
                   {
                     this.state.show? <div><h1>
-                       {fragments[1]}
-                    {fragments[9]}
-                    <br/><br/><br/>
-                    {fragments[2]}
-                    {fragments[4]}
-                    <br/>
-                    {fragments[3]}
-                    <br/>
-                    {fragments[5]}
-                    <br/>
-                    {fragments[7]}
-                    <br/>
-                    {fragments[8]}
-                    <br/><br/><br/>
-                    {fragments[10]}
-                    {fragments[12]}
-                    <br/>
-                    {fragments[11]}
-                    <br/>
-                    {fragments[13]}
-                    <br/>
-                    {fragments[15]}
-                    <br/>
-                    {fragments[16]}
-                    <br/><br/><br/>
-                    {fragments[17]}
+                      {stepsArray}
                       </h1></div> : null
                   }
-                  <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button>
+
+                  {/* <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button> */}
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
                   <br/><br/><br/>
-                  <button id="next-button" class="next-button">Next Step</button>
-                    {/* {fragments[17]} */}
-
+                  
+                  <div>
+                    <button id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</button>
+                  </div>
+                  
+                  <div className="test0" id="test0">{stepsArray[0]}</div>
+                  <div className="test1" id="test1">{stepsArray[1]}</div>
+                  <div className="test2" id="test2">{stepsArray[2]}</div>
+                  <div className="test3" id="test3">{stepsArray[3]}</div>
+                  <div className="test4" id="test4">{stepsArray[4]}</div>
+                  <div className="test5" id="test5">{stepsArray[5]}</div>
+                  <div className="test6" id="test6">{stepsArray[6]}</div>
+                  <div className="test7" id="test7">{stepsArray[7]}</div>
+                  <div className="test8" id="test8">{stepsArray[8]}</div>
+                  <div className="test9" id="test9">{stepsArray[9]}</div>
+                  <div className="test10" id="test10">{stepsArray[10]}</div>
+                  <div className="test11" id="test11">{stepsArray[11]}</div>
+                  <div className="test12" id="test12">{stepsArray[12]}</div>
+                  <div className="test13" id="test13">{stepsArray[13]}</div>
+                  <div className="test14" id="test14">{stepsArray[14]}</div>
+                  
                   <div className="sorted-array">{sortedArray}</div>
                   <div className='sorted-text'>Sorted List: </div>
                   {/* <div onClick={this.nextStep} className="continue-button">Continue</div> */}
                   <div  className="back-button">Go Back</div>
-              
+          
                 </div>
 
                 </div>
