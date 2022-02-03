@@ -5,21 +5,44 @@
 }
 
 .searchBar{
-
+  padding: 10px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  background-color: #abadad;
+  color: black;
+  border-width: 0px;;
+  Width:600px;
+  font-size: large;
+  font-weight: bold;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color: black;
+   opacity: 1; /* Firefox */
+ }
+ 
+ :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+ }
+ 
+ ::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+ }
 
 .searchContent{
    justify-content: center;
    display: flex;
+   margin: 50px;
 }
 
 .algorithmFormat{
-   
+   margin: 10px;
 }
 
 .dashboardheader {
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -37,7 +60,6 @@
     border: solid 1px;
     border-radius: 40px;
     border-color:rgba(2,0,36,1);
-    margin: 10px;
 }
 
 .algorithm-name {
