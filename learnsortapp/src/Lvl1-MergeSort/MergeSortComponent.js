@@ -39,10 +39,7 @@ export default class MergeSortComponent extends Component {
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     const i = ["step 1","step 2", "step 3", "step 4", "step 5", "step 6", "step 7", "step 8", "step 9", "step 10", "step 11", "step 12", "step 13", "step 14"];
-
-
     let elementID = "test" + this.state.arrayIndex;
-    
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
