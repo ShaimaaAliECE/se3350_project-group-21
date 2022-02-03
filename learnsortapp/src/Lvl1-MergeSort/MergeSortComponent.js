@@ -6,7 +6,7 @@ import './MergeSortComponent.css'
 export default class MergeSortComponent extends Component {
 
   // Initiliaze unsorted array
-  unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
+  unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
 
   constructor() {
     super();
@@ -21,7 +21,7 @@ export default class MergeSortComponent extends Component {
 
   // random number generator
   randomNum(){
-    let r = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
+    let r = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
     return r;
   }
 
@@ -49,7 +49,6 @@ export default class MergeSortComponent extends Component {
     instructionBox.innerHTML = instructionID;
 
     document.getElementById(elementID).style.display = 'block';
-    // document.getElementById(elementID).style.textAlign = 'center';
     document.getElementById(elementID).style.animation = 'pulse 2s';
     document.getElementById(elementID).style.fontSize = '12px';  
 
