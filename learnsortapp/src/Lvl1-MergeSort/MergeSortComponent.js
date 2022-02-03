@@ -100,7 +100,10 @@ export default class MergeSortComponent extends Component {
                     </div>
                     <div className='randomNum'> { this.unsorted.join(', ') } </div>
                     
-                    {/* {fragments[1]}
+                   
+                  {
+                    this.state.show? <div><h1>
+                       {fragments[1]}
                     {fragments[9]}
                     <br/><br/><br/>
                     {fragments[2]}
@@ -125,10 +128,8 @@ export default class MergeSortComponent extends Component {
                     <br/>
                     {fragments[16]}
                     <br/><br/><br/>
-                    {fragments[17]} */}
-
-                  {
-                    this.state.show? <div><h1>{fragments}</h1></div> : null
+                    {fragments[17]}
+                      </h1></div> : null
                   }
                   <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button>
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
