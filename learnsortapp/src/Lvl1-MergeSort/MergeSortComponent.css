@@ -219,60 +219,75 @@
 .test0 {
     display: none;
     margin-left: 250px;
+    margin-top: 35px;
+
+
 }
 
 .test1 {
     display: none;
     margin-left: 650px;
-    margin-top: -18px;
+    margin-top: -30px;
+    
+    
+ 
 }
 
 .test2 {
     display: none;
     margin-left: 200px;
     margin-top: 20px;
+  
 }
 
 .test3 {
     display: none;
     margin-left: 350px;
-    margin-top:-22px;
+    margin-top: -30px;
+ 
 }
 
 .test4 {
     display: none;
     margin-left: 400px;
-    margin-top: 20px;
+    margin-top: 15px;
+  
+    
 }
 
 .test5 {
     display: none;
-    margin-left: 200px;
-    margin-top: 20px;
+    margin-left: 170px;
+    margin-top: -20px;
+
 }
 
 .test6 {
     display: none;
     margin-left: 350px;
-    margin-top: -21px;
+    margin-top: 10px;
+   
 }
 
 .test7 {
     display: none;
     margin-left: 250px;
     margin-top: 20px;
+   
 }
 
 .test8 {
     display: none;
     margin-left: 600px;
-    margin-top: -120px;
+    margin-top: -160px;
+    
 }
 
 .test9 {
     display: none;
     margin-left: 750px;
-    margin-top: -18px;
+    margin-top: -30px;
+
 }
 
 .test10 {
@@ -284,13 +299,13 @@
 .test11 {
     display: none;
     margin-left: 600px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .test12 {
     display: none;
     margin-left: 750px;
-    margin-top: -17px;
+    margin-top: -25px;
 }
 
 .test13 {
@@ -301,8 +316,8 @@
 
 .test14 {
     display: none;
-    margin-left: 450px;
-    margin-top: 30px;
+    margin-left: 400px;
+    margin-top: 20px;
 }
 
 

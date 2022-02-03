@@ -49,8 +49,8 @@ export default class MergeSortComponent extends Component {
     instructionBox.innerHTML = instructionID;
 
     document.getElementById(elementID).style.display = 'block';
-    document.getElementById(elementID).style.animation = 'pulse 2s';
-    document.getElementById(elementID).style.fontSize = '12px';  
+    document.getElementById(elementID).style.animation = 'pulse 1s';
+    document.getElementById(elementID).style.fontSize = '20px';  
 
 
   }
