@@ -11,8 +11,8 @@ function Dashboard() {
             <div className="dashboardcontents">
                 <h1 className="dashboardheader">What would you like to learn?</h1>
 
-                <div className = "searchBar">
-                    <input type="text" placeholder="Search Algorithm" onChange={event => {setSearchTerm(event.target.value)}}/>
+                <div >
+                    <input type="text" className = "searchBar" placeholder="Search Algorithm" onChange={event => {setSearchTerm(event.target.value)}}/>
                     <div className="searchContent">
                     {JSONDATA.filter((val)=>{
                         if (searchTerm == "") {
@@ -21,7 +21,7 @@ function Dashboard() {
                             return val
                         }
                     }).map((val, key)=> {
-                        return <div className="algorithm format" key={key}>
+                        return <div className="algorithmFormat" key={key}>
                                     <div className="square">
                                         <p className="algorithm-name">{val.algorithm}</p>
                                         <div className="bottom-square">
