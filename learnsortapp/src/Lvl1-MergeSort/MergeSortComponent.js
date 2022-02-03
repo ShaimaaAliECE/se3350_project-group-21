@@ -12,7 +12,7 @@ export default class MergeSortComponent extends Component {
     super();
 
     // create references for partitions and mergesort
-    this.state = {partitions:  []};
+    this.state = {partitions:  [], show:false};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
@@ -29,6 +29,10 @@ export default class MergeSortComponent extends Component {
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});
 
+    // hiding the run algorithm button if it's clicked
+    document.getElementById('test-button').style.display =  'none'; 
+
+    document.getElementById('next-button').style.display = 'block'; 
   }
 
   // will be called after the component is rendered
@@ -82,8 +86,6 @@ export default class MergeSortComponent extends Component {
       return (
         <>
             <div class="contents">
-
-
               <h1 class = "sort-title">MergeSort</h1>
               <h2 class = "sort-title-background" />
               
@@ -98,7 +100,7 @@ export default class MergeSortComponent extends Component {
                     </div>
                     <div className='randomNum'> { this.unsorted.join(', ') } </div>
                     
-                    {fragments[1]}
+                    {/* {fragments[1]}
                     {fragments[9]}
                     <br/><br/><br/>
                     {fragments[2]}
@@ -123,18 +125,21 @@ export default class MergeSortComponent extends Component {
                     <br/>
                     {fragments[16]}
                     <br/><br/><br/>
-                    {fragments[17]}
+                    {fragments[17]} */}
 
-                  <div onClick={this.nextStep} className="continue-button">Continue</div>
-              
+                  {
+                    this.state.show? <div><h1>{fragments}</h1></div> : null
+                  }
+                  <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button>
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <br/><br/><br/>
+                  <button id="next-button" class="next-button">Next Step</button>
                 </div>
-
-                </div>
+              </div> 
             {/* this is where the rows of the output are printed
             each fragment is a row of the output, e.g. fragments[0] is row 1... */}
             {/* {fragments} */}
         </>
         );
-  
   }
 }

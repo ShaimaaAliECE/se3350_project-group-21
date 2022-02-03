@@ -1,31 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './Instructions.css';
 
 function Instructions() {
     return (
-        <div class="instructions-contents">
-            <h2 class = "instructions-title-background"></h2>
-            <h3 class = "instructions-title">Instructions</h3>
+        <>
+            <div class="instructions-contents">
+                <h2 class = "instructions-title-background"></h2>
+                <h3 class = "instructions-title">Instructions</h3>
 
-            <div class = "instructions-Outline">
-               <div class = "instructions-BackgroundRectangle">
-                  <h2>What is LearnSort?</h2>
-                  <p>This is an educational web application that allows students to learn different software engineering sorting algorithms with animations, interactive tests, and speech/text feedback.</p>
+                <div class = "instructions-Outline">
+                <div class = "instructions-BackgroundRectangle">
+                    <h2>What is LearnSort?</h2>
+                    <p>This is an educational web application that allows students to learn different software engineering sorting algorithms with animations, interactive tests, and speech/text feedback.</p>
 
-                  <h2>What are its Functions?</h2>
+                    <h2>What are its Functions?</h2>
 
-                  <h4>Course Page</h4>
-                  <p>When users first login, they’ll be presented with the main dashboard which contains all possible lessons (sorting algorithms) to learn. From there, they’ll be able to choose a specific algorithm and begin learning. Currently learning is only available for merge sort, however we intend to add additional learning modules.</p>
-               
-                  <h4>Level 1</h4>
-                  <p>Upon entering level one, the user will be presented with an explanation of the sorting algorithm, in this case merge sort. Once they’ve learned about the specific algorithm, they’ll be able to randomly generate numbers to watch an animation of the algorithm working. This animation includes an explanation at each step.</p>
-                  
-                  <h4>Updates</h4>
-                  <p>Upon future updates new features and levels will be integrated into the system. So stay tuned!!!</p>
-               </div>
+                    <h4>Course Page</h4>
+                    <p>When users first login, they’ll be presented with the main dashboard which contains all possible lessons (sorting algorithms) to learn. From there, they’ll be able to choose a specific algorithm and begin learning. Currently learning is only available for merge sort, however we intend to add additional learning modules.</p>
+                
+                    <h4>Level 1</h4>
+                    <p>Upon entering level one, the user will be presented with an explanation of the sorting algorithm, in this case merge sort. Once they’ve learned about the specific algorithm, they’ll be able to randomly generate numbers to watch an animation of the algorithm working. This animation includes an explanation at each step.</p>
+                    
+                    <h4>Updates</h4>
+                    <p>Upon future updates new features and levels will be integrated into the system. So stay tuned!!!</p>
+                </div>
+                </div>
             </div>
-    </div>
+        </>
+        
     );
 }
 
