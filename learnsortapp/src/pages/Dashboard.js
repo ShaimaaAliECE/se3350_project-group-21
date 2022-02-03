@@ -11,8 +11,9 @@ function Dashboard() {
             <div className="dashboardcontents">
                 <h1 className="dashboardheader">What would you like to learn?</h1>
 
-                <div className = "Search">
+                <div className = "searchBar">
                     <input type="text" placeholder="Search Algorithm" onChange={event => {setSearchTerm(event.target.value)}}/>
+                    <div className="searchContent">
                     {JSONDATA.filter((val)=>{
                         if (searchTerm == "") {
                             return val
@@ -40,7 +41,7 @@ function Dashboard() {
                 </div>
 
                 
-                
+                </div>
             </div>
         </>
     )
