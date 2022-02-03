@@ -35,7 +35,6 @@ function Dashboard() {
                                             </div>
                                         </Link>  
                                     </div>
-                                    
                                 </div>
                     })}
                 </div>

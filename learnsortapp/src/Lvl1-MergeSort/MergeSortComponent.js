@@ -147,11 +147,11 @@ export default class MergeSortComponent extends Component {
                   <div className="test11" id="test11">{stepsArray[11]}</div>
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
-                  <div className="test14" id="test14">{stepsArray[14]}</div>
+                  <div className="test14" id="test14">Sorted Array: {stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div className="sorted-array">{sortedArray}</div>
-                  <div className='sorted-text'>Sorted List: </div>
+                  {/* <div className="sorted-array">{sortedArray}</div>
+                  <div className='sorted-text'>Sorted List: </div> */}
                   
                   <div  className="back-button">Go Back</div>
                 </div>
