@@ -1,25 +1,31 @@
 [{
     "algorithm": "Merge Sort",
-    "link": "/Levels"
+    "link": "/Levels",
+    "levels": "6 Levels"
 },
 {
     "algorithm": "Bubble Sort",
-    "link": ""
+    "link": "",
+    "levels": "Coming Soon"
 },
 {
     "algorithm": "Quick Sort",
-    "link": ""
+    "link": "",
+    "levels": "Coming Soon"
 },
 {
     "algorithm": "Insertion Sort",
-    "link": ""
+    "link": "",
+    "levels": "Coming Soon"
 },
 {
     "algorithm": "Coming Soon",
-    "link": ""
+    "link": "",
+    "levels": "Coming Soon"
 },
 {
     "algorithm": "Coming Soon",
-    "link": ""
+    "link": "",
+    "levels": "Coming Soon"
 }
 ]

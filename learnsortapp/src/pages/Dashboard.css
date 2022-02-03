@@ -99,5 +99,17 @@
     transition: all 0.2s ease-out;
 }
 
+.searchBar input[type=text] {
+    float: center;
+    background-color: #D3D3D3;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 0px;
+    margin-right: 16px;
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
+
 
 

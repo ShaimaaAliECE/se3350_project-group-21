@@ -25,7 +25,7 @@ function Dashboard() {
                                     <div className="square">
                                         <p className="algorithm-name">{val.algorithm}</p>
                                         <div className="bottom-square">
-                                        <p className="levelnumbers">6 Levels</p>
+                                        <p className="levelnumbers">{val.levels}</p>
                                         </div>
                                         <div className="circle"></div>
                                         
