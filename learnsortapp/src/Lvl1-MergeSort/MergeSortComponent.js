@@ -134,11 +134,11 @@ export default class MergeSortComponent extends Component {
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
                   <br/><br/><br/>
                   <button id="next-button" class="next-button">Next Step</button>
-                    {fragments[17]}
+                    {/* {fragments[17]} */}
 
                   <div className="sorted-array">{sortedArray}</div>
                   <div className='sorted-text'>Sorted List: </div>
-                  <div onClick={this.nextStep} className="continue-button">Continue</div>
+                  {/* <div onClick={this.nextStep} className="continue-button">Continue</div> */}
                   <div  className="back-button">Go Back</div>
               
                 </div>
