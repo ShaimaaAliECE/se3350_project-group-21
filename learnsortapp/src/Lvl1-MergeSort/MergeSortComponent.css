@@ -112,7 +112,7 @@
 }
 
 .continue-button:hover,
-.back-button:hover { 
+.back-button:hover, .next-button:hover { 
 
     background: black;
     color: #FA991C;
@@ -168,6 +168,42 @@
 
     color: #000000;
 
+}
+.next-button{
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    width: 150px;
+    height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+    padding-top: 3px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+ 
+
+
+}
+
+@keyframes pulse {
+    0% {
+		transform: scale(0.95);
+
+	}
+
+	70% {
+		transform: scale(1.5);
+        color: orangered;
+        
+	}
+
+	100% {
+		transform: scale(0.95);
+
+
+	}
 }
 
 .test0, .test1, .test2, .test3, .test4,

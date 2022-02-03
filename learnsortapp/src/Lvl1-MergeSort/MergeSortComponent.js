@@ -40,7 +40,11 @@ export default class MergeSortComponent extends Component {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
 
     let elementID = "test" + this.state.arrayIndex;
-    document.getElementById(elementID).style.display = 'block'; 
+    document.getElementById(elementID).style.display = 'block';
+    document.getElementById(elementID).style.textAlign = 'center';
+    document.getElementById(elementID).style.animation = 'pulse 2s';
+    document.getElementById(elementID).style.fontSize = '14px';  
+
   }
 
   // will be called after the component is rendered
@@ -137,7 +141,7 @@ export default class MergeSortComponent extends Component {
 
                   {/* <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button> */}
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
-                  <br/><br/><br/>
+                  <br/>
                   
                   <div>
                     <button id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</button>
