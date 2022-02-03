@@ -7,9 +7,9 @@
  }
 
  .sort-title{
-    position: absolute;
+    position: center;
     width: auto;
-    margin: auto;
+    margin-top: auto;
     
     font-family: Montserrat;
     font-style: normal;
@@ -20,12 +20,12 @@
     color: #000000;
  }
 
- .sort-title-background{
-    position: absolute;
+ .sort-title-background
+ {
+    position: center;
     width: 474px;
     height: 40px;
-    left: 510px;
-    top: 5px;
+    margin-top: 60px;
 
     background: rgba(250, 153, 28, 0.35); 
  }
@@ -35,7 +35,7 @@
     position: absolute;
     width: 280px;
     height: 30px;
-    top: 140px;
+    top: 180px;
   
     background: #032539;
     border-radius: 20px;

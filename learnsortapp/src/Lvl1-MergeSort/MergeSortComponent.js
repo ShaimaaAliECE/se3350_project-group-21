@@ -113,6 +113,7 @@ export default class MergeSortComponent extends Component {
       return (
         <>
             <div class="contents">
+
               <h1 class = "sort-title">MergeSort</h1>
               <h2 class = "sort-title-background" />
               
