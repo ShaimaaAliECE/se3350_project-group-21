@@ -6,6 +6,7 @@ import './Navbar.css'
 function Navbar() {
     return (
         <>
+        
             <nav className="NavbarItems">
                 <Link to='/' className="navbar-logo">LearnSort</Link>
                 <ul className="nav-menu">

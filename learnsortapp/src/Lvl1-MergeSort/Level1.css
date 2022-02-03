@@ -57,6 +57,7 @@
 }
 
 .ContinueBox {
+   position: absolute;
    margin-left: 825px;
    margin-top: -80px;
    width: 125px;
@@ -67,8 +68,11 @@
 }
 
 .ContinueText{
+   position: absolute;
    text-align: center;
    padding-top: 8px;
+   top: -20px;
+   left: 36px;
 }
 
 .continue-link {
