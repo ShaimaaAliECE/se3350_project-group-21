@@ -5,7 +5,7 @@ import './MergeSortComponent.css'
 
 export default class MergeSortComponent extends Component {
 
-  // Random number generator 
+  // Initiliaze unsorted array
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
 
   constructor() {
@@ -19,10 +19,12 @@ export default class MergeSortComponent extends Component {
 
   }
 
+  // random number generator
   randomNum(){
     let r = Array.from({length: 10}, () => Math.floor(Math.random() * 21));
     return r;
   }
+
 
   nextStep(){
     let partition = new Partition(0, this.unsorted);
@@ -38,7 +40,7 @@ export default class MergeSortComponent extends Component {
 
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    const i = ["Step 1: Split the array into two new sublists (as evenly as possible). ","Step 2: Split the left sub-arrays into two new sublists", "Step 3: Split the new left sub-arrays into two new sublists", "Step 4: Split the new left sub-arrays into two more new sublists.", "Step 5: As the base case for the leftmost sub-array is reached, merge the individual left sub-arrays together in sorted order", "Step 6: Split the right sub-arrays into two new sublists each. ", "Step 7: Merge the right sub-arrays in sorted order.", "Step 8: Merge the new left sub-arrays and the new right sub-arrays in sorted order. ", "Step 9: Split the right sub-arrays into two new sublists.", "Step 10: Split the new left sub-arrays into two more new sublists.", "Step 11: Split the new leftmost sub-arrays into two more new sublists.", "Step 12: As the base case for the leftmost sub-array is reached, merge the individual left sub-arrays together in sorted order.", "Step 13: Split the right sub-arrays into two new sublists each.", "Step 14: Merge the right sub-arrays in sorted order.", "Step 15: Merge the new left sub-arrays and the new right sub-arrays in sorted order.", "Step 16: Merge the left and right sublists in sorted order to get the final sorted array."];
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", "Step 8(b): Merge the right sub-arrays in ascending order.", "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
@@ -52,45 +54,25 @@ export default class MergeSortComponent extends Component {
 
   }
 
-  // will be called after the component is rendered
- /* componentDidMount() {
-    // make a partition of the current unsorted array
-    let partition = new Partition(0, this.unsorted);
-    this.mergeSort1.mergeSort(partition);
-    this.setState({partitions: this.mergeSort1.partitions});   
-  }*/
-
   render() {
-    // more styling, again it could use some work
     // get each partition and map each node 
     let fragments = this.state.partitions.map((node, i1) => {
       // for each fragment row
         return <div key={i1} className="fragment" >
         {
-        
           node.fragments.map((numbers, i2) =>
           <span>
             <span className="group" key={i2}>
             {
               numbers.map((number, index) => {
-                {/* will display the first half of each row (before "split from" or "merged from") */}
-                
                 return <span key={index} className="number"> {number} </span>
               })
             }
             </span>
           </span>
           )
-        }
-        
-        {/* will either be "split from" or "merged from" */}
-
-                {/* will display the first half of the right side (after "split from" or "merged from") */}
-              
-              
-                {/* will display the second half of the right side (after "split from" or "merged from") */}
-                
-              </div>
+        }    
+        </div>
               
     });
 
@@ -137,20 +119,14 @@ export default class MergeSortComponent extends Component {
                     </div>
                     <div className='randomNum'> { this.unsorted.join(', ') } </div>
                    
-                    
-                  
                   {
                     this.state.show? <div><h1>
                       {stepsArray}
                       </h1></div> : null
                   }
-                   
-
-                  {/* <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button> */}
-                  
+        
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
               
-                  
                   <div>
                     <button id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</button>
                   </div>
@@ -179,16 +155,8 @@ export default class MergeSortComponent extends Component {
                   
                   {/* <div onClick={this.nextStep} className="continue-button">Continue</div> */}
                   <div  className="back-button">Go Back</div>
-                
-          
                 </div>
-                
-
                 </div>
-         
-            {/* this is where the rows of the output are printed
-            each fragment is a row of the output, e.g. fragments[0] is row 1... */}
-            {/* {fragments} */}
         </>
         );
   }
