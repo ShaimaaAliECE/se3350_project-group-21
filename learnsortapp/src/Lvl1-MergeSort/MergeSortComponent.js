@@ -31,19 +31,27 @@ export default class MergeSortComponent extends Component {
 
     // hiding the run algorithm button if it's clicked
     document.getElementById('test-button').style.display =  'none'; 
-
+    document.getElementById('instruction-box').style.display = 'block';
     document.getElementById('next-button').style.display = 'block'; 
 
   }
 
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
+    const i = ["step 1","step 2", "step 3", "step 4", "step 5", "step 6", "step 7", "step 8", "step 9", "step 10", "step 11", "step 12", "step 13", "step 14"];
+
 
     let elementID = "test" + this.state.arrayIndex;
+    
+    let instructionBox = document.getElementById("instruction-box");
+    let instructionID = i[this.state.arrayIndex];
+    instructionBox.innerHTML = instructionID;
+
     document.getElementById(elementID).style.display = 'block';
     document.getElementById(elementID).style.textAlign = 'center';
     document.getElementById(elementID).style.animation = 'pulse 2s';
     document.getElementById(elementID).style.fontSize = '14px';  
+
 
   }
 
@@ -131,6 +139,7 @@ export default class MergeSortComponent extends Component {
                       <br/><br/>
                     </div>
                     <div className='randomNum'> { this.unsorted.join(', ') } </div>
+                   
                     
                   
                   {
@@ -138,15 +147,19 @@ export default class MergeSortComponent extends Component {
                       {stepsArray}
                       </h1></div> : null
                   }
+                   
 
                   {/* <button onClick={()=>{this.setState({show:!this.state.show})}}>{ this.state.show? 'Hide' : 'Show'} Div</button> */}
+                  
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
                   <br/>
                   
                   <div>
                     <button id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</button>
                   </div>
-                  
+
+                  <div id="instruction-box"class="instructions">Click "Next Step" to View</div>
+
                   <div className="test0" id="test0">{stepsArray[0]}</div>
                   <div className="test1" id="test1">{stepsArray[1]}</div>
                   <div className="test2" id="test2">{stepsArray[2]}</div>
@@ -162,16 +175,20 @@ export default class MergeSortComponent extends Component {
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
                   <div className="test14" id="test14">{stepsArray[14]}</div>
+                  <br/><br/>
                   
                   <div className="sorted-array">{sortedArray}</div>
                   <div className='sorted-text'>Sorted List: </div>
+                  
                   {/* <div onClick={this.nextStep} className="continue-button">Continue</div> */}
                   <div  className="back-button">Go Back</div>
+                
           
                 </div>
+                
 
                 </div>
-              
+         
             {/* this is where the rows of the output are printed
             each fragment is a row of the output, e.g. fragments[0] is row 1... */}
             {/* {fragments} */}

@@ -5,7 +5,15 @@
     display: flex;
     align-items: center;
  }
-
+.instructions{
+    background-color: #f0cab2;
+    margin-left: 30px;
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    display: none;
+    
+}
  .sort-title{
     position: center;
     width: auto;
