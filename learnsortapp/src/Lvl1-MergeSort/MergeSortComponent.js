@@ -38,7 +38,7 @@ export default class MergeSortComponent extends Component {
 
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    const i = ["step 1","step 2", "step 3", "step 4", "step 5", "step 6", "step 7", "step 8", "step 9", "step 10", "step 11", "step 12", "step 13", "step 14"];
+    const i = ["Step 1: Split the array into two new sublists (as evenly as possible). ","Step 2: Split the left sub-arrays into two new sublists", "Step 3: Split the new left sub-arrays into two new sublists", "Step 4: Split the new left sub-arrays into two more new sublists.", "Step 5: As the base case for the leftmost sub-array is reached, merge the individual left sub-arrays together in sorted order", "Step 6: Split the right sub-arrays into two new sublists each. ", "Step 7: Merge the right sub-arrays in sorted order.", "Step 8: Merge the new left sub-arrays and the new right sub-arrays in sorted order. ", "Step 9: Split the right sub-arrays into two new sublists.", "Step 10: Split the new left sub-arrays into two more new sublists.", "Step 11: Split the new leftmost sub-arrays into two more new sublists.", "Step 12: As the base case for the leftmost sub-array is reached, merge the individual left sub-arrays together in sorted order.", "Step 13: Split the right sub-arrays into two new sublists each.", "Step 14: Merge the right sub-arrays in sorted order.", "Step 15: Merge the new left sub-arrays and the new right sub-arrays in sorted order.", "Step 16: Merge the left and right sublists in sorted order to get the final sorted array."];
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
