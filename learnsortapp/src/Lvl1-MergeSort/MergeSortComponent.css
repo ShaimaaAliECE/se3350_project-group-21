@@ -35,7 +35,7 @@
     position: absolute;
     width: 280px;
     height: 30px;
-    top: 165px;
+    top: 140px;
   
     background: #032539;
     border-radius: 20px;
@@ -81,7 +81,7 @@
  }
  
 
-.continue-button {
+.continue-button{
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -96,20 +96,73 @@
     text-align: center;
 }
 
-.continue-button:hover { 
+.back-button{
+    position: absolute;
+    bottom: 23px;
+    left: 25px;
+    width: 125px;
+    height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.continue-button:hover,
+.back-button:hover { 
 
     background: black;
     color: #FA991C;
     transition: all 0.2s ease-out;
 }
 
-.blueBox{
-    margin-left: auto;
-    margin-right: auto;
+.outliner{
     position: absolute;
     width: 1000px;
-    height: 450px;
+    height: 500px;
     margin-top: 800px;
     border: 6px solid #1C768F;
     box-sizing: border-box;
+}
+
+.sorted-array{
+    position: absolute;
+    width: 300px;
+    height: 44px;
+    left: 410px;
+    bottom: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 8px;
+    letter-spacing: 3.5px;
+    
+    border-radius: 10px;
+
+}
+
+.sorted-text{
+    position: absolute;
+    width: 330px;
+    height: 49px;
+    left: 250px;
+    bottom: 25px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
 }

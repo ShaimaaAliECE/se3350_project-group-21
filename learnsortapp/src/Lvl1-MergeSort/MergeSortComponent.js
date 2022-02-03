@@ -53,6 +53,7 @@ export default class MergeSortComponent extends Component {
             {
               numbers.map((number, index) => {
                 {/* will display the first half of each row (before "split from" or "merged from") */}
+                
                 return <span key={index} className="number"> {number} </span>
               })
             }
@@ -62,18 +63,17 @@ export default class MergeSortComponent extends Component {
         }
         
         {/* will either be "split from" or "merged from" */}
-        
 
                 {/* will display the first half of the right side (after "split from" or "merged from") */}
-               
+              
               
                 {/* will display the second half of the right side (after "split from" or "merged from") */}
-                
                 
               </div>
               
     });
 
+    let sortedArray = fragments[fragments.length-1]
 
     function refreshPage() {
       window.location.reload(false);
@@ -89,7 +89,7 @@ export default class MergeSortComponent extends Component {
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
   
-              <div class = "blueBox">
+              <div class = "outliner">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
@@ -125,7 +125,10 @@ export default class MergeSortComponent extends Component {
                     <br/><br/><br/>
                     {fragments[17]}
 
+                  <div className="sorted-array">{sortedArray}</div>
+                  <div className='sorted-text'>Sorted List: </div>
                   <div onClick={this.nextStep} className="continue-button">Continue</div>
+                  <div  className="back-button">Go Back</div>
               
                 </div>
 
