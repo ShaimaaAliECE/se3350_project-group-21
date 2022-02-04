@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import MergeSortComponent from './MergeSortComponent';
 import './Level1.css';
 import { Link } from 'react-router-dom';
 

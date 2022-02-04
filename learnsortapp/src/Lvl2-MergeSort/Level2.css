@@ -1,0 +1,107 @@
+.contents{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+ }
+ 
+ 
+ .sort-title-background {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(250, 153, 28, 0.35);
+    height: 30px;
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    margin-top: 80px;
+ }
+ 
+ .sort-title { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+ }
+ 
+    
+ .Outline1 {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    margin-top: 550px;
+    border: 6px solid #1C768F;
+    box-sizing: border-box;
+ }
+ 
+ .BackgroundRectangle1 {
+    margin-top: 17.5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+    height: 350px;
+    background: #FBF3F2;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+ }
+ 
+ .ContinueBox1 {
+    position: absolute;
+    margin-left: 825px;
+    margin-top: -80px;
+    width: 125px;
+    height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+ }
+ 
+ .ContinueText1{
+    position: absolute;
+    text-align: center;
+    padding-top: 8px;
+    top: -20px;
+    left: 36px;
+ }
+ 
+ .continue-link1 {
+    text-decoration: none;
+ }
+ 
+ 
+ .ExplanationText1{
+ 
+    position: absolute;
+    width: 1134px;
+    height: 602px;
+    left: 153px;
+    top: 452px;
+ 
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+ 
+    color: #000000;
+ }
+ 
+ 
+ .ContinueBox1:hover {
+    margin-left: 825px;
+    margin-top: -80px;
+    width: 125px;
+    height: 40px;
+    background: black;
+    border-radius: 20px;
+    color: #FA991C;
+    transition: all 0.2s ease-out;
+ }
