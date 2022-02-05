@@ -60,6 +60,58 @@ export default class MergeSortComponent1 extends Component {
 
   }
 
+  getFragments = (index) => {
+    let fragments = this.state.partitions.map((node, i1) => {
+      // for each fragment row
+        return <div key={i1} className="fragment" >
+        {
+          node.fragments.map((numbers, i2) =>
+            <span className="group" key={i2}>
+            {
+              numbers.map((number, index) => {
+                return <span key={index} className="number"> {number} </span>
+              })
+            }
+          </span>
+          )
+        }    
+        </div>    
+    });
+
+    let stepsArray = new Array();
+    stepsArray[0] = fragments[1];
+    stepsArray[1] = fragments[9];
+    stepsArray[2] = fragments[2];
+    stepsArray[3] = fragments[4];
+    stepsArray[4] = fragments[5];
+    stepsArray[5] = fragments[3];
+    stepsArray[6] = fragments[7];
+    stepsArray[7] = fragments[8];
+    stepsArray[8] = fragments[10];
+    stepsArray[9] = fragments[12];
+    stepsArray[10] = fragments[13];
+    stepsArray[11] = fragments[11];
+    stepsArray[12] = fragments[15];
+    stepsArray[13] = fragments[16];
+    stepsArray[14] = fragments[17];
+
+    // returning unexpected value...
+    // the numbers are in there, just a matter of parsing
+    return JSON.stringify(stepsArray[index]);
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    if(event.target.answer0.value === this.getFragments(0)){
+        alert("correct");
+    }
+    else
+        alert("false");
+        // testing the value of getFragments()
+        alert(this.getFragments(0));
+  }
+
+
   render() {
     // get each partition and map each node 
     let fragments = this.state.partitions.map((node, i1) => {
@@ -150,7 +202,6 @@ export default class MergeSortComponent1 extends Component {
                       </h1></div> : null
                   }
         
-                  <div>{fragments[1]}</div>
                   <div onClick={this.nextStep} id="test-button1" className="continue-button1">Run Algorithm</div>
               
                   <div>
