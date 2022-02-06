@@ -88,6 +88,7 @@ export default class MergeSortComponent extends Component {
     stepsArray[2] = fragments[2];
     stepsArray[3] = fragments[4];
     stepsArray[4] = fragments[5];
+
     stepsArray[5] = fragments[3];
     stepsArray[6] = fragments[7];
     stepsArray[7] = fragments[8];
@@ -98,7 +99,7 @@ export default class MergeSortComponent extends Component {
     stepsArray[12] = fragments[15];
     stepsArray[13] = fragments[16];
     stepsArray[14] = fragments[17];
-    
+
       return (
         <>
             <div class="contents">
@@ -124,10 +125,8 @@ export default class MergeSortComponent extends Component {
                   }
         
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
               
-                  <div>
-                    <button id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</button>
-                  </div>
 
                   <div id="instruction-box"class="instructions">Click "Next Step" to View</div>
 
@@ -145,7 +144,8 @@ export default class MergeSortComponent extends Component {
                   <div className="test11" id="test11">{stepsArray[11]}</div>
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
-                  <div className="test14" id="test14">Sorted Array: {stepsArray[14]}</div>
+                  <br/>
+                  <div className="test14" id="test14"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
                   

@@ -110,7 +110,6 @@ export default class MergeSortComponent1 extends Component {
       arrayIn[i] = a.value;
     }
     
-
     document.getElementById("par").innerHTML = arrayIn;
 
     if(JSON.stringify(arrayIn) == JSON.stringify(this.getFragments(0))){
@@ -194,10 +193,7 @@ export default class MergeSortComponent1 extends Component {
                   }
         
                   <div onClick={this.nextStep} id="test-button1" className="continue-button1">Run Algorithm</div>
-              
-                  <div>
-                    <button id="next-button1" class="next-button1" onClick={this.IncrementItem}>Next Step</button>
-                  </div>
+                  <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
 
                   <div id="instruction-box1" class="instructions1">Click "Next Step" to View</div>
                   <div>
