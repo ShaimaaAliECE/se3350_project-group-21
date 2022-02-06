@@ -102,7 +102,18 @@ export default class MergeSortComponent1 extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    if(event.target.answer0.value === this.getFragments(0)){
+    
+    let input =  document.getElementsByName('array');
+    let arrayIn = new Array();
+    for(let i =0; i<input.length; i++){
+      let a = input[i]
+      arrayIn[i] = a.value;
+    }
+    
+
+    document.getElementById("par").innerHTML = arrayIn;
+
+    if(JSON.stringify(arrayIn) == JSON.stringify(this.getFragments(0))){
         alert("correct");
     }
     else
@@ -156,26 +167,6 @@ export default class MergeSortComponent1 extends Component {
     stepsArray[13] = fragments[16];
     stepsArray[14] = fragments[17];
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        //creating an array from the users input (trying to find a way to get an array from one input)
-        let input = document.getElementsByName('array[]');
-        let k = "Array ";
-        for(let i=0; i< input.length; i++){
-          let a = input[i];
-          k = k + "array[" + i + "].value= "
-                                   + a.value + " ";
-        }
-        document.getElementById("par").innerHTML = input;
-
-
-        // will not get the correct value of steps array, just returns [object Object]
-        if(input == stepsArray[1]){
-            alert("correct");
-        }
-        else
-            alert("false");
-      }
     
       return (
         <>
@@ -209,35 +200,20 @@ export default class MergeSortComponent1 extends Component {
                   </div>
 
                   <div id="instruction-box1" class="instructions1">Click "Next Step" to View</div>
-
                   <div>
-                  <form >
+                  <form onSubmit={this.handleSubmit}>
                     <label>
-                        Input Array Element
-                        <input 
-                            type="text"
-                            name="array[]"
-                        />
-                        <input 
-                            type="text"
-                            name="array[]"
-          
-                        />
-                        <input 
-                            type="text"
-                            name="array[]"
-                            
-                        /><input 
-                            type="text"
-                            name="array[]"
-                            
-                        /><input 
-                            type="text"
-                            name="array[]"
-                            
-                        />
+                      Answer:
+                      <input 
+                        type="text" 
+                        name="array"
+                      />
+                      
+                      
+                        
+                        
                         </label>
-                        <button type="submit" onClick={handleSubmit}>Check your answer</button>
+                        <button type="submit">Check your answer</button>
                         <p id="par"></p>
                     </form>
                   </div>

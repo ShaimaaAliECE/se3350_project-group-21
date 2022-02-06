@@ -77,8 +77,6 @@ export default class MergeSortComponent extends Component {
               
     });
 
-    let sortedArray = fragments[fragments.length-1]
-
     function refreshPage() {
       window.location.reload(false);
     }
@@ -150,8 +148,6 @@ export default class MergeSortComponent extends Component {
                   <div className="test14" id="test14">Sorted Array: {stepsArray[14]}</div>
                   <br/><br/>
                   
-                  {/* <div className="sorted-array">{sortedArray}</div>
-                  <div className='sorted-text'>Sorted List: </div> */}
                   
                   <div  className="back-button">Go Back</div>
                 </div>
