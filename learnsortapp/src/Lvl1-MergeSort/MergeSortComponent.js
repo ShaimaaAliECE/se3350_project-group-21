@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
 import './MergeSortComponent.css'
+import { Link } from 'react-router-dom';
 
 export default class MergeSortComponent extends Component {
 
@@ -25,7 +26,6 @@ export default class MergeSortComponent extends Component {
     return r;
   }
 
-
   // start running the algorithm
   nextStep(){
     let partition = new Partition(0, this.unsorted);
@@ -42,7 +42,18 @@ export default class MergeSortComponent extends Component {
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", "Step 8(b): Merge the right sub-arrays in ascending order.", "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", 
+              "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
+              "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+              "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
+              "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
+              "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
+              "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
+              "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
+              "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
+              "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
+              "Step 8(b): Merge the right sub-arrays in ascending order.", 
+              "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
@@ -55,6 +66,7 @@ export default class MergeSortComponent extends Component {
     // next button disappears after the final step to avoid having 'undefined' on the text box
     if (this.state.arrayIndex > 13) {
       document.getElementById('next-button').style.display = 'none';
+      document.getElementById('next-level-button').style.display = 'block';
     }
   }
 
@@ -129,7 +141,9 @@ export default class MergeSortComponent extends Component {
         
                   <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
                   <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
-              
+                  <Link to='/Level2'>
+                    <div id="next-level-button" class="next-level-button">Next Level!</div>
+                  </Link>
 
                   <div id="instruction-box"class="instructions">Click "Next Step" to View</div>
 
