@@ -11,8 +11,8 @@ import Instructions from './pages/Instructions'
 import Level2 from './Lvl2-MergeSort/Level2';
 import MergeSortComponent1 from './Lvl2-MergeSort/MergeSortComponent1';
 import Login from './pages/login';
-import Level3 from './Lvl3-MergeSort/Level3';
-import MergeSortComponent2 from './Lvl3-MergeSort2/MergeSortComponent2';
+import Level3 from './Lvl3-MergeSort/Level3'
+import MergeSortComponent2 from './Lvl3-MergeSort/MergeSortComponent2';
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
           <Route path='/MergeSortComponent1' element={<MergeSortComponent1 />} />
           <Route path='/login' element={<Login/>} />
           <Route path='/Level3' element={<Level3 />} />
+          <Route path='/MergeSortComponent2' element={<MergeSortComponent2 />} />
         </Routes>
       </Router>
       </>

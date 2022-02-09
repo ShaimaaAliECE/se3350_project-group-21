@@ -204,10 +204,6 @@ export default class MergeSortComponent1 extends Component {
                         type="text" 
                         name="array"
                       />
-                      
-                      
-                        
-                        
                         </label>
                         <button type="submit">Check your answer</button>
                         <p id="par"></p>
