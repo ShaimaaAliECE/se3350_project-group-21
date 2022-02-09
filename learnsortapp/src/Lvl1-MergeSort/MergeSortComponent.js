@@ -53,7 +53,10 @@ export default class MergeSortComponent extends Component {
     document.getElementById(elementID).style.animation = 'pulse 1s';
     document.getElementById(elementID).style.fontSize = '20px';  
 
-
+    // next button disappears after the final step to avoid having 'undefined' on the text box
+    if (this.state.arrayIndex > 13) {
+      document.getElementById('next-button').style.display = 'none';
+    }
   }
 
   render() {
