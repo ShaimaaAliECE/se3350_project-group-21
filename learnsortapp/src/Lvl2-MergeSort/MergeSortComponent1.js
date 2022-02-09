@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MergeSort1 } from './MergeSort1';
 import { Partition1 } from './Partition1';
+import ReactDOMServer from 'react-dom/server';
 import './MergeSortComponent1.css'
 
 export default class MergeSortComponent1 extends Component {
@@ -118,7 +119,10 @@ export default class MergeSortComponent1 extends Component {
     else
         alert("false");
         // testing the value of getFragments()
-        alert(this.getFragments(0));
+        // console.log(this.getFragments(0));
+        // console.log(JSON.stringify(this.state.partitions, null, 2))
+        const s = ReactDOMServer.renderToString(this.getFragments(0));
+        // console.log(document.getElementById("fragments").innerHTML);
   }
 
 

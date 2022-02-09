@@ -1,4 +1,4 @@
-export class Partition { // partition class will separate our output from MergeSort
+export class Partition { // partition class will represent each row of the output (before being split)
     static nextId = 0;
   
     // constructor to get current nodes from our list of values (will also get partition id)

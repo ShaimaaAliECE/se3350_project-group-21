@@ -9,6 +9,7 @@ export default class MergeSortComponent extends Component {
   // Initiliaze unsorted array
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
 
+  // MergeSortComponent Constructor
   constructor() {
     super();
 
@@ -71,9 +72,9 @@ export default class MergeSortComponent extends Component {
   }
 
   render() {
-    // get each partition and map each node 
+    // take the current partition and turn it into a "fragment"
     let fragments = this.state.partitions.map((node, i1) => {
-      // for each fragment row
+      // for each fragment, we need to get the specific part of the JSON
         return <div key={i1} className="fragment" >
         {
           node.fragments.map((numbers, i2) =>
@@ -92,6 +93,8 @@ export default class MergeSortComponent extends Component {
               
     });
 
+    // refresh page function
+    // will be called every time the user click the random number generator button
     function refreshPage() {
       window.location.reload(false);
     }
