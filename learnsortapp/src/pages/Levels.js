@@ -19,7 +19,7 @@ function Levels() {
                   <p class= "level-text">Level 2</p>
                </div>
             </Link>
-            <Link to='' class="sort-levels">
+            <Link to='/Level3' class="sort-levels">
                <div class = "level-box">
                   <p class= "level-text">Level 3</p>
                </div>
