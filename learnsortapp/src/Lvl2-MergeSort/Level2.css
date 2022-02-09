@@ -52,22 +52,20 @@
  
  .ContinueBox1 {
     position: absolute;
-    margin-left: 825px;
-    margin-top: -80px;
+    bottom: 20px;
+    right: 25px;
     width: 125px;
-    height: 40px;
+   height: 40px;
     background: #FA991C;
     border-radius: 20px;
     color: black;
  }
- 
  .ContinueText1{
-    position: absolute;
     text-align: center;
-    padding-top: 8px;
-    top: -20px;
-    left: 36px;
+    margin-top: 5px;
+    
  }
+ 
  
  .continue-link1 {
     text-decoration: none;

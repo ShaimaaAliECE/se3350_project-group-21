@@ -8,10 +8,12 @@
 
 .instructions{
     background-color: #ffe9ed;
+    margin-top: -60px;
     margin-left: 30px;
-    height: fit-content;
-    width: fit-content;
+    height: 120px;
+    width: 280px;
     padding: 1%;
+    text-align: center;
     display: none;
     
 }
@@ -131,7 +133,7 @@
 .outliner{
     position: absolute;
     width: 1000px;
-    height: 500px;
+    height: 600px;
     margin-top: 800px;
     border: 6px solid #1C768F;
     box-sizing: border-box;
@@ -180,38 +182,48 @@
 }
 .next-button{
     position: absolute;
-    bottom: 30px;
+    bottom: 23px;
     right: 25px;
     width: 150px;
     height: 40px;
     background: #FA991C;
     border-radius: 20px;
     color: black;
-    padding-top: 3px;
+    padding-top: 10px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
- 
-
 
 }
 
 @keyframes pulse {
     0% {
 		transform: scale(0.95);
-
+        border: 0px solid ;
+        box-sizing: border-box;
+        border-radius: 10px;
+        height: max-content;
+        width: max-content;
+        
 	}
 
 	70% {
 		transform: scale(1.5);
-        color: orangered;
-        
+        border: 4px solid #FA991C;
+        box-sizing: border-box;
+        border-radius: 10px;
+        height: max-content;
+        width: max-content;
 	}
 
 	100% {
 		transform: scale(0.95);
-
-
+        border: 0px solid;
+        box-sizing: border-box;
+        border-radius: 10px;
+        height: max-content;
+        width: max-content;
+        
 	}
 }
 
@@ -220,7 +232,7 @@
     display: none;
     margin-left: 250px;
     margin-top: 35px;
-
+    letter-spacing: 3.5px;
 
 }
 
@@ -228,15 +240,14 @@
     display: none;
     margin-left: 650px;
     margin-top: -30px;
-    
-    
- 
+    letter-spacing: 3.5px;
 }
 
 .test2 {
     display: none;
     margin-left: 200px;
     margin-top: 20px;
+    letter-spacing: 3.5px;
   
 }
 
@@ -244,6 +255,7 @@
     display: none;
     margin-left: 350px;
     margin-top: -30px;
+    letter-spacing: 3.5px;
  
 }
 
@@ -251,21 +263,21 @@
     display: none;
     margin-left: 400px;
     margin-top: 15px;
-  
-    
+    letter-spacing: 3.5px;
 }
 
 .test5 {
     display: none;
     margin-left: 170px;
     margin-top: -20px;
-
+    letter-spacing: 3.5px;
 }
 
 .test6 {
     display: none;
     margin-left: 350px;
     margin-top: 10px;
+    letter-spacing: 3.5px;
    
 }
 
@@ -273,6 +285,7 @@
     display: none;
     margin-left: 250px;
     margin-top: 20px;
+    letter-spacing: 3.5px;
    
 }
 
@@ -280,6 +293,7 @@
     display: none;
     margin-left: 600px;
     margin-top: -160px;
+    letter-spacing: 3.5px;
     
 }
 
@@ -287,6 +301,7 @@
     display: none;
     margin-left: 750px;
     margin-top: -30px;
+    letter-spacing: 3.5px;
 
 }
 
@@ -294,30 +309,35 @@
     display: none;
     margin-left: 800px;
     margin-top: 20px;
+    letter-spacing: 3.5px;
 }
 
 .test11 {
     display: none;
     margin-left: 600px;
     margin-top: 15px;
+    letter-spacing: 3.5px;
 }
 
 .test12 {
     display: none;
     margin-left: 750px;
     margin-top: -25px;
+    letter-spacing: 3.5px;
 }
 
 .test13 {
     display: none;
     margin-left: 650px;
     margin-top: 20px;
+    letter-spacing: 3.5px;
 }
 
 .test14 {
     display: none;
     margin-left: 400px;
     margin-top: 20px;
+    letter-spacing: 3.5px;
 }
 
 
