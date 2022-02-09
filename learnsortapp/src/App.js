@@ -12,6 +12,7 @@ import Level2 from './Lvl2-MergeSort/Level2';
 import MergeSortComponent1 from './Lvl2-MergeSort/MergeSortComponent1';
 import Login from './pages/login';
 import Level3 from './Lvl3-MergeSort/Level3';
+import MergeSortComponent2 from './Lvl3-MergeSort2/MergeSortComponent2';
 
 
 function App() {
