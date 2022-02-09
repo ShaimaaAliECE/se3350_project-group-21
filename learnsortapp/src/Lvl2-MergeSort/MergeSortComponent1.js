@@ -61,68 +61,23 @@ export default class MergeSortComponent1 extends Component {
 
   }
 
-  getFragments = (index) => {
-    let fragments = this.state.partitions.map((node, i1) => {
-      // for each fragment row
-        return <div key={i1} className="fragment" >
-        {
-          node.fragments.map((numbers, i2) =>
-            <span className="group" key={i2}>
-            {
-              numbers.map((number, index) => {
-                return <span key={index} className="number"> {number} </span>
-              })
-            }
-          </span>
-          )
-        }    
-        </div>    
-    });
-
-    let stepsArray = new Array();
-    stepsArray[0] = fragments[1];
-    stepsArray[1] = fragments[9];
-    stepsArray[2] = fragments[2];
-    stepsArray[3] = fragments[4];
-    stepsArray[4] = fragments[5];
-    stepsArray[5] = fragments[3];
-    stepsArray[6] = fragments[7];
-    stepsArray[7] = fragments[8];
-    stepsArray[8] = fragments[10];
-    stepsArray[9] = fragments[12];
-    stepsArray[10] = fragments[13];
-    stepsArray[11] = fragments[11];
-    stepsArray[12] = fragments[15];
-    stepsArray[13] = fragments[16];
-    stepsArray[14] = fragments[17];
-
-    // returning unexpected value...
-    // the numbers are in there, just a matter of parsing
-    return JSON.stringify(stepsArray[index]);
-  }
-
   handleSubmit = (event) => {
     event.preventDefault()
-    
-    let input =  document.getElementsByName('array');
-    let arrayIn = new Array();
-    for(let i =0; i<input.length; i++){
-      let a = input[i]
-      arrayIn[i] = a.value;
-    }
-    
-    document.getElementById("par").innerHTML = arrayIn;
 
-    if(JSON.stringify(arrayIn) == JSON.stringify(this.getFragments(0))){
+    let answer = [];
+
+        let fragmentNo = "test" + this.state.arrayIndex;
+        var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
+        for(let i = 0; i < length; i++){
+          let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
+          answer.push(value);
+        }
+
+    if(event.target.answer0.value == answer.toString()){
         alert("correct");
     }
     else
-        alert("false");
-        // testing the value of getFragments()
-        // console.log(this.getFragments(0));
-        // console.log(JSON.stringify(this.state.partitions, null, 2))
-        const s = ReactDOMServer.renderToString(this.getFragments(0));
-        // console.log(document.getElementById("fragments").innerHTML);
+        alert("false");       
   }
 
 
@@ -130,18 +85,18 @@ export default class MergeSortComponent1 extends Component {
     // get each partition and map each node 
     let fragments = this.state.partitions.map((node, i1) => {
       // for each fragment row
-        return <div key={i1} className="fragment" >
+        return <div key={i1} className="fragment">
         {
           node.fragments.map((numbers, i2) =>
-          <span>
-            <span className="group" key={i2}>
+          <div className = "test">
+            <div className="group" key={i2}>
             {
               numbers.map((number, index) => {
-                return <span key={index} className="number"> {number} </span>
+                return <div key={index} className="number" id="number">{number}</div>
               })
             }
-            </span>
-          </span>
+            </div>
+          </div>
           )
         }    
         </div>
@@ -206,11 +161,10 @@ export default class MergeSortComponent1 extends Component {
                       Answer:
                       <input 
                         type="text" 
-                        name="array"
+                        name="answer0"
                       />
                         </label>
                         <button type="submit">Check your answer</button>
-                        <p id="par"></p>
                     </form>
                   </div>
 
