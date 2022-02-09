@@ -21,7 +21,7 @@ export default class MergeSortComponent1 extends Component {
 
     this.mergeSort1 = new MergeSort1();
     this.forward = { render: false}
-    this.nextStep = this.nextStep.bind(this);
+    this.runAlgorithm = this.runAlgorithm.bind(this);
 
   }
 
@@ -33,7 +33,7 @@ export default class MergeSortComponent1 extends Component {
 
 
   // start running the algorithm
-  nextStep(){
+  runAlgorithm(){
     let partition = new Partition1(0, this.unsorted);
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});
@@ -48,17 +48,11 @@ export default class MergeSortComponent1 extends Component {
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", "Step 8(b): Merge the right sub-arrays in ascending order.", "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+    const i = ["Step 1(b): This is the right side:", "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", "Step 8(b): Merge the right sub-arrays in ascending order.", "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box1");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
-
-    document.getElementById(elementID).style.display = 'block';
-    document.getElementById(elementID).style.animation = 'pulse 1s';
-    document.getElementById(elementID).style.fontSize = '20px';  
-
-
   }
 
   handleSubmit = (event) => {
@@ -66,12 +60,12 @@ export default class MergeSortComponent1 extends Component {
 
     let answer = [];
 
-        let fragmentNo = "test" + this.state.arrayIndex;
-        var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
-        for(let i = 0; i < length; i++){
-          let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
-          answer.push(value);
-        }
+    let fragmentNo = "test" + this.state.arrayIndex;
+    var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
+    for(let i = 0; i < length; i++){
+      let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
+      answer.push(value);
+    }
 
     if(event.target.answer0.value == answer.toString()){
         alert("correct");
@@ -151,10 +145,10 @@ export default class MergeSortComponent1 extends Component {
                       </h1></div> : null
                   }
         
-                  <div onClick={this.nextStep} id="test-button1" className="continue-button1">Run Algorithm</div>
+                  <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Run Algorithm</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
 
-                  <div id="instruction-box1" class="instructions1">Click "Next Step" to View</div>
+                  <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
                   <div>
                   <form onSubmit={this.handleSubmit}>
                     <label>
