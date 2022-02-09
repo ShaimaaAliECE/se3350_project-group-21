@@ -37,7 +37,6 @@ export default class MergeSortComponent extends Component {
     document.getElementById('test-button').style.display =  'none'; 
     document.getElementById('instruction-box').style.display = 'block';
     document.getElementById('next-button').style.display = 'block'; 
-
   }
 
   // display the next step in the algorithm with text
@@ -45,7 +44,8 @@ export default class MergeSortComponent extends Component {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", 
               "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
-              "Step 2(b): This is the second half of the left sub-array:", "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+              "Step 2(b): This is the second half of the left sub-array:", 
+              "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
               "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
               "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
               "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
@@ -68,6 +68,43 @@ export default class MergeSortComponent extends Component {
     if (this.state.arrayIndex > 13) {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
+    }
+  }
+
+  // display the previous step in the algorithm with text
+  DecrementItem = () => {
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:",
+    "Step 1(b): This is the right side:", 
+    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
+    "Step 2(b): This is the second half of the left sub-array:", 
+    "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+    "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
+    "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
+    "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
+    "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
+    "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
+    "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
+    "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
+    "Step 8(b): Merge the right sub-arrays in ascending order.", 
+    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+
+    if (this.state.arrayIndex-1 >= 0) { // to avoid going below zero and printing undefined
+      
+      let elementID = "test" + (this.state.arrayIndex-1);
+      document.getElementById(elementID).style.display = 'none';
+    
+      let instructionBox = document.getElementById("instruction-box");
+      
+      let instructionID = '<div>Click "Next Step" to View</div>'
+
+      if (this.state.arrayIndex-1 == 0) { // to avoid printing undefined
+        instructionBox.innerHTML = instructionID;
+      } else {
+        instructionID = i[this.state.arrayIndex-2];
+      }
+
+      instructionBox.innerHTML = instructionID;
+      this.setState({ arrayIndex: this.state.arrayIndex - 1 });
     }
   }
 
@@ -128,7 +165,6 @@ export default class MergeSortComponent extends Component {
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
   
               <div class = "outliner">
-                  
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
                       Your Values:
@@ -169,7 +205,7 @@ export default class MergeSortComponent extends Component {
                   <br/><br/>
                   
                   
-                  <div  className="back-button">Go Back</div>
+                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
                 </div>
                 </div>
         </>
