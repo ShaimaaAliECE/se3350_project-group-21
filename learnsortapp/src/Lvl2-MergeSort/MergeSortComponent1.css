@@ -5,6 +5,54 @@
     display: flex;
     align-items: center;
  }
+ .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    align-content: center;
+    align-items: center;
+
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 360px;
+    height: 200px;
+    background-color: rgb(247, 189, 65);
+    color: #fff;
+    text-align: center;
+    vertical-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    position: fixed;
+    margin-left: 320px;
+    margin-top: -120px;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    font-size: large;
+    
+    align-content: center;
+    align-items: center;
+  }
+  .popnext{
+      background-color: white;
+      border-radius: 12px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    border: #F1F1F1;
+    margin-top: 70px;
+
+
+  }
+
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
 
 .instructions1{
     background-color: #ffe9ed;
