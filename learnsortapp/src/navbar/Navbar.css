@@ -45,3 +45,12 @@
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
 }
+
+.navbar-profile {
+   transition: all .2s ease-in-out;
+   height: 30px;
+}
+
+.navbar-profile:hover {
+   transform: scale(1.3);
+}

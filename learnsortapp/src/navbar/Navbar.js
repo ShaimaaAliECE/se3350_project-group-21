@@ -23,7 +23,7 @@ function Navbar() {
                     })}
                     <li>
                         <Link to ={"/profile"}>
-                           <img src={profileIcon} height="30"/>
+                           <img src={profileIcon} className={"navbar-profile"}/>
                         </Link>
                     </li>
                 </ul>
