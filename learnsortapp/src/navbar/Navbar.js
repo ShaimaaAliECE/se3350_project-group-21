@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { MenuItems } from "./MenuItems";
 import { Link } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
+import profileIcon from './profileIcon.png';
 
 function Navbar() {
     return (
@@ -15,10 +16,16 @@ function Navbar() {
                             <li key={index}>
                                 <Link to = {item.url} className={item.cName}>
                                     {item.title}
+                                    {item.icon}
                                 </Link>
                             </li>
                         )
                     })}
+                    <li>
+                        <Link to ={"/profile"}>
+                           <img src={profileIcon} height="30"/>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </>
