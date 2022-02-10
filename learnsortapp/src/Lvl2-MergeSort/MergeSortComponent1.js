@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { MergeSort1 } from './MergeSort1';
 import { Partition1 } from './Partition1';
-import ReactDOMServer from 'react-dom/server';
 import './MergeSortComponent1.css'
 
 export default class MergeSortComponent1 extends Component {
@@ -14,25 +13,19 @@ export default class MergeSortComponent1 extends Component {
     // create references for partitions and mergesort
     this.state = {
         partitions:  [], 
-        show:false, 
         arrayIndex:0
     };
-
     this.mergeSort1 = new MergeSort1();
-    this.forward = { render: false}
-    this.runAlgorithm = this.runAlgorithm.bind(this);
-
   }
 
   // random number generator
-  randomNum(){
+  randomNum = () => {
     let r = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
     return r;
   }
 
-
   // start running the algorithm
-  runAlgorithm(){
+  runAlgorithm = () => {
     let partition = new Partition1(0, this.unsorted);
     this.mergeSort1.mergeSort(partition);
     this.setState({partitions: this.mergeSort1.partitions});
@@ -41,7 +34,6 @@ export default class MergeSortComponent1 extends Component {
     document.getElementById('test-button1').style.display =  'none'; 
     document.getElementById('instruction-box1').style.display = 'block';
     document.getElementById('next-button1').style.display = 'block'; 
-
   }
 
   // display the next step in the algorithm with text
@@ -65,7 +57,7 @@ export default class MergeSortComponent1 extends Component {
       answer.push(value);
     }
 
-    if(event.target.userInput.value == answer.toString()){
+    if(event.target.userInput.value === answer.toString()){
         alert("correct");
     }
     else
@@ -91,8 +83,7 @@ export default class MergeSortComponent1 extends Component {
           </div>
           )
         }    
-        </div>
-              
+        </div>        
     });
 
     function refreshPage() {
@@ -100,7 +91,7 @@ export default class MergeSortComponent1 extends Component {
     }
     
     // steps in correct order
-    let stepsArray = new Array();
+    let stepsArray = []
     stepsArray[0] = fragments[1];
     stepsArray[1] = fragments[9];
     stepsArray[2] = fragments[2];
@@ -120,11 +111,10 @@ export default class MergeSortComponent1 extends Component {
     
       return (
         <>
-        
             <div class="contents">
 
               <h1 class = "sort-title">MergeSort</h1>
-              <h2 class = "sort-title-background" />
+              <div class = "sort-title-background" />
               
               <div onClick={refreshPage} class="gen-num-button1">Generate New Numbers</div>
   
@@ -136,17 +126,12 @@ export default class MergeSortComponent1 extends Component {
                       <br/><br/>
                     </div>
                     <div className='randomNum1'> { this.unsorted.join(', ') } </div>
-                   
-                  {
-                    this.state.show? <div><h1>
-                      {stepsArray}
-                      </h1></div> : null
-                  }
-        
+
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
 
                   <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
+
                   <div>
                   <form onSubmit={this.handleSubmit}>
                     <label>
@@ -174,7 +159,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="test11" id="test11">{stepsArray[11]}</div>
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
-                  <div className="test14" id="test14">Sorted Array: {stepsArray[14]}</div>
+                  <div className="test14" id="test14">{stepsArray[14]}</div>
                   <br/><br/>
                   
                   <div  className="back-button1">Go Back</div>
