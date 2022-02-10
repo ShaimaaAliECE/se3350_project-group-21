@@ -141,6 +141,7 @@ export default class MergeSortComponent1 extends Component {
                   <div class="popup" >
                   <span class="popuptext" id="myPopup"><br/><br/><br/><div id="poptext">Correct</div><button class="popnext" onClick={this.closeBox}>Close</button></span>
                   </div>
+
                   <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
 
                   <div>
