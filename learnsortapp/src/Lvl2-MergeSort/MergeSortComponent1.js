@@ -158,7 +158,7 @@ export default class MergeSortComponent1 extends Component {
                         <button type="submit">Check your answer</button>
                     </form>
                   </div>
-
+                  
                   <div className="test0" id="test0">{stepsArray[0]}</div>
                   <div className="test1" id="test1">{stepsArray[1]}</div>
                   <div className="test2" id="test2">{stepsArray[2]}</div>

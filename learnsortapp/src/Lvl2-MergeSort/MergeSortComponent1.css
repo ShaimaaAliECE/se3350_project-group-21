@@ -95,6 +95,7 @@
     width: 280px;
     height: 30px;
     top: 175px;
+    margin-top: 5px;
   
     background: #032539;
     border-radius: 20px;
@@ -142,17 +143,24 @@
 
 .continue-button1{
     position: absolute;
-    bottom: 250px;
-    right: 415px;
-    width: 150px;
-    height: 40px;
-    background: #FA991C;
-    border-radius: 20px;
-    color: black;
-    padding-top: 10px;
-    box-sizing: border-box;
+    
+    filter: drop-shadow(5px 5px 5px #FF9000);
+    color: rgb(8, 36, 73);
+    
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif;
+    margin-top: -110px;
+    margin-left: 410px;
     text-align: center;
+    padding-top: 300px;
+
+    transition: all .2s ease-in-out; 
+
+    
+}
+
+.continue-button1:hover{
+    transform: scale(1.1);
 }
 
 .back-button1{
@@ -170,7 +178,6 @@
     text-align: center;
 }
 
-.continue-button1:hover,
 .back-button1:hover, .next-button1:hover { 
 
     background: black;
