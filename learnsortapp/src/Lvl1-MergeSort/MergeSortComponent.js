@@ -10,15 +10,13 @@ export default class MergeSortComponent extends Component {
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
 
   // MergeSortComponent Constructor
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     // create references for partitions and mergesort
     this.state = {partitions:  [], show:false, arrayIndex:0};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
-
   }
 
   // random number generator
