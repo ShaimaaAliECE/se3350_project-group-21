@@ -14,6 +14,8 @@ import Login from './pages/login';
 import Level3 from './Lvl3-MergeSort/Level3'
 import MergeSortComponent2 from './Lvl3-MergeSort/MergeSortComponent2';
 
+import AudioTest from './AudioFeedback/AudioTest';
+
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/Level3' element={<Level3 />} />
           <Route path='/MergeSortComponent2' element={<MergeSortComponent2 />} />
+
+          <Route path='/audiotest' element={<AudioTest />} />
         </Routes>
       </Router>
       </>
