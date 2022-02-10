@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
  }
- .popup {
+ .popupTextC, .popupTextI {
+  
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -15,7 +16,7 @@
   }
   
  
-  .popup .popuptext {
+  .popup, .popupC, .popupI{
     visibility: hidden;
     width: 360px;
     height: 200px;
@@ -37,7 +38,7 @@
     align-content: center;
     align-items: center;
   }
-  .popnext{
+ .popnextC, .popnextI{
       background-color: white;
       border-radius: 12px;
     padding: 5px 10px;

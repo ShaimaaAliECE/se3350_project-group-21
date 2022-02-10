@@ -13,13 +13,15 @@ export default class MergeSortComponent1 extends Component {
     // create references for partitions and mergesort
     this.state = {
         partitions:  [], 
-        arrayIndex:0
+        arrayIndex:0,
+        textIndex: 1
     };
     this.mergeSort1 = new MergeSort1();
   }
 
-  closeBox(){
-    var popup = document.getElementById("myPopup");
+
+  closeBoxI(){
+    var popup = document.getElementById("myPopupI");
     popup.style.visibility = "hidden"; 
   }
 
@@ -45,6 +47,7 @@ export default class MergeSortComponent1 extends Component {
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
+    this.setState({ textIndex: this.state.arrayIndex + 1 });
     const i = ["Step 1(b): This is the right side:", 
     "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
     "Step 2(b): This is the second half of the left sub-array:", 
@@ -60,7 +63,7 @@ export default class MergeSortComponent1 extends Component {
     "Step 8(b): Merge the right sub-arrays in ascending order.", 
     "Step 9: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
-    let userInputID = "userInput" + this.state.arrayIndex;
+    let userInputID = "userInput" + this.state.textIndex ;
     let instructionBox = document.getElementById("instruction-box1");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
@@ -69,6 +72,9 @@ export default class MergeSortComponent1 extends Component {
     document.getElementById(elementID).style.animation = 'pulse 1s';
     document.getElementById(elementID).style.fontSize = '20px';  
     document.getElementById(userInputID).style.display = 'block';
+
+    var popup = document.getElementById("myPopupC");
+    popup.style.visibility = "hidden"; 
   }
 
   handleSubmit = (event) => {
@@ -83,16 +89,18 @@ export default class MergeSortComponent1 extends Component {
       answer.push(value);
     }
 
-    var popup = document.getElementById("myPopup");
-    var popupText = document.getElementById("poptext");
-    popup.style.visibility = "visible"; 
+    var popupC = document.getElementById("myPopupC");
+
+    var popupI = document.getElementById("myPopupI");
+
+    
 
     if(event.target.userInput.value == answer.toString()){
-        popupText.innerHTML = "Correct"; 
+      popupC.style.visibility = "visible"; 
 
     }
     else
-      popupText.innerHTML = "Incorrect";      
+      popupI.style.visibility = "visible";     
   }
 
   render() {
@@ -164,8 +172,11 @@ export default class MergeSortComponent1 extends Component {
                   }
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
-                  <div class="popup" >
-                  <span class="popuptext" id="myPopup"><br/><br/><br/><div id="poptext">Correct</div><button class="popnext" onClick={this.closeBox}>Continue</button></span>
+                  <div class="popupC" id="myPopupC" >
+                  <span class="popuptextC" id="myPopupC"><br/><br/><br/><div id="poptextC">Correct</div><button class="popnextC" onClick={this.IncrementItem}>Continue</button></span>
+                  </div>
+                  <div class="popupI" id="myPopupI">
+                  <span class="popuptextI"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI" onClick={this.closeBoxI}>Continue</button></span>
                   </div>
 
                   <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
@@ -174,7 +185,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput0" id="userInput0">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer0:
                       <input 
                         type="text" 
                         name="userInput"
@@ -187,7 +198,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput1" id="userInput1">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer1:
                       <input 
                         type="text" 
                         name="userInput"
@@ -200,7 +211,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput2" id="userInput2">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer2:
                       <input 
                         type="text" 
                         name="userInput"
@@ -213,7 +224,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput3" id="userInput3">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer3:
                       <input 
                         type="text" 
                         name="userInput"
@@ -226,7 +237,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput4" id="userInput4">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer4:
                       <input 
                         type="text" 
                         name="userInput"
@@ -239,7 +250,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput5" id="userInput5">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer5:
                       <input 
                         type="text" 
                         name="userInput"
@@ -252,7 +263,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput6" id="userInput6">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer6:
                       <input 
                         type="text" 
                         name="userInput"
@@ -265,7 +276,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput7" id="userInput7">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer7:
                       <input 
                         type="text" 
                         name="userInput"
@@ -278,7 +289,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput8" id="userInput8">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer8:
                       <input 
                         type="text" 
                         name="userInput"
@@ -291,7 +302,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput9" id="userInput9">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer9:
                       <input 
                         type="text" 
                         name="userInput"
@@ -304,7 +315,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput10" id="userInput10">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer10:
                       <input 
                         type="text" 
                         name="userInput"
@@ -317,7 +328,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput11" id="userInput11">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer11:
                       <input 
                         type="text" 
                         name="userInput"
@@ -330,7 +341,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput12" id="userInput12">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer12:
                       <input 
                         type="text" 
                         name="userInput"
@@ -343,7 +354,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput13" id="userInput13">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer13:
                       <input 
                         type="text" 
                         name="userInput"
@@ -356,7 +367,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput14" id="userInput14">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer:
+                      Answer14:
                       <input 
                         type="text" 
                         name="userInput"
