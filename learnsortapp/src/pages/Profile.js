@@ -10,6 +10,9 @@ function Profile() {
 
                 <div class = "profile-Outline">
                 <div class = "profile-BackgroundRectangle">
+                  <div class="profile-UsernameBox">
+                     <h2>Username: (HERE)</h2>
+                  </div>
                   <ul class= "profile-grid">
                      <li>
                         <h2>Levels</h2>
