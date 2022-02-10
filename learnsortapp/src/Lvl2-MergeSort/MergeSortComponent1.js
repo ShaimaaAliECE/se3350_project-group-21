@@ -37,6 +37,7 @@ export default class MergeSortComponent1 extends Component {
     document.getElementById('test-button1').style.display =  'none'; 
     document.getElementById('instruction-box1').style.display = 'block';
     document.getElementById('next-button1').style.display = 'block'; 
+    document.getElementById('back-button1').style.display = 'block'; 
   }
 
   // display the next step in the algorithm with text
@@ -138,6 +139,7 @@ export default class MergeSortComponent1 extends Component {
 
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
+                  <div onClick={this.IncrementItem} id="back-button1" class="back-button1">Back</div>
                   <div class="popup" >
                   <span class="popuptext" id="myPopup"><br/><br/><br/><div id="poptext">Correct</div><button class="popnext" onClick={this.closeBox}>Close</button></span>
                   </div>
@@ -174,7 +176,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="test14" id="test14">{stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div  className="back-button1">Go Back</div>
+                  
                 </div>
                 </div>
         </>

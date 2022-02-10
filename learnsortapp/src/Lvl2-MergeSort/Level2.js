@@ -29,6 +29,11 @@ function Level2() {
                      <h3 class = "ContinueText1">Start!</h3>
                   </div>
                </Link>
+               <Link to='/Levels' class = "continue-link">
+                  <div class = "BackBox">
+                     <h3 class = "BackText">Levels Page</h3>
+                  </div>
+               </Link>
             </div>
     </div>
     );

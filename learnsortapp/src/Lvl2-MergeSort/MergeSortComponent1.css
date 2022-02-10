@@ -187,7 +187,8 @@
     box-sizing: border-box;
 }
 
-.next-button1 {
+.next-button1,
+.back-button1 {
     display: none;
 }
 
