@@ -15,6 +15,14 @@
    margin-top: 80px;
 }
 
+.profile-grid{
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   grid-gap: 20px;
+   list-style:none;
+   text-align: center;
+}
+
 .profile-title { 
    font-family: 'Montserrat', sans-serif;
    font-size: 28px;
@@ -30,7 +38,7 @@
    margin-right: auto;
    position: absolute;
    width: 1000px;
-   height: 650px;
+   height: 700px;
    margin-top: 825px;
    border: 6px solid #1C768F;
    box-sizing: border-box;
@@ -41,9 +49,27 @@
    margin-left: auto;
    margin-right: auto;
    width: 950px;
-   height: 600px;
+   height: 650px;
    background: #FBF3F2;
    text-align: center;
    box-sizing: border-box;
    padding: 10px;
+}
+
+.profile-LevelOutline {
+   text-align: center;
+   box-sizing: border-box;
+   padding: 10px;
+   border: 6px solid #36454F;
+   color: #36454F;
+}
+
+.profile-UsernameBox {
+   margin-top: 17.5px;
+   background: #36454F;
+   text-align: center;
+   box-sizing: border-box;
+   width: fit-content;
+   padding: 10px;
+   color: White;
 }
