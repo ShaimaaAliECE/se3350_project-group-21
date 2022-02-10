@@ -44,6 +44,11 @@
     text-decoration: none;
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.navbar-logo:hover {
+   transform: scale(1.2);
 }
 
 .navbar-profile {
