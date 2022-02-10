@@ -17,7 +17,10 @@ export default class MergeSortComponent1 extends Component {
     };
     this.mergeSort1 = new MergeSort1();
   }
-
+  closeBox(){
+    var popup = document.getElementById("myPopup");
+    popup.style.visibility = "hidden"; 
+  }
   // random number generator
   randomNum = () => {
     let r = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
@@ -57,11 +60,17 @@ export default class MergeSortComponent1 extends Component {
       answer.push(value);
     }
 
-    if(event.target.userInput.value === answer.toString()){
-        alert("correct");
+    var popup = document.getElementById("myPopup");
+    var popupText = document.getElementById("poptext");
+    popup.style.visibility = "visible"; 
+    
+
+    if(event.target.userInput.value == answer.toString()){
+        //alert("correct");
+        popupText.innerHTML = "Correct"; 
     }
     else
-        alert("false");       
+      popupText.innerHTML = "Incorrect";      
   }
 
 
@@ -129,7 +138,9 @@ export default class MergeSortComponent1 extends Component {
 
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
-
+                  <div class="popup" >
+                  <span class="popuptext" id="myPopup"><br/><br/><br/><div id="poptext">Correct</div><button class="popnext" onClick={this.closeBox}>Close</button></span>
+                  </div>
                   <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
 
                   <div>
