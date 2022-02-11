@@ -3,6 +3,9 @@ import { MergeSort1 } from './MergeSort1';
 import { Partition1 } from './Partition1';
 import './MergeSortComponent1.css'
 
+import correctAudio from '../audio/correct_audio_2.mp3';
+import wrongAudio from '../audio/wrong_audio_2.wav';
+
 export default class MergeSortComponent1 extends Component {
 
   // Initiliaze unsorted array
@@ -19,6 +22,13 @@ export default class MergeSortComponent1 extends Component {
     this.mergeSort1 = new MergeSort1();
   }
 
+  playCorrectAudio = () => {
+    new Audio(correctAudio).play();
+  }
+
+  playWrongAudio = () => {
+    new Audio(wrongAudio).play();
+  }
 
   closeBoxI(){
     var popup = document.getElementById("myPopupI");
@@ -97,10 +107,12 @@ export default class MergeSortComponent1 extends Component {
 
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
-
+      this.playCorrectAudio();
     }
-    else
-      popupI.style.visibility = "visible";     
+    else {
+      popupI.style.visibility = "visible"; 
+      this.playWrongAudio(); 
+    }   
   }
 
   render() {
