@@ -47,7 +47,7 @@ export default class MergeSortComponent1 extends Component {
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    this.setState({ textIndex: this.state.arrayIndex + 1 });
+    this.setState({ textIndex: this.state.arrayIndex + 2 });
     const i = ["Step 1(b): This is the right side:", 
     "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
     "Step 2(b): This is the second half of the left sub-array:", 
