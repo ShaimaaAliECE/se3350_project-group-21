@@ -203,7 +203,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -216,7 +216,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -229,7 +229,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -242,7 +242,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -255,7 +255,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -268,7 +268,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -281,7 +281,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -294,7 +294,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -307,7 +307,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -320,7 +320,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -333,7 +333,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -346,7 +346,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -359,7 +359,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -372,7 +372,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -385,7 +385,7 @@ export default class MergeSortComponent1 extends Component {
                         name="userInput"
                       />
                         </label>
-                        <button type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 

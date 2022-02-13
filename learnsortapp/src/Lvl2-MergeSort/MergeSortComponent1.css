@@ -500,5 +500,16 @@
     
 }
 
+.check-button{
+    position: absolute;
+    bottom: 23px;
+    left: 300px;
+    width: auto;
+    background: #FCD8A4;
+    height: 40px;    
+    border: 5px solid #FCD8A4;
+    box-sizing: border-box;
 
-
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
