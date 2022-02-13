@@ -4,6 +4,7 @@ import { Partition } from './Partition';
 import './MergeSortComponent.css'
 import { Link } from 'react-router-dom';
 import Timer from '../Timer/Timer.js';
+import IdleTimer from 'react-idle-timer';
 
 export default class MergeSortComponent extends Component {
 
@@ -14,11 +15,30 @@ export default class MergeSortComponent extends Component {
   constructor(props) {
     super(props);
     // create references for partitions and mergesort
-    this.state = {partitions:  [], show:false, arrayIndex:0};
+    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
+
+   this.idleTimer = null
+   this.onAction = this._onAction.bind(this)
+   this.onActive = this._onActive.bind(this)
+   this.onIdle = this._onIdle.bind(this)
   }
+
+  
+  _onAction(e) {
+   this.idleTimer.reset();
+ }
+
+ _onActive(e) {
+   this.idleTimer.reset();
+ }
+
+ _onIdle(e) {
+   //alert("We've detected you are idle.");
+   window.location = "/";
+ }
 
   // random number generator
   randomNum(){
@@ -163,6 +183,16 @@ export default class MergeSortComponent extends Component {
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer/>
+              <IdleTimer
+                  ref={ref => { this.idleTimer = ref }}
+                  element={document}
+                  onActive={this.onActive}
+                  onIdle={this.onIdle}
+                  onAction={this.onAction}
+                  debounce={250}
+                  timeout={this.state.timeout}  
+                  />
+
               <div class = "outliner">
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
