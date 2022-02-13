@@ -1,0 +1,10 @@
+.timer-box {
+   position: absolute;
+   background: #36454F;
+   text-align: center;
+   box-sizing: border-box;
+   width: fit-content;
+   padding: 10px;
+   color: White;
+   margin-left: 900px;
+}

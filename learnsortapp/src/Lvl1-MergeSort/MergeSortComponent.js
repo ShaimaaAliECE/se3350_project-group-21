@@ -3,6 +3,7 @@ import { MergeSort } from './MergeSort';
 import { Partition } from './Partition';
 import './MergeSortComponent.css'
 import { Link } from 'react-router-dom';
+import Timer from '../Timer/Timer.js';
 
 export default class MergeSortComponent extends Component {
 
@@ -161,7 +162,7 @@ export default class MergeSortComponent extends Component {
               <h2 class = "sort-title-background" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
-  
+              <Timer/>
               <div class = "outliner">
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
