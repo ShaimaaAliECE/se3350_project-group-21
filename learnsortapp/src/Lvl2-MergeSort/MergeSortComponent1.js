@@ -59,29 +59,31 @@ export default class MergeSortComponent1 extends Component {
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     this.setState({ textIndex: this.state.textIndex + 1 });
-    const i = ["Step 1(b): Now take the values from the right side of the middle and list them:", 
-    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). List the first half of the left sub-array:", 
-    "Step 2(b): Now list the right half of the left sub-array:", 
-    "Step 3(a): Now, we will continue to break down the right half of the left sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
-    "Step 3(b): Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the left sub-array in ascending order:", 
-    "Step 4: Order all of the elements from the right half of the left sub-array in ascending order and list them:", 
-    "Step 5: Merge all of the left sub-array elements, and list them in ascending order:", 
-    "Step 6(a): We will now repeat the process to the right sub-array. Find the middle value in the array and list the first half of the right sub-array:", 
-    "Step 6(b): Now list the right half of the left sub-array: ", 
-    "Step 7(a): Now, we will continue to break down the right half of the right sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
-    "Step 7(b): Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the right sub-array in ascending order:", 
-    "Step 8(a): Order all of the elements from the right half of the right sub-array in ascending order and list them:", 
-    "Step 8(b): Merge all of the right sub-array elements, and list them in ascending order:", 
-    "Step 9: Merge the now sorted left subarray, and right subarray to get the final sorted array. List the sorted values in ascending order:"];
+    const i = ["Step 2: Now take the values from the right side of the middle and list them:", 
+    "Step 3: Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). List the first half of the left sub-array:", 
+    "Step 4: Now list the right half of the left sub-array:", 
+    "Step 5: Now, we will continue to break down the right half of the left sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
+    "Step 6: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the left sub-array in ascending order:", 
+    "Step 7: Order all of the elements from the right half of the left sub-array in ascending order and list them:", 
+    "Step 8: Merge all of the left sub-array elements, and list them in ascending order:", 
+    "Step 9: We will now repeat the process to the right sub-array. Find the middle value in the array and list the first half of the right sub-array:", 
+    "Step 10: Now list the right half of the left sub-array: ", 
+    "Step 11: Now, we will continue to break down the right half of the right sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
+    "Step 12: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the right sub-array in ascending order:", 
+    "Step 13: Order all of the elements from the right half of the right sub-array in ascending order and list them:", 
+    "Step 14: Merge all of the right sub-array elements, and list them in ascending order:", 
+    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted array. List the sorted values in ascending order:",
+    "Level Complete!"];
+    
     let elementID = "test" + this.state.arrayIndex;
     let userInputID = "userInput" + this.state.textIndex ;
     let instructionBox = document.getElementById("instruction-box1");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
 
-    document.getElementById(elementID).style.display = 'block';
-    document.getElementById(elementID).style.animation = 'pulse 1s';
-    document.getElementById(elementID).style.fontSize = '20px';  
+    // document.getElementById(elementID).style.display = 'block';
+    // document.getElementById(elementID).style.animation = 'pulse 1s';
+    // document.getElementById(elementID).style.fontSize = '20px';  
     document.getElementById(userInputID).style.display = 'block';
 
     var popup = document.getElementById("myPopupC");
@@ -202,13 +204,13 @@ export default class MergeSortComponent1 extends Component {
                   <span class="popuptextI"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI" onClick={this.closeBoxI}>Continue</button></span>
                   </div>
 
-                  <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle of the current array. Take all of the elements to the left side of this value and list them to create the left sub-array.</div>
+                  <div id="instruction-box1" class="instructions1">Step 1: Find the middle of the current array. Take all of the elements to the left side of this value and list them to create the left sub-array.</div>
                   <div id="instruction" class="instruction">NOTE: Please type all responses in the format x,x,x,x (commas between all values and no spaces between values)</div>
 
                   <div className="userInput0" id="userInput0">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer0:
+                      Step 1:
                       <input 
                         type="text" 
                         name="userInput"
@@ -221,7 +223,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput1" id="userInput1">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer1:
+                      Step 2:
                       <input 
                         type="text" 
                         name="userInput"
@@ -234,7 +236,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput2" id="userInput2">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer2:
+                      Step 3:
                       <input 
                         type="text" 
                         name="userInput"
@@ -247,7 +249,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput3" id="userInput3">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer3:
+                      Step 4:
                       <input 
                         type="text" 
                         name="userInput"
@@ -260,7 +262,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput4" id="userInput4">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer4:
+                      Step 5:
                       <input 
                         type="text" 
                         name="userInput"
@@ -273,7 +275,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput5" id="userInput5">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer5:
+                      Step 6:
                       <input 
                         type="text" 
                         name="userInput"
@@ -286,7 +288,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput6" id="userInput6">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer6:
+                      Step 7:
                       <input 
                         type="text" 
                         name="userInput"
@@ -299,7 +301,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput7" id="userInput7">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer7:
+                      Step 8:
                       <input 
                         type="text" 
                         name="userInput"
@@ -312,7 +314,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput8" id="userInput8">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer8:
+                      Step 9:
                       <input 
                         type="text" 
                         name="userInput"
@@ -325,7 +327,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput9" id="userInput9">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer9:
+                      Step 10:
                       <input 
                         type="text" 
                         name="userInput"
@@ -338,7 +340,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput10" id="userInput10">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer10:
+                      Step 11:
                       <input 
                         type="text" 
                         name="userInput"
@@ -351,7 +353,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput11" id="userInput11">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer11:
+                      Step 12:
                       <input 
                         type="text" 
                         name="userInput"
@@ -364,7 +366,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput12" id="userInput12">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer12:
+                      Step 13:
                       <input 
                         type="text" 
                         name="userInput"
@@ -377,7 +379,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput13" id="userInput13">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer13:
+                      Step 14:
                       <input 
                         type="text" 
                         name="userInput"
@@ -390,7 +392,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="userInput14" id="userInput14">
                   <form onSubmit={this.handleSubmit}>
                     <label>
-                      Answer14:
+                      Step 15:
                       <input 
                         type="text" 
                         name="userInput"

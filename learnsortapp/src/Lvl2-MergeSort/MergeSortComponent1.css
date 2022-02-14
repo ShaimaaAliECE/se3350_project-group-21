@@ -442,7 +442,7 @@
 
 .userInput0 {
     display: none;
-    margin-left: 250px;
+    margin-left: 100px;
     margin-top: 35px;
 
 
@@ -451,73 +451,69 @@
 .userInput1 {
     display: none;
     margin-left: 650px;
-    margin-top: -30px;
-    
- 
+    margin-top: -25px;
 }
 
 .userInput2 {
     display: none;
-    margin-left: 200px;
+    margin-left: 1px;
     margin-top: 20px;
 }
 
 .userInput3 {
     display: none;
-    margin-left: 350px;
-    margin-top: -30px;
+    margin-left: 250px;
+    margin-top: -22px;
 }
 
 .userInput4 {
     display: none;
-    margin-left: 400px;
-    margin-top: 15px;
-  
-    
+    margin-left: 300px;
+    margin-top: 15px; 
 }
 
 .userInput5 {
     display: none;
-    margin-left: 170px;
-    margin-top: -20px;
+    margin-left: 1px;
+    margin-top: 20px;
 
 }
 
 .userInput6 {
     display: none;
-    margin-left: 350px;
-    margin-top: 10px;
+    margin-left: 250px;
+    margin-top: -22px;
    
 }
 
 .userInput7 {
     display: none;
-    margin-left: 250px;
+    margin-left: 100px;
     margin-top: 20px;
    
 }
 
 .userInput8 {
     display: none;
-    margin-left: 600px;
-    margin-top: -160px;
+    margin-left: 500px;
+    margin-top: -150px;
 }
 
 .userInput9 {
     display: none;
-    margin-left: 750px;
-    margin-top: -20px;
+    margin-left: 730px;
+    margin-top: -23px;
 }
 
 .userInput10 {
     display: none;
-    margin-left: 800px;
-    margin-top: 20px;
+    margin-left: 815px;
+    margin-top: 0px;
 }
 
 .userInput11 {
     display: none;
-    margin-left: 600px;
+    margin-left: 495px;
     margin-top: 15px;
 }
 
@@ -535,8 +531,8 @@
 
 .userInput14 {
     display: none;
-    margin-left: 400px;
-    margin-top: 20px;
+    margin-left: 360px;
+    margin-top: 40px;
     
 }
 
@@ -547,7 +543,7 @@
 .check-button{
     position: absolute;
     bottom: 23px;
-    left: 300px;
+    left: 425px;
     width: auto;
     background: #FCD8A4;
     height: 40px;    
