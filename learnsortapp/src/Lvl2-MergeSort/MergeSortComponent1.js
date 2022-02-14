@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MergeSort1 } from './MergeSort1';
 import { Partition1 } from './Partition1';
+import { Link } from 'react-router-dom';
 import './MergeSortComponent1.css'
 
 import correctAudio from '../audio/correct_audio_2.mp3';
@@ -50,7 +51,7 @@ export default class MergeSortComponent1 extends Component {
     // hiding the run algorithm button if it's clicked
     document.getElementById('test-button1').style.display =  'none'; 
     document.getElementById('instruction-box1').style.display = 'block';
-    document.getElementById('next-button1').style.display = 'block'; 
+    document.getElementById('instruction').style.display = 'block'; 
     document.getElementById('userInput0').style.display = 'block';
   }
 
@@ -58,20 +59,20 @@ export default class MergeSortComponent1 extends Component {
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     this.setState({ textIndex: this.state.textIndex + 1 });
-    const i = ["Step 1(b): This is the right side:", 
-    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
-    "Step 2(b): This is the second half of the left sub-array:", 
-    "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
-    "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
-    "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
-    "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
-    "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
-    "Step 6(b): This is the second half: ", 
-    "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
-    "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
-    "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
-    "Step 8(b): Merge the right sub-arrays in ascending order.", 
-    "Step 9: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+    const i = ["Step 1(b): Now take the values from the right side of the middle and list them:", 
+    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). List the first half of the left sub-array:", 
+    "Step 2(b): Now list the right half of the left sub-array:", 
+    "Step 3(a): Now, we will continue to break down the right half of the left sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
+    "Step 3(b): Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the left sub-array in ascending order:", 
+    "Step 4: Order all of the elements from the right half of the left sub-array in ascending order and list them:", 
+    "Step 5: Merge all of the left sub-array elements, and list them in ascending order:", 
+    "Step 6(a): We will now repeat the process to the right sub-array. Find the middle value in the array and list the first half of the right sub-array:", 
+    "Step 6(b): Now list the right half of the left sub-array: ", 
+    "Step 7(a): Now, we will continue to break down the right half of the right sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
+    "Step 7(b): Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the right sub-array in ascending order:", 
+    "Step 8(a): Order all of the elements from the right half of the right sub-array in ascending order and list them:", 
+    "Step 8(b): Merge all of the right sub-array elements, and list them in ascending order:", 
+    "Step 9: Merge the now sorted left subarray, and right subarray to get the final sorted array. List the sorted values in ascending order:"];
     let elementID = "test" + this.state.arrayIndex;
     let userInputID = "userInput" + this.state.textIndex ;
     let instructionBox = document.getElementById("instruction-box1");
@@ -103,16 +104,21 @@ export default class MergeSortComponent1 extends Component {
 
     var popupI = document.getElementById("myPopupI");
 
-    
-
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
+
+      if (this.state.textIndex > 14) {
+        document.getElementById('next-button1').style.display = 'none';
+        document.getElementById('next-level-button1').style.display = 'block';
+      }
     }
+
     else {
       popupI.style.visibility = "visible"; 
       this.playWrongAudio(); 
-    }   
+    }  
+    
   }
 
   render() {
@@ -184,6 +190,11 @@ export default class MergeSortComponent1 extends Component {
                   }
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
+
+                  <Link to='/Level3'>
+                    <div id="next-level-button1" class="next-level-button1">Next Level!</div>
+                  </Link>
+
                   <div class="popupC" id="myPopupC" >
                   <span class="popuptextC" id="myPopupC"><br/><br/><br/><div id="poptextC">Correct</div><button class="popnextC" onClick={this.IncrementItem}>Continue</button></span>
                   </div>
@@ -191,8 +202,8 @@ export default class MergeSortComponent1 extends Component {
                   <span class="popuptextI"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI" onClick={this.closeBoxI}>Continue</button></span>
                   </div>
 
-                  <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:</div>
-
+                  <div id="instruction-box1" class="instructions1">Step 1(a): Find the middle of the current array. Take all of the elements to the left side of this value and list them to create the left sub-array.</div>
+                  <div id="instruction" class="instruction">NOTE: Please type all responses in the format x,x,x,x (commas between all values and no spaces between values)</div>
 
                   <div className="userInput0" id="userInput0">
                   <form onSubmit={this.handleSubmit}>
@@ -389,6 +400,8 @@ export default class MergeSortComponent1 extends Component {
                     </form>
                   </div>
 
+                  <div className="userInput15" id="userInput15"></div>
+
 
 
                   <div className="test0" id="test0">{stepsArray[0]}</div>
@@ -406,6 +419,7 @@ export default class MergeSortComponent1 extends Component {
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
                   <div className="test14" id="test14">{stepsArray[14]}</div>
+                  <div className="test15" id="test15"></div>
                   <br/><br/>
                   
                   <div  className="back-button1">Go Back</div>

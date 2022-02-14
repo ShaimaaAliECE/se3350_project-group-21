@@ -55,6 +55,42 @@
     to {opacity:1 ;}
   }
 
+  .next-level-button1 {
+    position: absolute;
+    bottom: 23px;
+    right: 25px;
+    width: 150px;
+    height: 40px;
+    background: #032539;
+    border-radius: 20px;
+    color: #FBF3F2;
+    padding-top: 10px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    display: none;
+}
+
+.next-level-button1:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-out;
+}
+
+
+  .instruction{
+    position: absolute;
+    background-color: #ffe9ed;
+    top: 50px;
+    left: 660px;
+    height: 120px;
+    width: 280px;
+    padding: 1%;
+    text-align: center;
+    display: none;
+    
+}
+
 .instructions1{
     background-color: #ffe9ed;
     margin-top: -60px;
@@ -400,6 +436,10 @@
     
 }
 
+.test15{
+    display:none;
+}
+
 .userInput0 {
     display: none;
     margin-left: 250px;
@@ -498,6 +538,10 @@
     margin-left: 400px;
     margin-top: 20px;
     
+}
+
+.userInput15 {
+    display: none;
 }
 
 .check-button{
