@@ -195,6 +195,31 @@
     text-align: center;
 
 }
+.return-button{
+    position: absolute;
+    top: -45px;
+    right: 25px;
+    width: 130px;
+    height: 35px;
+    border: 2px solid #206289;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #206289;
+    padding-top: 5px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.return-button:hover{ 
+
+    background:#206289;
+    color: white;
+    transition: all 0.2s ease-out;
+}
+
+.return-button{
+    display: none;
+}
 
 @keyframes pulse {
     0% {

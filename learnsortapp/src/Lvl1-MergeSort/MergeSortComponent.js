@@ -55,7 +55,8 @@ export default class MergeSortComponent extends Component {
     // hiding the run algorithm button if it's clicked
     document.getElementById('test-button').style.display =  'none'; 
     document.getElementById('instruction-box').style.display = 'block';
-    document.getElementById('next-button').style.display = 'block'; 
+    document.getElementById('next-button').style.display = 'block';
+    document.getElementById('return-button').style.display = 'block'; 
   }
 
   // display the next step in the algorithm with text
@@ -235,6 +236,9 @@ export default class MergeSortComponent extends Component {
                   
                   
                   <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
+                  <Link to='/Levels'>
+                    <div id="return-button" className="return-button">Levels Page</div>
+                  </Link>
                 </div>
                 </div>
         </>

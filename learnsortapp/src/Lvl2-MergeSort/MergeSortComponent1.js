@@ -53,6 +53,8 @@ export default class MergeSortComponent1 extends Component {
     document.getElementById('instruction-box1').style.display = 'block';
     document.getElementById('instruction').style.display = 'block'; 
     document.getElementById('userInput0').style.display = 'block';
+    document.getElementById('return-button1').style.display = 'block';
+    document.getElementById('level1-button1').style.display = 'block';
   }
 
   // display the next step in the algorithm with text
@@ -81,9 +83,7 @@ export default class MergeSortComponent1 extends Component {
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
 
-    // document.getElementById(elementID).style.display = 'block';
-    // document.getElementById(elementID).style.animation = 'pulse 1s';
-    // document.getElementById(elementID).style.fontSize = '20px';  
+    
     document.getElementById(userInputID).style.display = 'block';
 
     var popup = document.getElementById("myPopupC");
@@ -113,6 +113,7 @@ export default class MergeSortComponent1 extends Component {
       if (this.state.textIndex > 14) {
         document.getElementById('next-button1').style.display = 'none';
         document.getElementById('next-level-button1').style.display = 'block';
+      
       }
     }
 
@@ -170,12 +171,12 @@ export default class MergeSortComponent1 extends Component {
         <>
             <div class="contents">
 
-              <h1 class = "sort-title">MergeSort</h1>
-              <div class = "sort-title-background" />
+              <h1 className = "sort-title">MergeSort</h1>
+              <div className = "sort-title-background" />
               
-              <div onClick={refreshPage} class="gen-num-button1">Generate New Numbers</div>
+              <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
   
-              <div class = "outliner1">
+              <div className = "outliner1">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -194,7 +195,7 @@ export default class MergeSortComponent1 extends Component {
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
 
                   <Link to='/Level3'>
-                    <div id="next-level-button1" class="next-level-button1">Next Level!</div>
+                    <div id="next-level-button1" className="next-level-button1">Next Level!</div>
                   </Link>
 
                   <div class="popupC" id="myPopupC" >
@@ -424,7 +425,12 @@ export default class MergeSortComponent1 extends Component {
                   <div className="test15" id="test15"></div>
                   <br/><br/>
                   
-                  <div  className="back-button1">Go Back</div>
+                  <Link to='/Level1'>
+                    <div id="level1-button1" className="level1-button1">Level 1</div>
+                  </Link>
+                  <Link to='/Levels'>
+                    <div id="return-button1" className="return-button1">Levels Page</div>
+                  </Link>
                 </div>
                 </div>
         </>

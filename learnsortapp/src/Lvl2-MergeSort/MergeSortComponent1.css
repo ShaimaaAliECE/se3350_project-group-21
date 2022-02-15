@@ -16,7 +16,7 @@
   }
   
  
-  .popup, .popupC, .popupI{
+.popup, .popupC, .popupI{
     visibility: hidden;
     width: 360px;
     height: 200px;
@@ -38,7 +38,7 @@
     align-content: center;
     align-items: center;
   }
- .popnextC, .popnextI{
+.popnextC, .popnextI{
       background-color: white;
       border-radius: 12px;
     padding: 5px 10px;
@@ -55,7 +55,7 @@
     to {opacity:1 ;}
   }
 
-  .next-level-button1 {
+ .next-level-button1 {
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -78,7 +78,7 @@
 }
 
 
-  .instruction{
+.instruction{
     position: absolute;
     background-color: #ffe9ed;
     top: 50px;
@@ -200,25 +200,48 @@
     transform: scale(1.1);
 }
 
-.back-button1{
+.level1-button1{
     position: absolute;
-    bottom: 23px;
+    top: -45px;
     left: 25px;
-    width: 125px;
-    height: 40px;
-    background: #FA991C;
-    border-radius: 20px;
-    color: black;
-    padding-top: 10px;
+    width: 130px;
+    height: 35px;
+    border: 2px solid #206289;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #206289;
+    padding-top: 5px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
-.back-button1:hover, .next-button1:hover { 
+.return-button1{
+    position: absolute;
+    top: -45px;
+    right: 25px;
+    width: 130px;
+    height: 35px;
+    border: 2px solid #206289;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #206289;
+    padding-top: 5px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 
+.next-button1:hover {
     background: black;
-    color: #FA991C;
+    color: #FF9000;
+    transition: all 0.2s ease-out;
+}
+.return-button1:hover,
+.level1-button1:hover { 
+
+    background:#206289;
+    color: white;
     transition: all 0.2s ease-out;
 }
 
@@ -232,7 +255,8 @@
 }
 
 .next-button1,
-.back-button1 {
+.return-button1,
+.level1-button1 {
     display: none;
 }
 
