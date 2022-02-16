@@ -3,7 +3,7 @@ import { MergeSort2 } from './MergeSort2';
 import { Partition2 } from './Partition2';
 import './MergeSortComponent2.css'
 
-export default class MergeSortComponent1 extends Component {
+export default class MergeSortComponent2 extends Component {
 
   // Initiliaze unsorted array
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
