@@ -7,6 +7,9 @@ import './MergeSortComponent1.css'
 import correctAudio from '../audio/correct_audio_2.mp3';
 import wrongAudio from '../audio/wrong_audio_2.wav';
 
+import Timer from '../Timer/Timer.js';
+import IdleTimer from 'react-idle-timer';
+
 export default class MergeSortComponent1 extends Component {
 
   // Initiliaze unsorted array
@@ -18,10 +21,29 @@ export default class MergeSortComponent1 extends Component {
     this.state = {
         partitions:  [], 
         arrayIndex:0,
-        textIndex: 1
+        textIndex: 1,
+        timeout:1000 * 5 * 60
     };
     this.mergeSort1 = new MergeSort1();
+
+   this.idleTimer = null
+   this.onAction = this._onAction.bind(this)
+   this.onActive = this._onActive.bind(this)
+   this.onIdle = this._onIdle.bind(this)
   }
+
+_onAction(e) {
+   this.idleTimer.reset();
+ }
+
+ _onActive(e) {
+   this.idleTimer.reset();
+ }
+
+ _onIdle(e) {
+   //alert("We've detected you are idle.");
+   window.location = "/";
+ }
 
   playCorrectAudio = () => {
     new Audio(correctAudio).play();
@@ -175,7 +197,16 @@ export default class MergeSortComponent1 extends Component {
               <div className = "sort-title-background" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
-  
+              <Timer/>
+              <IdleTimer
+                  ref={ref => { this.idleTimer = ref }}
+                  element={document}
+                  onActive={this.onActive}
+                  onIdle={this.onIdle}
+                  onAction={this.onAction}
+                  debounce={250}
+                  timeout={this.state.timeout}  
+                  />
               <div className = "outliner1">
                   
                     {/* // will show the initial values (created by random number generator) */}
