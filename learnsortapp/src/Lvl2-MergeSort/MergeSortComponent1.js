@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { MergeSort1 } from './MergeSort1';
 import { Partition1 } from './Partition1';
 import { Link } from 'react-router-dom';
@@ -15,14 +15,19 @@ export default class MergeSortComponent1 extends Component {
   // Initiliaze unsorted array
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
 
+  
+
   constructor(props) {
     super(props)
+
+    //const [counter, setCounter] = useState(0);
     // create references for partitions and mergesort
     this.state = {
         partitions:  [], 
         arrayIndex:0,
         textIndex: 1,
-        timeout:1000 * 5 * 60
+        timeout:1000 * 5 * 60,
+        attempts: 0
     };
     this.mergeSort1 = new MergeSort1();
 
@@ -140,8 +145,10 @@ _onAction(e) {
     }
 
     else {
+      this.setState({attempts: this.state.attempts + 1});
+      console.log(this.state.attempts);
       popupI.style.visibility = "visible"; 
-      this.playWrongAudio(); 
+      this.playWrongAudio();
     }  
     
   }
