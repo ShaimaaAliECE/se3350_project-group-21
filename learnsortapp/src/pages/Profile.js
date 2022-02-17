@@ -6,7 +6,7 @@ function Profile() {
         <>
             <div class="profile-contents">
                 <h2 class = "profile-title-background"></h2>
-                <h3 class = "profile-title">Profile</h3>
+                <div class = "profile-title">Profile</div>
 
                 <div class = "profile-Outline">
                 <div class = "profile-BackgroundRectangle">

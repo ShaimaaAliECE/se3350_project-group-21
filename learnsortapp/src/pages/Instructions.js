@@ -6,7 +6,7 @@ function Instructions() {
         <>
             <div class="instructions-contents">
                 <h2 class = "instructions-title-background"></h2>
-                <h3 class = "instructions-title">Instructions</h3>
+                <div class = "instructions-title">Instructions</div>
 
                 <div class = "instructions-Outline">
                 <div class = "instructions-BackgroundRectangle">

@@ -6,7 +6,7 @@ function LogOut() {
         <>
             <div class="LogOut-contents">
                 <h2 class = "LogOut-title-background"></h2>
-                <h3 class = "LogOut-title">Log Out</h3>
+                <div class = "LogOut-title">Log Out</div>
 
                 <div class = "LogOut-Outline">
                 <div class = "LogOut-BackgroundRectangle">

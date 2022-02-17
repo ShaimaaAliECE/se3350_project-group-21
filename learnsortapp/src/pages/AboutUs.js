@@ -6,7 +6,7 @@ function AboutUs() {
         <>
             <div class="AboutUs-contents">
                 <h2 class = "AboutUs-title-background"></h2>
-                <h3 class = "AboutUs-title">About Us</h3>
+                <div class = "AboutUs-title">About Us</div>
 
                 <div class = "AboutUs-Outline">
                 <div class = "AboutUs-BackgroundRectangle">
