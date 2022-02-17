@@ -577,3 +577,15 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
+.incorrect1{
+    visibility: hidden;
+}
+
+.incorrect2{
+    visibility: hidden
+}
+
+.incorrect3{
+    visibility: hidden;
+}

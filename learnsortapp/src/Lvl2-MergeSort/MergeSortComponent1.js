@@ -133,6 +133,10 @@ _onAction(e) {
 
     var popupI = document.getElementById("myPopupI");
 
+    var incorrect1 = document.getElementById("IncorrectAttempt1");
+    var incorrect2 = document.getElementById("IncorrectAttempt2");
+    var incorrect3 = document.getElementById("IncorrectAttempt3");
+
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
@@ -147,6 +151,15 @@ _onAction(e) {
     else {
       this.setState({attempts: this.state.attempts + 1});
       console.log(this.state.attempts);
+      if(this.state.attempts == 0){
+        incorrect1.style.visibility = "visible";
+      }
+      if(this.state.attempts == 1){
+        incorrect2.style.visibility = "visible";
+      }
+      if(this.state.attempts == 2){
+        incorrect3.style.visibility = "visible";
+      }
       popupI.style.visibility = "visible"; 
       this.playWrongAudio();
     }  
@@ -471,6 +484,17 @@ _onAction(e) {
                   </Link>
                 </div>
                 </div>
+
+                <div className='incorrect1' id='IncorrectAttempt1'>
+                  <h1 >X</h1>
+                </div>
+                <div className='incorrect2' id='IncorrectAttempt2'>
+                  <h1 >X</h1>
+                </div>
+                <div className='incorrect3' id='IncorrectAttempt3'>
+                  <h1 >X</h1>
+                </div>
+    
         </>
         );
   }
