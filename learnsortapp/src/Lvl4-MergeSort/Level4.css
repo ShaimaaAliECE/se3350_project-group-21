@@ -1,0 +1,135 @@
+.contents{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+ }
+ 
+ 
+ .sort-title-background1 {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: -1;
+    width: 474px;
+    height: 40px;
+    margin-top: 60px;
+    background: rgba(250, 153, 28, 0.35);
+ }
+ 
+ .sort-title1 { 
+    width: auto;
+    margin-top: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    padding-top: 40px
+ }
+ 
+    
+ .Outline3 {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    margin-top: 550px;
+    border: 6px solid #1C768F;
+    box-sizing: border-box;
+ }
+ 
+ .BackgroundRectangle3 {
+    margin-top: 17.5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+    height: 350px;
+    background: #FBF3F2;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+ }
+ 
+ .ContinueBox2{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    width: 125px;
+   height: 40px;
+    background: #FA991C;
+    border-radius: 20px;
+    color: black;
+ }
+ 
+ .ContinueText2{
+    text-align: center;
+    margin-top: 5px;
+    
+ }
+ 
+ 
+ .continue-link1 {
+    text-decoration: none;
+ }
+ 
+ 
+ .ExplanationText1{
+ 
+    position: absolute;
+    width: 1134px;
+    height: 602px;
+    left: 153px;
+    top: 452px;
+ 
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+ 
+    color: #000000;
+ }
+ 
+ 
+ .ContinueBox2:hover {
+    margin-left: 825px;
+    margin-top: -80px;
+    width: 125px;
+    height: 40px;
+    background: black;
+    border-radius: 20px;
+    color: #FA991C;
+    transition: all 0.2s ease-out;
+ }
+ 
+ .BackBox3{
+   position: absolute;
+   bottom: 150px;
+   left: 365px;
+   width: 250px;
+   height: 40px;
+   background: #FA991C;
+   border-radius: 40px;
+   color: black;
+ }
+ 
+ .BackText3{
+   text-align: center;
+   margin-top: 5px;
+   
+ }
+ 
+ .BackBox2:hover {
+   margin-right: 825px;
+   margin-top: -80px;
+   width: 125px;
+   height: 40px;
+   background: black;
+   border-radius: 20px;
+   color: #FA991C;
+   transition: all 0.2s ease-out;
+ }

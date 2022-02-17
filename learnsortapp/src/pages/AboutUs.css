@@ -1,0 +1,49 @@
+.AboutUs-contents {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+ }
+ 
+ .AboutUs-title-background {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(250, 153, 28, 0.35);
+    height: 30px;
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    margin-top: 80px;
+ }
+ 
+ .AboutUs-title { 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+ }
+ 
+ .AboutUs-Outline {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 1000px;
+    height: 350px;
+    margin-top: 525px;
+    border: 6px solid #1C768F;
+    box-sizing: border-box;
+ }
+ 
+ .AboutUs-BackgroundRectangle {
+    margin-top: 17.5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px;
+    height: 300px;
+    background: #FBF3F2;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+ }

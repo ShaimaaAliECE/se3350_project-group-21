@@ -14,6 +14,11 @@ import Login from './pages/login';
 import Level3 from './Lvl3-MergeSort/Level3'
 import MergeSortComponent2 from './Lvl3-MergeSort/MergeSortComponent2';
 import Profile from './pages/Profile';
+import Level4 from './Lvl4-MergeSort/Level4'
+import Level5 from './Lvl5-MergeSort/Level5'
+import Custom from './LvlCustom-MergeSort/Custom'
+import AboutUs from './pages/AboutUs';
+import LogOut from './pages/LogOut';
 
 import AudioTest from './AudioFeedback/AudioTest';
 
@@ -37,6 +42,11 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/Level3' element={<Level3 />} />
           <Route path='/MergeSortComponent2' element={<MergeSortComponent2 />} />
+          <Route path='/Level4' element={<Level4 />} />
+          <Route path='/Level5' element={<Level5 />} />
+          <Route path='/Custom' element={<Custom />} />
+          <Route path='/AboutUs' element={<AboutUs />} />
+          <Route path='/LogOut' element={<LogOut />} />
 
           <Route path='/audiotest' element={<AudioTest />} />
         </Routes>
