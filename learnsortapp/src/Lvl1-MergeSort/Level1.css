@@ -68,8 +68,7 @@
 }
 .ContinueText{
    text-align: center;
-   margin-top: 5px;
-   
+   margin-top: 8px;
 }
 
 .continue-link {
@@ -122,8 +121,7 @@
 
 .BackText{
    text-align: center;
-   margin-top: 5px;
-   
+   margin-top: 8px;
 }
 
 .BackBox:hover {
