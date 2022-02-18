@@ -9,7 +9,7 @@
   height: 40px;
   border-radius: 20px;
   outline: none;
-  background-color: #abadad;
+  background-color: #C4C4C4;
   color: black;
   border-width: 0px;;
   Width:600px;
@@ -31,9 +31,12 @@
  }
 
 .searchContent{
+   margin: 35px;
    justify-content: center;
-   display: flex;
-   margin: 50px;
+   display: grid;
+   grid-template-columns: repeat(3, auto);
+   grid-column-gap: 25px;
+   grid-row-gap: 25px;
 }
 
 .algorithmFormat{
