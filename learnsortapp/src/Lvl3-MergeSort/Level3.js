@@ -16,7 +16,7 @@ function Level3() {
             <div class = "Outline2">
                 <div class = "BackgroundRectangle2">
                     <h2>Level 3</h2>
-                    <p>Now that you have completed Level 2 of merge sort, you can try proceed to Level 3!</p>
+                    <p>Now that you have completed Level 2 of merge sort, you can proceed to Level 3!</p>
                     <p>As done in Level 2, you'll be given an unsorted list but no description of the steps in the merge sort algorithm.</p>
                     <p>You'll be asked to input the correct numbers, which you can check with the "check my answer" button.</p>
                     <p>If you are correct, you will move on to the next step, if you are incorrect, you can try again.</p>
