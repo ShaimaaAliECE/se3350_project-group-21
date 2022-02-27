@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import { MergeSort1 } from './MergeSort1';
-import { Partition1 } from './Partition1';
+import { MergeSort2 } from './MergeSort2';
+import { Partition2 } from './Partition2';
 import { Link } from 'react-router-dom';
-import './MergeSortComponent1.css'
-
+import './MergeSortComponent2.css'
 import correctAudio from '../audio/correct_audio_2.mp3';
 import wrongAudio from '../audio/wrong_audio_2.wav';
 
 import Timer from '../Timer/Timer.js';
 import IdleTimer from 'react-idle-timer';
 
-export default class MergeSortComponent1 extends Component {
+export default class MergeSortComponent2 extends Component {
 
   // Initiliaze unsorted array
   unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
 
-  
-
   constructor(props) {
     super(props)
-
-    //const [counter, setCounter] = useState(0);
     // create references for partitions and mergesort
     this.state = {
         partitions:  [], 
@@ -29,15 +24,15 @@ export default class MergeSortComponent1 extends Component {
         timeout:1000 * 5 * 60,
         attempts: 0
     };
-    this.mergeSort1 = new MergeSort1();
+    this.mergeSort2 = new MergeSort2();
 
-   this.idleTimer = null
-   this.onAction = this._onAction.bind(this)
-   this.onActive = this._onActive.bind(this)
-   this.onIdle = this._onIdle.bind(this)
+    this.idleTimer = null
+    this.onAction = this._onAction.bind(this)
+    this.onActive = this._onActive.bind(this)
+    this.onIdle = this._onIdle.bind(this)
   }
 
-_onAction(e) {
+  _onAction(e) {
    this.idleTimer.reset();
  }
 
@@ -69,39 +64,24 @@ _onAction(e) {
     return r;
   }
 
-  // start running the algorithm
-  runAlgorithm = () => {
-    let partition = new Partition1(0, this.unsorted);
-    this.mergeSort1.mergeSort(partition);
-    this.setState({partitions: this.mergeSort1.partitions});
-
-    // hiding the run algorithm button if it's clicked
-    document.getElementById('test-button1').style.display =  'none'; 
-    document.getElementById('instruction-box1').style.display = 'block';
-    document.getElementById('instruction').style.display = 'block'; 
-    document.getElementById('userInput0').style.display = 'block';
-    document.getElementById('return-button1').style.display = 'block';
-    document.getElementById('level1-button1').style.display = 'block';
-  }
-
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     this.setState({ textIndex: this.state.textIndex + 1 });
-    const i = ["Step 2: Now take the values from the right side of the middle and list them:", 
-    "Step 3: Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). List the first half of the left sub-array:", 
-    "Step 4: Now list the right half of the left sub-array:", 
-    "Step 5: Now, we will continue to break down the right half of the left sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
-    "Step 6: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the left sub-array in ascending order:", 
-    "Step 7: Order all of the elements from the right half of the left sub-array in ascending order and list them:", 
-    "Step 8: Merge all of the left sub-array elements, and list them in ascending order:", 
-    "Step 9: We will now repeat the process to the right sub-array. Find the middle value in the array and list the first half of the right sub-array:", 
-    "Step 10: Now list the right half of the left sub-array: ", 
-    "Step 11: Now, we will continue to break down the right half of the right sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
-    "Step 12: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the right sub-array in ascending order:", 
-    "Step 13: Order all of the elements from the right half of the right sub-array in ascending order and list them:", 
-    "Step 14: Merge all of the right sub-array elements, and list them in ascending order:", 
-    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted array. List the sorted values in ascending order:",
+    const i = ["Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
     "Level Complete!"];
     
     let elementID = "test" + this.state.arrayIndex;
@@ -116,6 +96,22 @@ _onAction(e) {
     var popup = document.getElementById("myPopupC");
     popup.style.visibility = "hidden"; 
   }
+
+  // start running the algorithm
+  runAlgorithm = () => {
+    let partition = new Partition2(0, this.unsorted);
+    this.mergeSort2.mergeSort(partition);
+    this.setState({partitions: this.mergeSort2.partitions});
+
+    // hiding the run algorithm button if it's clicked
+    document.getElementById('test-button1').style.display =  'none'; 
+    document.getElementById('instruction-box1').style.display = 'block';
+    document.getElementById('instruction').style.display = 'block'; 
+    document.getElementById('userInput0').style.display = 'block';
+    document.getElementById('return-button1').style.display = 'block';
+    document.getElementById('level1-button1').style.display = 'block';
+  }
+
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -161,7 +157,7 @@ _onAction(e) {
         incorrect3.style.visibility = "visible";
       }
       popupI.style.visibility = "visible"; 
-      this.playWrongAudio();
+      this.playWrongAudio(); 
     }  
     
   }
@@ -245,7 +241,7 @@ _onAction(e) {
                   <div onClick={this.runAlgorithm} id="test-button1" className="continue-button1">Start!</div>
                   <div onClick={this.IncrementItem} id="next-button1" class="next-button1">Next Step</div>
 
-                  <Link to='/Level3'>
+                  <Link to='/Level4'>
                     <div id="next-level-button1" className="next-level-button1">Next Level!</div>
                   </Link>
 
@@ -256,7 +252,7 @@ _onAction(e) {
                   <span class="popuptextI"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI" onClick={this.closeBoxI}>Continue</button></span>
                   </div>
 
-                  <div id="instruction-box1" class="instructions1">Step 1: Find the middle of the current array. Take all of the elements to the left side of this value and list them to create the left sub-array.</div>
+                  <div id="instruction-box1" class="instructions1">Decide what needs to be done at each step!</div>
                   <div id="instruction" class="instruction">NOTE: Please type all responses in the format x,x,x,x (commas between all values and no spaces between values)</div>
 
                   <div className="userInput0" id="userInput0">
@@ -476,15 +472,15 @@ _onAction(e) {
                   <div className="test15" id="test15"></div>
                   <br/><br/>
                   
-                  <Link to='/Level1'>
-                    <div id="level1-button1" className="level1-button1">Level 1</div>
+                  <Link to='/Level2'>
+                    <div id="level1-button1" className="level1-button1">Level 2</div>
                   </Link>
                   <Link to='/Levels'>
                     <div id="return-button1" className="return-button1">Levels Page</div>
                   </Link>
                 </div>
                 </div>
-
+                
                 <div className='incorrect1' id='IncorrectAttempt1'>
                   <h1 >X</h1>
                 </div>
@@ -495,6 +491,7 @@ _onAction(e) {
                   <h1 >X</h1>
                 </div>
     
+
         </>
         );
   }
