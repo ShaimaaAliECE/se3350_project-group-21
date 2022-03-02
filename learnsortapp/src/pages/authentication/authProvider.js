@@ -3,7 +3,7 @@ import {
   useState,
   useContext,
   createContext,
-  FunctionComponent,
+
 } from "react";
 import { firebase } from "./initFirebase";
 
