@@ -17,12 +17,22 @@ const firebaseAuthConfig = {
 };
 
 const FirebaseAuth = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
   return (
-  <div>
-    <StyledFirebaseAuth uiConfig = {firebaseAuthConfig}
-    firebaseAuth = {firebase.auth()}
-    />
-  </div>
+    <div>
+      {show && (
+        <StyledFirebaseAuth
+          uiConfig={firebaseAuthConfig}
+          firebaseAuth={firebase.auth()}
+        />
+      )}
+    </div>
   );
 };
+
 export default FirebaseAuth;
