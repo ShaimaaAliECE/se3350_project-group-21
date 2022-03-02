@@ -18,14 +18,12 @@ import { getAnalytics } from "firebase/analytics";
 import {useAuth} from "./authentication/authProvider"
 import FirebaseAuth from "./authentication/firebaseAuth"
 export default function Login() {
-    const { user, loading, logout } = {
-        user: null,
-        loading: false,
-        logout: () => {},
-      };
-  
-    if (loading) return null;
+    const { user, loading, logout } =  useAuth();
+    console.log(user + "0"); 
+    console.log(user + "1");
     if (!user) return <FirebaseAuth />;
+    console.log(user + "2");
+    
   
     return (
       <main>

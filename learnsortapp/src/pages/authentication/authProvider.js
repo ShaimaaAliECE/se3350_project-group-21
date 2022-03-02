@@ -15,12 +15,14 @@ const AuthContext = createContext({
 });
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  console.log(user);
+  const [user, setUser] = useState(firebase.User);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const cancelAuthListener = firebase.auth().onIdTokenChanged((u) => {
       setUser(u);
+      
       setLoading(false);
     });
 
