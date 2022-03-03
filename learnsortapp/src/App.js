@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Router, Route,Routes } from 'react-router'
+import { HashRouter } from 'react-router-dom'
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from "./navbar/Navbar";
 import Dashboard from './pages/Dashboard';
@@ -26,7 +28,8 @@ import AudioTest from './AudioFeedback/AudioTest';
 function App() {
   return (
     <>
-      <Router>
+    <HashRouter>
+    {/* <Router> */}
         <Navbar />
         <Routes>
           <Route path = '/' element={<Home />} />
@@ -50,7 +53,9 @@ function App() {
 
           <Route path='/audiotest' element={<AudioTest />} />
         </Routes>
-      </Router>
+      {/* </Router> */}
+
+    </HashRouter>
       </>
   );
 }
