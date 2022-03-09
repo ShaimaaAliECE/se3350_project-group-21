@@ -1,17 +1,17 @@
 var UserProfile = (function() {
-  var full_name = "";
+  var email = "";
 
-  var getName = function() {
-    return full_name;
+  var getEmail = function() {
+    return email;
   };
 
-  var setName = function(name) {
-    full_name = name;
+  var setEmail = function(value) {
+    email = value;
   };
 
   return {
-    getName: getName,
-    setName: setName
+    getEmail: getEmail,
+    setEmail: setEmail
   }
 
 })();
