@@ -310,12 +310,64 @@
     letter-spacing: 3.5px;
 }
 
+.merge2 {
+    margin-left: 350px;
+    margin-top: 10px;
+    letter-spacing: 3.5px;
+}
+
+.merge3 {
+    margin-left: 380px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
+.merge4 {
+    margin-left: 410px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
+.merge5 {
+    display: none;
+    margin-left: 250px;
+    margin-top: 20px;
+    letter-spacing: 3.5px;
+}
+
+.merge6 {
+    display: none;
+    margin-left: 280px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
+.merge7 {
+    display: none;
+    margin-left: 310px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
+.merge8 {
+    display: none;
+    margin-left: 340px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
+.merge9 {
+    display: none;
+    margin-left: 370px;
+    margin-top: -20px;
+    letter-spacing: 3.5px;
+}
+
 .test6 {
     display: none;
     margin-left: 350px;
     margin-top: 10px;
     letter-spacing: 3.5px;
-   
 }
 
 .test7 {

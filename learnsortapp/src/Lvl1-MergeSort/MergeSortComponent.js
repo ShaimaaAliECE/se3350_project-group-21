@@ -15,7 +15,7 @@ export default class MergeSortComponent extends Component {
   constructor(props) {
     super(props);
     // create references for partitions and mergesort
-    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60};
+    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60, mergeArrayIndex: 0};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
@@ -62,6 +62,7 @@ export default class MergeSortComponent extends Component {
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
+
     const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", 
               "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
               "Step 2(b): This is the second half of the left sub-array:", 
@@ -80,10 +81,29 @@ export default class MergeSortComponent extends Component {
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
 
-    document.getElementById(elementID).style.display = 'block';
-    document.getElementById(elementID).style.animation = 'pulse 1s';
-    document.getElementById(elementID).style.fontSize = '20px';  
+    if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7") {
+      document.getElementById(elementID).style.display = 'block';
+      document.getElementById(elementID).style.animation = 'pulse 1s';
+      document.getElementById(elementID).style.fontSize = '20px';  
+    } else if (elementID === "test5") {
+      document.getElementById("stepFiveArray").style.animation = 'pulse 1s';
+      document.getElementById("stepFiveArray").style.fontSize = '20px';    
+    } else if (elementID === "test6") {
+      document.getElementById("stepSixArray").style.animation = 'pulse 1s';
+      document.getElementById("stepSixArray").style.fontSize = '20px'; 
+    } else if (elementID === "test7") {
+        document.getElementById("merge0").style.animation = 'pulse 1s';
+        document.getElementById("merge0").style.fontSize = '20px';
+        document.getElementById("merge2").style.animation = 'pulse 1s';
+        document.getElementById("merge2").style.fontSize = '20px';    
+        document.getElementById("merge5").style.display = 'block';
 
+        document.getElementById("merge5").style.animation = 'pulse 1s';
+        document.getElementById("merge5").style.fontSize = '20px';
+        document.getElementById("merge5").style.animationDelay = '1s';
+    
+    }
+  
     // next button disappears after the final step to avoid having 'undefined' on the text box
     if (this.state.arrayIndex > 13) {
       document.getElementById('next-button').style.display = 'none';
@@ -91,6 +111,12 @@ export default class MergeSortComponent extends Component {
     }
 
     let answer = [];
+
+    let leftMerge1;
+    let leftMerge2;
+    let leftMerge3;
+    let leftMerge4;
+    let leftMerge5;
 
     let fragmentNo = "test" + this.state.arrayIndex;
     var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
@@ -106,10 +132,27 @@ export default class MergeSortComponent extends Component {
 
     // split the fragments into individual numbers (will probably require hard coding)
     if(this.state.arrayIndex == 5){
-      
         document.getElementById('merge0').innerHTML += answer[0];
         document.getElementById('merge1').innerHTML += answer[1];
-      
+        leftMerge1 = answer[0];
+        leftMerge2 = answer[1];
+    }
+
+    if(this.state.arrayIndex == 6){
+      document.getElementById('merge2').innerHTML += answer[0];
+      document.getElementById('merge3').innerHTML += answer[1];
+      document.getElementById('merge4').innerHTML += answer[2];
+      leftMerge3 = answer[0];
+      leftMerge4 = answer[1];
+      leftMerge5 = answer[2];
+    }
+
+    if(this.state.arrayIndex == 7){
+      document.getElementById('merge5').innerHTML += answer[0];
+      document.getElementById('merge6').innerHTML += answer[1];
+      document.getElementById('merge7').innerHTML += answer[2];
+      document.getElementById('merge8').innerHTML += answer[3];
+      document.getElementById('merge9').innerHTML += answer[4];
     }
   }
 
@@ -185,7 +228,6 @@ export default class MergeSortComponent extends Component {
     stepsArray[2] = fragments[2];
     stepsArray[3] = fragments[4];
     stepsArray[4] = fragments[5];
-
     stepsArray[5] = fragments[3];
     stepsArray[6] = fragments[7];
     stepsArray[7] = fragments[8];
@@ -243,11 +285,27 @@ export default class MergeSortComponent extends Component {
                   <div className="test2" id="test2">{stepsArray[2]}</div>
                   <div className="test3" id="test3">{stepsArray[3]}</div>
                   <div className="test4" id="test4">{stepsArray[4]}</div>
+                  
                   <div className="test5" id="test5">{stepsArray[5]}</div>
 
                   {/* Inserting new merging steps: */}
-                  <div className="merge0" id="merge0"></div>
-                  <div className="merge1" id="merge1"></div>
+                  <div id="stepFiveArray">
+                    <div className="merge0" id="merge0"></div>
+                    <div className="merge1" id="merge1"></div>
+                  </div>
+
+                  <div id="stepSixArray">
+                    <div className="merge2" id="merge2"></div>
+                    <div className="merge3" id="merge3"></div>
+                    <div className="merge4" id="merge4"></div>
+                  </div>
+
+                  <div className="merge5" id="merge5"></div>
+                  <div className="merge6" id="merge6"></div>
+                  <div className="merge7" id="merge7"></div>
+                  <div className="merge8" id="merge8"></div>
+                  <div className="merge9" id="merge9"></div>
+
                   <div className="test6" id="test6">{stepsArray[6]}</div>
                   <div className="test7" id="test7">{stepsArray[7]}</div>
                   <div className="test8" id="test8">{stepsArray[8]}</div>
@@ -259,7 +317,6 @@ export default class MergeSortComponent extends Component {
                   <br/>
                   <div className="test14" id="test14"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
-                  
                   
                   <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
