@@ -89,6 +89,28 @@ export default class MergeSortComponent extends Component {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
     }
+
+    let answer = [];
+
+    let fragmentNo = "test" + this.state.arrayIndex;
+    var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
+    for(let i = 0; i < length; i++){
+      let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
+      answer.push(value);
+    }
+    // will display the whole fragment
+    // alert(answer)
+
+    // will display only the first number of the fragment
+    // alert(answer[0])
+
+    // split the fragments into individual numbers (will probably require hard coding)
+    if(this.state.arrayIndex == 5){
+      
+        document.getElementById('merge0').innerHTML += answer[0];
+        document.getElementById('merge1').innerHTML += answer[1];
+      
+    }
   }
 
   // display the previous step in the algorithm with text
@@ -222,6 +244,10 @@ export default class MergeSortComponent extends Component {
                   <div className="test3" id="test3">{stepsArray[3]}</div>
                   <div className="test4" id="test4">{stepsArray[4]}</div>
                   <div className="test5" id="test5">{stepsArray[5]}</div>
+
+                  {/* Inserting new merging steps: */}
+                  <div className="merge0" id="merge0"></div>
+                  <div className="merge1" id="merge1"></div>
                   <div className="test6" id="test6">{stepsArray[6]}</div>
                   <div className="test7" id="test7">{stepsArray[7]}</div>
                   <div className="test8" id="test8">{stepsArray[8]}</div>
