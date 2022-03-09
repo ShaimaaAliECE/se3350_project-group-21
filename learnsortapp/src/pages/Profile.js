@@ -3,6 +3,9 @@ import './Profile.css';
 import UserProfile from '../Profile/UserProfile';
 
 function Profile() {
+
+   let levelTimes = UserProfile.getLevelTimes();
+
     return (
         <>
             <div class="profile-contents">
@@ -25,7 +28,13 @@ function Profile() {
                         <h3 class="profile-LevelOutline">Custom</h3>
                      </li>
                      <li>
-                        <h2>Time Spent</h2>
+                        <h2>Top Time</h2>
+                        <h3 class="profile-LevelOutline">{levelTimes.levelOneTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelOneTimeSpent[0] + ":" + levelTimes.levelOneTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{levelTimes.levelTwoTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelTwoTimeSpent[0] + ":" + levelTimes.levelTwoTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{levelTimes.levelThreeTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelThreeTimeSpent[0] + ":" + levelTimes.levelThreeTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{levelTimes.levelFourTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelFourTimeSpent[0] + ":" + levelTimes.levelFourTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{levelTimes.levelFiveTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelFiveTimeSpent[0] + ":" + levelTimes.levelFiveTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{levelTimes.customTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.customTimeSpent[0] + ":" + levelTimes.customTimeSpent[1]}</h3>
                      </li>
                   </ul>
                 </div>
