@@ -28,8 +28,8 @@ function Level4() {
                </Link>
 
                <Link to='/Levels' class = "continue-link1">
-                  <div class = "BackBox3">
-                     <h3 class = "BackText3">Levels page</h3>
+                  <div class = "BackBox2">
+                     <h3 class = "BackText2">Levels page</h3>
                   </div>
                </Link>
             </div>
