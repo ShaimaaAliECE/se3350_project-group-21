@@ -485,16 +485,17 @@ _onAction(e) {
                 </div>
                 </div>
 
-                <div className='incorrect1' id='IncorrectAttempt1'>
-                  <h1 >X</h1>
+                <div className='incorrectGrid'>
+                  <div className='incorrect1' id='IncorrectAttempt1'>
+                    X
+                  </div>
+                  <div className='incorrect2' id='IncorrectAttempt2'>
+                    X
+                  </div>
+                  <div className='incorrect3' id='IncorrectAttempt3'>
+                    X
+                  </div>
                 </div>
-                <div className='incorrect2' id='IncorrectAttempt2'>
-                  <h1 >X</h1>
-                </div>
-                <div className='incorrect3' id='IncorrectAttempt3'>
-                  <h1 >X</h1>
-                </div>
-    
         </>
         );
   }
