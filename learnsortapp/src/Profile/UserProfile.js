@@ -15,12 +15,20 @@ var UserProfile = (function() {
     email = value;
   };
 
+  var setLevelTimes = function(dbLevelOneTimeSpent, dbLevelTwoTimeSpent, dbLevelThreeTimeSpent, dbLevelFourTimeSpent, dbLevelFiveTimeSpent, dbCustomTimeSpent){
+      levelOneTimeSpent = dbLevelOneTimeSpent;
+      levelTwoTimeSpent = dbLevelTwoTimeSpent;
+      levelThreeTimeSpent = dbLevelThreeTimeSpent;
+      levelFourTimeSpent = dbLevelFourTimeSpent;
+      levelFiveTimeSpent = dbLevelFiveTimeSpent;
+      customTimeSpent = dbCustomTimeSpent;
+   };
+
   var getLevelTimes = function(){
      return {levelOneTimeSpent, levelTwoTimeSpent, levelThreeTimeSpent, levelFourTimeSpent, levelFiveTimeSpent, customTimeSpent};
-  }
+  };
 
   var updateRecordTime = function(level, newTimeMin, newTimeSeconds){  
-   alert(newTimeMin + ":" + newTimeSeconds);
       switch(level){
          case 1:
             if(levelOneTimeSpent[0] == null){
@@ -89,13 +97,14 @@ var UserProfile = (function() {
             }
             break;
       }
-  }
+  };
 
   return {
     getEmail: getEmail,
     setEmail: setEmail,
     updateRecordTime : updateRecordTime,
-    getLevelTimes : getLevelTimes
+    getLevelTimes : getLevelTimes,
+    setLevelTimes : setLevelTimes
   }
 
 })();
