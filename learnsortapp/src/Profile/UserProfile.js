@@ -26,8 +26,8 @@ var UserProfile = (function() {
             if(levelOneTimeSpent[0] == null){
                levelOneTimeSpent[0] = newTimeMin;
                levelOneTimeSpent[1] = newTimeSeconds;
-            }else if(levelOneTimeSpent[0] > newTimeMin){
-               if(levelOneTimeSpent[1] > newTimeSeconds){
+            }else if(levelOneTimeSpent[0] >= newTimeMin){
+               if(levelOneTimeSpent[1] >= newTimeSeconds){
                   levelOneTimeSpent[0] = newTimeMin;
                   levelOneTimeSpent[1] = newTimeSeconds;
                }
@@ -37,8 +37,8 @@ var UserProfile = (function() {
             if(levelTwoTimeSpent[0] == null){
                levelTwoTimeSpent[0] = newTimeMin;
                levelTwoTimeSpent[1] = newTimeSeconds;
-            }else if(levelTwoTimeSpent[0] > newTimeMin){
-               if(levelTwoTimeSpent[1] > newTimeSeconds){
+            }else if(levelTwoTimeSpent[0] >= newTimeMin){
+               if(levelTwoTimeSpent[1] >= newTimeSeconds){
                   levelTwoTimeSpent[0] = newTimeMin;
                   levelTwoTimeSpent[1] = newTimeSeconds;
                }
@@ -48,8 +48,8 @@ var UserProfile = (function() {
             if(levelThreeTimeSpent[0] == null){
                levelThreeTimeSpent[0] = newTimeMin;
                levelThreeTimeSpent[1] = newTimeSeconds;
-            }else if(levelThreeTimeSpent[0] > newTimeMin){
-               if(levelThreeTimeSpent[1] > newTimeSeconds){
+            }else if(levelThreeTimeSpent[0] >= newTimeMin){
+               if(levelThreeTimeSpent[1] >= newTimeSeconds){
                   levelThreeTimeSpent[0] = newTimeMin;
                   levelThreeTimeSpent[1] = newTimeSeconds;
                }
@@ -59,8 +59,8 @@ var UserProfile = (function() {
             if(levelFourTimeSpent[0] == null){
                levelFourTimeSpent[0] = newTimeMin;
                levelFourTimeSpent[1] = newTimeSeconds;
-            }else if(levelFourTimeSpent[0] > newTimeMin){
-               if(levelFourTimeSpent[1] > newTimeSeconds){
+            }else if(levelFourTimeSpent[0] >= newTimeMin){
+               if(levelFourTimeSpent[1] >= newTimeSeconds){
                   levelFourTimeSpent[0] = newTimeMin;
                   levelFourTimeSpent[1] = newTimeSeconds;
                }
@@ -70,8 +70,8 @@ var UserProfile = (function() {
             if(levelFiveTimeSpent[0] == null){
                levelFiveTimeSpent[0] = newTimeMin;
                levelFiveTimeSpent[1] = newTimeSeconds;
-            }else if(levelFiveTimeSpent[0] > newTimeMin){
-               if(levelFiveTimeSpent[1] > newTimeSeconds){
+            }else if(levelFiveTimeSpent[0] >= newTimeMin){
+               if(levelFiveTimeSpent[1] >= newTimeSeconds){
                   levelFiveTimeSpent[0] = newTimeMin;
                   levelFiveTimeSpent[1] = newTimeSeconds;
                }
@@ -81,8 +81,8 @@ var UserProfile = (function() {
             if(customTimeSpent[0] == null){
                customTimeSpent[0] = newTimeMin;
                customTimeSpent[1] = newTimeSeconds;
-            }else if(customTimeSpent[0] > newTimeMin){
-               if(customTimeSpent[1] > newTimeSeconds){
+            }else if(customTimeSpent[0] >= newTimeMin){
+               if(customTimeSpent[1] >= newTimeSeconds){
                   customTimeSpent[0] = newTimeMin;
                   customTimeSpent[1] = newTimeSeconds;
                }
