@@ -137,6 +137,8 @@ _onAction(e) {
     var incorrect2 = document.getElementById("IncorrectAttempt2");
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
+    var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
@@ -153,14 +155,19 @@ _onAction(e) {
       console.log(this.state.attempts);
       if(this.state.attempts == 0){
         incorrect1.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
       if(this.state.attempts == 1){
         incorrect2.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
       if(this.state.attempts == 2){
         incorrect3.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
-      popupI.style.visibility = "visible"; 
+      if(this.state.attempts >= 3){
+        incorrectOptionsBox.style.visibility = "visible";
+      }
       this.playWrongAudio();
     }  
     
@@ -483,6 +490,29 @@ _onAction(e) {
                     <div id="return-button1" className="return-button1">Levels Page</div>
                   </Link>
                 </div>
+                </div>
+
+                <div className='incorrectOptions' id='incorrectOptionsBox'>
+                  <br></br>
+                  <h1>3 Strikes!</h1>
+                  <h2>Please choose one of the following options:</h2>
+                  <br></br>
+                  <button onClick={refreshPage} className='incorrectOptionButton'>Restart This Level</button>
+                  <br></br>
+                  <br></br>
+                  <Link to='/Level1'>
+                    <button className='incorrectOptionButton'>Go Back to Level 1</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to=''>
+                    <button className='incorrectOptionButton'>Switch to Another Algorithm</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to='/'>
+                    <button className='incorrectOptionButton'>Quit</button>
+                  </Link>
                 </div>
 
                 <div className='incorrectGrid'>
