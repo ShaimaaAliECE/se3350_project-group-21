@@ -1,5 +1,6 @@
 import React, { Profiler } from 'react';
 import './Profile.css';
+import UserProfile from '../Profile/UserProfile';
 
 function Profile() {
     return (
@@ -11,7 +12,7 @@ function Profile() {
                 <div class = "profile-Outline">
                 <div class = "profile-BackgroundRectangle">
                   <div class="profile-UsernameBox">
-                     <h2>Username: (HERE)</h2>
+                     <h2>Username: {UserProfile.getEmail()}</h2>
                   </div>
                   <ul class= "profile-grid">
                      <li>

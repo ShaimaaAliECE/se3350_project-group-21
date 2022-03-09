@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from "react-dom";
 import './Timer.css';
+import UserProfile from '../Profile/UserProfile';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Timer extends React.Component {
     this.state = {
       elapsedTime: null,
       elapsedSeconds: 0,
-      elapsedMins: 0
+      elapsedMins: 0,
+      level: this.props.level
     };
 
     this.countUp = this.countUp.bind(this);
@@ -29,6 +31,10 @@ class Timer extends React.Component {
       this.setState(({ elapsedSeconds }) => ({ elapsedSeconds: 0}));
       this.setState(({ elapsedMins }) => ({ elapsedMins: elapsedMins + 1 }));
     }
+  }
+
+  componentWillUnmount(){
+     UserProfile.updateRecordTime(this.state.level, this.state.elapsedTime);
   }
 
   render() {
