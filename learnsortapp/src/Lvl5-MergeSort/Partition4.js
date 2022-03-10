@@ -1,11 +1,11 @@
-export class Partition2 { // partition class will separate our output from MergeSort
+export class Partition4 { // partition class will separate our output from MergeSort
     static nextId = 0;
   
     // constructor to get current nodes from our list of values (will also get partition id)
     constructor(parentId, items) {
       this.items = items;
       this.parentId = `parentId${parentId}`;
-      this.id = (Partition2.nextId++).toString();
+      this.id = (Partition4.nextId++).toString();
       this.middle = this.findMiddle();
     }
   
@@ -34,13 +34,13 @@ export class Partition2 { // partition class will separate our output from Merge
     getLeftHalf() {
       let items = this.items.slice(0, this.middle);
       // create a new partition of the smaller size of values
-      return new Partition2(this.id, items);
+      return new Partition4(this.id, items);
     }
   
     // get the second (right) half of the values
     getRightHalf() {
       let items = this.items.slice(this.middle, this.items.length);
       // create a new partition of the smaller size of values
-      return new Partition2(this.id, items);
+      return new Partition4(this.id, items);
     }
   }
