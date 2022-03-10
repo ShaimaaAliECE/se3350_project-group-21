@@ -86,6 +86,11 @@ _onAction(e) {
 
   // display the next step in the algorithm with text
   IncrementItem = () => {
+    // To add merging steps:
+    // could add multiple text boxes for the merging steps (so like 3), then have to users
+    // input their values into all 3 and check their answers at the end (this way we still only have to check if one of them is valid)
+
+
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
     this.setState({ textIndex: this.state.textIndex + 1 });
     const i = ["Step 2: Now take the values from the right side of the middle and list them:", 
