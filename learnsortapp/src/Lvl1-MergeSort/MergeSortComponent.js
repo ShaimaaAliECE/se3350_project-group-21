@@ -247,7 +247,9 @@ export default class MergeSortComponent extends Component {
               <h2 class = "sort-title-background" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
-              <Timer/>
+              <Timer 
+               level = {1} 
+               completion = {1}/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
                   element={document}
