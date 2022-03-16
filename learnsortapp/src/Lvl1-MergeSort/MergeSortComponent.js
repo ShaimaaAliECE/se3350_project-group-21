@@ -15,7 +15,7 @@ export default class MergeSortComponent extends Component {
   constructor(props) {
     super(props);
     // create references for partitions and mergesort
-    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60, mergeArrayIndex: 0};
+    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60, mergeArrayIndex: 0, complete: 0};
     this.mergeSort1 = new MergeSort();
     this.forward = { render: false}
     this.nextStep = this.nextStep.bind(this);
@@ -108,6 +108,7 @@ export default class MergeSortComponent extends Component {
     if (this.state.arrayIndex > 13) {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
+      this.setState({complete: 1});
     }
 
     let answer = [];
@@ -249,7 +250,7 @@ export default class MergeSortComponent extends Component {
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer 
                level = {1} 
-               completion = {1}/>
+               completion = {this.state.complete}/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
                   element={document}

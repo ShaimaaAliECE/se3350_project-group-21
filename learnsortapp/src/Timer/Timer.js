@@ -10,8 +10,7 @@ class Timer extends React.Component {
       elapsedTime: null,
       elapsedSeconds: 0,
       elapsedMins: 0,
-      level: this.props.level,
-      completion: this.props.completion
+      level: this.props.level
     };
 
     this.countUp = this.countUp.bind(this);
@@ -35,14 +34,15 @@ class Timer extends React.Component {
   }
 
   componentWillUnmount(){
-     if(this.state.completion){
+     //alert("Unmount = " + this.props.completion)
+     if(this.props.completion){
          UserProfile.updateRecordTime(this.state.level, this.state.elapsedMins, this.state.elapsedSeconds);
      }
   }
 
   render() {
     return (
-      <div className="timer-box">
+      <div className="timer-box" completion={this.props.completion}>
         <div>{this.state.elapsedMins}:{this.state.elapsedSeconds < 10 ?  `0${this.state.elapsedSeconds}` : this.state.elapsedSeconds}</div>
       </div>
     );
