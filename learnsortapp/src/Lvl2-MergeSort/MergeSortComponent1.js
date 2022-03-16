@@ -27,7 +27,8 @@ export default class MergeSortComponent1 extends Component {
         arrayIndex:0,
         textIndex: 1,
         timeout:1000 * 5 * 60,
-        attempts: 0
+        attempts: 0,
+        complete: 0
     };
     this.mergeSort1 = new MergeSort1();
 
@@ -151,7 +152,7 @@ _onAction(e) {
       if (this.state.textIndex > 14) {
         document.getElementById('next-button1').style.display = 'none';
         document.getElementById('next-level-button1').style.display = 'block';
-      
+        this.setState({complete: 1});
       }
     }
 
@@ -229,7 +230,9 @@ _onAction(e) {
               <div className = "sort-title-background" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
-              <Timer/>
+              <Timer 
+               level = {2} 
+               completion = {this.state.complete}/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
                   element={document}
