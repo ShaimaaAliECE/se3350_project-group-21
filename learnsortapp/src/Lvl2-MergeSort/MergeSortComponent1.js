@@ -99,7 +99,7 @@ _onAction(e) {
     "Step 4: Now list the right half of the left sub-array:", 
     "Step 5: Now, we will continue to break down the right half of the left sub-array until each element is separated. Again, find the middle of the array and list the values to the right (and including) that element:", 
     "Step 6: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. List the values from the left half of the left sub-array in ascending order:", 
-    "Step 7: Order all of the elements from the right half of the left sub-array in ascending order and list them:", 
+    "Step 7: Compare the first element of the right half of the left-subarray to the second element. If first element > second element, then the second element will now be the first element. If the second element > first element, then the first element will still be the first element. After this, you'll compare the last two elements and order them the same way. The right half of the left-subarray should now be in ascending order:", 
     "Step 8: Merge all of the left sub-array elements, and list them in ascending order:", 
     "Step 9: We will now repeat the process to the right sub-array. Find the middle value in the array and list the first half of the right sub-array:", 
     "Step 10: Now list the right half of the left sub-array: ", 
@@ -230,7 +230,8 @@ _onAction(e) {
               <div className = "sort-title-background" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
-              <Timer 
+
+                <Timer 
                level = {2} 
                completion = {this.state.complete}/>
               <IdleTimer
@@ -242,6 +243,7 @@ _onAction(e) {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
+
               <div className = "outliner1">
                   
                     {/* // will show the initial values (created by random number generator) */}
@@ -281,6 +283,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -294,6 +297,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -307,7 +311,20 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id="l2">
+                        3.(a):
+                        <input
+                          id = "u2"
+                        />
+                        </label>
+                      <label id = "l3">
+                      3.(b):
+                        <input
+                          id = "u3"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -320,7 +337,14 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id = "l4">
+                      4.(a):
+                        <input
+                          id = "u4"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -333,8 +357,22 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+                      
+                      <label id = "l5">
+                      5.(a):
+                      <input
+                          id = "u5"
+                        />
+                      </label>
+                      <label id = "l6">
+                      5.(b):
+                        <input
+                          id = "u6"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -346,6 +384,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -359,6 +398,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -372,6 +412,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -385,6 +426,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -398,6 +440,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -411,6 +454,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -424,6 +468,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -437,6 +482,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -450,6 +496,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -463,6 +510,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
+
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -534,6 +582,8 @@ _onAction(e) {
                     X
                   </div>
                 </div>
+
+               
         </>
         );
   }

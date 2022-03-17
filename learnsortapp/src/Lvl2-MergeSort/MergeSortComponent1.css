@@ -14,8 +14,7 @@
     align-items: center;
 
   }
-  
- 
+
 .popup, .popupC, .popupI{
     visibility: hidden;
     width: 360px;
@@ -463,97 +462,146 @@
     display:none;
 }
 
+#u1 {
+    width: 100px;
+}
+
 .userInput0 {
-    display: none;
+    /* display: none; */
     margin-left: 100px;
     margin-top: 35px;
-
-
 }
 
 .userInput1 {
-    display: none;
+    /* display: none; */
     margin-left: 650px;
     margin-top: -25px;
 }
 
 .userInput2 {
-    display: none;
+    /* display: none; */
     margin-left: 1px;
     margin-top: 20px;
 }
+#l2 {
+    position:absolute;
+    top:340px;
+    left:30px;  
+}
+#u2 {
+    position: absolute;
+    width: 20px;
+}
 
+#l3{
+    position: absolute;
+    top: 340px;
+    left: 100px;
+}
+#u3 {
+    position: absolute;
+    width: 20px;
+}
+
+/* step 4*/
 .userInput3 {
-    display: none;
+    /* display: none; */
     margin-left: 250px;
     margin-top: -22px;
 }
+#l4 {
+    position: absolute;
+    top: 340px;
+    left: 280px;
+}
+#u4 {
+    width: 20px;
+}
 
 .userInput4 {
-    display: none;
+    /* display: none; */
     margin-left: 300px;
     margin-top: 15px; 
 }
+#l5{
+    position: absolute;
+    top: 340px;
+    left: 350px;
+}
+#u5 {
+    
+    width: 20px;
+}
+
+#l6 {
+    position: absolute;
+    top: 340px;
+    left: 420px;
+}
+#u6 {
+    
+    width: 20px;
+}
 
 .userInput5 {
-    display: none;
+    /* display: none; */
     margin-left: 1px;
-    margin-top: 20px;
+    margin-top: 45px;
 
 }
 
 .userInput6 {
-    display: none;
+    /* display: none; */
     margin-left: 250px;
     margin-top: -22px;
    
 }
 
 .userInput7 {
-    display: none;
+    /* display: none; */
     margin-left: 100px;
     margin-top: 20px;
    
 }
 
 .userInput8 {
-    display: none;
+    /* display: none; */
     margin-left: 500px;
     margin-top: -150px;
 }
 
 .userInput9 {
-    display: none;
+    /* display: none; */
     margin-left: 730px;
     margin-top: -23px;
 }
 
 .userInput10 {
-    display: none;
+    /* display: none; */
     margin-left: 815px;
     margin-top: 0px;
 }
 
 .userInput11 {
-    display: none;
+    /* display: none; */
     margin-left: 495px;
     margin-top: 15px;
 }
 
 .userInput12 {
-    display: none;
+    /* display: none; */
     margin-left: 750px;
     margin-top: -25px;
 }
 
 .userInput13 {
-    display: none;
+    /* display: none; */
     margin-left: 650px;
     margin-top: 20px;
 }
 
 .userInput14 {
-    display: none;
+    /* display: none; */
     margin-left: 360px;
     margin-top: 40px;
     
@@ -565,7 +613,7 @@
 
 .check-button{
     position: absolute;
-    bottom: 23px;
+    top: 130px;
     left: 425px;
     width: auto;
     background: #FCD8A4;
