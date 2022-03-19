@@ -70,20 +70,29 @@ export default class MergeSortComponent extends Component {
               "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
               "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
               "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
+              "Step 5(a): Compare the two highlighted values to get the smaller value.",
+              "Step 5(b): Compare the two highlighted values to get the smaller value.",
+              "Step 5(c): Compare the two highlighted values to get the smaller value.",
+              "Step 5(d): Compare the two highlighted values to get the smaller value.",
+              "Step 5(e): Compare the two highlighted values to get the final value.",
+              "",
+              "",
+              "",
+              "",
+              "",
               "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
               "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
               "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
               "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
               "Step 8(b): Merge the right sub-arrays in ascending order.", 
-              "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+              "Step 9: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
  
-
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
-        && elementID !== "test9" && elementID !== "test10" && elementID !== "test11") {
+        && elementID !== "test9" && elementID !== "test10" && elementID !== "test11" && elementID !== "test12") {
       document.getElementById(elementID).style.display = 'block';
       document.getElementById(elementID).style.animation = 'pulse 1s';
       document.getElementById(elementID).style.fontSize = '20px';  
@@ -94,6 +103,7 @@ export default class MergeSortComponent extends Component {
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
+      document.getElementById("stepSevenArray").style.animation = 'pulse 1s';
       document.getElementById("stepSevenArray").style.fontSize = '20px';   
     } 
     
@@ -248,7 +258,29 @@ export default class MergeSortComponent extends Component {
     }
 
     // getting the fifth value of the left half array
-    
+    else if (elementID === "test12") {
+      if (document.getElementById("test11").style.backgroundColor === 'yellow' && document.getElementById("test12").style.backgroundColor === 'yellow') {
+        document.getElementById("test11").style.backgroundColor = 'white';
+        document.getElementById("test12").style.backgroundColor = 'yellow';
+        document.getElementById("test17").style.animation = 'pulse 1s';
+      } else if (document.getElementById("test9").style.backgroundColor === 'yellow' && document.getElementById("test12").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test9").value) <= parseInt(document.getElementById("test12").value)) {
+          document.getElementById("test9").style.backgroundColor = 'white';
+          document.getElementById("test12").style.backgroundColor = 'yellow';
+        } else if (parseInt(document.getElementById("test9").value) > parseInt(document.getElementById("test12").value)) {
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+          document.getElementById("test12").style.backgroundColor = 'white';
+        }
+        document.getElementById("test17").style.animation = 'pulse 1s';
+      } else if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+        document.getElementById("test11").style.backgroundColor = 'white';
+        document.getElementById("test12").style.backgroundColor = 'yellow';
+        document.getElementById("test17").style.animation = 'pulse 1s';
+      }
+
+      this.setState({ arrayIndex: this.state.arrayIndex + 6 });
+    }
+    // end of merging steps
 
     // next button disappears after the final step to avoid having 'undefined' on the text box
     if (this.state.arrayIndex > 23) {
