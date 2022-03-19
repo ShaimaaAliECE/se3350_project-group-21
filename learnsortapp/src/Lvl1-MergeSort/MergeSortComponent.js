@@ -83,7 +83,7 @@ export default class MergeSortComponent extends Component {
  
 
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
-        && elementID !== "test9" && elementID !== "test10") {
+        && elementID !== "test9" && elementID !== "test10" && elementID !== "test11") {
       document.getElementById(elementID).style.display = 'block';
       document.getElementById(elementID).style.animation = 'pulse 1s';
       document.getElementById(elementID).style.fontSize = '20px';  
@@ -196,7 +196,60 @@ export default class MergeSortComponent extends Component {
     }
 
     // getting the fourth value of the left half array
-  
+    else if (elementID === "test11") {
+      if (document.getElementById("test9").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test9").value) <= parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test9").style.backgroundColor = 'white';
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+
+          document.getElementById("test12").style.backgroundColor = 'yellow';
+
+        } else if (parseInt(document.getElementById("test9").value) > parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test11").style.backgroundColor = 'white';
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+
+          document.getElementById("test12").style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById("test16").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+        document.getElementById("test10").style.backgroundColor = 'white';
+        document.getElementById("test11").style.backgroundColor = 'yellow';
+
+        document.getElementById("test12").style.backgroundColor = 'yellow';
+
+        document.getElementById("test16").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test9").style.backgroundColor === 'yellow' && document.getElementById("test10").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test9").value) <= parseInt(document.getElementById("test10").value)) {
+          document.getElementById("test9").style.backgroundColor = 'white';
+          document.getElementById("test10").style.backgroundColor = 'yellow';
+
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+
+        } else if (parseInt(document.getElementById("test9").value) > parseInt(document.getElementById("test10").value)) {
+          document.getElementById("test10").style.backgroundColor = 'white';
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById("test16").style.animation = 'pulse 1s';
+        
+      } else if (document.getElementById("test8").style.backgroundColor === 'yellow' && document.getElementById("test9").style.backgroundColor === 'yellow') {
+        document.getElementById("test8").style.backgroundColor = 'white';
+        document.getElementById("test9").style.backgroundColor = 'yellow';
+
+        document.getElementById("test12").style.backgroundColor = 'yellow';
+
+        document.getElementById("test16").style.animation = 'pulse 1s';
+      }
+    }
+
+    // getting the fifth value of the left half array
+    
+
     // next button disappears after the final step to avoid having 'undefined' on the text box
     if (this.state.arrayIndex > 23) {
       document.getElementById('next-button').style.display = 'none';
