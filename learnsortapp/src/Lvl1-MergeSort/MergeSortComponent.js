@@ -82,7 +82,8 @@ export default class MergeSortComponent extends Component {
     instructionBox.innerHTML = instructionID;
  
 
-    if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7") {
+    if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
+        && elementID !== "test9") {
       document.getElementById(elementID).style.display = 'block';
       document.getElementById(elementID).style.animation = 'pulse 1s';
       document.getElementById(elementID).style.fontSize = '20px';  
@@ -93,10 +94,33 @@ export default class MergeSortComponent extends Component {
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
-      // document.getElementById("test13").style.backgroundColor = 'yellow';
-      // document.getElementById("stepSixArray").style.animation = 'pulse 1s';
-      // document.getElementById("stepSixArray").style.fontSize = '20px'; 
-      
+      // document.getElementById("stepSevenArray").style.backgroundColor = 'yellow';
+      // document.getElementById("stepSevenArray").style.animation = 'pulse 1s';
+      document.getElementById("stepSevenArray").style.fontSize = '20px';   
+    } else if (elementID === "test8") {
+      document.getElementById(elementID).style.backgroundColor = 'yellow';
+      document.getElementById("test10").style.backgroundColor = 'yellow';
+      document.getElementById("test13").style.animation = 'pulse 1s';
+
+    } else if (elementID === "test9") {
+      if (document.getElementById("test8") <= document.getElementById("test10")) {
+
+        document.getElementById("test8").style.backgroundColor = 'yellow';
+
+        document.getElementById("test9").style.backgroundColor = 'yellow';
+        document.getElementById("test10").style.backgroundColor = 'white';
+
+        document.getElementById("test14").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test8") > document.getElementById("test10")) {
+
+        document.getElementById("test10").style.backgroundColor = 'yellow';
+
+        document.getElementById("test8").style.backgroundColor = 'white';
+        document.getElementById("test9").style.backgroundColor = 'yellow';
+        // document.getElementById(elementID).style.backgroundColor = 'yellow';
+        document.getElementById("test14").style.animation = 'pulse 1s';
+      }
     }
     // } else if (elementID === "test7") {
     //     let pair1a = document.getElementById("merge0");
@@ -318,11 +342,13 @@ export default class MergeSortComponent extends Component {
                     <div className="merge4" id="test12"></div>
                   </div>
 
-                  <div className="merge5" id="test13"></div>
-                  <div className="merge6" id="test14"></div>
-                  <div className="merge7" id="test15"></div>
-                  <div className="merge8" id="test16"></div>
-                  <div className="merge9" id="test17"></div>
+                  <div id="stepSevenArray">
+                    <div className="merge5" id="test13"></div>
+                    <div className="merge6" id="test14"></div>
+                    <div className="merge7" id="test15"></div>
+                    <div className="merge8" id="test16"></div>
+                    <div className="merge9" id="test17"></div>
+                  </div>
 
                   {/* <div className="test6" id="test16">{stepsArray[6]}</div>
                   <div className="test7" id="test17">{stepsArray[7]}</div> */}
