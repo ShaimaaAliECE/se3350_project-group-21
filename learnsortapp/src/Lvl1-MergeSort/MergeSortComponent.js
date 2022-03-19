@@ -494,9 +494,6 @@ export default class MergeSortComponent extends Component {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
       this.setState({complete: 1});
-    } else if (this.state.arrayIndex <= 33) {
-      document.getElementById('next-button').style.display = 'block';
-      document.getElementById('next-level-button').style.display = 'none';
     }
 
     let answer = [];
