@@ -75,11 +75,11 @@ export default class MergeSortComponent extends Component {
               "Step 5(d): Compare the two highlighted values to get the smaller value.",
               "Step 5(e): Compare the two highlighted values to get the smaller value.",
               "Step 5(f): Compare the two highlighted values to get the final value.",
-              "",
-              "",
-              "",
-              "",
-              "",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
               "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
               "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
               "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
@@ -90,13 +90,13 @@ export default class MergeSortComponent extends Component {
               "Step 9(d): Compare the two highlighted values to get the smaller value.",
               "Step 9(e): Compare the two highlighted values to get the smaller value.",
               "Step 9(f): Compare the two highlighted values to get the final value.",
-              "",
-              "",
-              "",
-              "",
-              "",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
               "Step 10: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
-              
+
     let elementID = "test" + this.state.arrayIndex;
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
@@ -314,14 +314,14 @@ export default class MergeSortComponent extends Component {
     } 
     
     // merging step starts
-    // getting the first value of the left half array
+    // getting the first value of the right half array
     else if (elementID === "test24") {
       document.getElementById("test24").style.backgroundColor = 'yellow';
       document.getElementById("test26").style.backgroundColor = 'yellow';
       document.getElementById("test29").style.animation = 'pulse 1s';
     } 
     
-    // getting the second value of the left half array
+    // getting the second value of the right half array
     else if (elementID === "test25") {
       if (parseInt(document.getElementById("test24").value) <= parseInt(document.getElementById("test26").value)) {
         document.getElementById("test24").style.backgroundColor = 'white';
@@ -353,7 +353,7 @@ export default class MergeSortComponent extends Component {
       } 
     }
 
-    // getting the third value of the left half array
+    // getting the third value of the right half array
     else if (elementID === "test26") {
       // 4 possible cases
       if (document.getElementById("test26").style.backgroundColor === 'yellow' && document.getElementById("test25").style.backgroundColor === 'yellow') {
@@ -400,7 +400,7 @@ export default class MergeSortComponent extends Component {
           document.getElementById("test27").style.backgroundColor = 'yellow';
 
           document.getElementById("test25").style.backgroundColor = 'yellow';
-        } else if (parseInt(document.getElementById("test8").value) > parseInt(document.getElementById("test11").value)) {
+        } else if (parseInt(document.getElementById("test8").value) > parseInt(document.getElementById("test27").value)) {
           document.getElementById("test27").style.backgroundColor = 'white';
           document.getElementById("test24").style.backgroundColor = 'yellow';
 
@@ -411,7 +411,7 @@ export default class MergeSortComponent extends Component {
       }
     }
 
-    // getting the fourth value of the left half array
+    // getting the fourth value of the right half array
     else if (elementID === "test27") {
       if (document.getElementById("test25").style.backgroundColor === 'yellow' && document.getElementById("test27").style.backgroundColor === 'yellow') {
         if (parseInt(document.getElementById("test25").value) <= parseInt(document.getElementById("test27").value)) {
@@ -463,7 +463,7 @@ export default class MergeSortComponent extends Component {
       }
     }
 
-    // getting the fifth value of the left half array
+    // getting the fifth value of the right half array
     else if (elementID === "test28") {
       if (document.getElementById("test27").style.backgroundColor === 'yellow' && document.getElementById("test28").style.backgroundColor === 'yellow') {
         document.getElementById("test27").style.backgroundColor = 'white';
@@ -487,12 +487,16 @@ export default class MergeSortComponent extends Component {
 
       this.setState({ arrayIndex: this.state.arrayIndex + 6 });
     }
+    // end of merging steps (right half)
 
     // next button disappears after the final step to avoid having 'undefined' on the text box
     if (this.state.arrayIndex > 33) {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
       this.setState({complete: 1});
+    } else if (this.state.arrayIndex <= 33) {
+      document.getElementById('next-button').style.display = 'block';
+      document.getElementById('next-level-button').style.display = 'none';
     }
 
     let answer = [];
@@ -585,20 +589,39 @@ export default class MergeSortComponent extends Component {
 
   // display the previous step in the algorithm with text
   DecrementItem = () => {
-    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:",
-    "Step 1(b): This is the right side:", 
-    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
-    "Step 2(b): This is the second half of the left sub-array:", 
-    "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
-    "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
-    "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
-    "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
-    "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
-    "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
-    "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
-    "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
-    "Step 8(b): Merge the right sub-arrays in ascending order.", 
-    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", 
+              "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
+              "Step 2(b): This is the second half of the left sub-array:", 
+              "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+              "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
+              "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
+              "Step 5(a): Merge all of the left sub-array elements, now sorted in ascending order. ", 
+              "Step 5(b): Compare the two highlighted values to get the smaller value.",
+              "Step 5(c): Compare the two highlighted values to get the smaller value.",
+              "Step 5(d): Compare the two highlighted values to get the smaller value.",
+              "Step 5(e): Compare the two highlighted values to get the smaller value.",
+              "Step 5(f): Compare the two highlighted values to get the final value.",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
+              "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
+              "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
+              "Step 8: Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
+              "Step 9(a): Merge the right sub-arrays in ascending order.", 
+              "Step 9(b): Compare the two highlighted values to get the smaller value.",
+              "Step 9(c): Compare the two highlighted values to get the smaller value.",
+              "Step 9(d): Compare the two highlighted values to get the smaller value.",
+              "Step 9(e): Compare the two highlighted values to get the smaller value.",
+              "Step 9(f): Compare the two highlighted values to get the final value.",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Step 10: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
 
     if (this.state.arrayIndex-1 >= 0) { // to avoid going below zero and printing undefined
       
@@ -616,6 +639,7 @@ export default class MergeSortComponent extends Component {
       }
 
       instructionBox.innerHTML = instructionID;
+
       this.setState({ arrayIndex: this.state.arrayIndex - 1 });
     }
   }
