@@ -80,6 +80,7 @@ export default class MergeSortComponent extends Component {
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
+ 
 
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7") {
       document.getElementById(elementID).style.display = 'block';
@@ -92,20 +93,32 @@ export default class MergeSortComponent extends Component {
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
-        document.getElementById("merge0").style.animation = 'pulse 1s';
-        document.getElementById("merge0").style.fontSize = '20px';
-        document.getElementById("merge2").style.animation = 'pulse 1s';
-        document.getElementById("merge2").style.fontSize = '20px';    
-        document.getElementById("merge5").style.display = 'block';
-
-        document.getElementById("merge5").style.animation = 'pulse 1s';
-        document.getElementById("merge5").style.fontSize = '20px';
-        document.getElementById("merge5").style.animationDelay = '1s';
-    
+      // document.getElementById("test13").style.backgroundColor = 'yellow';
+      // document.getElementById("stepSixArray").style.animation = 'pulse 1s';
+      // document.getElementById("stepSixArray").style.fontSize = '20px'; 
+      
     }
+    // } else if (elementID === "test7") {
+    //     let pair1a = document.getElementById("merge0");
+    //     let pair1b = document.getElementById("merge2");
+
+    //     let pair2a;
+    //     let pair2b;
+
+    //     let pair3a;
+    //     let pair3b;
+
+    //     let pair4a;
+    //     let pair4b;
+
+    //     let pair5a;
+    //     let pair5b;
+
+
+    // }
   
     // next button disappears after the final step to avoid having 'undefined' on the text box
-    if (this.state.arrayIndex > 13) {
+    if (this.state.arrayIndex > 23) {
       document.getElementById('next-button').style.display = 'none';
       document.getElementById('next-level-button').style.display = 'block';
       this.setState({complete: 1});
@@ -133,27 +146,27 @@ export default class MergeSortComponent extends Component {
 
     // split the fragments into individual numbers (will probably require hard coding)
     if(this.state.arrayIndex == 5){
-        document.getElementById('merge0').innerHTML += answer[0];
-        document.getElementById('merge1').innerHTML += answer[1];
+        document.getElementById('test8').innerHTML += answer[0];
+        document.getElementById('test9').innerHTML += answer[1];
         leftMerge1 = answer[0];
         leftMerge2 = answer[1];
     }
 
     if(this.state.arrayIndex == 6){
-      document.getElementById('merge2').innerHTML += answer[0];
-      document.getElementById('merge3').innerHTML += answer[1];
-      document.getElementById('merge4').innerHTML += answer[2];
+      document.getElementById('test10').innerHTML += answer[0];
+      document.getElementById('test11').innerHTML += answer[1];
+      document.getElementById('test12').innerHTML += answer[2];
       leftMerge3 = answer[0];
       leftMerge4 = answer[1];
       leftMerge5 = answer[2];
     }
 
     if(this.state.arrayIndex == 7){
-      document.getElementById('merge5').innerHTML += answer[0];
-      document.getElementById('merge6').innerHTML += answer[1];
-      document.getElementById('merge7').innerHTML += answer[2];
-      document.getElementById('merge8').innerHTML += answer[3];
-      document.getElementById('merge9').innerHTML += answer[4];
+      document.getElementById('test13').innerHTML += answer[0];
+      document.getElementById('test14').innerHTML += answer[1];
+      document.getElementById('test15').innerHTML += answer[2];
+      document.getElementById('test16').innerHTML += answer[3];
+      document.getElementById('test17').innerHTML += answer[4];
     }
   }
 
@@ -290,35 +303,37 @@ export default class MergeSortComponent extends Component {
                   <div className="test4" id="test4">{stepsArray[4]}</div>
                   
                   <div className="test5" id="test5">{stepsArray[5]}</div>
+                  <div className="test6" id="test6">{stepsArray[6]}</div>
+                  <div className="test7" id="test7">{stepsArray[7]}</div>
 
                   {/* Inserting new merging steps: */}
                   <div id="stepFiveArray">
-                    <div className="merge0" id="merge0"></div>
-                    <div className="merge1" id="merge1"></div>
+                    <div className="merge0" id="test8"></div>
+                    <div className="merge1" id="test9"></div>
                   </div>
 
                   <div id="stepSixArray">
-                    <div className="merge2" id="merge2"></div>
-                    <div className="merge3" id="merge3"></div>
-                    <div className="merge4" id="merge4"></div>
+                    <div className="merge2" id="test10"></div>
+                    <div className="merge3" id="test11"></div>
+                    <div className="merge4" id="test12"></div>
                   </div>
 
-                  <div className="merge5" id="merge5"></div>
-                  <div className="merge6" id="merge6"></div>
-                  <div className="merge7" id="merge7"></div>
-                  <div className="merge8" id="merge8"></div>
-                  <div className="merge9" id="merge9"></div>
+                  <div className="merge5" id="test13"></div>
+                  <div className="merge6" id="test14"></div>
+                  <div className="merge7" id="test15"></div>
+                  <div className="merge8" id="test16"></div>
+                  <div className="merge9" id="test17"></div>
 
-                  <div className="test6" id="test6">{stepsArray[6]}</div>
-                  <div className="test7" id="test7">{stepsArray[7]}</div>
-                  <div className="test8" id="test8">{stepsArray[8]}</div>
-                  <div className="test9" id="test9">{stepsArray[9]}</div>
-                  <div className="test10" id="test10">{stepsArray[10]}</div>
-                  <div className="test11" id="test11">{stepsArray[11]}</div>
-                  <div className="test12" id="test12">{stepsArray[12]}</div>
-                  <div className="test13" id="test13">{stepsArray[13]}</div>
+                  {/* <div className="test6" id="test16">{stepsArray[6]}</div>
+                  <div className="test7" id="test17">{stepsArray[7]}</div> */}
+                  <div className="test8" id="test18">{stepsArray[8]}</div>
+                  <div className="test9" id="test19">{stepsArray[9]}</div>
+                  <div className="test10" id="test20">{stepsArray[10]}</div>
+                  <div className="test11" id="test21">{stepsArray[11]}</div>
+                  <div className="test12" id="test22">{stepsArray[12]}</div>
+                  <div className="test13" id="test23">{stepsArray[13]}</div>
                   <br/>
-                  <div className="test14" id="test14"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
+                  <div className="test14" id="test24"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
                   <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
