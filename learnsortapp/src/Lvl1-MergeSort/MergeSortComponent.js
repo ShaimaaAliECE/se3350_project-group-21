@@ -83,7 +83,7 @@ export default class MergeSortComponent extends Component {
  
 
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
-        && elementID !== "test9") {
+        && elementID !== "test9" && elementID !== "test10") {
       document.getElementById(elementID).style.display = 'block';
       document.getElementById(elementID).style.animation = 'pulse 1s';
       document.getElementById(elementID).style.fontSize = '20px';  
@@ -94,34 +94,181 @@ export default class MergeSortComponent extends Component {
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
-      // document.getElementById("stepSevenArray").style.backgroundColor = 'yellow';
-      // document.getElementById("stepSevenArray").style.animation = 'pulse 1s';
       document.getElementById("stepSevenArray").style.fontSize = '20px';   
-    } else if (elementID === "test8") {
-      document.getElementById(elementID).style.backgroundColor = 'yellow';
+    } 
+    
+    // merging step starts
+    // getting the first value of the left half array
+    else if (elementID === "test8") {
+      document.getElementById("test8").style.backgroundColor = 'yellow';
       document.getElementById("test10").style.backgroundColor = 'yellow';
       document.getElementById("test13").style.animation = 'pulse 1s';
-
-    } else if (elementID === "test9") {
-      if (document.getElementById("test8") <= document.getElementById("test10")) {
-
-        document.getElementById("test8").style.backgroundColor = 'yellow';
-
-        document.getElementById("test9").style.backgroundColor = 'yellow';
-        document.getElementById("test10").style.backgroundColor = 'white';
-
-        document.getElementById("test14").style.animation = 'pulse 1s';
-
-      } else if (document.getElementById("test8") > document.getElementById("test10")) {
-
+    } 
+    
+    // getting the second value of the left half array
+    else if (elementID === "test9") {
+      if (parseInt(document.getElementById("test8").value) <= parseInt(document.getElementById("test10").value)) {
+        document.getElementById("test8").style.backgroundColor = 'white';
         document.getElementById("test10").style.backgroundColor = 'yellow';
 
+        if (parseInt(document.getElementById("test9").value) <= parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+          console.log(document.getElementById("test9").value);
+        } else if (parseInt(document.getElementById("test9").value) > parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+          console.log(document.getElementById("test11").value);
+        }
+
+        document.getElementById("test14").style.animation = 'pulse 1s'; 
+      } 
+      else if (parseInt(document.getElementById("test8").value) > parseInt(document.getElementById("test10").value)) {
+        document.getElementById("test10").style.backgroundColor = 'white';
+        document.getElementById("test8").style.backgroundColor = 'yellow';
+
+        if (parseInt(document.getElementById("test9").value) <= parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+          console.log(document.getElementById("test9").value);
+        } else if (parseInt(document.getElementById("test9").value) > parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+          console.log(document.getElementById("test11").value);
+        }
+
+        document.getElementById("test14").style.animation = 'pulse 1s';
+      } 
+    }
+
+    // getting the third value of the left half array
+    else if (elementID === "test10") {
+      // 4 possible cases
+      if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test9").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test10").value) <= parseInt(document.getElementById("test9").value)) {
+          document.getElementById("test10").style.backgroundColor = 'white';
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+        } else if (parseInt(document.getElementById("test10").value) > parseInt(document.getElementById("test9").value)) {
+          document.getElementById("test9").style.backgroundColor = 'white';
+          document.getElementById("test10").style.backgroundColor = 'yellow';
+
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById("test15").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test10").value) <= parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test10").style.backgroundColor = 'white';
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+        } else if (parseInt(document.getElementById("test10").value) > parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test11").style.backgroundColor = 'white';
+          document.getElementById("test10").style.backgroundColor = 'yellow';
+
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById("test15").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test8").style.backgroundColor === 'yellow' && document.getElementById("test9").style.backgroundColor === 'yellow') {
         document.getElementById("test8").style.backgroundColor = 'white';
         document.getElementById("test9").style.backgroundColor = 'yellow';
-        // document.getElementById(elementID).style.backgroundColor = 'yellow';
-        document.getElementById("test14").style.animation = 'pulse 1s';
+
+        document.getElementById("test11").style.backgroundColor = 'yellow';
+
+        document.getElementById("test15").style.animation = 'pulse 1s';
+
+      } else if (document.getElementById("test8").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+        if (parseInt(document.getElementById("test8").value) <= parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test8").style.backgroundColor = 'white';
+          document.getElementById("test11").style.backgroundColor = 'yellow';
+
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+        } else if (parseInt(document.getElementById("test8").value) > parseInt(document.getElementById("test11").value)) {
+          document.getElementById("test11").style.backgroundColor = 'white';
+          document.getElementById("test8").style.backgroundColor = 'yellow';
+
+          document.getElementById("test9").style.backgroundColor = 'yellow';
+        }
+
+        document.getElementById("test15").style.animation = 'pulse 1s';
       }
     }
+
+    // getting the fourth value of the left half array
+
+
+    // } else if (elementID === "test10") {
+    //   if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test9").style.backgroundColor === 'yellow') {
+
+    //     if (document.getElementById("test10").value <= document.getElementById("test9").value) {
+    //       document.getElementById("test10").style.backgroundColor = 'white';
+
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+
+    //     } else if (document.getElementById("test10").value > document.getElementById("test9").value) {
+    //       document.getElementById("test9").style.backgroundColor = 'white';
+
+    //       document.getElementById("test10").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+    //     }
+
+    //     document.getElementById("test15").style.animation = 'pulse 1s';
+
+    //   } else if (document.getElementById("test10").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+
+    //     if (document.getElementById("test10").value <= document.getElementById("test11").value) {
+    //       document.getElementById("test10").style.backgroundColor = 'white';
+
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+
+    //     } else if (document.getElementById("test10").value > document.getElementById("test11").value) {
+    //       document.getElementById("test11").style.backgroundColor = 'white';
+
+    //       document.getElementById("test10").style.backgroundColor = 'yellow';
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //     }
+
+    //     document.getElementById("test15").style.animation = 'pulse 1s';
+
+    //   } else if (document.getElementById("test8").style.backgroundColor === 'yellow' && document.getElementById("test9").style.backgroundColor === 'yellow') {
+
+    //     if (document.getElementById("test8").value <= document.getElementById("test9").value) {
+    //       document.getElementById("test8").style.backgroundColor = 'white';
+
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+
+    //     } else if (document.getElementById("test8").value > document.getElementById("test9").value) {
+    //       document.getElementById("test9").style.backgroundColor = 'white';
+
+    //       document.getElementById("test8").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+    //     }
+
+    //     document.getElementById("test15").style.animation = 'pulse 1s';
+
+    //   } else if (document.getElementById("test8").style.backgroundColor === 'yellow' && document.getElementById("test11").style.backgroundColor === 'yellow') {
+
+    //     if (document.getElementById("test8").value <= document.getElementById("test11").value) {
+    //       document.getElementById("test8").style.backgroundColor = 'white';
+
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //       document.getElementById("test11").style.backgroundColor = 'yellow';
+
+    //     } else if (document.getElementById("test8").value > document.getElementById("test11").value) {
+    //       document.getElementById("test11").style.backgroundColor = 'white';
+
+    //       document.getElementById("test8").style.backgroundColor = 'yellow';
+    //       document.getElementById("test9").style.backgroundColor = 'yellow';
+    //     }
+
+    //     document.getElementById("test15").style.animation = 'pulse 1s';
+
+    //   }
+
     // } else if (elementID === "test7") {
     //     let pair1a = document.getElementById("merge0");
     //     let pair1b = document.getElementById("merge2");
@@ -150,12 +297,6 @@ export default class MergeSortComponent extends Component {
 
     let answer = [];
 
-    let leftMerge1;
-    let leftMerge2;
-    let leftMerge3;
-    let leftMerge4;
-    let leftMerge5;
-
     let fragmentNo = "test" + this.state.arrayIndex;
     var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
     for(let i = 0; i < length; i++){
@@ -169,28 +310,40 @@ export default class MergeSortComponent extends Component {
     // alert(answer[0])
 
     // split the fragments into individual numbers (will probably require hard coding)
-    if(this.state.arrayIndex == 5){
+    if(this.state.arrayIndex === 5){
         document.getElementById('test8').innerHTML += answer[0];
+        document.getElementById('test8').value = answer[0];
+
         document.getElementById('test9').innerHTML += answer[1];
-        leftMerge1 = answer[0];
-        leftMerge2 = answer[1];
+        document.getElementById('test9').value = answer[1];
     }
 
-    if(this.state.arrayIndex == 6){
+    if(this.state.arrayIndex === 6){
       document.getElementById('test10').innerHTML += answer[0];
+      document.getElementById('test10').value = answer[0];
+
       document.getElementById('test11').innerHTML += answer[1];
+      document.getElementById('test11').value = answer[1];
+
       document.getElementById('test12').innerHTML += answer[2];
-      leftMerge3 = answer[0];
-      leftMerge4 = answer[1];
-      leftMerge5 = answer[2];
+      document.getElementById('test12').value = answer[2];
     }
 
-    if(this.state.arrayIndex == 7){
+    if(this.state.arrayIndex === 7){
       document.getElementById('test13').innerHTML += answer[0];
+      document.getElementById('test13').value = answer[0];
+
       document.getElementById('test14').innerHTML += answer[1];
+      document.getElementById('test14').value = answer[1];
+
       document.getElementById('test15').innerHTML += answer[2];
+      document.getElementById('test15').value = answer[2];
+
       document.getElementById('test16').innerHTML += answer[3];
+      document.getElementById('test16').value = answer[3];
+
       document.getElementById('test17').innerHTML += answer[4];
+      document.getElementById('test17').value = answer[4];
     }
   }
 
