@@ -808,7 +808,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number34'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
