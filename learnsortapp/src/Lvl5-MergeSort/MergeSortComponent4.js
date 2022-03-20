@@ -109,7 +109,7 @@ export default class MergeSortComponent2 extends Component {
     document.getElementById('instruction5').style.display = 'block'; 
     document.getElementById('userInput0').style.display = 'block';
     document.getElementById('return-button5').style.display = 'block';
-    document.getElementById('level1-button5').style.display = 'block';
+    document.getElementById('level-button5').style.display = 'block';
   }
 
 
@@ -190,18 +190,15 @@ export default class MergeSortComponent2 extends Component {
     // steps in correct order
     let stepsArray = []
     stepsArray[0] = fragments[1];
-    stepsArray[1] = fragments[49];
-    stepsArray[2] = fragments[2];
-    stepsArray[3] = fragments[12];
-    stepsArray[4] = fragments[3];
-    stepsArray[5] = fragments[4];
-    
-    //stepsArray[4] = fragments[8];
-    stepsArray[5] = fragments[5];
-    stepsArray[6] = fragments[9];
-    stepsArray[7] = fragments[6];
-    stepsArray[8] = fragments[10];
-    stepsArray[9] = fragments[7];
+    stepsArray[1] = fragments[2];
+    stepsArray[2] = fragments[3];
+    stepsArray[3] = fragments[4];
+    stepsArray[4] = fragments[5];    
+    stepsArray[5] = fragments[6];
+    stepsArray[6] = fragments[7];
+    stepsArray[7] = fragments[8];
+    stepsArray[8] = fragments[9];
+    stepsArray[9] = fragments[10];
     stepsArray[10] = fragments[11];
     stepsArray[11] = fragments[12];
     stepsArray[12] = fragments[13];
@@ -353,7 +350,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number0'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -367,7 +364,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number1'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -381,7 +378,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number2'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -395,7 +392,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number3'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -409,7 +406,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number4'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -423,7 +420,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number5'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -437,7 +434,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number6'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -451,7 +448,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number7'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -465,7 +462,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number8'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -479,7 +476,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number9'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -493,7 +490,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number10'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -507,7 +504,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number11'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -521,7 +518,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number12'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -535,7 +532,7 @@ export default class MergeSortComponent2 extends Component {
                         className='number13'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -1680,12 +1677,14 @@ export default class MergeSortComponent2 extends Component {
                   <div className="test7" id="test7">{stepsArray[7]}</div>
                   <div className="test8" id="test8">{stepsArray[8]}</div>
                   <div className="test9" id="test9">{stepsArray[9]}</div>
+                  
                   <div className="test10" id="test10">{stepsArray[10]}</div>
                   <div className="test11" id="test11">{stepsArray[11]}</div>
                   <div className="test12" id="test12">{stepsArray[12]}</div>
                   <div className="test13" id="test13">{stepsArray[13]}</div>
                   <div className="test14" id="test14">{stepsArray[14]}</div>
                   <div className="test15" id="test15">{stepsArray[15]}</div>
+                  
                   <div className="test16" id="test16">{stepsArray[16]}</div>
                   <div className="test17" id="test17">{stepsArray[17]}</div>
                   <div className="test18" id="test18">{stepsArray[18]}</div>

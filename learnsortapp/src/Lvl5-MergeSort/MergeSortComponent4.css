@@ -78,11 +78,11 @@
 }
 
 
-.instruction{
+.instruction5{
     position: absolute;
     background-color: #ffe9ed;
-    top: 50px;
-    left: 660px;
+    top: 30px;
+    right: 60px;
     height: 120px;
     width: 280px;
     padding: 1%;
@@ -93,8 +93,8 @@
 
 .instructions5{
     background-color: #ffe9ed;
-    margin-top: -60px;
-    margin-left: 30px;
+    margin-top: -120px;
+    margin-left: 50px;
     height: 120px;
     width: 280px;
     padding: 1%;
@@ -105,8 +105,8 @@
  .sort-title5{
     position: center;
     width: auto;
-    margin-top: auto;
     margin-top: 20px;
+    margin-left: 80px;
     
     font-family: Montserrat;
     font-style: normal;
@@ -168,8 +168,8 @@
 .randomNum5{
     position: center;
     width: 500px;
-    height: 40px;
-    margin-left: 470px;
+    height: 80px;
+    margin-left: 500px;
     padding-top: 10px;
     align-items: center;
     text-align: center;
@@ -463,26 +463,45 @@
     display:none;
 }
 
+.number0{
+    width: 475px;
+}
+.number1{
+    width: 475px;
+}
+.number2{
+    width: 475px;
+}
+.number3{
+    width: 475px;
+}
+.number4{
+    width: 475px;
+}
+.number5{
+    width: 475px;
+}
+
 #u1 {
     width: 100px;
 }
 
 .userInput0 {
     display: none;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin-left: 490px;
+    margin-top: 70px;
 }
 
 .userInput1 {
     display: none;
-    margin-left: 650px;
-    margin-top: -25px;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 
 .userInput2 {
     display: none;
     margin-left: 1px;
-    margin-top: 20px;
+    margin-top: px;
 }
 #l2 {
     position:absolute;
@@ -815,10 +834,10 @@
     display: none;
 }
 
-.check-button5{
+.check-button{
     position: absolute;
-    top: 130px;
-    left: 425px;
+    top: 170px;
+    left: 655px;
     width: auto;
     background: #FCD8A4;
     height: 40px;    
