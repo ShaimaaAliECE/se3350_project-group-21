@@ -1,37 +1,32 @@
 import React, { Component } from 'react';
-import { MergeSort4 } from './MergeSort4';
-import { Partition4 } from './Partition4';
+import { MergeSort } from './MergeSort';
+import { Partition } from './Partition';
+import './MergeSortComponent.css'
 import { Link } from 'react-router-dom';
-import './MergeSortComponent4.css'
-import correctAudio from '../audio/correct_audio_2.mp3';
-import wrongAudio from '../audio/wrong_audio_2.wav';
-
 import Timer from '../Timer/Timer.js';
 import IdleTimer from 'react-idle-timer';
 
-export default class MergeSortComponent2 extends Component {
+export default class MergeSortComponent extends Component {
 
   // Initiliaze unsorted array
   unsorted = Array.from({length: 50}, () => Math.floor(Math.random() * 100)+1);
 
+  // MergeSortComponent Constructor
   constructor(props) {
-    super(props)
+    super(props);
     // create references for partitions and mergesort
-    this.state = {
-        partitions:  [], 
-        arrayIndex:0,
-        textIndex: 1,
-        timeout:1000 * 5 * 60,
-        attempts: 0
-    };
-    this.mergeSort2 = new MergeSort4();
+    this.state = {partitions:  [], show:false, arrayIndex:0, timeout:1000 * 5 * 60};
+    this.mergeSort1 = new MergeSort();
+    this.forward = { render: false}
+    this.nextStep = this.nextStep.bind(this);
 
-    this.idleTimer = null
-    this.onAction = this._onAction.bind(this)
-    this.onActive = this._onActive.bind(this)
-    this.onIdle = this._onIdle.bind(this)
+   this.idleTimer = null
+   this.onAction = this._onAction.bind(this)
+   this.onActive = this._onActive.bind(this)
+   this.onIdle = this._onIdle.bind(this)
   }
 
+  
   _onAction(e) {
    this.idleTimer.reset();
  }
@@ -45,158 +40,129 @@ export default class MergeSortComponent2 extends Component {
    window.location = "/";
  }
 
-  playCorrectAudio = () => {
-    new Audio(correctAudio).play();
-  }
-
-  playWrongAudio = () => {
-    new Audio(wrongAudio).play();
-  }
-
-  closeBoxI(){
-    var popup = document.getElementById("myPopupI");
-    popup.style.visibility = "hidden"; 
-  }
-
   // random number generator
-  randomNum = () => {
-    let r = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
+  randomNum(){
+    let r = Array.from({length: 50}, () => Math.floor(Math.random() * 100)+1);
     return r;
+  }
+
+  // start running the algorithm
+  nextStep(){
+    let partition = new Partition(0, this.unsorted);
+    this.mergeSort1.mergeSort(partition);
+    this.setState({partitions: this.mergeSort1.partitions});
+
+    // hiding the run algorithm button if it's clicked
+    document.getElementById('test-button').style.display =  'none'; 
+    document.getElementById('instruction-box').style.display = 'block';
+    document.getElementById('next-button').style.display = 'block';
+    document.getElementById('return-button').style.display = 'block'; 
   }
 
   // display the next step in the algorithm with text
   IncrementItem = () => {
     this.setState({ arrayIndex: this.state.arrayIndex + 1 });
-    this.setState({ textIndex: this.state.textIndex + 1 });
-    const i = ["Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!", 
-    "Fill in the blanks for the next step!",
-    "Level Complete!"];
-    
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:","Step 1(b): This is the right side:", 
+              "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
+              "Step 2(b): This is the second half of the left sub-array:", 
+              "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+              "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
+              "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
+              "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
+              "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
+              "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
+              "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
+              "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
+              "Step 8(b): Merge the right sub-arrays in ascending order.", 
+              "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
     let elementID = "test" + this.state.arrayIndex;
-    let userInputID = "userInput" + this.state.textIndex ;
-    let instructionBox = document.getElementById("instruction-box1");
+    let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
 
-    
-    document.getElementById(userInputID).style.display = 'block';
+    document.getElementById(elementID).style.display = 'block';
+    document.getElementById(elementID).style.animation = 'pulse 1s';
+    document.getElementById(elementID).style.fontSize = '20px';  
 
-    var popup = document.getElementById("myPopupC");
-    popup.style.visibility = "hidden"; 
-  }
-
-  // start running the algorithm
-  runAlgorithm = () => {
-    let partition = new Partition4(0, this.unsorted);
-    this.mergeSort2.mergeSort(partition);
-    this.setState({partitions: this.mergeSort2.partitions});
-
-    // hiding the run algorithm button if it's clicked
-    document.getElementById('test-button1').style.display =  'none'; 
-    document.getElementById('instruction-box1').style.display = 'block';
-    document.getElementById('instruction').style.display = 'block'; 
-    document.getElementById('userInput0').style.display = 'block';
-    document.getElementById('return-button1').style.display = 'block';
-    document.getElementById('level1-button1').style.display = 'block';
-  }
-
-
-  handleSubmit = (event) => {
-    event.preventDefault()
-
-    let answer = [];
-
-    let fragmentNo = "test" + this.state.arrayIndex;
-    var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
-    /*for(let i = 0; i < length; i++){
-      let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
-      answer.push(value);
-    }*/
-
-    var popupC = document.getElementById("myPopupC");
-
-    var popupI = document.getElementById("myPopupI");
-
-    var incorrect1 = document.getElementById("IncorrectAttempt1");
-    var incorrect2 = document.getElementById("IncorrectAttempt2");
-    var incorrect3 = document.getElementById("IncorrectAttempt3");
-
-    if(event.target.userInput.value == answer.toString()){
-      popupC.style.visibility = "visible"; 
-      this.playCorrectAudio();
-
-      if (this.state.textIndex > 100) {
-        document.getElementById('next-button1').style.display = 'none';
-        document.getElementById('next-level-button1').style.display = 'block';
-      
-      }
+    // next button disappears after the final step to avoid having 'undefined' on the text box
+    if (this.state.arrayIndex > 13) {
+      document.getElementById('next-button').style.display = 'none';
+      document.getElementById('next-level-button').style.display = 'block';
     }
+  }
 
-    else {
-      this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-      }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-      }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-      }
-      popupI.style.visibility = "visible"; 
-      this.playWrongAudio(); 
-    }  
+  // display the previous step in the algorithm with text
+  DecrementItem = () => {
+    const i = ["Step 1(a): Find the middle index of the array, and divide the array into two parts from the middle. This is the left side:",
+    "Step 1(b): This is the right side:", 
+    "Step 2(a): Now starting from the left half of the array, we are going to continue to divide each sub-array in half (as evenly as possible). This is the first half of the left sub-array:", 
+    "Step 2(b): This is the second half of the left sub-array:", 
+    "Step 3(a): Now, we will continue to break down the left sub-arrays until each element is separated. During this process we will also begin comparing elements to order them in ascending order. ", 
+    "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
+    "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
+    "Step 5: Merge all of the left sub-array elements, now sorted in ascending order. ", 
+    "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
+    "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
+    "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
+    "Step 8(a): Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
+    "Step 8(b): Merge the right sub-arrays in ascending order.", 
+    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
+
+    if (this.state.arrayIndex-1 >= 0) { // to avoid going below zero and printing undefined
+      
+      let elementID = "test" + (this.state.arrayIndex-1);
+      document.getElementById(elementID).style.display = 'none';
     
+      let instructionBox = document.getElementById("instruction-box");
+      
+      let instructionID = '<div>Click "Next Step" to View</div>'
+
+      if (this.state.arrayIndex-1 == 0) { // to avoid printing undefined
+        instructionBox.innerHTML = instructionID;
+      } else {
+        instructionID = i[this.state.arrayIndex-2];
+      }
+
+      instructionBox.innerHTML = instructionID;
+      this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+    }
   }
 
   render() {
-    // get each partition and map each node 
+    // take the current partition and turn it into a "fragment"
     let fragments = this.state.partitions.map((node, i1) => {
-      // for each fragment row
-        return <div key={i1} className="fragment">
+      // for each fragment, we need to get the specific part of the JSON
+        return <div key={i1} className="fragment" >
         {
           node.fragments.map((numbers, i2) =>
-          <div className = "test">
-            <div className="group" key={i2}>
+          <span>
+            <span className="group" key={i2}>
             {
               numbers.map((number, index) => {
-                return <div key={index} className="number" id="number">{number}</div>
+                return <span key={index} className="number"> {number} </span>
               })
             }
-            </div>
-          </div>
+            </span>
+          </span>
           )
         }    
-        </div>        
+        </div>
+              
     });
 
+    // refresh page function
+    // will be called every time the user click the random number generator button
     function refreshPage() {
       window.location.reload(false);
     }
-    
+
     // steps in correct order
-    let stepsArray = []
+    let stepsArray = new Array();
     stepsArray[0] = fragments[1];
-    stepsArray[1] = fragments[49];
-    stepsArray[2] = fragments[2];
-    stepsArray[3] = fragments[12];
-    stepsArray[4] = fragments[3];
-    stepsArray[5] = fragments[4];
-    
-    //stepsArray[4] = fragments[8];
+    stepsArray[1] = fragments[2];
+    stepsArray[2] = fragments[3];
+    stepsArray[3] = fragments[4];
+    stepsArray[4] = fragments[8];
     stepsArray[5] = fragments[5];
     stepsArray[6] = fragments[9];
     stepsArray[7] = fragments[6];
@@ -207,105 +173,119 @@ export default class MergeSortComponent2 extends Component {
     stepsArray[12] = fragments[13];
     stepsArray[13] = fragments[14];
     stepsArray[14] = fragments[15];
-    stepsArray[15] = fragments[16];
-    stepsArray[16] = fragments[17];
-    stepsArray[17] = fragments[18];
-    stepsArray[18] = fragments[19];
-    stepsArray[19] = fragments[20];
-    stepsArray[20] = fragments[21];
-    stepsArray[21] = fragments[22];
-    stepsArray[22] = fragments[23];
+    stepsArray[15] = fragments[16]
+    stepsArray[16] = fragments[17]
+    stepsArray[17] = fragments[18]
+    stepsArray[18] = fragments[19]
+    stepsArray[19] = fragments[20]
+    stepsArray[20] = fragments[21]
+    stepsArray[21] = fragments[22]
+    stepsArray[22] = fragments[23]
 
 
-    stepsArray[23] = fragments[24];
-    stepsArray[24] = fragments[25];
-    stepsArray[25] = fragments[26];
-    stepsArray[26] = fragments[27];
-    stepsArray[27] = fragments[28];
-    stepsArray[28] = fragments[29];
-    stepsArray[29] = fragments[30];
-    stepsArray[30] = fragments[31];
-    stepsArray[31] = fragments[32];
-    stepsArray[32] = fragments[33];
-    stepsArray[33] = fragments[34];
-    stepsArray[34] = fragments[35];
-    stepsArray[35] = fragments[36];
-    stepsArray[36] = fragments[37];
-    stepsArray[37] = fragments[38];
-    stepsArray[38] = fragments[39];
-    stepsArray[39] = fragments[40];
-    stepsArray[40] = fragments[41];
-    stepsArray[41] = fragments[42];
-    stepsArray[42] = fragments[43];
-    stepsArray[43] = fragments[44];
-    stepsArray[44] = fragments[45];
-    stepsArray[45] = fragments[46];
-    stepsArray[46] = fragments[47];
-    stepsArray[47] = fragments[48];
 
-    stepsArray[48] = fragments[49];
-    stepsArray[49] = fragments[50];
-    stepsArray[50] = fragments[51];
-    stepsArray[51] = fragments[52];
-    stepsArray[52] = fragments[53];
-    stepsArray[53] = fragments[54];
-    stepsArray[54] = fragments[55];
-    stepsArray[55] = fragments[56];
-    stepsArray[56] = fragments[57];
-    stepsArray[57] = fragments[58];
-    stepsArray[58] = fragments[59];
-    stepsArray[59] = fragments[60];
-    stepsArray[60] = fragments[61];
-    stepsArray[61] = fragments[62];
-    stepsArray[62] = fragments[63];
-    stepsArray[63] = fragments[64];
-    stepsArray[64] = fragments[65];
-    stepsArray[65] = fragments[66];
-    stepsArray[66] = fragments[67];
-    stepsArray[67] = fragments[68];
-    stepsArray[68] = fragments[69];
-    stepsArray[69] = fragments[70];
-    stepsArray[70] = fragments[71];
-    stepsArray[71] = fragments[72];
-    stepsArray[72] = fragments[73];
-    stepsArray[73] = fragments[74];
-    stepsArray[74] = fragments[75];
-    stepsArray[75] = fragments[76];
-    stepsArray[76] = fragments[77];
-    stepsArray[77] = fragments[78];
-    stepsArray[78] = fragments[79];
 
-    stepsArray[79] = fragments[80];
-    stepsArray[80] = fragments[81];
-    stepsArray[81] = fragments[82];
-    stepsArray[82] = fragments[83];
-    stepsArray[83] = fragments[84];
-    stepsArray[84] = fragments[85];
-    stepsArray[85] = fragments[86];
-    stepsArray[86] = fragments[87];
-    stepsArray[87] = fragments[88];
-    stepsArray[88] = fragments[89];
-    stepsArray[89] = fragments[90];
-    stepsArray[90] = fragments[91];
-    stepsArray[91] = fragments[92];
-    stepsArray[92] = fragments[93];
-    stepsArray[93] = fragments[94];
-    stepsArray[94] = fragments[95];
-    stepsArray[95] = fragments[96];
-    stepsArray[96] = fragments[97];
-    stepsArray[97] = fragments[98];
-    stepsArray[98] = fragments[99];
-    stepsArray[99] = fragments[100];
+
+    stepsArray[23] = fragments[24]
+    stepsArray[24] = fragments[25]
+    stepsArray[25] = fragments[26]
+    stepsArray[26] = fragments[27]
+    stepsArray[27] = fragments[28]
+    stepsArray[28] = fragments[29]
+    stepsArray[29] = fragments[30]
+    stepsArray[30] = fragments[31]
+    stepsArray[31] = fragments[32]
+    stepsArray[32] = fragments[33]
+    stepsArray[33] = fragments[34]
+    stepsArray[34] = fragments[35]
+    stepsArray[35] = fragments[36]
+    stepsArray[36] = fragments[37]
+    stepsArray[37] = fragments[38]
+    stepsArray[38] = fragments[39]
+    stepsArray[39] = fragments[40]
+    stepsArray[40] = fragments[41]
+    stepsArray[41] = fragments[42]
+    stepsArray[42] = fragments[43]
+    stepsArray[43] = fragments[44]
+    stepsArray[44] = fragments[45]
+    stepsArray[45] = fragments[46]
+    stepsArray[46] = fragments[47]
+    stepsArray[47] = fragments[48]
+
+
+    stepsArray[48] = fragments[49]
+    stepsArray[49] = fragments[50]
+    stepsArray[50] = fragments[51]
+    stepsArray[51] = fragments[52]
+    stepsArray[52] = fragments[53]
+    stepsArray[53] = fragments[54]
+    stepsArray[54] = fragments[55]
+    stepsArray[55] = fragments[56]
+    stepsArray[56] = fragments[57]
+    stepsArray[57] = fragments[58]
+    stepsArray[58] = fragments[59]
+    stepsArray[59] = fragments[60]
+    stepsArray[60] = fragments[61]
+    stepsArray[61] = fragments[62]
+    stepsArray[62] = fragments[63]
+    stepsArray[63] = fragments[64]
+    stepsArray[64] = fragments[65]
+    stepsArray[65] = fragments[66]
+    stepsArray[66] = fragments[67]
+    stepsArray[67] = fragments[68]
+    stepsArray[68] = fragments[69]
+    stepsArray[69] = fragments[70]
+    stepsArray[70] = fragments[71]
+    stepsArray[71] = fragments[72]
+    stepsArray[72] = fragments[73]
+    stepsArray[73] = fragments[74]
+    stepsArray[74] = fragments[75]
+    stepsArray[75] = fragments[76]
+    stepsArray[76] = fragments[77]
+    stepsArray[77] = fragments[78]
+    stepsArray[78] = fragments[79]
+
+    stepsArray[79] = fragments[80]
+    stepsArray[80] = fragments[81]
+    stepsArray[81] = fragments[82]
+    stepsArray[82] = fragments[83]
+    stepsArray[83] = fragments[84]
+    stepsArray[84] = fragments[85]
+    stepsArray[85] = fragments[86]
+    stepsArray[86] = fragments[87]
+    stepsArray[87] = fragments[88]
+    stepsArray[88] = fragments[89]
+    stepsArray[89] = fragments[90]
+    stepsArray[90] = fragments[91]
+    stepsArray[91] = fragments[92]
+    stepsArray[92] = fragments[93]
+    stepsArray[93] = fragments[94]
+    stepsArray[94] = fragments[95]
+    stepsArray[95] = fragments[96]
+    stepsArray[96] = fragments[97]
+    stepsArray[97] = fragments[98]
+    stepsArray[98] = fragments[99]
+    stepsArray[99] = fragments[100]
+
+
+
     
+
+
+    
+    
+    
+
+
 
       return (
         <>
-            <div class="contents5">
+            <div class="contents">
 
-              <h1 className = "sort-title5">MergeSort</h1>
-              <div className = "sort-title-background5" />
+              <h1 class = "sort-title">MergeSort</h1>
+              <h2 class = "sort-title-background" />
               
-              <div onClick={refreshPage} className="gen-num-button15">Generate New Numbers</div>
+              <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
@@ -316,1490 +296,303 @@ export default class MergeSortComponent2 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner15">
-                  
+
+              <div class = "outliner">
                     {/* // will show the initial values (created by random number generator) */}
-                    <div className="your-values15">
+                    <div className="your-values">
                       Your Values:
                       <br/><br/>
                     </div>
-                    <div className='randomNum15'> { this.unsorted.join(', ') } </div>
-
-
+                    <div className='randomNum'> { this.unsorted.join(', ') } </div>
+                   
                   {
                     this.state.show? <div><h1>
-                    </h1></div> : null
+                      {stepsArray}
+                      </h1></div> : null
                   }
-                  <div onClick={this.runAlgorithm} id="test-button1" className="continue-button15">Start!</div>
-                  <div onClick={this.IncrementItem} id="next-button1" class="next-button15">Next Step</div>
-
-                  <Link to='/Level4'>
-                    <div id="next-level-button1" className="next-level-button15">Next Level!</div>
+        
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
+                  <Link to='/Level2'>
+                    <div id="next-level-button" class="next-level-button">Next Level!</div>
                   </Link>
 
-                  <div class="popupC5" id="myPopupC" >
-                  <span class="popuptextC5" id="myPopupC"><br/><br/><br/><div id="poptextC">Correct</div><button class="popnextC5" onClick={this.IncrementItem}>Continue</button></span>
-                  </div>
-                  <div class="popupI5" id="myPopupI">
-                  <span class="popuptextI5"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI5" onClick={this.closeBoxI}>Continue</button></span>
-                  </div>
+                  <div id="instruction-box"class="instructions">Click "Next Step" to View</div>
 
-                  <div id="instruction-box1" class="instructions15">Decide what needs to be done at each step!</div>
-                  <div id="instruction" class="instruction5">NOTE: Please type all responses in the format x,x,x,x (commas between all values and no spaces between values)</div>
-
-                  <div className="userInput05" id="userInput0">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput0" id="userInput0">
+                  <form >
                     <label>
                       Step 1:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number0'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
-                  </div>
-
-                  <div className="userInput15" id="userInput1">
-                  <form onSubmit={this.handleSubmit}>
+                  </div><div className="userInput1" id="userInput0">
+                  <form >
                     <label>
                       Step 2:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number1'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput25" id="userInput2">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput2" id="userInput0">
+                  <form >
                     <label>
                       Step 3:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number2'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput35" id="userInput3">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput3" id="userInput0">
+                  <form >
                     <label>
                       Step 4:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number3'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput45" id="userInput4">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput4" id="userInput0">
+                  <form >
                     <label>
                       Step 5:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number4'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput55" id="userInput5">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput5" id="userInput0">
+                  <form >
                     <label>
                       Step 6:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number5'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput65" id="userInput6">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput6" id="userInput0">
+                  <form >
                     <label>
                       Step 7:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number6'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput75" id="userInput7">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput7" id="userInput0">
+                  <form >
                     <label>
                       Step 8:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number7'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput85" id="userInput8">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput8" id="userInput0">
+                  <form >
                     <label>
                       Step 9:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number8'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput95" id="userInput9">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput9" id="userInput0">
+                  <form >
                     <label>
                       Step 10:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number9'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput105" id="userInput10">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput10" id="userInput0">
+                  <form >
                     <label>
                       Step 11:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number10'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
-
-                  <div className="userInput115" id="userInput11">
-                  <form onSubmit={this.handleSubmit}>
+                  <div className="userInput11" id="userInput0">
+                  <form >
                     <label>
                       Step 12:
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number11'
+                        className='number'
                       />
                         </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="userInput125" id="userInput12">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 13:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number12'
-                      />
-                        </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
-                    </form>
-                  </div>
 
-                  <div className="userInput135" id="userInput13">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 14:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number13'
-                      />
-                        </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
-                    </form>
-                  </div>
 
-                  <div className="userInput145" id="userInput14">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 15:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number14'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
+                  {/*<div>{stepsArray[0]}</div>
+                  <div>{stepsArray[1]}</div>
+                  <div>{stepsArray[2]}</div>
+                  <div>{stepsArray[3]}</div>
+                  <div>{stepsArray[4]}</div>
+                  <div>{stepsArray[5]}</div>
+                  <div>{stepsArray[6]}</div>
+                  <div>{stepsArray[7]}</div>
+                  <div>{stepsArray[8]}</div>
+                  <div>{stepsArray[9]}</div>
+                  <div>{stepsArray[10]}</div>
+                  <div>{stepsArray[11]}</div>
+                  <div >{stepsArray[12]}</div>
+                  <div >{stepsArray[13]}</div>
+                  <div >{stepsArray[14]}</div>
+                  <div >{stepsArray[15]}</div>
+                  <div >{stepsArray[16]}</div>
+                  <div >{stepsArray[17]}</div>
+                  <div >{stepsArray[18]}</div>
+                  <div >{stepsArray[19]}</div>
+                  <div >{stepsArray[20]}</div>
+                  <div >{stepsArray[21]}</div>
+                  <div >{stepsArray[22]}</div>*/}
 
-                  <div className="userInput15" id="userInput15">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 16:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number15'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput16" id="userInput16">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 17:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number16'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput17" id="userInput17">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 18:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number17'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput18" id="userInput18">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 19:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number18'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput19" id="userInput19">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 20:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number19'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput20" id="userInput20">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 21:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number20'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput21" id="userInput21">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 22:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number21'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput22" id="userInput22">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 23:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number22'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput23" id="userInput23">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 24:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number23'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput24" id="userInput24">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 25:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number24'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput25" id="userInput25">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 26:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number25'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput26" id="userInput26">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 27:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number26'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput27" id="userInput27">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 28:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number27'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput28" id="userInput28">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 29:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number28'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput29" id="userInput29">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 30:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number29'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput30" id="userInput30">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 31:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number30'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput31" id="userInput31">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 32:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number31'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput32" id="userInput32">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 33:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number32'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput33" id="userInput33">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 34:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number33'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
 
-                  <div className="userInput34" id="userInput34">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 35:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number34'
-                      />
-                        </label>
-                        <button class="check-button5" type="submit">Check your answer</button>
-                    </form>
-                  </div>
+                  {/*<div >{stepsArray[23]}</div>
+                  <div >{stepsArray[24]}</div>
+                  <div >{stepsArray[25]}</div>
+                  <div >{stepsArray[26]}</div>
+                  <div >{stepsArray[27]}</div>
+                  <div >{stepsArray[28]}</div>
+                  <div >{stepsArray[29]}</div>
+                  <div >{stepsArray[30]}</div>
+                  <div >{stepsArray[31]}</div>
+                  <div >{stepsArray[32]}</div>
+                  <div >{stepsArray[33]}</div>
+                  <div >{stepsArray[34]}</div>
+                  <div >{stepsArray[35]}</div>
+                  <div >{stepsArray[36]}</div>
+                  <div >{stepsArray[37]}</div>
+                  <div >{stepsArray[38]}</div>
+                  <div >{stepsArray[39]}</div>
+                  <div >{stepsArray[40]}</div>
+                  <div >{stepsArray[41]}</div>
+                  <div >{stepsArray[42]}</div>
+                  <div >{stepsArray[43]}</div>
+                  <div >{stepsArray[44]}</div>
+                  <div >{stepsArray[45]}</div>
+                  <div >{stepsArray[46]}</div>
+                  <div >{stepsArray[47]}</div>
+                  <div >{stepsArray[48]}</div>*/}
 
-                  <div className="userInput35" id="userInput35">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 36:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number35'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
+                  {/*<div >{stepsArray[49]}</div>
+                  <div >{stepsArray[50]}</div>
+                  <div >{stepsArray[51]}</div>
+                  <div >{stepsArray[52]}</div>
+                  <div >{stepsArray[53]}</div>
+                  <div >{stepsArray[54]}</div>
+                  <div >{stepsArray[55]}</div>
+                  <div >{stepsArray[56]}</div>
+                  <div >{stepsArray[57]}</div>
+                  <div >{stepsArray[58]}</div>
+                  <div >{stepsArray[59]}</div>
 
-                  <div className="userInput36" id="userInput36">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 37:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number36'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput37" id="userInput37">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 38:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number37'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput38" id="userInput38">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 39:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number38'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput39" id="userInput39">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 40:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number39'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput40" id="userInput40">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 41:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number40'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput41" id="userInput41">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 42:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number41'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput42" id="userInput42">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 43:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number42'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput43" id="userInput43">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 44:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number43'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput44" id="userInput44">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 45:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number44'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput45" id="userInput45">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 46:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number45'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput46" id="userInput46">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 47:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number46'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput47" id="userInput47">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 48:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number47'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput48" id="userInput48">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 49:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number48'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput49" id="userInput49">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 50:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number49'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput50" id="userInput50">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 51:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number50'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput51" id="userInput51">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 52:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number51'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput52" id="userInput52">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 53:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number52'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput53" id="userInput53">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 54:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number53'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput54" id="userInput54">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 55:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number54'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput55" id="userInput55">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 56:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number55'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput56" id="userInput56">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 57:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number56'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput57" id="userInput57">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 58:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number57'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput58" id="userInput58">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 59:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number25'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput59" id="userInput59">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 60:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number59'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput60" id="userInput60">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 61:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number60'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput61" id="userInput61">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 62:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number61'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput62" id="userInput62">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 63:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number62'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput63" id="userInput63">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 64:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number63'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput64" id="userInput64">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 65:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number64'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput65" id="userInput65">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 66:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number65'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput66" id="userInput66">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 67:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number66'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput67" id="userInput67">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 68:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number67'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput68" id="userInput68">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 69:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number68'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput69" id="userInput69">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 70:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number69'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput70" id="userInput70">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 71:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number70'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput71" id="userInput71">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 72:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number71'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput72" id="userInput72">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 73:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number72'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput73" id="userInput73">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 74:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number73'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput74" id="userInput74">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 75:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number74'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput75" id="userInput75">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 76:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number75'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput76" id="userInput76">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 77:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number76'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput77" id="userInput77">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 78:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number77'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
+                  <br/>
+                  <div >{stepsArray[60]}</div>
+                  <div >{stepsArray[61]}</div>
+                  <div >{stepsArray[62]}</div>
+                  <div >{stepsArray[63]}</div>
+                  <div >{stepsArray[64]}</div>
+                  <div >{stepsArray[65]}</div>
+                  <div >{stepsArray[66]}</div>
+                  <div >{stepsArray[67]}</div>
+                  <div >{stepsArray[68]}</div>
+                  <div >{stepsArray[69]}</div>
+                  <div >{stepsArray[70]}</div>
                   
-                  <div className="userInput78" id="userInput78">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 79:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number78'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput79" id="userInput79">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 80:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number79'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput80" id="userInput80">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 81:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number80'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput81" id="userInput81">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 82:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number81'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput82" id="userInput82">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 83:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number82'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput83" id="userInput83">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 84:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number83'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput84" id="userInput84">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 85:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number84'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput85" id="userInput85">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 86:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number85'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput86" id="userInput86">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 87:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number86'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput87" id="userInput87">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 88:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number87'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput88" id="userInput88">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 89:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number88'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput89" id="userInput89">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 90:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number89'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-                  <div className="userInput90" id="userInput90">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 91:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number90'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput91" id="userInput91">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 92:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number91'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput92" id="userInput92">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 93:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number92'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput93" id="userInput93">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 94:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number93'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput94" id="userInput94">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 95:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number94'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput95" id="userInput95">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 96:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number95'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput96" id="userInput96">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 97:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number96'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput97" id="userInput97">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 98:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number97'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput98" id="userInput98">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 99:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number98'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-
-
-                  <div className="test0" id="test0">{stepsArray[0]}</div>
-                  <div className="test1" id="test1">{stepsArray[1]}</div>
-                  <div className="test2" id="test2">{stepsArray[2]}</div>
-                  <div className="test3" id="test3">{stepsArray[3]}</div>
-                  <div className="test4" id="test4">{stepsArray[4]}</div>
-                  <div className="test5" id="test5">{stepsArray[5]}</div>
-                  <div className="test6" id="test6">{stepsArray[6]}</div>
-                  <div className="test7" id="test7">{stepsArray[7]}</div>
-                  <div className="test8" id="test8">{stepsArray[8]}</div>
-                  <div className="test9" id="test9">{stepsArray[9]}</div>
-                  <div className="test10" id="test10">{stepsArray[10]}</div>
-                  <div className="test11" id="test11">{stepsArray[11]}</div>
-                  <div className="test12" id="test12">{stepsArray[12]}</div>
-                  <div className="test13" id="test13">{stepsArray[13]}</div>
-                  <div className="test14" id="test14">{stepsArray[14]}</div>
-                  <div className="test15" id="test15">{stepsArray[15]}</div>
-                  <div className="test16" id="test16">{stepsArray[16]}</div>
-                  <div className="test17" id="test17">{stepsArray[17]}</div>
-                  <div className="test18" id="test18">{stepsArray[18]}</div>
-                  <div className="test19" id="test19">{stepsArray[19]}</div>
-                  <div className="test20" id="test20">{stepsArray[20]}</div>
-
-                  <div className="test21" id="test21">{stepsArray[21]}</div>
-                  <div className="test22" id="test22">{stepsArray[22]}</div>
-                  <div className="test23" id="test23">{stepsArray[23]}</div>
-                  <div className="test24" id="test24">{stepsArray[24]}</div>
-                  <div className="test25" id="test25">{stepsArray[25]}</div>
-                  <div className="test26" id="test26">{stepsArray[26]}</div>
-                  <div className="test27" id="test27">{stepsArray[27]}</div>
-                  <div className="test28" id="test28">{stepsArray[28]}</div>
-                  <div className="test29" id="test29">{stepsArray[29]}</div>
-                  <div className="test30" id="test30">{stepsArray[30]}</div>
-                  <div className="test31" id="test31">{stepsArray[31]}</div>
-                  <div className="test32" id="test32">{stepsArray[32]}</div>
-
-                  <div className="test33" id="test33">{stepsArray[33]}</div>
-                  <div className="test34" id="test34">{stepsArray[34]}</div>
-                  <div className="test35" id="test35">{stepsArray[35]}</div>
-                  <div className="test36" id="test36">{stepsArray[36]}</div>
-                  <div className="test37" id="test37">{stepsArray[37]}</div>
-                  <div className="test38" id="test38">{stepsArray[38]}</div>
-                  <div className="test39" id="test39">{stepsArray[39]}</div>
-                  <div className="test40" id="test40">{stepsArray[40]}</div>
-                  <div className="test41" id="test41">{stepsArray[41]}</div>
-                  <div className="test42" id="test42">{stepsArray[42]}</div>
-                  <div className="test43" id="test43">{stepsArray[43]}</div>
-                  <div className="test44" id="test44">{stepsArray[44]}</div>
-
-                  <div className="test45" id="test45">{stepsArray[45]}</div>
-                  <div className="test46" id="test46">{stepsArray[46]}</div>
-                  <div className="test47" id="test47">{stepsArray[47]}</div>
-                  <div className="test48" id="test48">{stepsArray[48]}</div>
-                  <div className="test49" id="test49">{stepsArray[49]}</div>
-                  <div className="test50" id="test50">{stepsArray[50]}</div>
-                  <div className="test51" id="test51">{stepsArray[51]}</div>
-                  <div className="test52" id="test52">{stepsArray[52]}</div>
-                  <div className="test53" id="test53">{stepsArray[53]}</div>
-                  <div className="test54" id="test54">{stepsArray[54]}</div>
-                  <div className="test55" id="test55">{stepsArray[55]}</div>
-                  <div className="test56" id="test56">{stepsArray[56]}</div>
-
-                  <div className="test57" id="test57">{stepsArray[57]}</div>
-                  <div className="test58" id="test58">{stepsArray[58]}</div>
-                  <div className="test59" id="test59">{stepsArray[59]}</div>
-                  <div className="test60" id="test60">{stepsArray[60]}</div>
-                  <div className="test61" id="test61">{stepsArray[61]}</div>
-                  <div className="test62" id="test62">{stepsArray[62]}</div>
-                  <div className="test63" id="test63">{stepsArray[63]}</div>
-                  <div className="test64" id="test64">{stepsArray[64]}</div>
-                  <div className="test65" id="test65">{stepsArray[65]}</div>
-                  <div className="test66" id="test66">{stepsArray[66]}</div>
-                  <div className="test67" id="test67">{stepsArray[67]}</div>
-                  <div className="test68" id="test68">{stepsArray[68]}</div>
+                  <div >{stepsArray[71]}</div>
+                  <div >{stepsArray[72]}</div>
+                  <div >{stepsArray[73]}</div>
+                  <div >{stepsArray[74]}</div>
+                  <div >{stepsArray[75]}</div>
+                  <div >{stepsArray[76]}</div>
+                  <div >{stepsArray[77]}</div>
+                  <div >{stepsArray[78]}</div>
+                  <div >{stepsArray[79]}</div>
+                  <div >{stepsArray[80]}</div>
+                  <div >{stepsArray[81]}</div>
+                  <div >{stepsArray[82]}</div>
+                  <div >{stepsArray[83]}</div>
+                  <div >{stepsArray[84]}</div>
+                  <div >{stepsArray[85]}</div>
+                  <div >{stepsArray[86]}</div>
+                  <div >{stepsArray[87]}</div>
+                  <div >{stepsArray[88]}</div>
+                  <div >{stepsArray[89]}</div>
+                  <div >{stepsArray[90]}</div>
+                  <div >{stepsArray[91]}</div>
+                  <div >{stepsArray[92]}</div>
+                  <div >{stepsArray[93]}</div>
+                  <div >{stepsArray[94]}</div>
+                  <div >{stepsArray[95]}</div>
+                  <div >{stepsArray[96]}</div>
+                  <div >{stepsArray[97]}</div>
+                  <div >{stepsArray[98]}</div>
+                  <div >{stepsArray[99]}</div>*/}
                   
-                  <div className="test69" id="test69">{stepsArray[69]}</div>
-                  <div className="test70" id="test70">{stepsArray[70]}</div>
-                  <div className="test71" id="test71">{stepsArray[71]}</div>
-                  <div className="test72" id="test72">{stepsArray[72]}</div>
-                  <div className="test73" id="test73">{stepsArray[73]}</div>
-                  <div className="test74" id="test74">{stepsArray[74]}</div>
-                  <div className="test75" id="test75">{stepsArray[75]}</div>
-                  <div className="test76" id="test76">{stepsArray[76]}</div>
-                  <div className="test77" id="test77">{stepsArray[77]}</div>
-                  <div className="test78" id="test78">{stepsArray[78]}</div>
-                  <div className="test79" id="test79">{stepsArray[79]}</div>
-                  <div className="test80" id="test80">{stepsArray[80]}</div>
+
                   
-                  <div className="test81" id="test81">{stepsArray[81]}</div>
-                  <div className="test82" id="test82">{stepsArray[82]}</div>
-                  <div className="test83" id="test83">{stepsArray[83]}</div>
-                  <div className="test84" id="test84">{stepsArray[84]}</div>
-                  <div className="test85" id="test85">{stepsArray[85]}</div>
-                  <div className="test86" id="test86">{stepsArray[86]}</div>
-                  <div className="test87" id="test87">{stepsArray[87]}</div>
-                  <div className="test88" id="test88">{stepsArray[88]}</div>
-                  <div className="test89" id="test89">{stepsArray[89]}</div>
-                  <div className="test90" id="test90">{stepsArray[90]}</div>
-                  <div className="test91" id="test91">{stepsArray[91]}</div>
-                  <div className="test92" id="test92">{stepsArray[92]}</div>
-                  <div className="test93" id="test93">{stepsArray[93]}</div>
 
-                  <div className="test94" id="test94">{stepsArray[94]}</div>
-                  <div className="test95" id="test95">{stepsArray[95]}</div>
-                  <div className="test96" id="test96">{stepsArray[96]}</div>
-                  <div className="test97" id="test97">{stepsArray[97]}</div>
-                  <div className="test98" id="test98">{stepsArray[98]}</div>
-                  <div className="test99" id="test99">{stepsArray[99]}</div>
-
-
-                  <br/><br/>
                   
-                  <Link to='/Level4'>
-                    <div id="level1-button1" className="level1-button1">Level 4</div>
-                  </Link>
+                  
+                  
+                  <br/>
+                  <br/>
+
+                  <br/>
+
+                  <br/>
+
+                  <br/>
+
+                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
-                    <div id="return-button1" className="return-button15">Levels Page</div>
+                    <div id="return-button" className="return-button">Levels Page</div>
                   </Link>
                 </div>
                 </div>
-                
-                <div className='incorrect15' id='IncorrectAttempt1'>
-                  <h1 >X</h1>
-                </div>
-                <div className='incorrect25' id='IncorrectAttempt2'>
-                  <h1 >X</h1>
-                </div>
-                <div className='incorrect35' id='IncorrectAttempt3'>
-                  <h1 >X</h1>
-                </div>
-    
-
         </>
         );
   }
