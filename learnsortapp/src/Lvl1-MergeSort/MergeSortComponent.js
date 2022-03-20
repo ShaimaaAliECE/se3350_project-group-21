@@ -400,7 +400,7 @@ export default class MergeSortComponent extends Component {
           document.getElementById("test27").style.backgroundColor = 'yellow';
 
           document.getElementById("test25").style.backgroundColor = 'yellow';
-        } else if (parseInt(document.getElementById("test8").value) > parseInt(document.getElementById("test27").value)) {
+        } else if (parseInt(document.getElementById("test24").value) > parseInt(document.getElementById("test27").value)) {
           document.getElementById("test27").style.backgroundColor = 'white';
           document.getElementById("test24").style.backgroundColor = 'yellow';
 
