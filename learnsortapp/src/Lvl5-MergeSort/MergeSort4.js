@@ -1,6 +1,6 @@
-import { Partition4 } from './Partition4';
+import { Partition1 } from './Partition4';
 
-export class MergeSort4 { // Will act as our merge sort algo
+export class MergeSort1 { // Will act as our merge sort algo
   // first define an array of partitions
   partitions = [];
 
@@ -48,7 +48,7 @@ export class MergeSort4 { // Will act as our merge sort algo
     result = result.concat(left.items).concat(right.items);
 
     // create a new partition from left id - right id with the result
-    let newPartition = new Partition4(`${left.id}-${right.id}`, result);
+    let newPartition = new Partition1(`${left.id}-${right.id}`, result);
     
     // again, use the current styling, but needs some work
     this.buildModel(newPartition, parts);

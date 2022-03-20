@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { MergeSort4 } from './MergeSort4';
-import { Partition4 } from './Partition4';
+import { MergeSort1 } from './MergeSort4';
+import { Partition1 } from './Partition4';
 import { Link } from 'react-router-dom';
 import './MergeSortComponent4.css'
 import correctAudio from '../audio/correct_audio_2.mp3';
@@ -24,7 +24,7 @@ export default class MergeSortComponent2 extends Component {
         timeout:1000 * 5 * 60,
         attempts: 0
     };
-    this.mergeSort2 = new MergeSort4();
+    this.mergeSort2 = new MergeSort1();
 
     this.idleTimer = null
     this.onAction = this._onAction.bind(this)
@@ -99,7 +99,7 @@ export default class MergeSortComponent2 extends Component {
 
   // start running the algorithm
   runAlgorithm = () => {
-    let partition = new Partition4(0, this.unsorted);
+    let partition = new Partition1(0, this.unsorted);
     this.mergeSort2.mergeSort(partition);
     this.setState({partitions: this.mergeSort2.partitions});
 
@@ -818,6 +818,7 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button5" type="submit">Check your answer</button>
                     </form>
                   </div>
+
 
                   <div className="userInput35" id="userInput35">
                   <form onSubmit={this.handleSubmit}>
@@ -1785,7 +1786,7 @@ export default class MergeSortComponent2 extends Component {
                   <br/><br/>
                   
                   <Link to='/Level4'>
-                    <div id="level1-button1" className="level1-button1">Level 4</div>
+                    <div id="level1-button1" className="level1-button15">Level 4</div>
                   </Link>
                   <Link to='/Levels'>
                     <div id="return-button1" className="return-button15">Levels Page</div>
