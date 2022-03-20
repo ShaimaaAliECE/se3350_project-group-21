@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "react-idle-timer": "^4.6.4"
+    "firebase": "^9.6.8",
+    "react-firebaseui": "^6.0.0",
+    "react-idle-timer": "^4.6.4",
+    "use-sound": "^4.0.1"
   }
 }
