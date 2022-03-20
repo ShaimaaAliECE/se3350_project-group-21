@@ -55,7 +55,7 @@
     to {opacity:1 ;}
   }
 
- .next-level-button1 {
+ .next-level-button5 {
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -72,7 +72,7 @@
     display: none;
 }
 
-.next-level-button1:hover {
+.next-level-button5:hover {
     transform: scale(1.2);
     transition: all 0.2s ease-out;
 }
@@ -91,7 +91,7 @@
     
 }
 
-.instructions1{
+.instructions5{
     background-color: #ffe9ed;
     margin-top: -60px;
     margin-left: 30px;
@@ -127,7 +127,7 @@
     background: rgba(250, 153, 28, 0.35); 
  }
 
-.gen-num-button15 {
+.gen-num-button5 {
 
     position: absolute;
     width: 280px;
@@ -148,7 +148,7 @@
     color: #FBF3F2;
 }
 
-.gen-num-button1:hover {
+.gen-num-button5:hover {
     
     background-color: #ffffff;
     color: #032539;
@@ -157,7 +157,7 @@
     transition: ease-out;
 }
 
-.your-values15 {
+.your-values5 {
     margin-top: 15px;
     position: center;
     
@@ -165,7 +165,7 @@
     
 }
 
-.randomNum15{
+.randomNum5{
     position: center;
     width: 500px;
     height: 40px;
@@ -179,7 +179,7 @@
  }
  
 
-.continue-button15{
+.continue-button5{
     position: absolute;
     
     filter: drop-shadow(5px 5px 5px #FF9000);
@@ -195,11 +195,11 @@
     transition: all .2s ease-in-out; 
 }
 
-.continue-button15:hover{
+.continue-button5:hover{
     transform: scale(1.1);
 }
 
-.level1-button15{
+.level-button5{
     position: absolute;
     top: -45px;
     left: 25px;
@@ -215,7 +215,7 @@
     text-align: center;
 }
 
-.return-button15{
+.return-button5{
     position: absolute;
     top: -45px;
     right: 25px;
@@ -231,20 +231,20 @@
     text-align: center;
 }
 
-.next-button15:hover {
+.next-button5:hover {
     background: black;
     color: #FF9000;
     transition: all 0.2s ease-out;
 }
-.return-button15:hover,
-.level1-button15:hover { 
+.return-button5:hover,
+.level-button5:hover { 
 
     background:#206289;
     color: white;
     transition: all 0.2s ease-out;
 }
 
-.outliner15{
+.outliner5{
     position: absolute;
     width: 1500px;
     height: 800px;
@@ -253,9 +253,9 @@
     box-sizing: border-box;
 }
 
-.next-button15,
-.return-button15,
-.level1-button15 {
+.next-button5,
+.return-button5,
+.level-button5 {
     display: none;
 }
 
@@ -277,7 +277,7 @@
 
 }
 
-.sorted-text1{
+.sorted-text5{
     position: absolute;
     width: 330px;
     height: 49px;
@@ -296,7 +296,7 @@
     color: #000000;
 
 }
-.next-button15{
+.next-button5{
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -815,7 +815,7 @@
     display: none;
 }
 
-.check-button{
+.check-button5{
     position: absolute;
     top: 130px;
     left: 425px;
