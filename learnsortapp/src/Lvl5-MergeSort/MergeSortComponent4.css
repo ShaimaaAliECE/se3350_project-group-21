@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
 
-.contents15 {
+.contents1 {
     justify-content: center;
     display: flex;
     align-items: center;
  }
- .popupTextC5, .popupTextI5 {
+ .popupTextC, .popupTextI {
   
     position: relative;
     display: inline-block;
@@ -16,7 +16,7 @@
   }
   
  
-.popup5, .popupC5, .popupI5{
+.popup, .popupC, .popupI{
     visibility: hidden;
     width: 360px;
     height: 200px;
@@ -38,7 +38,7 @@
     align-content: center;
     align-items: center;
   }
-.popnextC5, .popnextI5{
+.popnextC, .popnextI{
       background-color: white;
       border-radius: 12px;
     padding: 5px 10px;
@@ -55,7 +55,7 @@
     to {opacity:1 ;}
   }
 
- .next-level-button15 {
+ .next-level-button1 {
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -72,13 +72,13 @@
     display: none;
 }
 
-.next-level-button15:hover {
+.next-level-button1:hover {
     transform: scale(1.2);
     transition: all 0.2s ease-out;
 }
 
 
-.instruction5{
+.instruction{
     position: absolute;
     background-color: #ffe9ed;
     top: 50px;
@@ -91,7 +91,7 @@
     
 }
 
-.instructions15{
+.instructions1{
     background-color: #ffe9ed;
     margin-top: -90px;
     margin-left: 20px;
@@ -102,7 +102,7 @@
     display: none;
     
 }
- .sort-title5{
+ .sort-title{
     position: center;
     width: auto;
     margin-top: auto;
@@ -116,7 +116,7 @@
     color: #000000;
  }
 
- .sort-title-background5
+ .sort-title-background
  {
     position: center;
     width: 474px;
@@ -126,7 +126,7 @@
     background: rgba(250, 153, 28, 0.35); 
  }
 
-.gen-num-button45 {
+.gen-num-button4 {
 
     position: absolute;
     width: 280px;
@@ -147,7 +147,7 @@
     color: #FBF3F2;
 }
 
-.gen-num-button15:hover {
+.gen-num-button1:hover {
     
     background-color: #ffffff;
     color: #032539;
@@ -156,7 +156,7 @@
     transition: ease-out;
 }
 
-.your-values15 {
+.your-values1 {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -164,7 +164,7 @@
     
 }
 
-.randomNum15{
+.randomNum1{
     position: relative;
     width: 550px;
     height: 75px;
@@ -178,7 +178,7 @@
  }
  
 
-.continue-button15{
+.continue-button1{
     position: absolute;
     
     filter: drop-shadow(5px 5px 5px #FF9000);
@@ -196,11 +196,11 @@
     
 }
 
-.continue-button15:hover{
+.continue-button1:hover{
     transform: scale(1.1);
 }
 
-.level1-button15{
+.level1-button1{
     position: absolute;
     top: -45px;
     left: 25px;
@@ -216,7 +216,7 @@
     text-align: center;
 }
 
-.return-button15{
+.return-button1{
     position: absolute;
     top: -45px;
     right: 25px;
@@ -232,20 +232,20 @@
     text-align: center;
 }
 
-.next-button15:hover {
+.next-button1:hover {
     background: black;
     color: #FF9000;
     transition: all 0.2s ease-out;
 }
-.return-button15:hover,
-.level1-button15:hover { 
+.return-button1:hover,
+.level1-button1:hover { 
 
     background:#206289;
     color: white;
     transition: all 0.2s ease-out;
 }
 
-.outliner15{
+.outliner1{
     position: absolute;
     width: 1500px;
     height: 1000px;
@@ -254,13 +254,13 @@
     box-sizing: border-box;
 }
 
-.next-button15,
-.return-button15,
-.level1-button15 {
+.next-button1,
+.return-button1,
+.level1-button1 {
     display: none;
 }
 
-.sorted-array15 {
+.sorted-array1 {
     position: absolute;
     width: 300px;
     height: 44px;
@@ -278,7 +278,7 @@
 
 }
 
-.sorted-text15{
+.sorted-text1{
     position: absolute;
     width: 330px;
     height: 49px;
@@ -297,7 +297,7 @@
     color: #000000;
 
 }
-.next-button15{
+.next-button1{
     position: absolute;
     bottom: 23px;
     right: 25px;
@@ -345,7 +345,7 @@
 }
 
 
-.test05 {
+.test0 {
     display: none;
     margin-left: 250px;
     margin-top: 35px;
@@ -354,7 +354,7 @@
 
 }
 
-.test15 {
+.test1 {
     display: none;
     margin-left: 650px;
     margin-top: -30px;
@@ -363,21 +363,21 @@
  
 }
 
-.test25 {
+.test2 {
     display: none;
     margin-left: 200px;
     margin-top: 20px;
     letter-spacing: 5px;
 }
 
-.test35 {
+.test3 {
     display: none;
     margin-left: 350px;
     margin-top: -30px;
     letter-spacing: 5px;
 }
 
-.test45{
+.test4 {
     display: none;
     margin-left: 400px;
     margin-top: 15px;
@@ -386,7 +386,7 @@
     
 }
 
-.test55 {
+.test5 {
     display: none;
     margin-left: 170px;
     margin-top: -20px;
@@ -394,7 +394,7 @@
 
 }
 
-.test65 {
+.test6 {
     display: none;
     margin-left: 350px;
     margin-top: 10px;
@@ -402,7 +402,7 @@
    
 }
 
-.test75 {
+.test7 {
     display: none;
     margin-left: 250px;
     margin-top: 20px;
@@ -410,49 +410,49 @@
    
 }
 
-.test85 {
+.test8 {
     display: none;
     margin-left: 600px;
     margin-top: -160px;
     letter-spacing: 5px;
 }
 
-.test95 {
+.test9 {
     display: none;
     margin-left: 750px;
     margin-top: -20px;
     letter-spacing: 5px;
 }
 
-.test105 {
+.test10 {
     display: none;
     margin-left: 800px;
     margin-top: 20px;
     letter-spacing: 5px;
 }
 
-.test115 {
+.test11 {
     display: none;
     margin-left: 600px;
     margin-top: 15px;
     letter-spacing: 5px;
 }
 
-.test125 {
+.test12 {
     display: none;
     margin-left: 750px;
     margin-top: -25px;
     letter-spacing: 5px;
 }
 
-.test135 {
+.test13 {
     display: none;
     margin-left: 650px;
     margin-top: 20px;
     letter-spacing: 5px;
 }
 
-.test145 {
+.test14 {
     display: none;
     margin-left: 400px;
     margin-top: 20px;
@@ -1967,7 +1967,8 @@
 
 
 
-.check-button5{
+
+.check-button{
     position: absolute;
     bottom: 23px;
     left: 425px;
@@ -1981,14 +1982,14 @@
     text-align: center;
 }
 
-.incorrect15{
+.incorrect1{
     visibility: hidden;
 }
 
-.incorrect25{
+.incorrect2{
     visibility: hidden
 }
 
-.incorrect35{
+.incorrect3{
     visibility: hidden;
 }
