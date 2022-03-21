@@ -57,7 +57,6 @@ export default class MergeSortComponent extends Component {
     document.getElementById('instruction-box').style.display = 'block';
     document.getElementById('next-button').style.display = 'block';
     document.getElementById('return-button').style.display = 'block'; 
-    document.getElementById('back-button').style.display = 'block'; 
   }
 
   // display the next step in the algorithm with text
@@ -692,8 +691,8 @@ export default class MergeSortComponent extends Component {
         <>
             <div class="contents">
 
-              <h1 class = "sort-title00">MergeSort</h1>
-              <h2 class = "sort-title-background00" />
+              <h1 class = "sort-title">MergeSort</h1>
+              <h2 class = "sort-title-background" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer 
@@ -723,7 +722,7 @@ export default class MergeSortComponent extends Component {
                       </h1></div> : null
                   }
         
-                  <div onClick={this.nextStep} id="test-button" className="continue-button">Start!</div>
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
                   <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
                   <Link to='/Level2'>
                     <div id="next-level-button" class="next-level-button">Next Level!</div>
@@ -742,18 +741,18 @@ export default class MergeSortComponent extends Component {
                   <div className="test7" id="test7">{stepsArray[7]}</div>
 
                   {/* Inserting new merging steps: */}
-                  <div id="stepFiveArray">
+                  <div className="stepFiveArray" id="stepFiveArray">
                     <div className="merge0" id="test8"></div>
                     <div className="merge1" id="test9"></div>
                   </div>
 
-                  <div id="stepSixArray">
+                  <div className="stepSixArray" id="stepSixArray">
                     <div className="merge2" id="test10"></div>
                     <div className="merge3" id="test11"></div>
                     <div className="merge4" id="test12"></div>
                   </div>
 
-                  <div id="stepSevenArray">
+                  <div className="stepSevenArray" id="stepSevenArray">
                     <div className="merge5" id="test13"></div>
                     <div className="merge6" id="test14"></div>
                     <div className="merge7" id="test15"></div>
@@ -770,18 +769,18 @@ export default class MergeSortComponent extends Component {
                   <div className="test13" id="test23">{stepsArray[13]}</div>
 
                   {/* Inserting new merging steps: */}
-                  <div id="step11Array">
+                  <div className="step11Array" id="step11Array">
                     <div className="merge10" id="test24"></div>
                     <div className="merge11" id="test25"></div>
                   </div>
 
-                  <div id="step12Array">
+                  <div className="step12Array" id="step12Array">
                     <div className="merge12" id="test26"></div>
                     <div className="merge13" id="test27"></div>
                     <div className="merge14" id="test28"></div>
                   </div>
 
-                  <div id="step13Array">
+                  <div className="step13Array" id="step13Array">
                     <div className="merge15" id="test29"></div>
                     <div className="merge16" id="test30"></div>
                     <div className="merge17" id="test31"></div>
@@ -793,7 +792,7 @@ export default class MergeSortComponent extends Component {
                   <div className="test14" id="test34"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div  className="back-button" id="back-button" onClick={this.DecrementItem}>Go Back</div>
+                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
                     <div id="return-button" className="return-button">Levels Page</div>
                   </Link>
