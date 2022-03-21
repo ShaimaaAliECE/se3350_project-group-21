@@ -741,18 +741,18 @@ export default class MergeSortComponent extends Component {
                   <div className="test7" id="test7">{stepsArray[7]}</div>
 
                   {/* Inserting new merging steps: */}
-                  <div id="stepFiveArray">
+                  <div className="stepFiveArray" id="stepFiveArray">
                     <div className="merge0" id="test8"></div>
                     <div className="merge1" id="test9"></div>
                   </div>
 
-                  <div id="stepSixArray">
+                  <div className="stepSixArray" id="stepSixArray">
                     <div className="merge2" id="test10"></div>
                     <div className="merge3" id="test11"></div>
                     <div className="merge4" id="test12"></div>
                   </div>
 
-                  <div id="stepSevenArray">
+                  <div className="stepSevenArray" id="stepSevenArray">
                     <div className="merge5" id="test13"></div>
                     <div className="merge6" id="test14"></div>
                     <div className="merge7" id="test15"></div>
@@ -769,18 +769,18 @@ export default class MergeSortComponent extends Component {
                   <div className="test13" id="test23">{stepsArray[13]}</div>
 
                   {/* Inserting new merging steps: */}
-                  <div id="step11Array">
+                  <div className="step11Array" id="step11Array">
                     <div className="merge10" id="test24"></div>
                     <div className="merge11" id="test25"></div>
                   </div>
 
-                  <div id="step12Array">
+                  <div className="step12Array" id="step12Array">
                     <div className="merge12" id="test26"></div>
                     <div className="merge13" id="test27"></div>
                     <div className="merge14" id="test28"></div>
                   </div>
 
-                  <div id="step13Array">
+                  <div className="step13Array" id="step13Array">
                     <div className="merge15" id="test29"></div>
                     <div className="merge16" id="test30"></div>
                     <div className="merge17" id="test31"></div>
