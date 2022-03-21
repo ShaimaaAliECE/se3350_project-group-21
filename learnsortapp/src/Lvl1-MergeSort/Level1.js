@@ -7,8 +7,8 @@ function Level1() {
     return (
         <div class="contents">
            
-            <h1 class = "sort-title">MergeSort</h1>
-            <h2 class = "sort-title-background" />
+            <h1 className = "sort-title0">MergeSort</h1>
+            <h2 className = "sort-title-background0" />
 
             {/* info about the specific algorithm */}
             <div class = "Outline">

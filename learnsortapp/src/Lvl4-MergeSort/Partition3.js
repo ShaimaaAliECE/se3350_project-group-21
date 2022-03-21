@@ -5,7 +5,7 @@ export class Partition3 { // partition class will separate our output from Merge
     constructor(parentId, items) {
       this.items = items;
       this.parentId = `parentId${parentId}`;
-      this.id = (Partition2.nextId++).toString();
+      this.id = (Partition3.nextId++).toString();
       this.middle = this.findMiddle();
     }
   
@@ -34,13 +34,13 @@ export class Partition3 { // partition class will separate our output from Merge
     getLeftHalf() {
       let items = this.items.slice(0, this.middle);
       // create a new partition of the smaller size of values
-      return new Partition2(this.id, items);
+      return new Partition3(this.id, items);
     }
   
     // get the second (right) half of the values
     getRightHalf() {
       let items = this.items.slice(this.middle, this.items.length);
       // create a new partition of the smaller size of values
-      return new Partition2(this.id, items);
+      return new Partition3(this.id, items);
     }
   }

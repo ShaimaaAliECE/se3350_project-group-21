@@ -4,13 +4,13 @@ import './Levels.css'
 
 function Levels() {
     return (
-      <div class="contents">
-         <h1 class = "sort-title">MergeSort</h1>
-         <h2 class = "sort-title-background" />
+      <div className="contents">
+         <h1 className = "title">MergeSort</h1>
+         <h2 className = "title-background" />
 
-         <div class = "sort-levels-box">
+         <div className = "sort-levels-box">
             <Link to='/Level1' class="sort-levels">
-               <div class = "level-box">
+               <div className = "level-box">
                   <p class= "level-text">Level 1</p>
                </div>
             </Link>

@@ -57,6 +57,7 @@ export default class MergeSortComponent extends Component {
     document.getElementById('instruction-box').style.display = 'block';
     document.getElementById('next-button').style.display = 'block';
     document.getElementById('return-button').style.display = 'block'; 
+    document.getElementById('back-button').style.display = 'block'; 
   }
 
   // display the next step in the algorithm with text
@@ -691,8 +692,8 @@ export default class MergeSortComponent extends Component {
         <>
             <div class="contents">
 
-              <h1 class = "sort-title">MergeSort</h1>
-              <h2 class = "sort-title-background" />
+              <h1 class = "sort-title00">MergeSort</h1>
+              <h2 class = "sort-title-background00" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer 
@@ -722,7 +723,7 @@ export default class MergeSortComponent extends Component {
                       </h1></div> : null
                   }
         
-                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Start!</div>
                   <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
                   <Link to='/Level2'>
                     <div id="next-level-button" class="next-level-button">Next Level!</div>
@@ -792,7 +793,7 @@ export default class MergeSortComponent extends Component {
                   <div className="test14" id="test34"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
+                  <div  className="back-button" id="back-button" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
                     <div id="return-button" className="return-button">Levels Page</div>
                   </Link>

@@ -5,31 +5,26 @@
 }
 
 
-.Rectangle15{
-
+.sort-title-background0 {
+   margin-left: auto;
+   margin-right: auto;
    position: absolute;
-   width: 475px;
+   z-index: -1;
+   width: 474px;
    height: 40px;
-   top: 103px;
-   
+   margin-top: 60px;
    background: rgba(250, 153, 28, 0.35);
-   }
-   
-.MergeSortText{
-   
-   position: absolute;
-   width: 500px;
-   height: 88px;
-   left: 100px;
-   top: -76px;
-   
+}
+
+.sort-title0 { 
+   width: auto;
+   margin-top: auto;
    font-family: Montserrat;
    font-style: normal;
    font-weight: bold;
    font-size: 48px;
    line-height: 59px;
-   
-   color: #000000;
+   padding-top: 40px
 }
 
    

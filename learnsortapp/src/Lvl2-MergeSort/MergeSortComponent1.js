@@ -226,8 +226,8 @@ _onAction(e) {
         <>
             <div class="contents">
 
-              <h1 className = "sort-title">MergeSort</h1>
-              <div className = "sort-title-background" />
+              <h1 className = "sort-title11">MergeSort</h1>
+              <div className = "sort-title-background11" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
 

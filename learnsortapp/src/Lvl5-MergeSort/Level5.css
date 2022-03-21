@@ -5,26 +5,27 @@
  }
  
  
- .sort-title-background {
-    margin-left: auto;
-    margin-right: auto;
+ .sort-title5 { 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   padding-top: 5px;
+   padding-left: 50px;
+   margin-left: 10px;
+}
+ .sort-title-background5 {
+    
     background-color: rgba(250, 153, 28, 0.35);
     height: 30px;
     width: 350px;
-    position: absolute;
     z-index: -1;
-    margin-top: 80px;
- }
- 
- .sort-title { 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    display: flex;
     justify-content: center;
-    padding-top: 40px;
- }
+   }
+ 
+
  
     
  .Outline1 {

@@ -99,7 +99,7 @@ export default class MergeSortComponent3 extends Component {
 
   // start running the algorithm
   runAlgorithm = () => {
-    let partition = new Partition2(0, this.unsorted);
+    let partition = new Partition3(0, this.unsorted);
     this.mergeSort2.mergeSort(partition);
     this.setState({partitions: this.mergeSort2.partitions});
 

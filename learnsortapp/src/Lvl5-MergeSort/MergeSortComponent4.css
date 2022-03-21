@@ -180,7 +180,7 @@
  
 
 .continue-button5{
-    position: absolute;
+    position: center;
     
     filter: drop-shadow(5px 5px 5px #FF9000);
     color: rgb(8, 36, 73);
@@ -188,7 +188,6 @@
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
     margin-top: -110px;
-    margin-left: 410px;
     text-align: center;
     padding-top: 300px;
 
