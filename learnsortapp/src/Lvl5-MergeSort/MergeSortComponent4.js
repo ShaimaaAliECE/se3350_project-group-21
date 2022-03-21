@@ -82,6 +82,90 @@ export default class MergeSortComponent2 extends Component {
     "Fill in the blanks for the next step!", 
     "Fill in the blanks for the next step!", 
     "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!", 
+    "Fill in the blanks for the next step!",
     "Level Complete!"];
     
     let elementID = "test" + this.state.arrayIndex;
@@ -189,7 +273,7 @@ export default class MergeSortComponent2 extends Component {
     
     // steps in correct order
     let stepsArray = []
-    stepsArray[0] = fragments[1];
+    stepsArray[0] = fragments[1];//no 1
     stepsArray[1] = fragments[2];
     stepsArray[2] = fragments[3];
     stepsArray[3] = fragments[4];
@@ -290,9 +374,7 @@ export default class MergeSortComponent2 extends Component {
     stepsArray[94] = fragments[95];
     stepsArray[95] = fragments[96];
     stepsArray[96] = fragments[97];
-    stepsArray[97] = fragments[98];
-    stepsArray[98] = fragments[99];
-    stepsArray[99] = fragments[100];
+    
     
 
       return (
@@ -334,7 +416,7 @@ export default class MergeSortComponent2 extends Component {
                   <span class="popuptextC" id="myPopupC"><br/><br/><br/><div id="poptextC">Correct</div><button class="popnextC" onClick={this.IncrementItem}>Continue</button></span>
                   </div>
                   <div class="popup" id="myPopupI">
-                  <span class="popuptext"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnext" onClick={this.closeBoxI}>Continue</button></span>
+                  <span class="popuptext"><br/><br/><br/><div id="poptextI">Incorrect</div><button class="popnextI" onClick={this.closeBoxI}>Continue</button></span>
                   </div>
 
                   <div id="instruction-box5" class="instructions5">Decide what needs to be done at each step!</div>
@@ -1798,17 +1880,17 @@ export default class MergeSortComponent2 extends Component {
                   <br></br>
                   <br></br>
                   <Link to='/Level1'>
-                    <button className='incorrectOptionButton'>Go Back to Level 1</button>
+                    <button className='incorrectOptionButton5'>Go Back to Level 1</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to=''>
-                    <button className='incorrectOptionButton'>Switch to Another Algorithm</button>
+                    <button className='incorrectOptionButton5'>Switch to Another Algorithm</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to='/'>
-                    <button className='incorrectOptionButton'>Quit</button>
+                    <button className='incorrectOptionButton5'>Quit</button>
                   </Link>
                 </div>
 

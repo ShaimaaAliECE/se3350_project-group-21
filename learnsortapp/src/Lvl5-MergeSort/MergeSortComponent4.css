@@ -28,8 +28,8 @@
     position: absolute;
     z-index: 1;
     position: fixed;
-    margin-left: 320px;
-    margin-top: -120px;
+    margin-left: 560px;
+    margin-top: -90px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     font-size: large;
@@ -39,12 +39,12 @@
   }
   
 .popnextC, .popnextI{
-      background-color: white;
-      border-radius: 12px;
+    background-color: white;
+    border-radius: 12px;
     padding: 5px 10px;
     font-weight: bolder;
     border: #F1F1F1;
-    margin-top: 70px;
+    margin-top: 40px;
 
 
   }
@@ -809,7 +809,7 @@
 }
 
 .number46{
-    width: 230px;
+    width: 475px;
 }
 .number47{
     width: 110px;
@@ -1199,14 +1199,14 @@
 }
 .userInput46 {
     display: none;
-    margin-left: 120px;
-    margin-top: 10px;
+    margin-left: 480px;
+    margin-top: 20px;
 }
 
 .userInput47 {
     display: none;
     margin-left: 40px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .userInput48 {
@@ -1328,7 +1328,7 @@
 .userInput68 {
     display: none;
     margin-left: 970px;
-    margin-top: -270px;
+    margin-top: -265px;
 }
 .userInput69 {
     display: none;
@@ -1437,9 +1437,13 @@
 }
 .userInput90 {
     display: none;
+    margin-left: 480px;
+    margin-top: 20px;
 }
 .userInput91 {
     display: none;
+    margin-left: 155px;
+    margin-top: -305px;
 }
 .userInput92 {
     display: none;
@@ -1471,7 +1475,7 @@
 .check-button{
     position: absolute;
     top: 170px;
-    left: 655px;
+    left: 790px;
     width: auto;
     background: #FCD8A4;
     height: 40px;    
@@ -1516,8 +1520,8 @@
 }
 
 .incorrectGrid {
-    margin-left: 350px;
-    margin-top: 560px;
+    margin-left: 180px;
+    margin-top: 245px;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -1542,7 +1546,7 @@
     visibility: hidden;
 }
 
-.incorrectOptionButton {
+.incorrectOptionButton5 {
     background: white;  
     color: black;
     border: 2px solid #032539;
@@ -1555,7 +1559,7 @@
     width: 400px;
 }
 
-.incorrectOptionButton:hover {
+.incorrectOptionButton5:hover {
     transform: scale(1.07);
     transition: all 0.2s ease-out;
 }
