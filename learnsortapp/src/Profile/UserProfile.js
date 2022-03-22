@@ -1,5 +1,5 @@
 var UserProfile = (function() {
-  var email = "example.user@rogers.com";
+  var email = "";
   let levelOneTimeSpent = [];
   var levelTwoTimeSpent = [];
   var levelThreeTimeSpent = [];
@@ -103,6 +103,55 @@ var UserProfile = (function() {
       this.setEmail(user);
    }
 
+   var userLoggedOut = function() {
+      this.setEmail("");
+      this.setLevelTimes(0, 0, 0, 0, 0, 0);
+   }
+
+   var outputTime = function(level){
+      let min;
+      let sec;
+      switch(level){
+         case 1:
+            min = levelOneTimeSpent[0];
+            sec = levelOneTimeSpent[1];
+            break;
+         case 2:
+            min = levelTwoTimeSpent[0];
+            sec = levelTwoTimeSpent[1];
+            break;
+         case 1:
+            min = levelThreeTimeSpent[0];
+            sec = levelThreeTimeSpent[1];
+            break;
+         case 1:
+            min = levelFourTimeSpent[0];
+            sec = levelFourTimeSpent[1];
+            break;
+         case 1:
+            min = levelFiveTimeSpent[0];
+            sec = levelFiveTimeSpent[1];
+            break;
+         case 1:
+            min = customTimeSpent[0];
+            sec = customTimeSpent[1];
+            break;
+      }
+      
+      if(min != null && sec != null && !(min == 0 && sec == 0)){
+         let secondsString;
+         if(sec < 10){
+            secondsString = "0" + sec;
+         }else{
+            secondsString = sec;
+         }
+         let output = min + ":" + secondsString;
+         return output;
+      }else{
+         return "INCOMPLETE";
+      }
+   }
+
   return {
     getEmail: getEmail,
     setEmail: setEmail,
@@ -110,7 +159,8 @@ var UserProfile = (function() {
     getLevelTimes : getLevelTimes,
     setLevelTimes : setLevelTimes,
     userLoggedIn : userLoggedIn,
-    userLoggedOut : userLoggedIn
+    userLoggedOut : userLoggedOut,
+    outputTime : outputTime
   }
 
 })();

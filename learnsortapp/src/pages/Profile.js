@@ -29,12 +29,12 @@ function Profile() {
                      </li>
                      <li>
                         <h2>Top Time</h2>
-                        <h3 class="profile-LevelOutline">{levelTimes.levelOneTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelOneTimeSpent[0] + ":" + levelTimes.levelOneTimeSpent[1]}</h3>
-                        <h3 class="profile-LevelOutline">{levelTimes.levelTwoTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelTwoTimeSpent[0] + ":" + levelTimes.levelTwoTimeSpent[1]}</h3>
-                        <h3 class="profile-LevelOutline">{levelTimes.levelThreeTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelThreeTimeSpent[0] + ":" + levelTimes.levelThreeTimeSpent[1]}</h3>
-                        <h3 class="profile-LevelOutline">{levelTimes.levelFourTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelFourTimeSpent[0] + ":" + levelTimes.levelFourTimeSpent[1]}</h3>
-                        <h3 class="profile-LevelOutline">{levelTimes.levelFiveTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.levelFiveTimeSpent[0] + ":" + levelTimes.levelFiveTimeSpent[1]}</h3>
-                        <h3 class="profile-LevelOutline">{levelTimes.customTimeSpent[0] == null ? "INCOMPLETE" : levelTimes.customTimeSpent[0] + ":" + levelTimes.customTimeSpent[1]}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(1)}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(2)}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(3)}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(4)}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(5)}</h3>
+                        <h3 class="profile-LevelOutline">{UserProfile.outputTime(6)}</h3>
                      </li>
                   </ul>
                 </div>

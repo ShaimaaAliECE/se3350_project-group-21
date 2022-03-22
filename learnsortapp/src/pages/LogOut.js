@@ -1,18 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LogOut.css';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+//import { useAuth } from "./authentication/authProvider"
+import signOut from "./authentication/firebaseAuth"
+import UserProfile from '../Profile/UserProfile';
+
+const onClickLogout = () => {
+   console.log('Logoff clicked' );
+   UserProfile.userLoggedOut(); 
+   signOut();
+};
 
 function LogOut() {
     return (
         <>
             <div class="LogOut-contents">
-                <h2 class = "LogOut-title-background"></h2>
-                <div class = "LogOut-title">Log Out</div>
+               <h2 class = "LogOut-title-background"></h2>
+               <div class = "LogOut-title">Log Out</div>
 
-                <div class = "LogOut-Outline">
-                <div class = "LogOut-BackgroundRectangle">
-                    <h2>User Accounts coming soon!</h2>
-                </div>
-                </div>
+               <div class = "LogOut-Outline">
+                  <div class = "LogOut-BackgroundRectangle">
+                     <h2>Thanks for learning with LearnSort!</h2>
+                     <Link to='/' onClick={onClickLogout} class="Logout-button">
+                        <div class = "Logout-box">
+                           <p class= "Logout-text">Logoff</p>
+                        </div>
+                     </Link>
+                  </div>
+               </div>
             </div>
         </>
         
