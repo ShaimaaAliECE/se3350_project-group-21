@@ -6,11 +6,12 @@ import 'firebase/compat/firestore';
 //import { useAuth } from "./authentication/authProvider"
 import signOut from "./authentication/firebaseAuth"
 import UserProfile from '../Profile/UserProfile';
+import firebase from 'firebase/compat/app';
 
 const onClickLogout = () => {
    console.log('Logoff clicked' );
    UserProfile.userLoggedOut(); 
-   signOut();
+   firebase.auth().signOut();
 };
 
 function LogOut() {

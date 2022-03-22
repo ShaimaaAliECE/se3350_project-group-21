@@ -6,6 +6,7 @@ var UserProfile = (function() {
   var levelFourTimeSpent = [];
   var levelFiveTimeSpent = [];
   var customTimeSpent = [];
+  var loggedIn = false;
 
   var getEmail = function() {
     return email;
@@ -101,11 +102,17 @@ var UserProfile = (function() {
 
    var userLoggedIn = function(user) {
       this.setEmail(user);
+      loggedIn = true;
    }
 
    var userLoggedOut = function() {
       this.setEmail("");
       this.setLevelTimes(0, 0, 0, 0, 0, 0);
+      loggedIn = false;
+   }
+
+   var userAuthenticated = function(){
+      return loggedIn;
    }
 
    var outputTime = function(level){
@@ -160,7 +167,8 @@ var UserProfile = (function() {
     setLevelTimes : setLevelTimes,
     userLoggedIn : userLoggedIn,
     userLoggedOut : userLoggedOut,
-    outputTime : outputTime
+    outputTime : outputTime,
+    userAuthenticated : userAuthenticated
   }
 
 })();
