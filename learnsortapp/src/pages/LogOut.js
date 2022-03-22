@@ -25,8 +25,8 @@ function LogOut() {
                   <div class = "LogOut-BackgroundRectangle">
                      <h2>Thanks for learning with LearnSort!</h2>
                      <Link to='/' onClick={onClickLogout} class="Logout-button">
-                        <div class = "Logout-box">
-                           <p class= "Logout-text">Logoff</p>
+                        <div class = "Logout-Box">
+                           <h3 class= "Logout-text">Log Out</h3>
                         </div>
                      </Link>
                   </div>
