@@ -1,5 +1,5 @@
 var UserProfile = (function() {
-  var email = "jon.richards@rogers.com";
+  var email = "example.user@rogers.com";
   let levelOneTimeSpent = [];
   var levelTwoTimeSpent = [];
   var levelThreeTimeSpent = [];
@@ -99,12 +99,18 @@ var UserProfile = (function() {
       }
   };
 
+   var userLoggedIn = function(user) {
+      this.setEmail(user);
+   }
+
   return {
     getEmail: getEmail,
     setEmail: setEmail,
     updateRecordTime : updateRecordTime,
     getLevelTimes : getLevelTimes,
-    setLevelTimes : setLevelTimes
+    setLevelTimes : setLevelTimes,
+    userLoggedIn : userLoggedIn,
+    userLoggedOut : userLoggedIn
   }
 
 })();
