@@ -21,6 +21,7 @@ import { getAnalytics } from "firebase/analytics";
 import { useAuth } from "./authentication/authProvider"
 import FirebaseAuth from "./authentication/firebaseAuth"
 import signOut from "./authentication/firebaseAuth"
+import  { Redirect } from 'react-router-dom'
 
 
 export default function Login() {
@@ -28,7 +29,11 @@ export default function Login() {
    const { user, loading, logout } = useAuth();
    console.log(user + "0");
    console.log(user + "1");
-   if (!firebase.auth().currentUser) return <FirebaseAuth />;
+   if (!firebase.auth().currentUser){ 
+      return <FirebaseAuth />;
+   }else{
+      window.location = "/#/dashboard";
+   }
    console.log(user + "2");
 
    return (
@@ -46,7 +51,7 @@ firebase.auth().onAuthStateChanged(user => {
       UserProfile.userLoggedIn( user.email );
    }
    else {
-      signOutUser(user);
+      UserProfile.userLoggedOut( user.email );
    }
 })
 
