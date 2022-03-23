@@ -4,7 +4,7 @@
     width: 60px;
     font-size: x-small;
 }
-.userInput0 {
+.userInput0-4 {
     display: none;
     margin-left: 180px;
     margin-top: 10px;
@@ -13,35 +13,35 @@
     
 }
 
-.userInput1 {
+.userInput1-4 {
     display: none;
     margin-left: 670px;
     margin-top: -15px;
     font-size: x-small;
 }
 
-.userInput2 {
+.userInput2-4 {
     display: none;
     margin-left: 65px;
     margin-top: 20px;
     font-size: x-small;
 }
 
-/* step 4*/
-.userInput3 {
+
+.userInput3-4 {
     display: none;
     margin-left: 290px;
     margin-top: -20px;
     font-size: x-small;
 }
-.userInput4 {
+.userInput4-4 {
     display: none;
     margin-left: 5px;
     margin-top: 20px;
     font-size: x-small; 
 }
 
-.userInput5 {
+.userInput5-4 {
     display: none;
     margin-left: 120px;
     margin-top: -20px;
@@ -49,7 +49,7 @@
 
 }
 
-.userInput6 {
+.userInput6-4 {
     display: none;
     margin-left: 230px;
     margin-top: -20px;
@@ -57,7 +57,7 @@
    
 }
 
-.userInput7 {
+.userInput7-4 {
     display: none;
     margin-left: 360px;
     margin-top: -18px;
@@ -65,7 +65,7 @@
    
 }
 
-.userInput8 {
+.userInput8-4 {
     display: none;
     margin-left: 120px;
     margin-top: 15px;
@@ -73,7 +73,7 @@
 }
 
 
-.userInput9 {
+.userInput9-4 {
     display: none;
     margin-left: 5px;
     margin-top: 15px;
@@ -84,7 +84,7 @@
 
 
 
-.userInput10 {
+.userInput10-4 {
     display: none;
     margin-left: 115px;
     margin-top: -15px;
@@ -95,21 +95,21 @@
 
 
 
-.userInput11 {
+.userInput11-4 {
     display: none;
     margin-left: 85px;
     margin-top: 20px;
     font-size: x-small;
 }
 
-.userInput12 {
+.userInput12-4 {
     display: none;
     margin-left: 360px;
     margin-top: -93px;
     font-size: x-small;
 }
 
-.userInput13 {
+.userInput13-4 {
     display: none;
     margin-left: 225px;
     margin-top: 22px;
@@ -117,126 +117,127 @@
 }
 
 
-.userInput14 {
+.userInput14-4 {
     display: none;
     margin-left: 360px;
     margin-top: -18px;
     font-size: x-small;
     
 }
-.userInput15 {
+.userInput15-4 {
     display: none;
     margin-left: 290px;
     margin-top: 18px;
     font-size: x-small;
     
 }
-.userInput16 {
+.userInput16-4 {
     display: none;
     margin-left: 190px;
     margin-top: 18px;
     font-size: x-small;
     
 }
-.userInput17 {
+.userInput17-4 {
     display: none;
     margin-left: 555px;
     margin-top: -190px;
     font-size: x-small;
     
 }
-.userInput18 {
+.userInput18-4 {
     display: none;
     margin-left: 800px;
     margin-top: -18px;
     font-size: x-small;
     
 }
-#userInput19 {
+/* i had to switch over to id names instead of classnames because it stopped working */
+.userInput19-4 {
     display: none;
     margin-left: 485px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: x-small;
     
 }
-#userInput20 {
+.userInput20-4 {
     display: none;
     margin-left: 610px;
     margin-top: -20px;
     font-size: x-small;
     
 }
-#userInput21 {
+.userInput21-4 {
     display: none;
     margin-left: 725px;
     margin-top: -20px;
     font-size: x-small;
     
 }
-#userInput22 {
+.userInput22-4 {
     display: none;
     margin-left: 875px;
     margin-top: -20px;
     font-size: x-small;
     
 }
-#userInput23 {
+.userInput23-4 {
     display: none;
     margin-left: 610px;
     margin-top: 20px;
     font-size: x-small;
     
 }
-#userInput24 {
+.userInput24-4 {
     display: none;
     margin-left: 480px;
     margin-top: 8px;
     font-size: x-small;
     
 }
-#userInput25 {
+.userInput25-4 {
     display: none;
     margin-left: 610px;
     margin-top: -15px;
     font-size: x-small;
     
 }
-#userInput26 {
+.userInput26-4 {
     display: none;
     margin-left: 540px;
     margin-top: 15px;
     font-size: x-small;
     
 }
-#userInput27 {
+.userInput27-4 {
     display: none;
     margin-left: 875px;
     margin-top: -80px;
     font-size: x-small;
     
 }
-#userInput28 {
+.userInput28-4 {
     display: none;
     margin-left: 725px;
     margin-top: 10px;
     font-size: x-small;
     
 }
-#userInput29 {
+.userInput29-4 {
     display: none;
     margin-left: 875px;
     margin-top: -15px;
     font-size: x-small;
     
 }
-#userInput30 {
+.userInput30-4 {
     display: none;
     margin-left: 800px;
     margin-top: 13px;
     font-size: x-small;
     
 }
-#userInput31 {
+.userInput31-4 {
     display: none;
     margin-left: 670px;
     margin-top: 18px;
@@ -244,353 +245,19 @@
     
 }
 
-#userInput32 {
+.userInput32-4 {
     display: none;
     font-size: x-small;
     margin-top: 50px;
     margin-left: 450px;
 }
-#l2 {
-    position:absolute;
-    top:315px;
-    left:30px;  
-}
-#u2 {
-    position: absolute;
-    width: 20px;
-}
 
-#l3{
-    position: absolute;
-    top: 315px;
-    left: 100px;
-}
-#u3 {
-    position: absolute;
-    width: 20px;
-}
-#l4 {
-    position: absolute;
-    top: 315px;
-    left: 280px;
-}
-#u4 {
-    width: 20px;
-}
-#l10{
-    position: absolute;
-    top: 315px;
-    right: 100px;
-}
-#u10{
-    width: 20px;
-}
-#l11{
-    position: absolute;
-    top: 315px;
-    right: 20px;
-}
-#u11{
-    width: 20px;
-}
-#l5{
-    position: absolute;
-    top: 315px;
-    left: 350px;
-}
-#u5 {
-    
-    width: 20px;
-}
-
-#l6 {
-    position: absolute;
-    top: 315px;
-    left: 420px;
-}
-#u6 {
-    
-    width: 20px;
-}
-#l12 {
-    position: absolute;
-    top: 375px;
-    left: 115px;
-}
-#u12{
-    width: 100px;
-}
-#l15 {
-    position: absolute;
-    top: 399px;
-    left: 15px;
-}
-#u15 {
-    width: 100px;
-}
-#l16 {
-    position: absolute;
-    top: 398px;
-    left: 265px;
-}
-#u16 {
-    width: 100px;
-}
-
-
-
-#l13 {
-    position: absolute;
-    top: 425px;
-    left: 115px;
-}
-#u13{
-    width: 100px;
-}
-#l17 {
-    position: absolute;
-    top: 449px;
-    left: 15px;
-}
-#u17 {
-    width: 100px;
-}
-#l18 {
-    position: absolute;
-    top: 448px;
-    left: 265px;
-}
-#u18 {
-    width: 100px;
-}
-
-
-#l14 {
-    position: absolute;
-    top: 475px;
-    left: 115px;
-}
-#u14{
-    width: 100px;
-}
-#l19 {
-    position: absolute;
-    top: 499px;
-    left: 15px;
-}
-#u19 {
-    width: 100px;
-}
-#l20 {
-    position: absolute;
-    top: 498px;
-    left: 265px;
-}
-#u20 {
-    width: 100px;
-}
-#l7 {
-    position: absolute;
-    top: 315px;
-    right: 400px;
-}
-#u7{
-    width: 20px;
-}
-
-#l8 {
-    position: absolute;
-    top: 315px;
-    right: 320px;
-}
-#u8{
-    width: 20px;
-}
-#l9{
-    position: absolute;
-    top: 315px;
-    right: 180px;
-}
-
-#u9{
-    width: 20px;
-}
-
-#l21 {
-    position: absolute;
-    top: 375px;
-    right: 173px;
-}
-#u21{
-    width: 100px;
-}
-#l24 {
-    position: absolute;
-    top: 399px;
-    right: 73px;
-}
-#u24 {
-    width: 100px;
-}
-#l25 {
-    position: absolute;
-    top: 398px;
-    right: 323px;
-}
-#u25 {
-    width: 100px;
-}
-
-
-
-#l22 {
-    position: absolute;
-    top: 425px;
-    right: 173px;
-}
-#u22{
-    width: 100px;
-}
-#l26 {
-    position: absolute;
-    top: 449px;
-    right: 73px;
-}
-#u26 {
-    width: 100px;
-}
-#l27 {
-    position: absolute;
-    top: 448px;
-    right: 323px;
-}
-#u27 {
-    width: 100px;
-}
-
-
-#l23 {
-    position: absolute;
-    top: 475px;
-    right: 173px;
-}
-#u23{
-    width: 100px;
-}
-#l28 {
-    position: absolute;
-    top: 499px;
-    right: 73px;
-}
-#u28 {
-    width: 100px;
-}
-#l29 {
-    position: absolute;
-    top: 498px;
-    right: 323px;
-}
-#u29 {
-    width: 100px;
-}
-
-.check-button{
-    position: absolute;
-    top: 130px;
-    left: 425px;
-    width: auto;
-    background: #FCD8A4;
-    height: 40px;    
-    border: 5px solid #FCD8A4;
-    box-sizing: border-box;
-
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-
-.incorrect1 {
-    font-size: 25px;
-    font-weight: 700;
-    color: red;
-    border: solid 4px;
-    border-color: red;
-    border-radius: 50%;
-    padding: 5px;
-    visibility: hidden;
-}
-
-.incorrect2{
-    font-size: 25px;
-    font-weight: 700;
-    color: red;
-    border: solid 4px;
-    border-color: red;
-    border-radius: 50%;
-    padding: 5px;
-    visibility: hidden;
-}
-
-.incorrect3{
-    font-size: 25px;
-    font-weight: 700;
-    color: red;
-    border: solid 4px;
-    border-color: red;
-    border-radius: 50%;
-    padding: 5px;
-    visibility: hidden;
-}
-
-.incorrectGrid {
-    margin-left: 15px;
-    margin-top: 220px;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-column-gap: 10px;
-}
-
-.incorrectOptions {
-    width: 60%;
-    height: 80%;
-    z-index: 1;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-    background-color: #FA991C;
-    border: 2px solid #FA991C;
-    border-radius: 10px;
-    visibility: hidden;
-}
-
-.incorrectOptionButton {
-    background: white;  
-    color: black;
-    border: 2px solid #032539;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-    width: 400px;
-}
-
-.incorrectOptionButton:hover {
-    transform: scale(1.07);
-    transition: all 0.2s ease-out;
-}
-.test16{
+.test16-4{
     display:none;
 }
-.test17{
+.test17-4{
     display:none;
 }
-.test18{
+.test18-4{
     display:none;
 }

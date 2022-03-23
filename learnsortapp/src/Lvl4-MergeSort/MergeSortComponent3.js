@@ -98,6 +98,7 @@ export default class MergeSortComponent3 extends Component {
     "Fill in the blanks for the next step!",
     "Fill in the blanks for the next step!",
     "Fill in the blanks for the next step!",
+    "Fill in the blanks for the next step!",
     "Level Complete!"];
     
     let elementID = "test" + this.state.arrayIndex;
@@ -138,7 +139,8 @@ export default class MergeSortComponent3 extends Component {
     var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
-        answer.push(value);
+      //comment this line out if you want to speed through without correct answers  
+      answer.push(value);
     }
 
     var popupC = document.getElementById("myPopupC");
@@ -289,7 +291,7 @@ export default class MergeSortComponent3 extends Component {
                   <div id="instruction-box1" class="instructions1">Decide what needs to be done at each step!</div>
                   <div id="instruction" class="instruction">NOTE: Please type all responses in the format x,x,x,x (commas between all values and no spaces between values)</div>
 
-                  <div className="userInput0" id="userInput0">
+                  <div className="userInput0-4" id="userInput0">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 1:
@@ -303,7 +305,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput1" id="userInput1">
+                  <div className="userInput1-4" id="userInput1">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 2:
@@ -317,7 +319,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput2" id="userInput2">
+                  <div className="userInput2-4" id="userInput2">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 3:
@@ -331,7 +333,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput3" id="userInput3">
+                  <div className="userInput3-4" id="userInput3">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 4:
@@ -345,7 +347,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput4" id="userInput4">
+                  <div className="userInput4-4" id="userInput4">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 5:
@@ -359,7 +361,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput5" id="userInput5">
+                  <div className="userInput5-4" id="userInput5">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 6:
@@ -373,7 +375,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput6" id="userInput6">
+                  <div className="userInput6-4" id="userInput6">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 7:
@@ -387,7 +389,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput7" id="userInput7">
+                  <div className="userInput7-4" id="userInput7">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 8:
@@ -401,7 +403,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput8" id="userInput8">
+                  <div className="userInput8-4" id="userInput8">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 9:
@@ -415,7 +417,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput9" id="userInput9">
+                  <div className="userInput9-4" id="userInput9">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 10:
@@ -429,7 +431,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput10" id="userInput10">
+                  <div className="userInput10-4" id="userInput10">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 11:
@@ -443,7 +445,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput11" id="userInput11">
+                  <div className="userInput11-4" id="userInput11">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 12:
@@ -457,7 +459,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput12" id="userInput12">
+                  <div className="userInput12-4" id="userInput12">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 13:
@@ -471,7 +473,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput13" id="userInput13">
+                  <div className="userInput13-4" id="userInput13">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 14:
@@ -485,7 +487,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput14" id="userInput14">
+                  <div className="userInput14-4" id="userInput14">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 15:
@@ -499,7 +501,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput15" id="userInput15">
+                  <div className="userInput15-4" id="userInput15">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 16:
@@ -513,7 +515,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput16" id="userInput16">
+                  <div className="userInput16-4" id="userInput16">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 17:
@@ -527,7 +529,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput17" id="userInput17">
+                  <div className="userInput17-4" id="userInput17">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 18:
@@ -541,7 +543,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput18" id="userInput18">
+                  <div className="userInput18-4" id="userInput18">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 19:
@@ -555,7 +557,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput19" id="userInput19">
+                  <div className="userInput19-4" id="userInput19">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 20:
@@ -569,7 +571,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput20" id="userInput20">
+                  <div className="userInput20-4" id="userInput20">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 21:
@@ -583,7 +585,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput21" id="userInput21">
+                  <div className="userInput21-4" id="userInput21">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 22:
@@ -597,7 +599,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
                   
-                  <div className="userInput22" id="userInput22">
+                  <div className="userInput22-4" id="userInput22">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 23:
@@ -611,7 +613,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput23" id="userInput23">
+                  <div className="userInput23-4" id="userInput23">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 24:
@@ -625,7 +627,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput24" id="userInput24">
+                  <div className="userInput24-4" id="userInput24">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 25:
@@ -640,7 +642,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput25" id="userInput25">
+                  <div className="userInput25-4" id="userInput25">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 26:
@@ -654,7 +656,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput26" id="userInput26">
+                  <div className="userInput26-4" id="userInput26">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 27:
@@ -668,7 +670,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput27" id="userInput27">
+                  <div className="userInput27-4" id="userInput27">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 28:
@@ -682,7 +684,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput28" id="userInput28">
+                  <div className="userInput28-4" id="userInput28">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 29:
@@ -696,7 +698,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput29" id="userInput29">
+                  <div className="userInput29-4" id="userInput29">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 30:
@@ -710,7 +712,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput30" id="userInput30">
+                  <div className="userInput30-4" id="userInput30">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 31:
@@ -724,7 +726,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput31" id="userInput31">
+                  <div className="userInput31-4" id="userInput31">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 32:
@@ -738,7 +740,7 @@ export default class MergeSortComponent3 extends Component {
                     </form>
                   </div>
 
-                  <div className="userInput32" id="userInput32">
+                  <div className="userInput32-4" id="userInput32">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 33:
@@ -772,9 +774,9 @@ export default class MergeSortComponent3 extends Component {
                   <div className="test13" id="test13">{stepsArray[13]}</div>
                   <div className="test14" id="test14">{stepsArray[14]}</div>
                   <div className="test15" id="test15">{stepsArray[15]}</div>
-                  <div className="test16" id="test16">{stepsArray[16]}</div>
-                  <div className="test17" id="test17">{stepsArray[17]}</div>
-                  <div className="test18" id="test18">{stepsArray[18]}</div>
+                  <div className="test16-4" id="test16">{stepsArray[16]}</div>
+                  <div className="test17-4" id="test17">{stepsArray[17]}</div>
+                  <div className="test18-4" id="test18">{stepsArray[18]}</div>
                   <div className="test19" id="test19">{stepsArray[19]}</div>
                   <div className="test20" id="test20">{stepsArray[20]}</div>
                   <div className="test21" id="test21">{stepsArray[21]}</div>
