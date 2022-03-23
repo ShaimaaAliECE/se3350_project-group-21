@@ -127,7 +127,7 @@
     background: rgba(250, 153, 28, 0.35); 
  }
 
-.gen-num-button15 {
+.gen-num-button5 {
 
     position: absolute;
     width: 280px;
@@ -148,7 +148,7 @@
     color: #FBF3F2;
 }
 
-.gen-num-button15:hover {
+.gen-num-button5:hover {
     
     background-color: #ffffff;
     color: #032539;
@@ -343,83 +343,83 @@
 }
 
 
-.test0-5 {
+.test0 {
     display: none;
 }
 
-.test1-5 {
+.test1 {
     display: none;
 }
-.test2-5 {
+.test2 {
     display: none;
    
 }
-.test3-5 {
+.test3 {
     display: none;
     
 }
 
-.test4-5 {
+.test4 {
     display: none;  
 }
 
-.test5-5 {
+.test5 {
     display: none;
 
 }
 
-.test6-5 {
+.test6 {
     display: none;
    
 }
 
-.test7-5 {
+.test7 {
     display: none;
 
 }
 
-.test8-5 {
+.test8 {
     display: none;
 }
 
-.test9-5 {
-    display: none;
-
-}
-
-.test10-5 {
+.test9 {
     display: none;
 
 }
 
-.test11-5 {
+.test10 {
     display: none;
 
 }
 
-.test12-5 {
+.test11 {
     display: none;
 
 }
 
-.test13-5 {
+.test12 {
+    display: none;
+
+}
+
+.test13 {
     display: none;
 }
 
-.test14-5 {
+.test14 {
     display: none;
 }
 
-.test15-5{
+.test15{
     display:none;
 }
-.test16-5{
+.test16{
     display:none;
 }
-.test17-5{
+.test17{
     display:none;
 }
-.test18-5{
+.test18{
     display:none;
 }
 .test19{
@@ -961,119 +961,119 @@
 }
 
 
-.userInput0-5 {
+.userInput0 {
     display: none;
     margin-left: 490px;
     margin-top: 70px;
 }
 
-.userInput1-5 {
+.userInput1 {
     display: none;
     margin-left: 120px;
     margin-top: 10px;
 }
 
-.userInput2-5 {
+.userInput2 {
     display: none;
     margin-left: 40px;
     margin-top: 10px;
 }
 
 
-.userInput3-5 {
+.userInput3 {
     display: none;
     margin-left: 350px;
     margin-top: -22px;
 }
 
-.userInput4-5 {
+.userInput4 {
     display: none;
     margin-left: 5px;
     margin-top: 10px; 
 }
 
-.userInput5-5 {
+.userInput5 {
     display: none;
     margin-left: 40px;
     margin-top: 10px; 
 
 }
 
-.userInput6-5 {
+.userInput6 {
     display: none;
     margin-left: 40px;
     margin-top: 10px;
    
 }
 
-.userInput7-5 {
+.userInput7 {
     display: none;
     margin-left: 5px;
     margin-top: 10px;
    
 }
 
-.userInput8-5 {
+.userInput8 {
     display: none;
     margin-left: 150px;
     margin-top: -125px;
 }
 
-.userInput9-5 {
+.userInput9 {
     display: none;
     margin-left: 180px;
     margin-top: 10px; 
 }
 
-.userInput10-5 {
+.userInput10 {
     display: none;
     margin-left: 180px;
     margin-top: 10px; 
 }
 
 
-.userInput11-5 {
+.userInput11 {
     display: none;
     margin-left: 145px;
     margin-top: 10px;
 }
 
-.userInput12-5 {
+.userInput12 {
     display: none;
     margin-left: 30px;
     margin-top: 10px;
 }
 
-.userInput13-5 {
+.userInput13 {
     display: none;
     margin-left: 290px;
     margin-top: -165px;
 }
 
 
-.userInput14-5 {
+.userInput14 {
     display: none;
     margin-left: 460px;
     margin-top: -25px;
     
 }
 
-.userInput15-5 {
+.userInput15 {
     display: none;
     margin-left: 340px;
     margin-top: 10px;
 }
-.userInput16-5 {
+.userInput16 {
     display: none;
     margin-left: 340px;
     margin-top: 10px;
 }
-.userInput17-5 {
+.userInput17 {
     display: none;
     margin-left: 290px;
     margin-top: 10px;
 }
-.userInput18-5 {
+.userInput18 {
     display: none;
     margin-left: 495px;
     margin-top: -95px;
@@ -1507,7 +1507,7 @@
 .check-button{
     position: absolute;
     top: 170px;
-    left: 790px;
+    left: 490px;
     width: auto;
     background: #FCD8A4;
     height: 40px;    
@@ -1518,7 +1518,7 @@
     text-align: center;
 }
 
-.incorrect1-5 {
+.incorrect1 {
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1529,7 +1529,7 @@
     visibility: hidden;
 }
 
-.incorrect2-5{
+.incorrect2{
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1540,7 +1540,7 @@
     visibility: hidden;
 }
 
-.incorrect3-5{
+.incorrect3{
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1551,7 +1551,7 @@
     visibility: hidden;
 }
 
-.incorrectGrid-5 {
+.incorrectGrid {
     margin-left: 180px;
     margin-top: 245px;
     justify-content: center;
