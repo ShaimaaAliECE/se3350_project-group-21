@@ -1,6 +1,6 @@
 var UserProfile = (function() {
   var email = "";
-  let levelOneTimeSpent = [];
+  var levelOneTimeSpent = [];
   var levelTwoTimeSpent = [];
   var levelThreeTimeSpent = [];
   var levelFourTimeSpent = [];
