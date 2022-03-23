@@ -54,7 +54,6 @@ var UserProfile = (function() {
       switch(level){
          case 1:
             if(levelOneTimeSpentMin == null){
-               alert(newTimeMin);
                levelOneTimeSpentMin = newTimeMin;
                levelOneTimeSpentSec = newTimeSeconds;
             }else if(levelOneTimeSpentMin >= newTimeMin){
