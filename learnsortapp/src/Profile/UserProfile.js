@@ -122,55 +122,85 @@ var UserProfile = (function() {
   };
 
   var populateProfileTimes = function(){
-   levelOneTimeSpentMin = localStorage.getItem("levelOneMin");
-   levelOneTimeSpentSec = localStorage.getItem("levelOneSec");
+      if(!Number.isNaN(Number(localStorage.getItem(String(email + "levelOneMin"))))){
+         levelOneTimeSpentMin = Number(localStorage.getItem(String(email + "levelOneMin")));
+         levelOneTimeSpentSec = Number(localStorage.getItem(String(email + "levelOneSec")));
+      }else{
+         levelOneTimeSpentMin = 0;
+         levelOneTimeSpentSec = 0;
+      }
 
-   levelTwoTimeSpentMin = localStorage.getItem("levelTwoMin");
-   levelTwoTimeSpentSec = localStorage.getItem("levelTwoSec");
+      if(!Number.isNaN(Number(localStorage.getItem(String(email + "levelTwoMin"))))){
+         levelTwoTimeSpentMin = Number(localStorage.getItem(String(email + "levelTwoMin")));
+         levelTwoTimeSpentSec = Number(localStorage.getItem(String(email + "levelTwoSec")));
+      }else{
+         levelTwoTimeSpentMin = 0;
+         levelTwoTimeSpentSec = 0;
+      }
 
-   levelThreeTimeSpentMin = localStorage.getItem("levelThreeMin");
-   levelThreeTimeSpentSec = localStorage.getItem("levelThreeSec");
+      if(!Number.isNaN(Number(localStorage.getItem(String(email + "levelThreeMin"))))){
+         levelThreeTimeSpentMin = Number(localStorage.getItem(String(email + "levelThreeMin")));
+         levelThreeTimeSpentSec = Number(localStorage.getItem(String(email + "levelThreeSec")));
+      }else{
+         levelThreeTimeSpentMin = 0;
+         levelThreeTimeSpentSec = 0;
+      }
 
-   levelFourTimeSpentMin = localStorage.getItem("levelFourMin");
-   levelFourTimeSpentSec = localStorage.getItem("levelFourSec");
+      if(!Number.isNaN(Number(localStorage.getItem(String(email + "levelFourMin"))))){
+         levelFourTimeSpentMin = Number(localStorage.getItem(String(email + "levelFourMin")));
+         levelFourTimeSpentSec = Number(localStorage.getItem(String(email + "levelFourSec")));
+      }else{
+         levelFourTimeSpentMin = 0;
+         levelFourTimeSpentSec = 0;
+      }
 
-   levelFiveTimeSpentMin = localStorage.getItem("levelFiveMin");
-   levelFiveTimeSpentSec = localStorage.getItem("levelFiveSec");
+      if(!Number.isNaN(Number(localStorage.getItem(String(email + "levelFiveMin"))))){
+         levelFiveTimeSpentMin = Number(localStorage.getItem(String(email + "levelFiveMin")));
+         levelFiveTimeSpentSec = Number(localStorage.getItem(String(email + "levelFiveSec")));
+      }else{
+         levelFiveTimeSpentMin = 0;
+         levelFiveTimeSpentSec = 0;
+      }
 
-   levelCustomTimeSpentMin = localStorage.getItem("levelCustomMin");
-   levelCustomTimeSpentSec = localStorage.getItem("levelCustomSec");
+      if(!Number.isNaN(Number(localStorage.getItem(email + "levelFiveMin")))){
+         levelCustomTimeSpentMin = Number(localStorage.getItem(email + "levelCustomMin"));
+         levelCustomTimeSpentSec = Number(localStorage.getItem(email + "levelCustomSec"));
+      }else{
+         levelCustomTimeSpentMin = 0;
+         levelCustomTimeSpentSec = 0;
+      }
 }
 
    var userLoggedIn = function(user) {
       this.setEmail(user);
       loggedIn = true;
-      //populateProfileTimes();
+      populateProfileTimes();
    }
 
    var populateLocalStorageTimes = function(){
-      localStorage.setItem("levelOneMin", this.levelOneTimeSpentMin);
-      localStorage.setItem("levelOneSec", this.levelOneTimeSpentSec);
+      localStorage.setItem(String(email + "levelOneMin"), String(levelOneTimeSpentMin));
+      localStorage.setItem(String(email + "levelOneSec"), String(levelOneTimeSpentSec));
 
-      localStorage.setItem("levelTwoMin", this.levelTwoTimeSpentMin);
-      localStorage.setItem("levelTwoSec", this.levelTwoTimeSpentSec);
+      localStorage.setItem(String(email + "levelTwoMin"), String(levelTwoTimeSpentMin));
+      localStorage.setItem(String(email + "levelTwoSec"), String(levelTwoTimeSpentSec));
 
-      localStorage.setItem("levelThreeMin", this.levelThreeTimeSpentMin);
-      localStorage.setItem("levelThreeSec", this.levelThreeTimeSpentSec);
+      localStorage.setItem(String(email + "levelThreeMin"), String(levelThreeTimeSpentMin));
+      localStorage.setItem(String(email + "levelThreeSec"), String(levelThreeTimeSpentSec));
 
-      localStorage.setItem("levelFourMin", this.levelFourTimeSpentMin);
-      localStorage.setItem("levelFourSec", this.levelFourTimeSpentSec);
+      localStorage.setItem(String(email + "levelFourMin"), String(levelFourTimeSpentMin));
+      localStorage.setItem(String(email + "levelFourSec"), String(levelFourTimeSpentSec));
 
-      localStorage.setItem("levelFiveMin", this.levelFiveTimeSpentMin);
-      localStorage.setItem("levelFiveSec", this.levelFiveTimeSpentSec);
+      localStorage.setItem(String(email + "levelFiveMin"), String(levelFiveTimeSpentMin));
+      localStorage.setItem(String(email + "levelFiveSec"), String(levelFiveTimeSpentSec));
 
-      localStorage.setItem("levelCustomMin", this.customTimeSpentMin);
-      localStorage.setItem("levelCustomSec", this.customTimeSpentSec);
+      localStorage.setItem(String(email + "levelCustomMin"), String(levelCustomTimeSpentMin));
+      localStorage.setItem(String(email + "levelCustomSec"), String(levelCustomTimeSpentSec));
       
    }
 
    var userLoggedOut = function() {
-      this.setEmail("");
-      //populateLocalStorageTimes();
+      populateLocalStorageTimes();
+      setEmail("");
       clearTimes();
       loggedIn = false;
    }
