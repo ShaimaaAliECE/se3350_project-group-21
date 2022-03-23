@@ -1,11 +1,24 @@
 var UserProfile = (function() {
   var email = "";
-  var levelOneTimeSpent = [];
-  var levelTwoTimeSpent = [];
-  var levelThreeTimeSpent = [];
-  var levelFourTimeSpent = [];
-  var levelFiveTimeSpent = [];
-  var customTimeSpent = [];
+
+  var levelOneTimeSpentSec;
+  var levelOneTimeSpentMin;
+
+  var levelTwoTimeSpentSec;
+  var levelTwoTimeSpentMin;
+
+  var levelThreeTimeSpentSec;
+  var levelThreeTimeSpentMin;
+
+  var levelFourTimeSpentSec;
+  var levelFourTimeSpentMin;
+
+  var levelFiveTimeSpentSec;
+  var levelFiveTimeSpentMin;
+
+  var levelCustomTimeSpentSec;
+  var levelCustomTimeSpentMin;
+
   var loggedIn = false;
 
   var getEmail = function() {
@@ -16,98 +29,150 @@ var UserProfile = (function() {
     email = value;
   };
 
-  var setLevelTimes = function(dbLevelOneTimeSpent, dbLevelTwoTimeSpent, dbLevelThreeTimeSpent, dbLevelFourTimeSpent, dbLevelFiveTimeSpent, dbCustomTimeSpent){
-      levelOneTimeSpent = dbLevelOneTimeSpent;
-      levelTwoTimeSpent = dbLevelTwoTimeSpent;
-      levelThreeTimeSpent = dbLevelThreeTimeSpent;
-      levelFourTimeSpent = dbLevelFourTimeSpent;
-      levelFiveTimeSpent = dbLevelFiveTimeSpent;
-      customTimeSpent = dbCustomTimeSpent;
-   };
+  var clearTimes = function(){
+      
+   levelOneTimeSpentMin = 0;
+   levelOneTimeSpentSec = 0;
 
-  var getLevelTimes = function(){
-     return {levelOneTimeSpent, levelTwoTimeSpent, levelThreeTimeSpent, levelFourTimeSpent, levelFiveTimeSpent, customTimeSpent};
-  };
+   levelTwoTimeSpentMin = 0;
+   levelTwoTimeSpentSec = 0;
+
+   levelThreeTimeSpentMin = 0;
+   levelThreeTimeSpentSec = 0;
+
+   levelFourTimeSpentMin = 0;
+   levelFourTimeSpentSec = 0;
+
+   levelFiveTimeSpentMin = 0;
+   levelFiveTimeSpentSec = 0;
+
+   levelCustomTimeSpentMin = 0;
+   levelCustomTimeSpentSec = 0;
+}
 
   var updateRecordTime = function(level, newTimeMin, newTimeSeconds){  
       switch(level){
          case 1:
-            if(levelOneTimeSpent[0] == null){
-               levelOneTimeSpent[0] = newTimeMin;
-               levelOneTimeSpent[1] = newTimeSeconds;
-            }else if(levelOneTimeSpent[0] >= newTimeMin){
-               if(levelOneTimeSpent[1] >= newTimeSeconds){
-                  levelOneTimeSpent[0] = newTimeMin;
-                  levelOneTimeSpent[1] = newTimeSeconds;
+            if(levelOneTimeSpentMin == null){
+               alert(newTimeMin);
+               levelOneTimeSpentMin = newTimeMin;
+               levelOneTimeSpentSec = newTimeSeconds;
+            }else if(levelOneTimeSpentMin >= newTimeMin){
+               if(levelOneTimeSpentSec >= newTimeSeconds){
+                  levelOneTimeSpentMin = newTimeMin;
+                  levelOneTimeSpentSec = newTimeSeconds;
                }
             }
             break;
          case 2:
-            if(levelTwoTimeSpent[0] == null){
-               levelTwoTimeSpent[0] = newTimeMin;
-               levelTwoTimeSpent[1] = newTimeSeconds;
-            }else if(levelTwoTimeSpent[0] >= newTimeMin){
-               if(levelTwoTimeSpent[1] >= newTimeSeconds){
-                  levelTwoTimeSpent[0] = newTimeMin;
-                  levelTwoTimeSpent[1] = newTimeSeconds;
+            if(levelTwoTimeSpentMin == null){
+               levelTwoTimeSpentMin = newTimeMin;
+               levelTwoTimeSpentSec = newTimeSeconds;
+            }else if(levelTwoTimeSpentMin >= newTimeMin){
+               if(levelTwoTimeSpentSec >= newTimeSeconds){
+                  levelTwoTimeSpentMin = newTimeMin;
+                  levelTwoTimeSpentSec = newTimeSeconds;
                }
             }
             break;
          case 3:
-            if(levelThreeTimeSpent[0] == null){
-               levelThreeTimeSpent[0] = newTimeMin;
-               levelThreeTimeSpent[1] = newTimeSeconds;
-            }else if(levelThreeTimeSpent[0] >= newTimeMin){
-               if(levelThreeTimeSpent[1] >= newTimeSeconds){
-                  levelThreeTimeSpent[0] = newTimeMin;
-                  levelThreeTimeSpent[1] = newTimeSeconds;
+            if(levelThreeTimeSpentMin == null){
+               levelThreeTimeSpentMin = newTimeMin;
+               levelThreeTimeSpentSec = newTimeSeconds;
+            }else if(levelThreeTimeSpentMin >= newTimeMin){
+               if(levelThreeTimeSpentSec >= newTimeSeconds){
+                  levelThreeTimeSpentMin = newTimeMin;
+                  levelThreeTimeSpentSec = newTimeSeconds;
                }
             }
             break;
          case 4:
-            if(levelFourTimeSpent[0] == null){
-               levelFourTimeSpent[0] = newTimeMin;
-               levelFourTimeSpent[1] = newTimeSeconds;
-            }else if(levelFourTimeSpent[0] >= newTimeMin){
-               if(levelFourTimeSpent[1] >= newTimeSeconds){
-                  levelFourTimeSpent[0] = newTimeMin;
-                  levelFourTimeSpent[1] = newTimeSeconds;
+            if(levelFourTimeSpentMin == null){
+               levelFourTimeSpentMin = newTimeMin;
+               levelFourTimeSpentSec = newTimeSeconds;
+            }else if(levelFourTimeSpentMin >= newTimeMin){
+               if(levelFourTimeSpentSec >= newTimeSeconds){
+                  levelFourTimeSpentMin = newTimeMin;
+                  levelFourTimeSpentSec = newTimeSeconds;
                }
             }
             break;
          case 5:
-            if(levelFiveTimeSpent[0] == null){
-               levelFiveTimeSpent[0] = newTimeMin;
-               levelFiveTimeSpent[1] = newTimeSeconds;
-            }else if(levelFiveTimeSpent[0] >= newTimeMin){
-               if(levelFiveTimeSpent[1] >= newTimeSeconds){
-                  levelFiveTimeSpent[0] = newTimeMin;
-                  levelFiveTimeSpent[1] = newTimeSeconds;
+            if(levelFiveTimeSpentMin == null){
+               levelFiveTimeSpentMin = newTimeMin;
+               levelFiveTimeSpentSec = newTimeSeconds;
+            }else if(levelFiveTimeSpentMin >= newTimeMin){
+               if(levelFiveTimeSpentSec >= newTimeSeconds){
+                  levelFiveTimeSpentMin = newTimeMin;
+                  levelFiveTimeSpentSec = newTimeSeconds;
                }
             }
             break;
          case 6:
-            if(customTimeSpent[0] == null){
-               customTimeSpent[0] = newTimeMin;
-               customTimeSpent[1] = newTimeSeconds;
-            }else if(customTimeSpent[0] >= newTimeMin){
-               if(customTimeSpent[1] >= newTimeSeconds){
-                  customTimeSpent[0] = newTimeMin;
-                  customTimeSpent[1] = newTimeSeconds;
+            if(levelCustomTimeSpentMin == null){
+               levelCustomTimeSpentMin = newTimeMin;
+               levelCustomTimeSpentSec = newTimeSeconds;
+            }else if(levelCustomTimeSpentMin >= newTimeMin){
+               if(levelCustomTimeSpentSec >= newTimeSeconds){
+                  levelCustomTimeSpentMin = newTimeMin;
+                  levelCustomTimeSpentSec = newTimeSeconds;
                }
             }
             break;
       }
   };
 
+  var populateProfileTimes = function(){
+   levelOneTimeSpentMin = localStorage.getItem("levelOneMin");
+   levelOneTimeSpentSec = localStorage.getItem("levelOneSec");
+
+   levelTwoTimeSpentMin = localStorage.getItem("levelTwoMin");
+   levelTwoTimeSpentSec = localStorage.getItem("levelTwoSec");
+
+   levelThreeTimeSpentMin = localStorage.getItem("levelThreeMin");
+   levelThreeTimeSpentSec = localStorage.getItem("levelThreeSec");
+
+   levelFourTimeSpentMin = localStorage.getItem("levelFourMin");
+   levelFourTimeSpentSec = localStorage.getItem("levelFourSec");
+
+   levelFiveTimeSpentMin = localStorage.getItem("levelFiveMin");
+   levelFiveTimeSpentSec = localStorage.getItem("levelFiveSec");
+
+   levelCustomTimeSpentMin = localStorage.getItem("levelCustomMin");
+   levelCustomTimeSpentSec = localStorage.getItem("levelCustomSec");
+}
+
    var userLoggedIn = function(user) {
       this.setEmail(user);
       loggedIn = true;
+      //populateProfileTimes();
+   }
+
+   var populateLocalStorageTimes = function(){
+      localStorage.setItem("levelOneMin", this.levelOneTimeSpentMin);
+      localStorage.setItem("levelOneSec", this.levelOneTimeSpentSec);
+
+      localStorage.setItem("levelTwoMin", this.levelTwoTimeSpentMin);
+      localStorage.setItem("levelTwoSec", this.levelTwoTimeSpentSec);
+
+      localStorage.setItem("levelThreeMin", this.levelThreeTimeSpentMin);
+      localStorage.setItem("levelThreeSec", this.levelThreeTimeSpentSec);
+
+      localStorage.setItem("levelFourMin", this.levelFourTimeSpentMin);
+      localStorage.setItem("levelFourSec", this.levelFourTimeSpentSec);
+
+      localStorage.setItem("levelFiveMin", this.levelFiveTimeSpentMin);
+      localStorage.setItem("levelFiveSec", this.levelFiveTimeSpentSec);
+
+      localStorage.setItem("levelCustomMin", this.customTimeSpentMin);
+      localStorage.setItem("levelCustomSec", this.customTimeSpentSec);
+      
    }
 
    var userLoggedOut = function() {
       this.setEmail("");
-      this.setLevelTimes(0, 0, 0, 0, 0, 0);
+      //populateLocalStorageTimes();
+      clearTimes();
       loggedIn = false;
    }
 
@@ -120,28 +185,28 @@ var UserProfile = (function() {
       let sec;
       switch(level){
          case 1:
-            min = levelOneTimeSpent[0];
-            sec = levelOneTimeSpent[1];
+            min = levelOneTimeSpentMin;
+            sec = levelOneTimeSpentSec;
             break;
          case 2:
-            min = levelTwoTimeSpent[0];
-            sec = levelTwoTimeSpent[1];
+            min = levelTwoTimeSpentMin;
+            sec = levelTwoTimeSpentSec;
             break;
-         case 1:
-            min = levelThreeTimeSpent[0];
-            sec = levelThreeTimeSpent[1];
+         case 3:
+            min = levelThreeTimeSpentMin;
+            sec = levelThreeTimeSpentSec;
             break;
-         case 1:
-            min = levelFourTimeSpent[0];
-            sec = levelFourTimeSpent[1];
+         case 4:
+            min = levelFourTimeSpentMin;
+            sec = levelFourTimeSpentSec;
             break;
-         case 1:
-            min = levelFiveTimeSpent[0];
-            sec = levelFiveTimeSpent[1];
+         case 5:
+            min = levelFiveTimeSpentMin;
+            sec = levelFiveTimeSpentSec;
             break;
-         case 1:
-            min = customTimeSpent[0];
-            sec = customTimeSpent[1];
+         case 6:
+            min = levelCustomTimeSpentMin;
+            sec = levelCustomTimeSpentSec;
             break;
       }
       
@@ -163,12 +228,11 @@ var UserProfile = (function() {
     getEmail: getEmail,
     setEmail: setEmail,
     updateRecordTime : updateRecordTime,
-    getLevelTimes : getLevelTimes,
-    setLevelTimes : setLevelTimes,
     userLoggedIn : userLoggedIn,
     userLoggedOut : userLoggedOut,
     outputTime : outputTime,
-    userAuthenticated : userAuthenticated
+    userAuthenticated : userAuthenticated,
+    clearTimes : clearTimes,
   }
 
 })();

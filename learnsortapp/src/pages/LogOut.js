@@ -10,8 +10,8 @@ import firebase from 'firebase/compat/app';
 
 const onClickLogout = () => {
    console.log('Logoff clicked' );
-   UserProfile.userLoggedOut(); 
    firebase.auth().signOut();
+   UserProfile.userLoggedOut(); 
 };
 
 function LogOut() {

@@ -4,8 +4,6 @@ import UserProfile from '../Profile/UserProfile';
 
 function Profile() {
 
-   let levelTimes = UserProfile.getLevelTimes();
-
     return (
         <>
             <div class="profile-contents">
