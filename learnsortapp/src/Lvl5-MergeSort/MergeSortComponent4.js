@@ -58,11 +58,7 @@ export default class MergeSortComponent2 extends Component {
     popup.style.visibility = "hidden"; 
   }
 
-  // random number generator
-  randomNum = () => {
-    let r = Array.from({length: 10}, () => Math.floor(Math.random() * 20)+1);
-    return r;
-  }
+
 
   // display the next step in the algorithm with text
   IncrementItem = () => {
@@ -204,10 +200,10 @@ export default class MergeSortComponent2 extends Component {
 
     let fragmentNo = "test" + this.state.arrayIndex;
     var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
-    /*for(let i = 0; i < length; i++){
+    for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       answer.push(value);
-    }*/
+    }
 
     var popupC = document.getElementById("myPopupC");
 
@@ -217,14 +213,17 @@ export default class MergeSortComponent2 extends Component {
     var incorrect2 = document.getElementById("IncorrectAttempt2");
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
+    var incorrectOptionsBox = document.getElementById("incorrectOptionsBox5");
+
+
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
 
-      if (this.state.textIndex > 100) {
-        document.getElementById('next-button5').style.display = 'none';
-        document.getElementById('next-level-button5').style.display = 'block';
-      
+      if (this.state.textIndex > 14) {
+        document.getElementById('next-button1').style.display = 'none';
+        document.getElementById('next-level-button1').style.display = 'block';
+        this.setState({complete: 1});
       }
     }
 
@@ -233,16 +232,22 @@ export default class MergeSortComponent2 extends Component {
       console.log(this.state.attempts);
       if(this.state.attempts == 0){
         incorrect1.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
       if(this.state.attempts == 1){
         incorrect2.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
       if(this.state.attempts == 2){
         incorrect3.style.visibility = "visible";
+        popupI.style.visibility = "visible"; 
       }
-      popupI.style.visibility = "visible"; 
-      this.playWrongAudio(); 
+      if(this.state.attempts >= 3){
+        incorrectOptionsBox.style.visibility = "visible";
+      }
+      this.playWrongAudio();
     }  
+     
     
   }
 
@@ -276,21 +281,21 @@ export default class MergeSortComponent2 extends Component {
     stepsArray[0] = fragments[1];//no 1
     stepsArray[1] = fragments[2];
     stepsArray[2] = fragments[3];
-    stepsArray[3] = fragments[4];
-    stepsArray[4] = fragments[5];    
-    stepsArray[5] = fragments[6];
-    stepsArray[6] = fragments[7];
-    stepsArray[7] = fragments[8];
-    stepsArray[8] = fragments[9];
-    stepsArray[9] = fragments[10];
-    stepsArray[10] = fragments[11];
-    stepsArray[11] = fragments[12];
-    stepsArray[12] = fragments[13];
+    stepsArray[3] = fragments[13];
+    stepsArray[4] = fragments[4];    
+    stepsArray[5] = fragments[5];
+    stepsArray[6] = fragments[6];
+    stepsArray[7] = fragments[7];
+    stepsArray[8] = fragments[8];
+    stepsArray[9] = fragments[9];
+    stepsArray[10] = fragments[10];
+    stepsArray[11] = fragments[11];
+    stepsArray[12] = fragments[12];
     stepsArray[13] = fragments[14];
-    stepsArray[14] = fragments[15];
-    stepsArray[15] = fragments[16];
-    stepsArray[16] = fragments[17];
-    stepsArray[17] = fragments[18];
+    stepsArray[14] = fragments[18];
+    stepsArray[15] = fragments[15];
+    stepsArray[16] = fragments[16];
+    stepsArray[17] = fragments[17];
     stepsArray[18] = fragments[19];
     stepsArray[19] = fragments[20];
     stepsArray[20] = fragments[21];
@@ -300,21 +305,21 @@ export default class MergeSortComponent2 extends Component {
 
     stepsArray[23] = fragments[24];
     stepsArray[24] = fragments[25];
-    stepsArray[25] = fragments[26];
-    stepsArray[26] = fragments[27];
-    stepsArray[27] = fragments[28];
-    stepsArray[28] = fragments[29];
-    stepsArray[29] = fragments[30];
-    stepsArray[30] = fragments[31];
-    stepsArray[31] = fragments[32];
-    stepsArray[32] = fragments[33];
-    stepsArray[33] = fragments[34];
-    stepsArray[34] = fragments[35];
+    stepsArray[25] = fragments[35];
+    stepsArray[26] = fragments[26];
+    stepsArray[27] = fragments[30];
+    stepsArray[28] = fragments[27];
+    stepsArray[29] = fragments[28];
+    stepsArray[30] = fragments[29];
+    stepsArray[31] = fragments[31];
+    stepsArray[32] = fragments[32];
+    stepsArray[33] = fragments[33];
+    stepsArray[34] = fragments[34];
     stepsArray[35] = fragments[36];
-    stepsArray[36] = fragments[37];
-    stepsArray[37] = fragments[38];
-    stepsArray[38] = fragments[39];
-    stepsArray[39] = fragments[40];
+    stepsArray[36] = fragments[40];
+    stepsArray[37] = fragments[37];
+    stepsArray[38] = fragments[38];
+    stepsArray[39] = fragments[39];
     stepsArray[40] = fragments[41];
     stepsArray[41] = fragments[42];
     stepsArray[42] = fragments[43];
@@ -327,53 +332,53 @@ export default class MergeSortComponent2 extends Component {
     stepsArray[48] = fragments[49];
     stepsArray[49] = fragments[50];
     stepsArray[50] = fragments[51];
-    stepsArray[51] = fragments[52];
-    stepsArray[52] = fragments[53];
-    stepsArray[53] = fragments[54];
-    stepsArray[54] = fragments[55];
-    stepsArray[55] = fragments[56];
-    stepsArray[56] = fragments[57];
-    stepsArray[57] = fragments[58];
-    stepsArray[58] = fragments[59];
-    stepsArray[59] = fragments[60];
-    stepsArray[60] = fragments[61];
-    stepsArray[61] = fragments[62];
-    stepsArray[62] = fragments[63];
-    stepsArray[63] = fragments[64];
-    stepsArray[64] = fragments[65];
-    stepsArray[65] = fragments[66];
-    stepsArray[66] = fragments[67];
-    stepsArray[67] = fragments[68];
-    stepsArray[68] = fragments[69];
-    stepsArray[69] = fragments[70];
-    stepsArray[70] = fragments[71];
-    stepsArray[71] = fragments[72];
-    stepsArray[72] = fragments[73];
-    stepsArray[73] = fragments[74];
-    stepsArray[74] = fragments[75];
-    stepsArray[75] = fragments[76];
-    stepsArray[76] = fragments[77];
-    stepsArray[77] = fragments[78];
-    stepsArray[78] = fragments[79];
+    stepsArray[51] = fragments[61];
+    stepsArray[52] = fragments[52];
+    stepsArray[53] = fragments[53];
+    stepsArray[54] = fragments[54];
+    stepsArray[55] = fragments[55];
+    stepsArray[56] = fragments[56];
+    stepsArray[57] = fragments[57];
+    stepsArray[58] = fragments[58];
+    stepsArray[59] = fragments[59];
+    stepsArray[60] = fragments[60];
+    stepsArray[61] = fragments[61];
+    stepsArray[62] = fragments[62];
+    stepsArray[63] = fragments[63];
+    stepsArray[64] = fragments[64];
+    stepsArray[65] = fragments[65];
+    stepsArray[66] = fragments[66];
+    stepsArray[67] = fragments[67];
+    stepsArray[68] = fragments[68];
+    stepsArray[69] = fragments[69];
+    stepsArray[70] = fragments[70];
+    stepsArray[71] = fragments[71];
+    stepsArray[72] = fragments[72];
+    stepsArray[73] = fragments[73];
+    stepsArray[74] = fragments[84];
+    stepsArray[75] = fragments[74];
+    stepsArray[76] = fragments[78];
+    stepsArray[77] = fragments[75];
+    stepsArray[78] = fragments[76];
 
-    stepsArray[79] = fragments[80];
-    stepsArray[80] = fragments[81];
-    stepsArray[81] = fragments[82];
-    stepsArray[82] = fragments[83];
-    stepsArray[83] = fragments[84];
-    stepsArray[84] = fragments[85];
-    stepsArray[85] = fragments[86];
-    stepsArray[86] = fragments[87];
-    stepsArray[87] = fragments[88];
-    stepsArray[88] = fragments[89];
-    stepsArray[89] = fragments[90];
-    stepsArray[90] = fragments[91];
-    stepsArray[91] = fragments[92];
-    stepsArray[92] = fragments[93];
-    stepsArray[93] = fragments[94];
-    stepsArray[94] = fragments[95];
-    stepsArray[95] = fragments[96];
-    stepsArray[96] = fragments[97];
+    stepsArray[79] = fragments[77];
+    stepsArray[80] = fragments[79];
+    stepsArray[81] = fragments[80];
+    stepsArray[82] = fragments[81];
+    stepsArray[83] = fragments[82];
+    stepsArray[84] = fragments[83];
+    stepsArray[85] = fragments[88];
+    stepsArray[86] = fragments[84];
+    stepsArray[87] = fragments[85];
+    stepsArray[88] = fragments[86];
+    stepsArray[89] = fragments[87];
+    stepsArray[90] = fragments[89];
+    stepsArray[91] = fragments[90];
+    stepsArray[92] = fragments[91];
+    stepsArray[93] = fragments[92];
+    stepsArray[94] = fragments[93];
+    stepsArray[95] = fragments[94];
+    stepsArray[96] = fragments[95];
     
     
 
@@ -993,6 +998,20 @@ export default class MergeSortComponent2 extends Component {
                     </form>
                   </div>
 
+                  <div className="userInput41" id="userInput41">
+                  <form onSubmit={this.handleSubmit}>
+                    <label>
+                      Step 42:
+                      <input 
+                        type="text" 
+                        name="userInput"
+                        className='number41'
+                      />
+                        </label>
+                        <button class="check-button" type="submit">Check your answer</button>
+                    </form>
+                  </div>
+
                   <div className="userInput42" id="userInput42">
                   <form onSubmit={this.handleSubmit}>
                     <label>
@@ -1020,6 +1039,8 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
+
+                  
 
                   <div className="userInput44" id="userInput44">
                   <form onSubmit={this.handleSubmit}>
@@ -1090,6 +1111,8 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
+
+
                   <div className="userInput49" id="userInput49">
                   <form onSubmit={this.handleSubmit}>
                     <label>
@@ -1103,6 +1126,7 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
+
                   <div className="userInput50" id="userInput50">
                   <form onSubmit={this.handleSubmit}>
                     <label>
@@ -1116,6 +1140,7 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
+
                   <div className="userInput51" id="userInput51">
                   <form onSubmit={this.handleSubmit}>
                     <label>
@@ -1214,7 +1239,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        className='number25'
+                        className='number58'
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -1280,6 +1305,32 @@ export default class MergeSortComponent2 extends Component {
                         type="text" 
                         name="userInput"
                         className='number63'
+                      />
+                        </label>
+                        <button class="check-button" type="submit">Check your answer</button>
+                    </form>
+                  </div>
+                  <div className="userInput64" id="userInput64">
+                  <form onSubmit={this.handleSubmit}>
+                    <label>
+                      Step 65:
+                      <input 
+                        type="text" 
+                        name="userInput"
+                        className='number64'
+                      />
+                        </label>
+                        <button class="check-button" type="submit">Check your answer</button>
+                    </form>
+                  </div>
+                  <div className="userInput65" id="userInput65">
+                  <form onSubmit={this.handleSubmit}>
+                    <label>
+                      Step 66:
+                      <input 
+                        type="text" 
+                        name="userInput"
+                        className='number65'
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -1717,32 +1768,7 @@ export default class MergeSortComponent2 extends Component {
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
-                  <div className="userInput97" id="userInput97">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 98:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number97'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
-                  <div className="userInput98" id="userInput98">
-                  <form onSubmit={this.handleSubmit}>
-                    <label>
-                      Step 99:
-                      <input 
-                        type="text" 
-                        name="userInput"
-                        className='number98'
-                      />
-                        </label>
-                        <button class="check-button" type="submit">Check your answer</button>
-                    </form>
-                  </div>
+                  
 
             
                   
@@ -1871,7 +1897,7 @@ export default class MergeSortComponent2 extends Component {
                 </div>
                 </div>
                 
-                <div className='incorrectOptions' id='incorrectOptionsBox'>
+                <div className='incorrectOptions5' id='incorrectOptionsBox5'>
                   <br></br>
                   <h1>3 Strikes!</h1>
                   <h2>Please choose one of the following options:</h2>
@@ -1879,8 +1905,8 @@ export default class MergeSortComponent2 extends Component {
                   <button onClick={refreshPage} className='incorrectOptionButton'>Restart This Level</button>
                   <br></br>
                   <br></br>
-                  <Link to='/Level1'>
-                    <button className='incorrectOptionButton5'>Go Back to Level 1</button>
+                  <Link to='/Level4'>
+                    <button className='incorrectOptionButton5'>Go Back to Level 4</button>
                   </Link>
                   <br></br>
                   <br></br>
