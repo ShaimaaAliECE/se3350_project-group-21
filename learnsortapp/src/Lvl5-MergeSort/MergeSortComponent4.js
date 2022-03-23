@@ -22,7 +22,8 @@ export default class MergeSortComponent2 extends Component {
         arrayIndex:0,
         textIndex: 1,
         timeout:1000 * 5 * 60,
-        attempts: 0
+        attempts: 0,
+        complete: 0
     };
     this.mergeSort2 = new MergeSort1();
 
@@ -390,7 +391,9 @@ export default class MergeSortComponent2 extends Component {
               <div className = "sort-title-background5" />
               
               <div onClick={refreshPage} className="gen-num-button5">Generate New Numbers</div>
-              <Timer/>
+              <Timer 
+               level = {5} 
+               completion = {this.state.complete}/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
                   element={document}
