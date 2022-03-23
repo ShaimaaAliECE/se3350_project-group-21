@@ -691,8 +691,8 @@ export default class MergeSortComponent extends Component {
         <>
             <div class="contents">
 
-              <h1 class = "sort-title">MergeSort</h1>
-              <h2 class = "sort-title-background" />
+              <h1 class = "sort-title2">MergeSort</h1>
+              <h2 class = "sort-title-background2" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer 
