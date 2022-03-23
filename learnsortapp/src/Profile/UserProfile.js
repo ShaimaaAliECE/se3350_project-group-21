@@ -53,7 +53,7 @@ var UserProfile = (function() {
   var updateRecordTime = function(level, newTimeMin, newTimeSeconds){  
       switch(level){
          case 1:
-            if(levelOneTimeSpentMin == null){
+            if(levelOneTimeSpentMin == null || (levelOneTimeSpentMin == 0 && levelOneTimeSpentSec == 0)){
                levelOneTimeSpentMin = newTimeMin;
                levelOneTimeSpentSec = newTimeSeconds;
             }else if(levelOneTimeSpentMin >= newTimeMin){
@@ -64,7 +64,7 @@ var UserProfile = (function() {
             }
             break;
          case 2:
-            if(levelTwoTimeSpentMin == null){
+            if(levelTwoTimeSpentMin == null || (levelTwoTimeSpentMin == 0 && levelTwoTimeSpentSec == 0)){
                levelTwoTimeSpentMin = newTimeMin;
                levelTwoTimeSpentSec = newTimeSeconds;
             }else if(levelTwoTimeSpentMin >= newTimeMin){
@@ -75,7 +75,7 @@ var UserProfile = (function() {
             }
             break;
          case 3:
-            if(levelThreeTimeSpentMin == null){
+            if(levelThreeTimeSpentMin == null || (levelThreeTimeSpentMin == 0 && levelThreeTimeSpentSec == 0)){
                levelThreeTimeSpentMin = newTimeMin;
                levelThreeTimeSpentSec = newTimeSeconds;
             }else if(levelThreeTimeSpentMin >= newTimeMin){
@@ -86,7 +86,7 @@ var UserProfile = (function() {
             }
             break;
          case 4:
-            if(levelFourTimeSpentMin == null){
+            if(levelFourTimeSpentMin == null || (levelFourTimeSpentMin == 0 && levelFourTimeSpentSec == 0)){
                levelFourTimeSpentMin = newTimeMin;
                levelFourTimeSpentSec = newTimeSeconds;
             }else if(levelFourTimeSpentMin >= newTimeMin){
@@ -97,7 +97,7 @@ var UserProfile = (function() {
             }
             break;
          case 5:
-            if(levelFiveTimeSpentMin == null){
+            if(levelFiveTimeSpentMin == null || (levelFiveTimeSpentMin == 0 && levelCustomTimeSpentSec == 0)){
                levelFiveTimeSpentMin = newTimeMin;
                levelFiveTimeSpentSec = newTimeSeconds;
             }else if(levelFiveTimeSpentMin >= newTimeMin){
@@ -108,7 +108,7 @@ var UserProfile = (function() {
             }
             break;
          case 6:
-            if(levelCustomTimeSpentMin == null){
+            if(levelCustomTimeSpentMin == null || (levelCustomTimeSpentMin == 0 && levelCustomTimeSpentSec == 0)){
                levelCustomTimeSpentMin = newTimeMin;
                levelCustomTimeSpentSec = newTimeSeconds;
             }else if(levelCustomTimeSpentMin >= newTimeMin){
