@@ -8,7 +8,8 @@ import firebase from 'firebase/compat/app';
 function Navbar() {
 
    const [showLogOut, setShowLogOut] = useState(firebase.auth().currentUser ? true : false);
-   const [showProfileIcon, setShowProfileIcon] = useState(firebase.auth().currentUser ? true : false);  
+   const [showProfileIcon, setShowProfileIcon] = useState(firebase.auth().currentUser ? true : false);
+   const [showLogIn, setShowLogIn] = useState(!firebase.auth().currentUser ? true : false);    
 
 
    // register to receive notification when the current user changes
@@ -16,9 +17,11 @@ function Navbar() {
       if(firebase.auth().currentUser){
          setShowLogOut(true);
          setShowProfileIcon(true);
+         setShowLogIn(false);
       }else{
          setShowLogOut(false);
          setShowProfileIcon(false);
+         setShowLogIn(true);
       }
    })
 
@@ -48,6 +51,13 @@ function Navbar() {
                     <li>
                         <Link to ={"/profile"}>
                            <img src={profileIcon} className={"navbar-profile"}/>
+                        </Link>
+                    </li>
+                    )}
+                    {showLogIn && (
+                    <li>
+                        <Link to ={"/LogIn"} className={"nav-links"}>
+                           Log In
                         </Link>
                     </li>
                     )}
