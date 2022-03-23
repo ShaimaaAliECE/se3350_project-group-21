@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
 
 .boxSize{
-    width: 70px;
+    width: 60px;
     font-size: x-small;
 }
 .userInput0 {
@@ -15,14 +15,14 @@
 
 .userInput1 {
     display: none;
-    margin-left: 750px;
+    margin-left: 670px;
     margin-top: -15px;
     font-size: x-small;
 }
 
 .userInput2 {
     display: none;
-    margin-left: 85px;
+    margin-left: 65px;
     margin-top: 20px;
     font-size: x-small;
 }
@@ -31,35 +31,35 @@
 .userInput3 {
     display: none;
     margin-left: 290px;
-    margin-top: -22px;
+    margin-top: -20px;
     font-size: x-small;
 }
 .userInput4 {
     display: none;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: x-small; 
 }
 
 .userInput5 {
     display: none;
-    margin-left: 130px;
-    margin-top: -15px;
+    margin-left: 120px;
+    margin-top: -20px;
     font-size: x-small;
 
 }
 
 .userInput6 {
     display: none;
-    margin-left: 250px;
-    margin-top: -22px;
+    margin-left: 230px;
+    margin-top: -20px;
     font-size: x-small;
    
 }
 
 .userInput7 {
     display: none;
-    margin-left: 390px;
+    margin-left: 360px;
     margin-top: -18px;
     font-size: x-small;
    
@@ -67,7 +67,7 @@
 
 .userInput8 {
     display: none;
-    margin-left: 130px;
+    margin-left: 120px;
     margin-top: 15px;
     font-size: x-small;
 }
@@ -86,7 +86,7 @@
 
 .userInput10 {
     display: none;
-    margin-left: 130px;
+    margin-left: 115px;
     margin-top: -15px;
     font-size: x-small;
 }
@@ -104,14 +104,14 @@
 
 .userInput12 {
     display: none;
-    margin-left: 390px;
-    margin-top: -98px;
+    margin-left: 360px;
+    margin-top: -93px;
     font-size: x-small;
 }
 
 .userInput13 {
     display: none;
-    margin-left: 260px;
+    margin-left: 225px;
     margin-top: 22px;
     font-size: x-small;
 }
@@ -119,133 +119,136 @@
 
 .userInput14 {
     display: none;
-    margin-left: 390px;
+    margin-left: 360px;
     margin-top: -18px;
     font-size: x-small;
     
 }
 .userInput15 {
     display: none;
-    margin-left: 330px;
+    margin-left: 290px;
     margin-top: 18px;
     font-size: x-small;
     
 }
 .userInput16 {
     display: none;
-    margin-left: 200px;
+    margin-left: 190px;
     margin-top: 18px;
     font-size: x-small;
     
 }
 .userInput17 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 555px;
+    margin-top: -190px;
     font-size: x-small;
     
 }
 .userInput18 {
     display: none;
-    margin-left: 360px;
+    margin-left: 800px;
+    margin-top: -18px;
+    font-size: x-small;
+    
+}
+#userInput19 {
+    display: none;
+    margin-left: 485px;
+    margin-top: 10px;
+    font-size: x-small;
+    
+}
+#userInput20 {
+    display: none;
+    margin-left: 610px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+#userInput21 {
+    display: none;
+    margin-left: 725px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+#userInput22 {
+    display: none;
+    margin-left: 875px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+#userInput23 {
+    display: none;
+    margin-left: 610px;
+    margin-top: 20px;
+    font-size: x-small;
+    
+}
+#userInput24 {
+    display: none;
+    margin-left: 480px;
     margin-top: 8px;
     font-size: x-small;
     
 }
-.userInput19 {
+#userInput25 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 610px;
+    margin-top: -15px;
     font-size: x-small;
     
 }
-.userInput20 {
+#userInput26 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 540px;
+    margin-top: 15px;
     font-size: x-small;
     
 }
-.userInput21 {
+#userInput27 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 875px;
+    margin-top: -80px;
     font-size: x-small;
     
 }
-.userInput22 {
+#userInput28 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 725px;
+    margin-top: 10px;
     font-size: x-small;
     
 }
-.userInput23 {
+#userInput29 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 875px;
+    margin-top: -15px;
     font-size: x-small;
     
 }
-.userInput24 {
+#userInput30 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 800px;
+    margin-top: 13px;
     font-size: x-small;
     
 }
-.userInput25 {
+#userInput31 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput26 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput27 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput28 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput29 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput30 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput31 {
-    display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 670px;
+    margin-top: 18px;
     font-size: x-small;
     
 }
 
-.userInput32 {
+#userInput32 {
     display: none;
+    font-size: x-small;
+    margin-top: 50px;
+    margin-left: 450px;
 }
 #l2 {
     position:absolute;
@@ -581,4 +584,13 @@
 .incorrectOptionButton:hover {
     transform: scale(1.07);
     transition: all 0.2s ease-out;
+}
+.test16{
+    display:none;
+}
+.test17{
+    display:none;
+}
+.test18{
+    display:none;
 }

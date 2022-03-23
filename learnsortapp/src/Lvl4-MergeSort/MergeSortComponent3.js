@@ -138,7 +138,7 @@ export default class MergeSortComponent3 extends Component {
     var length = document.getElementById(fragmentNo).getElementsByClassName('number').length
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
-      //answer.push(value);
+        answer.push(value);
     }
 
     var popupC = document.getElementById("myPopupC");
@@ -153,7 +153,7 @@ export default class MergeSortComponent3 extends Component {
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
 
-      if (this.state.textIndex > 33) {
+      if (this.state.textIndex > 32) {
         document.getElementById('next-button1').style.display = 'none';
         document.getElementById('next-level-button1').style.display = 'block';
       
@@ -788,7 +788,7 @@ export default class MergeSortComponent3 extends Component {
                   <div className="test29" id="test29">{stepsArray[29]}</div>
                   <div className="test30" id="test30">{stepsArray[30]}</div>
                   <div className="test31" id="test31">{stepsArray[31]}</div>
-                  <div className="test32" id="test32"></div>
+                  <div className="test32" id="test32">{stepsArray[32]}</div>
                   <br/><br/>
                   
                   <Link to='/Level3'>
