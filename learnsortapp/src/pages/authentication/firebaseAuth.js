@@ -13,7 +13,7 @@ const firebaseAuthConfig = {
     },
 
   ],
-  signInSuccessUrl: "/",
+  signInSuccessUrl: "/#/Dashboard",
 };
 
 const FirebaseAuth = () => {

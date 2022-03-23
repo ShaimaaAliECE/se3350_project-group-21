@@ -127,7 +127,7 @@
     background: rgba(250, 153, 28, 0.35); 
  }
 
-.gen-num-button5 {
+.gen-num-button15 {
 
     position: absolute;
     width: 280px;
@@ -148,7 +148,7 @@
     color: #FBF3F2;
 }
 
-.gen-num-button5:hover {
+.gen-num-button15:hover {
     
     background-color: #ffffff;
     color: #032539;
@@ -343,83 +343,83 @@
 }
 
 
-.test0 {
+.test0-5 {
     display: none;
 }
 
-.test1 {
+.test1-5 {
     display: none;
 }
-.test2 {
+.test2-5 {
     display: none;
    
 }
-.test3 {
+.test3-5 {
     display: none;
     
 }
 
-.test4 {
+.test4-5 {
     display: none;  
 }
 
-.test5 {
+.test5-5 {
     display: none;
 
 }
 
-.test6 {
+.test6-5 {
     display: none;
    
 }
 
-.test7 {
+.test7-5 {
     display: none;
 
 }
 
-.test8 {
+.test8-5 {
     display: none;
 }
 
-.test9 {
-    display: none;
-
-}
-
-.test10 {
+.test9-5 {
     display: none;
 
 }
 
-.test11 {
+.test10-5 {
     display: none;
 
 }
 
-.test12 {
+.test11-5 {
     display: none;
 
 }
 
-.test13 {
+.test12-5 {
+    display: none;
+
+}
+
+.test13-5 {
     display: none;
 }
 
-.test14 {
+.test14-5 {
     display: none;
 }
 
-.test15{
+.test15-5{
     display:none;
 }
-.test16{
+.test16-5{
     display:none;
 }
-.test17{
+.test17-5{
     display:none;
 }
-.test18{
+.test18-5{
     display:none;
 }
 .test19{
@@ -961,119 +961,119 @@
 }
 
 
-.userInput0 {
+.userInput0-5 {
     display: none;
     margin-left: 490px;
     margin-top: 70px;
 }
 
-.userInput1 {
+.userInput1-5 {
     display: none;
     margin-left: 120px;
     margin-top: 10px;
 }
 
-.userInput2 {
+.userInput2-5 {
     display: none;
     margin-left: 40px;
     margin-top: 10px;
 }
 
 
-.userInput3 {
+.userInput3-5 {
     display: none;
     margin-left: 350px;
     margin-top: -22px;
 }
 
-.userInput4 {
+.userInput4-5 {
     display: none;
     margin-left: 5px;
     margin-top: 10px; 
 }
 
-.userInput5 {
+.userInput5-5 {
     display: none;
     margin-left: 40px;
     margin-top: 10px; 
 
 }
 
-.userInput6 {
+.userInput6-5 {
     display: none;
     margin-left: 40px;
     margin-top: 10px;
    
 }
 
-.userInput7 {
+.userInput7-5 {
     display: none;
     margin-left: 5px;
     margin-top: 10px;
    
 }
 
-.userInput8 {
+.userInput8-5 {
     display: none;
     margin-left: 150px;
     margin-top: -125px;
 }
 
-.userInput9 {
+.userInput9-5 {
     display: none;
     margin-left: 180px;
     margin-top: 10px; 
 }
 
-.userInput10 {
+.userInput10-5 {
     display: none;
     margin-left: 180px;
     margin-top: 10px; 
 }
 
 
-.userInput11 {
+.userInput11-5 {
     display: none;
     margin-left: 145px;
     margin-top: 10px;
 }
 
-.userInput12 {
+.userInput12-5 {
     display: none;
     margin-left: 30px;
     margin-top: 10px;
 }
 
-.userInput13 {
+.userInput13-5 {
     display: none;
     margin-left: 290px;
     margin-top: -165px;
 }
 
 
-.userInput14 {
+.userInput14-5 {
     display: none;
     margin-left: 460px;
     margin-top: -25px;
     
 }
 
-.userInput15 {
+.userInput15-5 {
     display: none;
     margin-left: 340px;
     margin-top: 10px;
 }
-.userInput16 {
+.userInput16-5 {
     display: none;
     margin-left: 340px;
     margin-top: 10px;
 }
-.userInput17 {
+.userInput17-5 {
     display: none;
     margin-left: 290px;
     margin-top: 10px;
 }
-.userInput18 {
+.userInput18-5 {
     display: none;
     margin-left: 495px;
     margin-top: -95px;
@@ -1518,7 +1518,7 @@
     text-align: center;
 }
 
-.incorrect1 {
+.incorrect1-5 {
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1529,7 +1529,7 @@
     visibility: hidden;
 }
 
-.incorrect2{
+.incorrect2-5{
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1540,7 +1540,7 @@
     visibility: hidden;
 }
 
-.incorrect3{
+.incorrect3-5{
     font-size: 25px;
     font-weight: 700;
     color: red;
@@ -1551,7 +1551,7 @@
     visibility: hidden;
 }
 
-.incorrectGrid {
+.incorrectGrid-5 {
     margin-left: 180px;
     margin-top: 245px;
     justify-content: center;
