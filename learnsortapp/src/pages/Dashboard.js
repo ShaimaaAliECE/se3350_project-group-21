@@ -8,9 +8,12 @@ import firebase from 'firebase/compat/app';
 function Dashboard() {
     const [searchTerm, setSearchTerm] = useState('')
 
+    // Forces the user to login
+    /*
     if (!firebase.auth().currentUser)
       window.location = "/#/login";
-   
+   */
+
     return (
         <>
             <div className="dashboardcontents">
