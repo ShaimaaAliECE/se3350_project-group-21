@@ -74,3 +74,43 @@
    padding: 10px;
    color: White;
 }
+
+.clear-Box{
+   
+   position: absolute;
+   width: 244px;
+   height: 71px;
+   margin-bottom: 80px;
+   margin-left: 475px;
+   
+   background: #1C768F;
+   border-radius: 80px;
+}
+
+.clear-Box:hover { 
+   background:  #032539;
+   border-radius: 80px;
+   transition: all 0.2s ease-out;
+}
+
+.clear-button{
+   justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.clear-text{
+   
+   position: absolute;
+   width: 200px;
+   height: 35px;
+   left: 25px;
+   top: -12px;
+   
+   font-family: 'Nunito', sans-serif;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 30px;
+   line-height: 35px;
+   color: #FFFFFF;
+}

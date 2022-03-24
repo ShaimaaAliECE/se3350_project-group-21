@@ -24,7 +24,7 @@ const FirebaseAuth = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{"marginTop" : 25}}>
       {show && (
         <StyledFirebaseAuth
           uiConfig={firebaseAuthConfig}
