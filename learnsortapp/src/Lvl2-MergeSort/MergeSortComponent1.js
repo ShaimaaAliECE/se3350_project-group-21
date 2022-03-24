@@ -1092,7 +1092,7 @@ _onAction(e) {
                   <br></br>
                   <br></br>
                   <Link to=''>
-                    <button className='incorrectOptionButton'>Switch to Another Algorithm</button>
+                    <button className='incorrectOptionButton'>Switch to Another Algorithm (Coming Soon)</button>
                   </Link>
                   <br></br>
                   <br></br>

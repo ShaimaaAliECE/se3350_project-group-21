@@ -1068,26 +1068,26 @@ export default class MergeSortComponent2 extends Component {
                 </div>
                 </div>
                 
-                <div className='incorrectOptions' id='incorrectOptionsBox'>
+                <div className='incorrectOptions3' id='incorrectOptionsBox'>
                   <br></br>
                   <h1>3 Strikes!</h1>
                   <h2>Please choose one of the following options:</h2>
                   <br></br>
-                  <button onClick={refreshPage} className='incorrectOptionButton'>Restart This Level</button>
+                  <button onClick={refreshPage} className='incorrectOptionButton3'>Restart This Level</button>
                   <br></br>
                   <br></br>
-                  <Link to='/Level1'>
-                    <button className='incorrectOptionButton'>Go Back to Level 1</button>
+                  <Link to='/Level2'>
+                    <button className='incorrectOptionButton3'>Go Back to Level 2</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to=''>
-                    <button className='incorrectOptionButton'>Switch to Another Algorithm</button>
+                    <button className='incorrectOptionButton3'>Switch to Another Algorithm (Coming Soon)</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to='/'>
-                    <button className='incorrectOptionButton'>Quit</button>
+                    <button className='incorrectOptionButton3'>Quit</button>
                   </Link>
                 </div>
 
