@@ -232,7 +232,7 @@ export default class MergeSortComponent2 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner1">
+              <div className = "outlinerLvl2-3">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -271,6 +271,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -284,6 +285,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -297,7 +299,20 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id="l2">
+                        3.(a):
+                        <input
+                          id = "u2"
+                        />
+                        </label>
+                      <label id = "l3">
+                      3.(b):
+                        <input
+                          id = "u3"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -310,7 +325,14 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id = "l4">
+                      4.(a):
+                        <input
+                          id = "u4"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -323,8 +345,22 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+                      
+                      <label id = "l5">
+                      5.(a):
+                      <input
+                          id = "u5"
+                        />
+                      </label>
+                      <label id = "l6">
+                      5.(b):
+                        <input
+                          id = "u6"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -336,6 +372,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -349,6 +386,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -362,8 +400,72 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+                        <label id = "l12">
+                      8.(a):
+                        <input
+                          id = "u12"
+                        />
+                      </label>
+                      <label id = "l15">
+                      6.(a):
+                        <input
+                          id = "u15"
+                        />
+                      </label>
+                      <label id = "l16">
+                      7.(a):
+                        <input
+                          id = "u16"
+                        />
+                      </label>
+
+
+
+                      <label id = "l13">
+                      8.(b):
+                        <input
+                          id = "u13"
+                        />
+                      </label>
+                      <label id = "l17">
+                      6.(b):
+                        <input
+                          id = "u17"
+                        />
+                      </label>
+                      <label id = "l18">
+                      7.(b):
+                        <input
+                          id = "u18"
+                        />
+                      </label>
+
+
+
+
+
+                      <label id = "l14">
+                      8.(c):
+                        <input
+                          id = "u14"
+                        />
+                      </label>
+                      <label id = "l19">
+                      6.(c):
+                        <input
+                          id = "u19"
+                        />
+                      </label>
+                      <label id = "l20">
+                      7.(c):
+                        <input
+                          id = "u20"
+                        />
+                      </label>
+                      
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -375,8 +477,21 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+                        <label id = "l7">
+                      9.(a):
+                      <input
+                          id = "u7"
+                        />
+                      </label>
+                      <label id = "l8">
+                      9.(b):
+                        <input
+                          id = "u8"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -388,7 +503,14 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id = "l9">
+                      10.(a):
+                        <input
+                          id = "u9"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -401,7 +523,20 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
+                        </label>
+                        <label id = "l10">
+                      11.(a):
+                        <input
+                          id = "u10"
+                        />
+                        </label>
+                        <label id = "l11">
+                      11.(b):
+                        <input
+                          id = "u11"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -414,6 +549,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -427,6 +563,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -440,8 +577,73 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+
+                        <label id = "l21">
+                      14.(a):
+                        <input
+                          id = "u21"
+                        />
+                      </label>
+                      <label id = "l24">
+                      13.(a):
+                        <input
+                          id = "u24"
+                        />
+                      </label>
+                      <label id = "l25">
+                      12.(a):
+                        <input
+                          id = "u25"
+                        />
+                      </label>
+
+
+
+                      <label id = "l22">
+                      14.(b):
+                        <input
+                          id = "u22"
+                        />
+                      </label>
+                      <label id = "l26">
+                      13.(b):
+                        <input
+                          id = "u26"
+                        />
+                      </label>
+                      <label id = "l27">
+                      12.(b):
+                        <input
+                          id = "u27"
+                        />
+                      </label>
+
+
+
+
+
+                      <label id = "l23">
+                      14.(c):
+                        <input
+                          id = "u23"
+                        />
+                      </label>
+                      <label id = "l28">
+                      13.(c):
+                        <input
+                          id = "u28"
+                        />
+                      </label>
+                      <label id = "l29">
+                      12.(c):
+                        <input
+                          id = "u29"
+                        />
+                      </label>
+                        
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -453,6 +655,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>

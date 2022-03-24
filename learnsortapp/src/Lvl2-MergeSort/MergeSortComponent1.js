@@ -107,7 +107,7 @@ _onAction(e) {
     "Step 12: Now that all of our values are separated, we need to compare the individual values and order them in ascending order. Compare 9(a) to 9(b) and select the smallest value to be entered first, then enter the second value.", 
     "Step 13: Compare 10(a) to 11(a). List the smallest element first, then compare 10(a) to 11(b). If 10(a) < 11(b), then list 4(a), otherwise list 11(b). After this, you'll compare 11(a) and 11(b) and list the smallest element next.", 
     "Step 14(a): Select the smallest values from the front of the lists (from step 12 and 13) and add the minimum value to 14(a). Record the remaining values of the lists in 12(a) and 13(a). Step 14(b) and 14(c): Continue to compare the smallest elements until one list is empty. Step 14: Copy the values from 14(a),14(b), and 14(c) then copy the remainder of the second list into the sorted array.", 
-    "Step 15: Merge the now sorted left subarray, and right subarray to get the final sorted array. List the sorted values in ascending order:",
+    "Step 15: For each part of step 15, compare the first value in step 8 to the first value in step 14. Add the minimum value to the step. You can use the boxes to the left to record the new arrays for step 8 and 14.",
     "Level Complete!"];
     
     let elementID = "test" + this.state.arrayIndex;
@@ -134,6 +134,35 @@ _onAction(e) {
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       answer.push(value);
     }
+
+    if(this.state.textIndex == 3){
+      console.log((event.target.extra.value));
+    }
+    
+
+    // if(this.state.textIndex == 2 | this.state.textIndex == 3 | this.state.textIndex == 4 |
+    //   this.state.textIndex == 7 | this.state.textIndex == 8 | this.state.textIndex == 9 | this.state.textIndex == 11 |
+    //   this.state.textIndex == 13 | this.state.textIndex == 14) {
+
+      // if(event.target.extra.value == null | event.target.extra1.value == null) {
+      //     this.playWrongAudio();
+      // }
+
+    //   else if(this.state.textIndex == 3) {
+    //     let response = document.getElementById('l4').innerHTML;
+    //       if(response == null){
+    //         this.playWrongAudio();
+    //       }
+    //   }
+
+    //   else if(this.state.textIndex == 4) {
+    //     let response = document.getElementById('l5').innerHTML;
+    //     let response1 = document.getElementById('l6').innerHTML;
+    //       if(response == null & response1 == null){
+    //         this.playWrongAudio();
+    //       }
+    //   }
+    // }
 
     var popupC = document.getElementById("myPopupC");
 
@@ -244,7 +273,7 @@ _onAction(e) {
                   timeout={this.state.timeout}  
                   />
 
-              <div className = "outliner1">
+              <div className = "outlinerLvl2-3">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -317,12 +346,16 @@ _onAction(e) {
                         <label id="l2">
                         3.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u2"
                         />
                         </label>
                       <label id = "l3">
                       3.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u3"
                         />
                         </label>
@@ -670,6 +703,67 @@ _onAction(e) {
 
                       />
                         </label>
+
+                        <label id = "l30">
+                      15.(a):
+                        <input
+                          id = "u30"
+                        />
+                      </label>
+                      <label id = "l38">
+                      Leftover Array 8:
+                        <input
+                          id = "u38"
+                        />
+                      </label>
+                      <label id = "l39">
+                      Leftover Array 14:
+                        <input
+                          id = "u39"
+                        />
+                      </label>
+                      <label id = "l31">
+                      15.(b):
+                        <input
+                          id = "u31"
+                        />
+                      </label>
+                      <label id = "l32">
+                      15.(c):
+                        <input
+                          id = "u32"
+                        />
+                      </label>
+                      <label id = "l33">
+                      15.(d):
+                        <input
+                          id = "u33"
+                        />
+                      </label>
+                      <label id = "l34">
+                      15.(e):
+                        <input
+                          id = "u34"
+                        />
+                      </label>
+                      <label id = "l35">
+                      15.(f):
+                        <input
+                          id = "u35"
+                        />
+                      </label>
+                      <label id = "l36">
+                      15.(g):
+                        <input
+                          id = "u36"
+                        />
+                      </label>
+                      <label id = "l37">
+                      15.(h):
+                        <input
+                          id = "u37"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
