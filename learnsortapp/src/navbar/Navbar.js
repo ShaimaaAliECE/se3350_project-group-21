@@ -40,20 +40,18 @@ function Navbar() {
                             </li>
                         )
                     })}
-                    {showLogOut && (
-                       <li>
-                        <Link to ={"/LogOut"} className={"nav-links"}>
-                           Log Out
-                        </Link>
-                    </li>
-                    )}
-                    {showProfileIcon && (
-                    <li>
-                        <Link to ={"/profile"}>
-                           <img src={profileIcon} className={"navbar-profile"}/>
-                        </Link>
-                    </li>
-                    )}
+                    <div class="dropdown">
+                        {showProfileIcon && (
+                        <li>
+                            <img src={profileIcon} className={"navbar-profile"}/>
+                            <div class="dropdown-content">
+                                <Link to ={"/profile"} className={"nav-links"}>View Profile</Link>
+                                <Link to ={"/Logout"} className={"nav-links"}>Logout</Link>
+                            </div>
+                            
+                        </li>
+                        )}
+                    </div>
                     {showLogIn && (
                     <li>
                         <Link to ={"/LogIn"} className={"nav-links"}>

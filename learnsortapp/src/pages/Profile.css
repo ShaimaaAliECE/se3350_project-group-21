@@ -183,7 +183,7 @@ section{
 .box .skill .graph{
    position: absolute;
    width: 40px;
-   background: rgba(0,0,0,1);
+   background: rgba(0,0,0,.1);
    bottom: 0;
    left: 50%;
    transform: translateX(-50%);
@@ -202,10 +202,10 @@ section{
 .box .skill .graph:after{
    content: '';
    position: absolute;
-   top: 2px;
-   left: 2px;
-   right: 2px;
-   bottom: 0;
+   top: 0;
+   left: 0;
+   width: 50%;
+   height: 100%;
    background: #1C768F;
 }
 

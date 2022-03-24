@@ -94,7 +94,7 @@ function Profile() {
                      <section>
                         <div class="box">
                            <div class ="skill">
-                              <div class="graph">
+                              <div class="graph" >
                                  <div class="percent">{levelOneTime}</div>
                               </div>
                               <div class="name">Level 1</div>
