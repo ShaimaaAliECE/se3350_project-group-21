@@ -101,6 +101,13 @@ export default class MergeSortComponent extends Component {
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
+
+    if (elementID !== "test8" && elementID !== "test9" && elementID !== "test10" && elementID !== "test11" && elementID !== "test12"
+    && elementID !== "test24" && elementID !== "test25" && elementID !== "test26" && elementID !== "test27" && elementID !== "test28") {
+      document.getElementById("go-back").style.display = 'block';
+    } else {
+      document.getElementById("go-back").style.display = 'none';
+    }
  
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
         && elementID !== "test9" && elementID !== "test10" && elementID !== "test11" && elementID !== "test12"
@@ -306,12 +313,15 @@ export default class MergeSortComponent extends Component {
 
     // right half
     else if (elementID === "test21") {
+      document.getElementById("step11Array").style.display = 'block';
       document.getElementById("step11Array").style.animation = 'pulse 1s';
       document.getElementById("step11Array").style.fontSize = '20px';    
     } else if (elementID === "test22") {
+      document.getElementById("step12Array").style.display = 'block';
       document.getElementById("step12Array").style.animation = 'pulse 1s';
       document.getElementById("step12Array").style.fontSize = '20px'; 
     } else if (elementID === "test23") {
+      document.getElementById("step13Array").style.display = 'block';
       document.getElementById("step13Array").style.animation = 'pulse 1s';
       document.getElementById("step13Array").style.fontSize = '20px';   
     } 
@@ -617,31 +627,11 @@ export default class MergeSortComponent extends Component {
               "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
               "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
               "Step 5(a): Merge all of the left sub-array elements, now sorted in ascending order. ", 
-              "Step 5(b): Compare the two highlighted values to get the smaller value.",
-              "Step 5(c): Compare the two highlighted values to get the smaller value.",
-              "Step 5(d): Compare the two highlighted values to get the smaller value.",
-              "Step 5(e): Compare the two highlighted values to get the smaller value.",
-              "Step 5(f): Compare the two highlighted values to get the final value.",
-              "Merging step",
-              "Merging step",
-              "Merging step",
-              "Merging step",
-              "Merging step",
               "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
               "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
               "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
               "Step 8: Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
               "Step 9(a): Merge the right sub-arrays in ascending order.", 
-              "Step 9(b): Compare the two highlighted values to get the smaller value.",
-              "Step 9(c): Compare the two highlighted values to get the smaller value.",
-              "Step 9(d): Compare the two highlighted values to get the smaller value.",
-              "Step 9(e): Compare the two highlighted values to get the smaller value.",
-              "Step 9(f): Compare the two highlighted values to get the final value.",
-              "Merging step",
-              "Merging step",
-              "Merging step",
-              "Merging step",
-              "Merging step",
               "Step 10: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
 
     if (this.state.arrayIndex-1 >= 0) { // to avoid going below zero and printing undefined
@@ -665,10 +655,14 @@ export default class MergeSortComponent extends Component {
         document.getElementById("stepFiveArray").style.display = 'none';
         document.getElementById("stepSixArray").style.display = 'none';
         document.getElementById("stepSevenArray").style.display = 'none';
-
         this.setState({ arrayIndex: 5 });
-
-      } else {
+      } else if (elementID === "test21" || elementID === "test22" || elementID === "test23") {
+        document.getElementById("step11Array").style.display = 'none';
+        document.getElementById("step12Array").style.display = 'none';
+        document.getElementById("step13Array").style.display = 'none';
+        this.setState({ arrayIndex: 21 });
+      }
+      else {
         this.setState({ arrayIndex: this.state.arrayIndex - 1 });
       }
     }
@@ -825,7 +819,7 @@ export default class MergeSortComponent extends Component {
                   <div className="test14" id="test34"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
+                  <div  className="back-button" id="go-back" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
                     <div id="return-button" className="return-button">Levels Page</div>
                   </Link>
