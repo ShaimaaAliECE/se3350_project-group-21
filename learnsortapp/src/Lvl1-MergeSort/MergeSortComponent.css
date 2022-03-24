@@ -17,28 +17,26 @@
     display: none;
     
 }
- .sort-title{
-    position: center;
+.sort-title-background11 {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    z-index: -1;
+    width: 474px;
+    height: 40px;
+    margin-top: 60px;
+    background: rgba(250, 153, 28, 0.35);
+ }
+ 
+.sort-title11 { 
     width: auto;
     margin-top: auto;
-    
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
     line-height: 59px;
-    
-    color: #000000;
- }
-
- .sort-title-background
- {
-    position: center;
-    width: 474px;
-    height: 40px;
-    margin-top: 60px;
-
-    background: rgba(250, 153, 28, 0.35); 
+    padding-top: 40px
  }
 
 .gen-num-button {
@@ -130,11 +128,11 @@
     transition: all 0.2s ease-out;
 }
 
-.outliner{
+.outliner11{
     position: absolute;
     width: 1000px;
-    height: 600px;
-    margin-top: 800px;
+    height: 650px;
+    margin-top: 850px;
     border: 6px solid #1C768F;
     box-sizing: border-box;
 }

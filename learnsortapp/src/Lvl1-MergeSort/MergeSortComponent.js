@@ -691,8 +691,8 @@ export default class MergeSortComponent extends Component {
         <>
             <div class="contents">
 
-              <h1 class = "sort-title">MergeSort</h1>
-              <h2 class = "sort-title-background" />
+              <h1 class = "sort-title11">MergeSort</h1>
+              <h2 class = "sort-title-background11" />
               
               <div onClick={refreshPage} class="gen-num-button">Generate New Numbers</div>
               <Timer 
@@ -708,7 +708,7 @@ export default class MergeSortComponent extends Component {
                   timeout={this.state.timeout}  
                   />
 
-              <div class = "outliner">
+              <div class = "outliner11">
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
                       Your Values:
