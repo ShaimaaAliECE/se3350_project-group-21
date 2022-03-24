@@ -516,7 +516,6 @@ export default class MergeSortComponent extends Component {
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       answer.push(value);
-      console.log(answer);
     }
     // will display the whole fragment
     // alert(answer)
@@ -627,11 +626,31 @@ export default class MergeSortComponent extends Component {
               "Step 3(b): Continue breaking down the sub-arrays into individual elements: ", 
               "Step 4: Now we have all of our elements separated, we can start to compare the elements of the left sub-array and sort them in ascending order.", 
               "Step 5(a): Merge all of the left sub-array elements, now sorted in ascending order. ", 
+              "Step 5(b): Compare the two highlighted values to get the smaller value.",
+              "Step 5(c): Compare the two highlighted values to get the smaller value.",
+              "Step 5(d): Compare the two highlighted values to get the smaller value.",
+              "Step 5(e): Compare the two highlighted values to get the smaller value.",
+              "Step 5(f): Compare the two highlighted values to get the final value.",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
               "Step 6(a): We will now repeat the process to the right sub-array. Split the right sub-array in half (as evenly as possible). This is the first half: ", 
               "Step 6(b): This is the second half: ", "Step 7(a): Continue to break down the right sub-arrays until they are all just one element. We will also begin comparing elements to ensure they are in ascending order. ", 
               "Step 7(b): Continue splitting the right sub-arrays that are still not single elements: ", 
               "Step 8: Now we can begin comparing all of the right sub-array elements and sort them in ascending order", 
               "Step 9(a): Merge the right sub-arrays in ascending order.", 
+              "Step 9(b): Compare the two highlighted values to get the smaller value.",
+              "Step 9(c): Compare the two highlighted values to get the smaller value.",
+              "Step 9(d): Compare the two highlighted values to get the smaller value.",
+              "Step 9(e): Compare the two highlighted values to get the smaller value.",
+              "Step 9(f): Compare the two highlighted values to get the final value.",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
+              "Merging step",
               "Step 10: Merge the now sorted left subarray, and right subarray to get the final sorted list."];
 
     if (this.state.arrayIndex-1 >= 0) { // to avoid going below zero and printing undefined
@@ -656,14 +675,17 @@ export default class MergeSortComponent extends Component {
         document.getElementById("stepSixArray").style.display = 'none';
         document.getElementById("stepSevenArray").style.display = 'none';
         this.setState({ arrayIndex: 5 });
+        console.log(this.state.arrayIndex);
       } else if (elementID === "test21" || elementID === "test22" || elementID === "test23") {
         document.getElementById("step11Array").style.display = 'none';
         document.getElementById("step12Array").style.display = 'none';
         document.getElementById("step13Array").style.display = 'none';
         this.setState({ arrayIndex: 21 });
+        console.log(this.state.arrayIndex);
       }
       else {
         this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+        console.log(this.state.arrayIndex);
       }
     }
   }
