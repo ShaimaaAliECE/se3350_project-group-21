@@ -834,34 +834,43 @@
 
 .incorrect1 {
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
 .incorrect2{
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
 .incorrect3{
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
@@ -869,9 +878,11 @@
     margin-left: 15px;
     margin-top: 220px;
     justify-content: center;
+    align-items: center;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-column-gap: 10px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-column-gap: 7px;
 }
 
 .incorrectOptions {
