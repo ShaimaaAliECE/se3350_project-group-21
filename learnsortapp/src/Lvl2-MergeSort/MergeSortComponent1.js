@@ -518,8 +518,8 @@ _onAction(e) {
         <>
             <div class="contents">
 
-              <h1 className = "sort-title22">MergeSort</h1>
-              <div className = "sort-title-background22" />
+              <h1 className = "sort-title2">MergeSort</h1>
+              <div className = "sort-title-background2" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
 
@@ -578,11 +578,11 @@ _onAction(e) {
                         id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user1" id="userInput1">
+                  <div className="userInput1" id="userInput1">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 2:
@@ -592,11 +592,11 @@ _onAction(e) {
                         id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user2" id="userInput2">
+                  <div className="userInput2" id="userInput2">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 3:
@@ -606,7 +606,7 @@ _onAction(e) {
                         id = "u50"
                       />
                         </label>
-                        <label id="l22">
+                        <label id="l2">
                         3.(a):
                         <input
                           type = "text"
@@ -614,7 +614,7 @@ _onAction(e) {
                           id = "u2"
                         />
                         </label>
-                      <label id = "l32">
+                      <label id = "l3">
                       3.(b):
                         <input
                           type = "text"
@@ -622,11 +622,11 @@ _onAction(e) {
                           id = "u3"
                         />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user3" id="userInput3">
+                  <div className="userInput3" id="userInput3">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 4:
@@ -636,7 +636,7 @@ _onAction(e) {
                         id = "u51"
                       />
                         </label>
-                        <label id = "l42">
+                        <label id = "l4">
                       4.(a):
                         <input
                           type = "text"
@@ -644,11 +644,11 @@ _onAction(e) {
                           id = "u4"
                         />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user4" id="userInput4">
+                  <div className="userInput4" id="userInput4">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 5:
@@ -659,7 +659,7 @@ _onAction(e) {
                       />
                         </label>
                       
-                      <label id = "l52">
+                      <label id = "l5">
                       5.(a):
                       <input
                           type = "text"
@@ -667,7 +667,7 @@ _onAction(e) {
                           id = "u5"
                         />
                       </label>
-                      <label id = "l62">
+                      <label id = "l6">
                       5.(b):
                         <input
                           type = "text"
@@ -675,39 +675,39 @@ _onAction(e) {
                           id = "u6"
                         />
                       </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user5" id="userInput5">
+                  <div className="userInput5" id="userInput5">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 6:
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u12"
+                        id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user6" id="userInput6">
+                  <div className="userInput6" id="userInput6">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 7:
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u12"
+                        id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user7" id="userInput7">
+                  <div className="userInput7" id="userInput7">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 8:
@@ -717,43 +717,43 @@ _onAction(e) {
                         id = "u1"
                       />
                         </label>
-                        <label id = "l122">
+                        <label id = "l12">
                       8.(a):
                         <input
-                          id = "u122"
+                          id = "u12"
                         />
                       </label>
-                      <label id = "l152">
+                      <label id = "l15">
                       6.(a):
                         <input
-                          id = "u152"
+                          id = "u15"
                         />
                       </label>
-                      <label id = "l162">
+                      <label id = "l16">
                       7.(a):
                         <input
-                          id = "u162"
+                          id = "u16"
                         />
                       </label>
 
 
 
-                      <label id = "l132">
+                      <label id = "l13">
                       8.(b):
                         <input
-                          id = "u132"
+                          id = "u13"
                         />
                       </label>
-                      <label id = "l172">
+                      <label id = "l17">
                       6.(b):
                         <input
-                          id = "u172"
+                          id = "u17"
                         />
                       </label>
-                      <label id = "l182">
+                      <label id = "l18">
                       7.(b):
                         <input
-                          id = "u182"
+                          id = "u18"
                         />
                       </label>
 
@@ -761,30 +761,30 @@ _onAction(e) {
 
 
 
-                      <label id = "l142">
+                      <label id = "l14">
                       8.(c):
                         <input
-                          id = "u142"
+                          id = "u14"
                         />
                       </label>
-                      <label id = "l192">
+                      <label id = "l19">
                       6.(c):
                         <input
-                          id = "u192"
+                          id = "u19"
                         />
                       </label>
-                      <label id = "l202">
+                      <label id = "l20">
                       7.(c):
                         <input
-                          id = "u202"
+                          id = "u20"
                         />
                       </label>
                       
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user8" id="userInput8">
+                  <div className="userInput8" id="userInput8">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 9:
@@ -794,7 +794,7 @@ _onAction(e) {
                         id = "u53"
                       />
                         </label>
-                        <label id = "l72">
+                        <label id = "l7">
                       9.(a):
                       <input
                           type = "text"
@@ -802,7 +802,7 @@ _onAction(e) {
                           id = "u7"
                         />
                       </label>
-                      <label id = "l82">
+                      <label id = "l8">
                       9.(b):
                         <input
                           type = "text"
@@ -810,11 +810,11 @@ _onAction(e) {
                           id = "u8"
                         />
                       </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user9" id="userInput9">
+                  <div className="userInput9" id="userInput9">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 10:
@@ -824,7 +824,7 @@ _onAction(e) {
                         id = "u54"
                       />
                         </label>
-                        <label id = "l92">
+                        <label id = "l9">
                       10.(a):
                         <input
                           type = "text"
@@ -832,11 +832,11 @@ _onAction(e) {
                           id = "u9"
                         />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user10" id="userInput10">
+                  <div className="userInput10" id="userInput10">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 11:
@@ -846,7 +846,7 @@ _onAction(e) {
                         id = "u55"
                       />
                         </label>
-                        <label id = "l102">
+                        <label id = "l10">
                       11.(a):
                         <input
                           type = "text"
@@ -854,7 +854,7 @@ _onAction(e) {
                           id = "u10"
                         />
                         </label>
-                        <label id = "l112">
+                        <label id = "l11">
                       11.(b):
                         <input
                           type = "text"
@@ -862,11 +862,11 @@ _onAction(e) {
                           id = "u11"
                         />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user11" id="userInput11">
+                  <div className="userInput11" id="userInput11">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 12:
@@ -876,11 +876,11 @@ _onAction(e) {
                         id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user12" id="userInput12">
+                  <div className="userInput12" id="userInput12">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 13:
@@ -890,11 +890,11 @@ _onAction(e) {
                         id = "u1"
                       />
                         </label>
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
-                  <div className="user13" id="userInput13">
+                  <div className="userInput13" id="userInput13">
                   <form onSubmit={this.handleSubmit}>
                     <label>
                       Step 14:
@@ -905,40 +905,40 @@ _onAction(e) {
                       />
                         </label>
 
-                        <label id = "l212">
+                        <label id = "l21">
                       14.(a):
                         <input
-                          id = "u212"
+                          id = "u21"
                         />
                       </label>
-                      <label id = "l242">
+                      <label id = "l24">
                       13.(a):
                         <input
-                          id = "u242"
+                          id = "u24"
                         />
                       </label>
-                      <label id = "l252">
+                      <label id = "l25">
                       12.(a):
                         <input
-                          id = "u252"
+                          id = "u25"
                         />
                       </label>
 
 
 
-                      <label id = "l222">
+                      <label id = "l22">
                       14.(b):
                         <input
-                          id = "u222"
+                          id = "u22"
                         />
                       </label>
-                      <label id = "l262">
+                      <label id = "l26">
                       13.(b):
                         <input
-                          id = "u262"
+                          id = "u26"
                         />
                       </label>
-                      <label id = "l272">
+                      <label id = "l27">
                       12.(b):
                         <input
                           id = "u27"
@@ -968,7 +968,7 @@ _onAction(e) {
                         />
                       </label>
                         
-                        <button class="check-button22" type="submit">Check your answer</button>
+                        <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
@@ -1101,7 +1101,7 @@ _onAction(e) {
                   </Link>
                 </div>
 
-                <div className='incorrectGrid22'>
+                <div className='incorrectGrid'>
                   <div className='incorrect1' id='IncorrectAttempt1'>
                     X
                   </div>

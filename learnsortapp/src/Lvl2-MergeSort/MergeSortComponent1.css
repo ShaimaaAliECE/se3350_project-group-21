@@ -81,7 +81,7 @@
 .instruction{
     position: absolute;
     background-color: #ffe9ed;
-    top: 40px;
+    top: 30px;
     left: 660px;
     height: 120px;
     width: 280px;
@@ -93,36 +93,41 @@
 
 .instructions1{
     background-color: #ffe9ed;
-    margin-top: -90px;
-    margin-left: 10px;
-    height: 120px;
-    width: 280px;
+    margin-top: -80px;
+    margin-left: 5px;
+    height: 140px;
+    width: 300px;
     padding: 1%;
     text-align: center;
     display: none;
     
 }
-
-.sort-title-background22 {
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-    z-index: -1;
-    width: 474px;
-    height: 40px;
-    margin-top: 60px;
-    background: rgba(250, 153, 28, 0.35);
- }
- 
-.sort-title22 { 
+ .sort-title2{
+    position: relative;
     width: auto;
-    margin-top: auto;
+    
+    left: 240px;
+
+    
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
     line-height: 59px;
-    padding-top: 40px
+    
+    color: #000000;
+ }
+
+ .sort-title-background2
+ {
+    position: relative;
+    width: 474px;
+    height: 40px;
+
+    left: -120px;
+    top:20px;
+
+    background: rgba(250, 153, 28, 0.35); 
  }
 
 .gen-num-button1 {
@@ -130,8 +135,8 @@
     position: absolute;
     width: 280px;
     height: 30px;
-    margin-top: 175px;
-    
+    top: 150px;
+    margin-top: 20px;
   
     background: #032539;
     border-radius: 20px;
@@ -465,45 +470,45 @@
     width: 100px;
 }
 
-.userInput02 {
+.userInput0 {
     display: none;
     margin-left: 100px;
     margin-top: 20px;
 }
 
-.userInput122 {
+.userInput1 {
     display: none;
     margin-left: 650px;
-    margin-top: -20px;
+    margin-top: -25px;
 }
 
-.userInput222 {
+.userInput2 {
     display: none;
-    margin-left: -12px;
+    margin-left: 1px;
     margin-top: 20px;
 }
-#l22 {
+#l2 {
     position:absolute;
     top:315px;
     left:30px;  
 }
-#u22 {
+#u2 {
     position: absolute;
     width: 20px;
 }
 
-#l32{
+#l3{
     position: absolute;
     top: 315px;
     left: 100px;
 }
-#u32 {
+#u3 {
     position: absolute;
     width: 20px;
 }
 
 /* step 4*/
-.userInput32{
+.userInput3 {
     display: none;
     margin-left: 250px;
     margin-top: -22px;
@@ -914,8 +919,8 @@
 
 .check-button{
     position: absolute;
-    top: 120px;
-    left: 320px;
+    top: 130px;
+    left: 425px;
     width: auto;
     background: #FCD8A4;
     height: 40px;    
@@ -968,9 +973,9 @@
     visibility: hidden;
 }
 
-.incorrectGrid22 {
-    margin-left: 120px;
-    margin-top: 190px;
+.incorrectGrid {
+    margin-left: 15px;
+    margin-top: 220px;
     justify-content: center;
     align-items: center;
     display: grid;
