@@ -722,7 +722,7 @@ export default class MergeSortComponent extends Component {
                       </h1></div> : null
                   }
         
-                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Start!</div>
                   <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
                   <Link to='/Level2'>
                     <div id="next-level-button" class="next-level-button">Next Level!</div>

@@ -90,19 +90,24 @@
  }
  
 
-.continue-button{
+ .continue-button{
     position: absolute;
-    bottom: 23px;
-    right: 25px;
-    width: 150px;
-    height: 40px;
-    background: #FA991C;
-    border-radius: 20px;
-    color: black;
-    padding-top: 10px;
-    box-sizing: border-box;
+    
+    filter: drop-shadow(5px 5px 5px #FF9000);
+    color: rgb(8, 36, 73);
+    
+    font-size: 50px;
     font-family: 'Montserrat', sans-serif;
+    margin-top: -110px;
+    margin-left: 410px;
     text-align: center;
+    padding-top: 300px;
+
+    transition: all .2s ease-in-out; 
+}
+
+.continue-button:hover{
+    transform: scale(1.1);
 }
 
 .back-button{
@@ -120,7 +125,6 @@
     text-align: center;
 }
 
-.continue-button:hover,
 .back-button:hover, .next-button:hover { 
 
     background: black;
@@ -137,7 +141,8 @@
     box-sizing: border-box;
 }
 
-.next-button {
+.next-button,
+.back-button {
     display: none;
 }
 

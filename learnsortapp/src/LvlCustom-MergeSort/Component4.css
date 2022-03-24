@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+
+.boxSize{
+    width: 60px;
+    font-size: x-small;
+}
+.userInput0-4 {
+    display: none;
+    margin-left: 180px;
+    margin-top: 10px;
+    font-size: x-small;
+    
+    
+}
+
+.userInput1-4 {
+    display: none;
+    margin-left: 670px;
+    margin-top: -15px;
+    font-size: x-small;
+}
+
+.userInput2-4 {
+    display: none;
+    margin-left: 65px;
+    margin-top: 20px;
+    font-size: x-small;
+}
+
+
+.userInput3-4 {
+    display: none;
+    margin-left: 290px;
+    margin-top: -20px;
+    font-size: x-small;
+}
+.userInput4-4 {
+    display: none;
+    margin-left: 5px;
+    margin-top: 20px;
+    font-size: x-small; 
+}
+
+.userInput5-4 {
+    display: none;
+    margin-left: 120px;
+    margin-top: -20px;
+    font-size: x-small;
+
+}
+/* 6 */
+.userInput10-4 {
+    display: none;
+    margin-left: 230px;
+    margin-top: -120px;
+    font-size: x-small;
+   
+}
+/* 7 */
+.userInput11-4 {
+    display: none;
+    margin-left: 360px;
+    margin-top: -18px;
+    font-size: x-small;
+   
+}
+/* 8 */
+.userInput6-4 {
+    display: none;
+    margin-left: 120px;
+    margin-top: 15px;
+    font-size: x-small;
+}
+
+/* 9 */
+.userInput7-4 {
+    display: none;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-size: x-small;
+}
+
+
+
+
+/* 10 */
+.userInput8-4 {
+    display: none;
+    margin-left: 115px;
+    margin-top: -15px;
+    font-size: x-small;
+}
+
+
+
+
+/* 11 */
+.userInput9-4 {
+    display: none;
+    margin-left: 85px;
+    margin-top: 20px;
+    font-size: x-small;
+}
+/* 12 */
+.userInput12-4 {
+    display: none;
+    margin-left: 360px;
+    margin-top: 10px;
+    font-size: x-small;
+}
+/* 13 */
+.userInput13-4 {
+    display: none;
+    margin-left: 225px;
+    margin-top: 10px;
+    font-size: x-small;
+}
+
+/* 14 */
+.userInput14-4 {
+    display: none;
+    margin-left: 360px;
+    margin-top: -18px;
+    font-size: x-small;
+    
+}
+.userInput15-4 {
+    display: none;
+    margin-left: 290px;
+    margin-top: 18px;
+    font-size: x-small;
+    
+}
+.userInput16-4 {
+    display: none;
+    margin-left: 190px;
+    margin-top: 18px;
+    font-size: x-small;
+    
+}
+.userInput17-4 {
+    display: none;
+    margin-left: 555px;
+    margin-top: -190px;
+    font-size: x-small;
+    
+}
+.userInput18-4 {
+    display: none;
+    margin-left: 800px;
+    margin-top: -18px;
+    font-size: x-small;
+    
+}
+/* i had to switch over to id names instead of classnames because it stopped working */
+.userInput19-4 {
+    display: none;
+    margin-left: 485px;
+    margin-top: 20px;
+    font-size: x-small;
+    
+}
+.userInput20-4 {
+    display: none;
+    margin-left: 610px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+.userInput25-4 {
+    display: none;
+    margin-left: 725px;
+    margin-top: -115px;
+    font-size: x-small;
+    
+}
+.userInput26-4 {
+    display: none;
+    margin-left: 875px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+.userInput21-4 {
+    display: none;
+    margin-left: 610px;
+    margin-top: 20px;
+    font-size: x-small;
+    
+}
+.userInput22-4 {
+    display: none;
+    margin-left: 480px;
+    margin-top: 8px;
+    font-size: x-small;
+    
+}
+.userInput23-4 {
+    display: none;
+    margin-left: 610px;
+    margin-top: -15px;
+    font-size: x-small;
+    
+}
+.userInput24-4 {
+    display: none;
+    margin-left: 540px;
+    margin-top: 15px;
+    font-size: x-small;
+    
+}
+.userInput27-4 {
+    display: none;
+    margin-left: 875px;
+    margin-top: 20px;
+    font-size: x-small;
+    
+}
+.userInput28-4 {
+    display: none;
+    margin-left: 725px;
+    margin-top: 10px;
+    font-size: x-small;
+    
+}
+.userInput29-4 {
+    display: none;
+    margin-left: 875px;
+    margin-top: -15px;
+    font-size: x-small;
+    
+}
+.userInput30-4 {
+    display: none;
+    margin-left: 800px;
+    margin-top: 13px;
+    font-size: x-small;
+    
+}
+.userInput31-4 {
+    display: none;
+    margin-left: 670px;
+    margin-top: 18px;
+    font-size: x-small;
+    
+}
+
+.userInput32-4 {
+    display: none;
+    font-size: x-small;
+    margin-top: 50px;
+    margin-left: 450px;
+}
+
+.test16-4{
+    display:none;
+}
+.test17-4{
+    display:none;
+}
+.test18-4{
+    display:none;
+}
+
+.incorrect14 {
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    border: solid 4px;
+    border-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.incorrect24{
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    border: solid 4px;
+    border-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.incorrect34{
+    font-size: 25px;
+    font-weight: 700;
+    color: red;
+    border: solid 4px;
+    border-color: red;
+    border-radius: 50%;
+    padding: 5px;
+    visibility: hidden;
+}
+
+.incorrectGrid4 {
+    margin-left: 15px;
+    margin-top: 220px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 10px;
+}
+
+.incorrectOptions4 {
+    width: 60%;
+    height: 80%;
+    z-index: 1;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    background-color: #FA991C;
+    border: 2px solid #FA991C;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.incorrectOptionButton4 {
+    background: white;  
+    color: black;
+    border: 2px solid #032539;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    width: 400px;
+}
+
+.incorrectOptionButton4:hover {
+    transform: scale(1.07);
+    transition: all 0.2s ease-out;
+}
