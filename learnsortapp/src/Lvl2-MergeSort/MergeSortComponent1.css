@@ -81,7 +81,7 @@
 .instruction{
     position: absolute;
     background-color: #ffe9ed;
-    top: 50px;
+    top: 40px;
     left: 660px;
     height: 120px;
     width: 280px;
@@ -473,7 +473,7 @@
 .userInput0 {
     display: none;
     margin-left: 100px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .userInput1 {
@@ -648,7 +648,7 @@
 .userInput8 {
     display: none;
     margin-left: 500px;
-    margin-top: -312px;
+    margin-top: -302px;
 }
 
 #l7 {
@@ -714,13 +714,13 @@
 .userInput11 {
     display: none;
     margin-left: 495px;
-    margin-top: 46px;
+    margin-top: 51px;
 }
 
 .userInput12 {
     display: none;
     margin-left: 750px;
-    margin-top: -25px;
+    margin-top: -22px;
 }
 
 .userInput13 {
