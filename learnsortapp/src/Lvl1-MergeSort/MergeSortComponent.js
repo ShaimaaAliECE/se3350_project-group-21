@@ -708,7 +708,7 @@ export default class MergeSortComponent extends Component {
                   timeout={this.state.timeout}  
                   />
 
-              <div class = "outliner">
+              <div class = "outliner11">
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values">
                       Your Values:
