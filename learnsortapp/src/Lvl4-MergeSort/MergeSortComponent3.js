@@ -22,7 +22,8 @@ export default class MergeSortComponent3 extends Component {
         arrayIndex:0,
         textIndex: 1,
         timeout:1000 * 5 * 60,
-        attempts: 0
+        attempts: 0,
+        complete: 0
     };
     this.mergeSort3 = new MergeSort3();
 
@@ -151,6 +152,8 @@ export default class MergeSortComponent3 extends Component {
     var incorrect2 = document.getElementById("IncorrectAttempt2");
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
+    var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
@@ -158,24 +161,32 @@ export default class MergeSortComponent3 extends Component {
       if (this.state.textIndex > 32) {
         document.getElementById('next-button1').style.display = 'none';
         document.getElementById('next-level-button1').style.display = 'block';
-      
+        this.setState({complete: 1});
       }
     }
 
     else {
       this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-      }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-      }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-      }
-      popupI.style.visibility = "visible"; 
-      this.playWrongAudio(); 
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio(); 
     }  
     
   }
@@ -213,13 +224,13 @@ export default class MergeSortComponent3 extends Component {
     stepsArray[3] = fragments[10];
     stepsArray[4] = fragments[3];
     stepsArray[5] = fragments[5];
-    stepsArray[6] = fragments[11];
-    stepsArray[7] = fragments[13];
-    stepsArray[8] = fragments[7];
-    stepsArray[9] = fragments[4];
-    stepsArray[10] = fragments[8];
-    stepsArray[11] = fragments[9];
-    stepsArray[12] = fragments[15];
+    stepsArray[6] = fragments[6];
+    stepsArray[7] = fragments[4];
+    stepsArray[8] = fragments[8];
+    stepsArray[9] = fragments[9];
+    stepsArray[10] = fragments[11];
+    stepsArray[11] = fragments[13];
+    stepsArray[12] = fragments[14];
     stepsArray[13] = fragments[12];
     stepsArray[14] = fragments[16];
     stepsArray[15] = fragments[17];
@@ -228,13 +239,13 @@ export default class MergeSortComponent3 extends Component {
     stepsArray[18] = fragments[28];
     stepsArray[19] = fragments[21];
     stepsArray[20] = fragments[23];
-    stepsArray[21] = fragments[29];
-    stepsArray[22] = fragments[31];
-    stepsArray[23] = fragments[25];
-    stepsArray[24] = fragments[22];
-    stepsArray[25] = fragments[26];
-    stepsArray[26] = fragments[27];
-    stepsArray[27] = fragments[33];
+    stepsArray[21] = fragments[24];
+    stepsArray[22] = fragments[22];
+    stepsArray[23] = fragments[26];
+    stepsArray[24] = fragments[27];
+    stepsArray[25] = fragments[29];
+    stepsArray[26] = fragments[31];
+    stepsArray[27] = fragments[32];
     stepsArray[28] = fragments[30];
     stepsArray[29] = fragments[34];
     stepsArray[30] = fragments[35];
@@ -246,11 +257,13 @@ export default class MergeSortComponent3 extends Component {
         <>
             <div class="contents">
 
-              <h1 className = "sort-title">MergeSort</h1>
-              <div className = "sort-title-background" />
+              <h1 className = "sort-title2">MergeSort</h1>
+              <div className = "sort-title-background2" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
-              <Timer/>
+              <Timer 
+               level = {4} 
+               completion = {this.state.complete}/>
               <IdleTimer
                   ref={ref => { this.idleTimer = ref }}
                   element={document}
@@ -260,7 +273,7 @@ export default class MergeSortComponent3 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner1">
+              <div className = "outliner">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -802,14 +815,39 @@ export default class MergeSortComponent3 extends Component {
                 </div>
                 </div>
                 
-                <div className='incorrect1' id='IncorrectAttempt1'>
-                  <h1 >X</h1>
+                <div className='incorrectOptions4' id='incorrectOptionsBox'>
+                  <br></br>
+                  <h1>3 Strikes!</h1>
+                  <h2>Please choose one of the following options:</h2>
+                  <br></br>
+                  <button onClick={refreshPage} className='incorrectOptionButton4'>Restart This Level</button>
+                  <br></br>
+                  <br></br>
+                  <Link to='/Level3'>
+                    <button className='incorrectOptionButton4'>Go Back to Level 3</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to=''>
+                    <button className='incorrectOptionButton4'>Switch to Another Algorithm (Coming Soon)</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to='/'>
+                    <button className='incorrectOptionButton4'>Quit</button>
+                  </Link>
                 </div>
-                <div className='incorrect2' id='IncorrectAttempt2'>
-                  <h1 >X</h1>
-                </div>
-                <div className='incorrect3' id='IncorrectAttempt3'>
-                  <h1 >X</h1>
+
+                <div className='incorrectGrid4'>
+                  <div className='incorrect14' id='IncorrectAttempt1'>
+                    X
+                  </div>
+                  <div className='incorrect24' id='IncorrectAttempt2'>
+                    X
+                  </div>
+                  <div className='incorrect34' id='IncorrectAttempt3'>
+                    X
+                  </div>
                 </div>
     
 

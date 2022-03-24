@@ -81,8 +81,8 @@
 .instruction{
     position: absolute;
     background-color: #ffe9ed;
-    top: 20px;
-    left: 670px;
+    top: 40px;
+    left: 660px;
     height: 120px;
     width: 280px;
     padding: 1%;
@@ -242,11 +242,11 @@
     transition: all 0.2s ease-out;
 }
 
-.outliner1{
+.outlinerLvl2-3{
     position: absolute;
     width: 1000px;
-    height: 600px;
-    margin-top: 850px;
+    height: 950px;
+    margin-top: 1150px;
     border: 6px solid #1C768F;
     box-sizing: border-box;
 }
@@ -643,7 +643,7 @@
 .userInput8 {
     display: none;
     margin-left: 500px;
-    margin-top: -312px;
+    margin-top: -302px;
 }
 
 #l7 {
@@ -709,13 +709,13 @@
 .userInput11 {
     display: none;
     margin-left: 495px;
-    margin-top: 46px;
+    margin-top: 51px;
 }
 
 .userInput12 {
     display: none;
     margin-left: 750px;
-    margin-top: -25px;
+    margin-top: -22px;
 }
 
 .userInput13 {
@@ -804,16 +804,115 @@
 
 .userInput14 {
     display: none;
-    margin-left: 360px;
-    margin-top: 8px;
+    margin-left: 340px;
+    margin-top: 350px;
     
+}
+
+#l30 {
+    position: absolute;
+    top: 570px;
+    right: 463px;
+}
+#u30 {
+    width: 100px;
+}
+
+#l31 {
+    position: absolute;
+    top: 610px;
+    right: 463px;
+}
+#u31 {
+    width: 100px;
+}
+
+#l32 {
+    position: absolute;
+    top: 650px;
+    right: 463px;
+}
+#u32 {
+    width: 100px;
+}
+
+#l33 {
+    position: absolute;
+    top: 690px;
+    right: 463px;
+
+}
+#u33 {
+    width: 100px;
+}
+
+#l34 {
+    position: absolute;
+    top: 730px;
+    right: 463px;
+
+}
+#u34 {
+    width: 100px;
+}
+
+#l35 {
+    position: absolute;
+    top: 770px;
+    right: 463px;
+
+}
+#u35 {
+    width: 100px;
+}
+
+#l36 {
+    position: absolute;
+    top: 810px;
+    right: 463px;
+
+}
+#u36 {
+    width: 100px;
+}
+#l37 {
+    position: absolute;
+    top: 850px;
+    right: 463px;
+
+}
+#u37 {
+    width: 100px;
+}
+
+#l38 {
+    position: absolute;
+    top: 700px;
+    left: 35px;
+
+}
+#u38 {
+    width: 100px;
+}
+#l39 {
+    position: absolute;
+    top: 700px;
+    right: 170px;
+
+}
+#u39 {
+    width: 100px;
 }
 
 .userInput15 {
     display: none;
 }
 
-.check-button22{
+#u50, #u51, #u52, #u53, #u54, #u55{
+    width: 100px;
+}
+
+.check-button{
     position: absolute;
     top: 120px;
     left: 320px;
@@ -829,34 +928,43 @@
 
 .incorrect1 {
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
 .incorrect2{
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
 .incorrect3{
     font-size: 25px;
+    font: Ariel;
+    text-align: center;
     font-weight: 700;
+    background-color: white;
     color: red;
     border: solid 4px;
     border-color: red;
     border-radius: 50%;
-    padding: 5px;
+    padding: 4px;
     visibility: hidden;
 }
 
@@ -864,9 +972,11 @@
     margin-left: 120px;
     margin-top: 190px;
     justify-content: center;
+    align-items: center;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-column-gap: 10px;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px;
+    grid-column-gap: 7px;
 }
 
 .incorrectOptions {

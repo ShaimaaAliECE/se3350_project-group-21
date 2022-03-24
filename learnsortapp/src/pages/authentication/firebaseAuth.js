@@ -3,6 +3,7 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import './firebaseAuth.css';
 
 const firebaseAuthConfig = {
   signInFlow: "popup",
@@ -24,7 +25,7 @@ const FirebaseAuth = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{"marginTop" : 25}}>
       {show && (
         <StyledFirebaseAuth
           uiConfig={firebaseAuthConfig}

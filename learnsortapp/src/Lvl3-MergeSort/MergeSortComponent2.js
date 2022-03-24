@@ -135,38 +135,331 @@ export default class MergeSortComponent2 extends Component {
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
     var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+    if(this.state.textIndex == 3 | this.state.textIndex == 4 | this.state.textIndex == 4 |
+      this.state.textIndex == 9 | this.state.textIndex == 10 | this.state.textIndex == 11) {
+        // beginning of step 3
+        if(this.state.textIndex == 3){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
 
-    if(event.target.userInput.value == answer.toString()){
-      popupC.style.visibility = "visible"; 
-      this.playCorrectAudio();
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u2').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u3').style.background = "red";
+            }
 
-      if (this.state.textIndex > 14) {
-        document.getElementById('next-button1').style.display = 'none';
-        document.getElementById('next-level-button1').style.display = 'block';
-        this.setState({complete: 1});
-      }
-    }
+            if(response2 != answer.toString()){
+              document.getElementById('u50').style.background = "red";
+            }
 
-    else {
-      this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u2').style.background = "white";
+            document.getElementById('u3').style.background = "white";
+            document.getElementById('u50').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 3
+
+        // beginning of step 4
+        if(this.state.textIndex == 4){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u4').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u51').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u4').style.background = "white";
+            document.getElementById('u51').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 4
+
+        // beginning of step 5
+        if(this.state.textIndex == 5){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u5').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u6').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u52').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u5').style.background = "white";
+            document.getElementById('u6').style.background = "white";
+            document.getElementById('u52').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 5
+
+        // beginning of step 9
+        if(this.state.textIndex == 9){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u7').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u8').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u53').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u7').style.background = "white";
+            document.getElementById('u8').style.background = "white";
+            document.getElementById('u53').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 9
+
+        // beginning of step 10
+        if(this.state.textIndex == 10){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u9').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u54').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u9').style.background = "white";
+            document.getElementById('u54').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 10
+
+        // beginning of step 11
+        if(this.state.textIndex == 11){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u10').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u11').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u55').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u10').style.background = "white";
+            document.getElementById('u11').style.background = "white";
+            document.getElementById('u55').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 11
       }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+
+    else
+     if(event.target.userInput.value == answer.toString()){
+        popupC.style.visibility = "visible"; 
+        this.playCorrectAudio();
+  
+        if (this.state.textIndex > 14) {
+          document.getElementById('next-button1').style.display = 'none';
+          document.getElementById('next-level-button1').style.display = 'block';
+          this.setState({complete: 1});
+        }
       }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+  
+      else {
+        this.setState({attempts: this.state.attempts + 1});
+        console.log(this.state.attempts);
+        if(this.state.attempts == 0){
+          incorrect1.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 1){
+          incorrect2.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 2){
+          incorrect3.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts >= 3){
+          incorrectOptionsBox.style.visibility = "visible";
+        }
+        this.playWrongAudio();
       }
-      if(this.state.attempts >= 3){
-        incorrectOptionsBox.style.visibility = "visible";
-      }
-      this.playWrongAudio();
-    }  
   }
 
   render() {
@@ -216,8 +509,8 @@ export default class MergeSortComponent2 extends Component {
         <>
             <div class="contents">
 
-              <h1 className = "sort-title">MergeSort</h1>
-              <div className = "sort-title-background" />
+              <h1 className = "sort-title2">MergeSort</h1>
+              <div className = "sort-title-background2" />
               
               <div onClick={refreshPage} className="gen-num-button1">Generate New Numbers</div>
               <Timer 
@@ -232,7 +525,7 @@ export default class MergeSortComponent2 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner1">
+              <div className = "outlinerLvl2-3">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -271,6 +564,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -284,6 +578,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -297,7 +592,24 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u50"
                       />
+                        </label>
+                        <label id="l2">
+                        3.(a):
+                        <input
+                          type = "text"
+                          name = "extra"
+                          id = "u2"
+                        />
+                        </label>
+                      <label id = "l3">
+                      3.(b):
+                        <input
+                          type = "text"
+                          name = "extra1"
+                          id = "u3"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -310,7 +622,16 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u51"
                       />
+                        </label>
+                        <label id = "l4">
+                      4.(a):
+                        <input
+                          type = "text"
+                          name = "extra"
+                          id = "u4"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -323,8 +644,26 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u52"
                       />
                         </label>
+                      
+                      <label id = "l5">
+                      5.(a):
+                      <input
+                          type = "text"
+                          name = "extra"
+                          id = "u5"
+                        />
+                      </label>
+                      <label id = "l6">
+                      5.(b):
+                        <input
+                          type = "text"
+                          name = "extra1"
+                          id = "u6"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -336,6 +675,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -349,6 +689,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -362,8 +703,72 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+                        <label id = "l12">
+                      8.(a):
+                        <input
+                          id = "u12"
+                        />
+                      </label>
+                      <label id = "l15">
+                      6.(a):
+                        <input
+                          id = "u15"
+                        />
+                      </label>
+                      <label id = "l16">
+                      7.(a):
+                        <input
+                          id = "u16"
+                        />
+                      </label>
+
+
+
+                      <label id = "l13">
+                      8.(b):
+                        <input
+                          id = "u13"
+                        />
+                      </label>
+                      <label id = "l17">
+                      6.(b):
+                        <input
+                          id = "u17"
+                        />
+                      </label>
+                      <label id = "l18">
+                      7.(b):
+                        <input
+                          id = "u18"
+                        />
+                      </label>
+
+
+
+
+
+                      <label id = "l14">
+                      8.(c):
+                        <input
+                          id = "u14"
+                        />
+                      </label>
+                      <label id = "l19">
+                      6.(c):
+                        <input
+                          id = "u19"
+                        />
+                      </label>
+                      <label id = "l20">
+                      7.(c):
+                        <input
+                          id = "u20"
+                        />
+                      </label>
+                      
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -375,8 +780,25 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u53"
                       />
                         </label>
+                        <label id = "l7">
+                      9.(a):
+                      <input
+                          type = "text"
+                          name = "extra"
+                          id = "u7"
+                        />
+                      </label>
+                      <label id = "l8">
+                      9.(b):
+                        <input
+                          type = "text"
+                          name = "extra1"
+                          id = "u8"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -388,7 +810,16 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u54"
                       />
+                        </label>
+                        <label id = "l9">
+                      10.(a):
+                        <input
+                          type = "text"
+                          name = "extra"
+                          id = "u9"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -401,7 +832,24 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u55"
                       />
+                        </label>
+                        <label id = "l10">
+                      11.(a):
+                        <input
+                          type = "text"
+                          name = "extra"
+                          id = "u10"
+                        />
+                        </label>
+                        <label id = "l11">
+                      11.(b):
+                        <input
+                          type = "text"
+                          name = "extra1"
+                          id = "u11"
+                        />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
@@ -414,6 +862,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -427,6 +876,7 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -440,8 +890,73 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+                        id = "u1"
                       />
                         </label>
+
+                        <label id = "l21">
+                      14.(a):
+                        <input
+                          id = "u21"
+                        />
+                      </label>
+                      <label id = "l24">
+                      13.(a):
+                        <input
+                          id = "u24"
+                        />
+                      </label>
+                      <label id = "l25">
+                      12.(a):
+                        <input
+                          id = "u25"
+                        />
+                      </label>
+
+
+
+                      <label id = "l22">
+                      14.(b):
+                        <input
+                          id = "u22"
+                        />
+                      </label>
+                      <label id = "l26">
+                      13.(b):
+                        <input
+                          id = "u26"
+                        />
+                      </label>
+                      <label id = "l27">
+                      12.(b):
+                        <input
+                          id = "u27"
+                        />
+                      </label>
+
+
+
+
+
+                      <label id = "l23">
+                      14.(c):
+                        <input
+                          id = "u23"
+                        />
+                      </label>
+                      <label id = "l28">
+                      13.(c):
+                        <input
+                          id = "u28"
+                        />
+                      </label>
+                      <label id = "l29">
+                      12.(c):
+                        <input
+                          id = "u29"
+                        />
+                      </label>
+                        
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -453,13 +968,76 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
+
                       />
                         </label>
+
+                        <label id = "l30">
+                      15.(a):
+                        <input
+                          id = "u30"
+                        />
+                      </label>
+                      <label id = "l38">
+                      Leftover Array 8:
+                        <input
+                          id = "u38"
+                        />
+                      </label>
+                      <label id = "l39">
+                      Leftover Array 14:
+                        <input
+                          id = "u39"
+                        />
+                      </label>
+                      <label id = "l31">
+                      15.(b):
+                        <input
+                          id = "u31"
+                        />
+                      </label>
+                      <label id = "l32">
+                      15.(c):
+                        <input
+                          id = "u32"
+                        />
+                      </label>
+                      <label id = "l33">
+                      15.(d):
+                        <input
+                          id = "u33"
+                        />
+                      </label>
+                      <label id = "l34">
+                      15.(e):
+                        <input
+                          id = "u34"
+                        />
+                      </label>
+                      <label id = "l35">
+                      15.(f):
+                        <input
+                          id = "u35"
+                        />
+                      </label>
+                      <label id = "l36">
+                      15.(g):
+                        <input
+                          id = "u36"
+                        />
+                      </label>
+                      <label id = "l37">
+                      15.(h):
+                        <input
+                          id = "u37"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
                   <div className="userInput15" id="userInput15"></div>
+
 
 
 
@@ -490,26 +1068,26 @@ export default class MergeSortComponent2 extends Component {
                 </div>
                 </div>
                 
-                <div className='incorrectOptions' id='incorrectOptionsBox'>
+                <div className='incorrectOptions3' id='incorrectOptionsBox'>
                   <br></br>
                   <h1>3 Strikes!</h1>
                   <h2>Please choose one of the following options:</h2>
                   <br></br>
-                  <button onClick={refreshPage} className='incorrectOptionButton'>Restart This Level</button>
+                  <button onClick={refreshPage} className='incorrectOptionButton3'>Restart This Level</button>
                   <br></br>
                   <br></br>
-                  <Link to='/Level1'>
-                    <button className='incorrectOptionButton'>Go Back to Level 1</button>
+                  <Link to='/Level2'>
+                    <button className='incorrectOptionButton3'>Go Back to Level 2</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to=''>
-                    <button className='incorrectOptionButton'>Switch to Another Algorithm</button>
+                    <button className='incorrectOptionButton3'>Switch to Another Algorithm (Coming Soon)</button>
                   </Link>
                   <br></br>
                   <br></br>
                   <Link to='/'>
-                    <button className='incorrectOptionButton'>Quit</button>
+                    <button className='incorrectOptionButton3'>Quit</button>
                   </Link>
                 </div>
 

@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom';
 import './Dashboard.css'
 import JSONDATA from "./AlgorithmSelect.json"
 import {useState} from 'react'
+import firebase from 'firebase/compat/app';
 
 function Dashboard() {
     const [searchTerm, setSearchTerm] = useState('')
+
+    // Forces the user to login
+    /*
+    if (!firebase.auth().currentUser)
+      window.location = "/#/login";
+   */
+
     return (
         <>
             <div className="dashboardcontents">
