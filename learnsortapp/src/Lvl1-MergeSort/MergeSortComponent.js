@@ -675,17 +675,14 @@ export default class MergeSortComponent extends Component {
         document.getElementById("stepSixArray").style.display = 'none';
         document.getElementById("stepSevenArray").style.display = 'none';
         this.setState({ arrayIndex: 5 });
-        console.log(this.state.arrayIndex);
       } else if (elementID === "test21" || elementID === "test22" || elementID === "test23") {
         document.getElementById("step11Array").style.display = 'none';
         document.getElementById("step12Array").style.display = 'none';
         document.getElementById("step13Array").style.display = 'none';
         this.setState({ arrayIndex: 21 });
-        console.log(this.state.arrayIndex);
       }
       else {
         this.setState({ arrayIndex: this.state.arrayIndex - 1 });
-        console.log(this.state.arrayIndex);
       }
     }
   }
