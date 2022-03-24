@@ -135,38 +135,331 @@ export default class MergeSortComponent2 extends Component {
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
     var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+    if(this.state.textIndex == 3 | this.state.textIndex == 4 | this.state.textIndex == 4 |
+      this.state.textIndex == 9 | this.state.textIndex == 10 | this.state.textIndex == 11) {
+        // beginning of step 3
+        if(this.state.textIndex == 3){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
 
-    if(event.target.userInput.value == answer.toString()){
-      popupC.style.visibility = "visible"; 
-      this.playCorrectAudio();
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u2').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u3').style.background = "red";
+            }
 
-      if (this.state.textIndex > 14) {
-        document.getElementById('next-button1').style.display = 'none';
-        document.getElementById('next-level-button1').style.display = 'block';
-        this.setState({complete: 1});
-      }
-    }
+            if(response2 != answer.toString()){
+              document.getElementById('u50').style.background = "red";
+            }
 
-    else {
-      this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u2').style.background = "white";
+            document.getElementById('u3').style.background = "white";
+            document.getElementById('u50').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 3
+
+        // beginning of step 4
+        if(this.state.textIndex == 4){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u4').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u51').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u4').style.background = "white";
+            document.getElementById('u51').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 4
+
+        // beginning of step 5
+        if(this.state.textIndex == 5){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u5').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u6').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u52').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u5').style.background = "white";
+            document.getElementById('u6').style.background = "white";
+            document.getElementById('u52').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 5
+
+        // beginning of step 9
+        if(this.state.textIndex == 9){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u7').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u8').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u53').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u7').style.background = "white";
+            document.getElementById('u8').style.background = "white";
+            document.getElementById('u53').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 9
+
+        // beginning of step 10
+        if(this.state.textIndex == 10){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u9').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u54').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u9').style.background = "white";
+            document.getElementById('u54').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 10
+
+        // beginning of step 11
+        if(this.state.textIndex == 11){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u10').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u11').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u55').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u10').style.background = "white";
+            document.getElementById('u11').style.background = "white";
+            document.getElementById('u55').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 11
       }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+
+    else
+     if(event.target.userInput.value == answer.toString()){
+        popupC.style.visibility = "visible"; 
+        this.playCorrectAudio();
+  
+        if (this.state.textIndex > 14) {
+          document.getElementById('next-button1').style.display = 'none';
+          document.getElementById('next-level-button1').style.display = 'block';
+          this.setState({complete: 1});
+        }
       }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+  
+      else {
+        this.setState({attempts: this.state.attempts + 1});
+        console.log(this.state.attempts);
+        if(this.state.attempts == 0){
+          incorrect1.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 1){
+          incorrect2.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 2){
+          incorrect3.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts >= 3){
+          incorrectOptionsBox.style.visibility = "visible";
+        }
+        this.playWrongAudio();
       }
-      if(this.state.attempts >= 3){
-        incorrectOptionsBox.style.visibility = "visible";
-      }
-      this.playWrongAudio();
-    }  
   }
 
   render() {
@@ -299,18 +592,22 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u50"
                       />
                         </label>
                         <label id="l2">
                         3.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u2"
                         />
                         </label>
                       <label id = "l3">
                       3.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u3"
                         />
                         </label>
@@ -325,12 +622,14 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u51"
                       />
                         </label>
                         <label id = "l4">
                       4.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u4"
                         />
                         </label>
@@ -345,19 +644,23 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u52"
                       />
                         </label>
                       
                       <label id = "l5">
                       5.(a):
                       <input
+                          type = "text"
+                          name = "extra"
                           id = "u5"
                         />
                       </label>
                       <label id = "l6">
                       5.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u6"
                         />
                       </label>
@@ -477,18 +780,22 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u53"
                       />
                         </label>
                         <label id = "l7">
                       9.(a):
                       <input
+                          type = "text"
+                          name = "extra"
                           id = "u7"
                         />
                       </label>
                       <label id = "l8">
                       9.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u8"
                         />
                       </label>
@@ -503,12 +810,14 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u54"
                       />
                         </label>
                         <label id = "l9">
                       10.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u9"
                         />
                         </label>
@@ -523,18 +832,22 @@ export default class MergeSortComponent2 extends Component {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u55"
                       />
                         </label>
                         <label id = "l10">
                       11.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u10"
                         />
                         </label>
                         <label id = "l11">
                       11.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u11"
                         />
                         </label>
@@ -658,11 +971,73 @@ export default class MergeSortComponent2 extends Component {
 
                       />
                         </label>
+
+                        <label id = "l30">
+                      15.(a):
+                        <input
+                          id = "u30"
+                        />
+                      </label>
+                      <label id = "l38">
+                      Leftover Array 8:
+                        <input
+                          id = "u38"
+                        />
+                      </label>
+                      <label id = "l39">
+                      Leftover Array 14:
+                        <input
+                          id = "u39"
+                        />
+                      </label>
+                      <label id = "l31">
+                      15.(b):
+                        <input
+                          id = "u31"
+                        />
+                      </label>
+                      <label id = "l32">
+                      15.(c):
+                        <input
+                          id = "u32"
+                        />
+                      </label>
+                      <label id = "l33">
+                      15.(d):
+                        <input
+                          id = "u33"
+                        />
+                      </label>
+                      <label id = "l34">
+                      15.(e):
+                        <input
+                          id = "u34"
+                        />
+                      </label>
+                      <label id = "l35">
+                      15.(f):
+                        <input
+                          id = "u35"
+                        />
+                      </label>
+                      <label id = "l36">
+                      15.(g):
+                        <input
+                          id = "u36"
+                        />
+                      </label>
+                      <label id = "l37">
+                      15.(h):
+                        <input
+                          id = "u37"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
 
                   <div className="userInput15" id="userInput15"></div>
+
 
 
 

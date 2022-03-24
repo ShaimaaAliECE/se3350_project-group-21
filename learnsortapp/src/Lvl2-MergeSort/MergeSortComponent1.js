@@ -144,8 +144,8 @@ _onAction(e) {
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
     var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
-    if(this.state.textIndex == 3 | this.state.textIndex == 4 | this.state.textIndex == 4 | this.state.textIndex == 8 |
-      this.state.textIndex == 9 | this.state.textIndex == 10 | this.state.textIndex == 11 | this.state.textIndex == 14) {
+    if(this.state.textIndex == 3 | this.state.textIndex == 4 | this.state.textIndex == 4 |
+      this.state.textIndex == 9 | this.state.textIndex == 10 | this.state.textIndex == 11) {
         // beginning of step 3
         if(this.state.textIndex == 3){
           let response = event.target.extra.value;
@@ -195,6 +195,246 @@ _onAction(e) {
           }
         }
         // end of step 3
+
+        // beginning of step 4
+        if(this.state.textIndex == 4){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u4').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u51').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u4').style.background = "white";
+            document.getElementById('u51').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 4
+
+        // beginning of step 5
+        if(this.state.textIndex == 5){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u5').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u6').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u52').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u5').style.background = "white";
+            document.getElementById('u6').style.background = "white";
+            document.getElementById('u52').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 5
+
+        // beginning of step 9
+        if(this.state.textIndex == 9){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u7').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u8').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u53').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u7').style.background = "white";
+            document.getElementById('u8').style.background = "white";
+            document.getElementById('u53').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 9
+
+        // beginning of step 10
+        if(this.state.textIndex == 10){
+          let response = event.target.extra.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u9').style.background = "red";
+            }
+            
+            if(response2 != answer.toString()){
+              document.getElementById('u54').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u9').style.background = "white";
+            document.getElementById('u54').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 10
+
+        // beginning of step 11
+        if(this.state.textIndex == 11){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
+
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u10').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u11').style.background = "red";
+            }
+
+            if(response2 != answer.toString()){
+              document.getElementById('u55').style.background = "red";
+            }
+
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u10').style.background = "white";
+            document.getElementById('u11').style.background = "white";
+            document.getElementById('u55').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 11
       }
 
     else
@@ -393,12 +633,14 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u51"
                       />
                         </label>
                         <label id = "l4">
                       4.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u4"
                         />
                         </label>
@@ -413,19 +655,23 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u52"
                       />
                         </label>
                       
                       <label id = "l5">
                       5.(a):
                       <input
+                          type = "text"
+                          name = "extra"
                           id = "u5"
                         />
                       </label>
                       <label id = "l6">
                       5.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u6"
                         />
                       </label>
@@ -545,18 +791,22 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u53"
                       />
                         </label>
                         <label id = "l7">
                       9.(a):
                       <input
+                          type = "text"
+                          name = "extra"
                           id = "u7"
                         />
                       </label>
                       <label id = "l8">
                       9.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u8"
                         />
                       </label>
@@ -571,12 +821,14 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u54"
                       />
                         </label>
                         <label id = "l9">
                       10.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u9"
                         />
                         </label>
@@ -591,18 +843,22 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u55"
                       />
                         </label>
                         <label id = "l10">
                       11.(a):
                         <input
+                          type = "text"
+                          name = "extra"
                           id = "u10"
                         />
                         </label>
                         <label id = "l11">
                       11.(b):
                         <input
+                          type = "text"
+                          name = "extra1"
                           id = "u11"
                         />
                         </label>
