@@ -116,12 +116,15 @@ export default class MergeSortComponent extends Component {
       document.getElementById("test28").style.backgroundColor = 'white';
 
     } else if (elementID === "test5") {
+      document.getElementById("stepFiveArray").style.display = 'block';
       document.getElementById("stepFiveArray").style.animation = 'pulse 1s';
       document.getElementById("stepFiveArray").style.fontSize = '20px';    
     } else if (elementID === "test6") {
+      document.getElementById("stepSixArray").style.display = 'block';
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
+      document.getElementById("stepSevenArray").style.display = 'block';
       document.getElementById("stepSevenArray").style.animation = 'pulse 1s';
       document.getElementById("stepSevenArray").style.fontSize = '20px';   
     } 
@@ -503,6 +506,7 @@ export default class MergeSortComponent extends Component {
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       answer.push(value);
+      console.log(answer);
     }
     // will display the whole fragment
     // alert(answer)
@@ -512,73 +516,93 @@ export default class MergeSortComponent extends Component {
 
     // split the fragments into individual numbers (will probably require hard coding)
     if(this.state.arrayIndex === 5){
+        document.getElementById('test8').innerHTML = "";
         document.getElementById('test8').innerHTML += answer[0];
         document.getElementById('test8').value = answer[0];
 
+        document.getElementById('test9').innerHTML = "";
         document.getElementById('test9').innerHTML += answer[1];
         document.getElementById('test9').value = answer[1];
     }
 
     if(this.state.arrayIndex === 6){
+      document.getElementById('test10').innerHTML = "";
       document.getElementById('test10').innerHTML += answer[0];
       document.getElementById('test10').value = answer[0];
 
+      document.getElementById('test11').innerHTML = "";
       document.getElementById('test11').innerHTML += answer[1];
       document.getElementById('test11').value = answer[1];
 
+      document.getElementById('test12').innerHTML = "";
       document.getElementById('test12').innerHTML += answer[2];
       document.getElementById('test12').value = answer[2];
     }
 
     if(this.state.arrayIndex === 7){
+      document.getElementById('test13').innerHTML = "";
       document.getElementById('test13').innerHTML += answer[0];
       document.getElementById('test13').value = answer[0];
 
+      document.getElementById('test14').innerHTML = "";
       document.getElementById('test14').innerHTML += answer[1];
       document.getElementById('test14').value = answer[1];
 
+      document.getElementById('test15').innerHTML = "";
       document.getElementById('test15').innerHTML += answer[2];
       document.getElementById('test15').value = answer[2];
 
+      document.getElementById('test16').innerHTML = "";
       document.getElementById('test16').innerHTML += answer[3];
       document.getElementById('test16').value = answer[3];
 
+      document.getElementById('test17').innerHTML = "";
       document.getElementById('test17').innerHTML += answer[4];
       document.getElementById('test17').value = answer[4];
     }
 
     if(this.state.arrayIndex === 21){
+      document.getElementById('test24').innerHTML = "";
       document.getElementById('test24').innerHTML += answer[0];
       document.getElementById('test24').value = answer[0];
 
+      document.getElementById('test25').innerHTML = "";
       document.getElementById('test25').innerHTML += answer[1];
       document.getElementById('test25').value = answer[1];
     }
 
     if(this.state.arrayIndex === 22){
+      document.getElementById('test26').innerHTML = "";
       document.getElementById('test26').innerHTML += answer[0];
       document.getElementById('test26').value = answer[0];
 
+      document.getElementById('test27').innerHTML = "";
       document.getElementById('test27').innerHTML += answer[1];
       document.getElementById('test27').value = answer[1];
 
+      document.getElementById('test28').innerHTML = "";
       document.getElementById('test28').innerHTML += answer[2];
       document.getElementById('test28').value = answer[2];
     }
 
     if(this.state.arrayIndex === 23){
+      document.getElementById('test29').innerHTML = "";
       document.getElementById('test29').innerHTML += answer[0];
       document.getElementById('test29').value = answer[0];
 
+      document.getElementById('test30').innerHTML = "";
       document.getElementById('test30').innerHTML += answer[1];
       document.getElementById('test30').value = answer[1];
 
+      document.getElementById('test31').innerHTML = "";
       document.getElementById('test31').innerHTML += answer[2];
       document.getElementById('test31').value = answer[2];
 
+      document.getElementById('test32').innerHTML = "";
       document.getElementById('test32').innerHTML += answer[3];
       document.getElementById('test32').value = answer[3];
 
+      document.getElementById('test33').innerHTML = "";
       document.getElementById('test33').innerHTML += answer[4];
       document.getElementById('test33').value = answer[4];
     }
@@ -637,7 +661,16 @@ export default class MergeSortComponent extends Component {
 
       instructionBox.innerHTML = instructionID;
 
-      this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+      if (elementID === "test5" || elementID === "test6" || elementID === "test7") {
+        document.getElementById("stepFiveArray").style.display = 'none';
+        document.getElementById("stepSixArray").style.display = 'none';
+        document.getElementById("stepSevenArray").style.display = 'none';
+
+        this.setState({ arrayIndex: 5 });
+
+      } else {
+        this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+      }
     }
   }
 
