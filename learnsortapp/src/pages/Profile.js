@@ -29,7 +29,7 @@ function Profile() {
                 <div class = "profile-Outline">
                 <div class = "profile-BackgroundRectangle">
                   <div class="profile-UsernameBox">
-                     <h2>Username: {UserProfile.getEmail()}</h2>
+                     <h2>{UserProfile.getEmail()}</h2>
                   </div>
                   <div onClick={() => {
                                        UserProfile.clearLocalStorageTimes();
@@ -39,6 +39,15 @@ function Profile() {
                      <div class = "clear-Box">
                         <h3 class= "clear-text">Clear Times</h3>
                      </div>
+                  </div>
+                  <h3>Algorithms:</h3>
+                  <div class="dropdown">
+                     <button class="dropbtn">Select Algorithm</button>
+                     <div class="dropdown-content">
+                        <a href="#">Merge Sort</a>
+                        <a href="#">Bubble Sort</a>
+                        <a href="#">Quick Sort</a>
+                     </div>               
                   </div>
                   <ul class= "profile-grid">
                      <li>
