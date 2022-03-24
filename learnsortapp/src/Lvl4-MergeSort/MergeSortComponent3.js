@@ -273,7 +273,7 @@ export default class MergeSortComponent3 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner">
+              <div className = "outliner11">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -370,6 +370,20 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                      {/* LEVEL 5 MERGE */}
+                      <label id="l5a">
+                      Step 5(a):
+                      <input 
+                        id = "u5a"
+                      />
+                        </label>
+                      <label id="l5b">
+                      Step 5(b):
+                      <input 
+                        id = "u5b"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -384,6 +398,14 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                        {/* LEVEL 6 MERGE */}
+                      <label id="l6a">
+                      Step 6(a):
+                      <input 
+                        id = "u6a"
+                      />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -396,6 +418,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                      {/* LEVEL 7 MERGE */}
+                      <label id="l7a">
+                      Step 7(a):
+                      <input 
+                        id = "u7a"
+                      />
+                        </label>
+                      <label id="l7b">
+                      Step 7(b):
+                      <input 
+                        id = "u7b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -440,6 +476,44 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                      {/* LEVEL 10 MERGE */}
+                      <label id="l8">
+                      Leftover Array 8:
+                      <input 
+                        id = "u8"
+                      />
+                        </label>
+                      <label id="l9">
+                      Leftover Array 9:
+                      <input 
+                        id = "u9"
+                      />
+                        </label>
+                      <label id="l10a">
+                      Step 10(a):
+                      <input 
+                        id = "u10a"
+                      />
+                        </label>
+                      <label id="l10b">
+                      Step 10(b):
+                      <input 
+                        id = "u10b"
+                      />
+                        </label>
+                        <label id="l10c">
+                      Step 10(c):
+                      <input 
+                        id = "u10c"
+                      />
+                        </label>
+                      <label id="l10d">
+                      Step 10(d):
+                      <input 
+                        id = "u10d"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -452,6 +526,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                        {/* LEVEL 11 MERGE */}
+                      <label id="l11a">
+                      Step 11(a):
+                      <input 
+                        id = "u11a"
+                      />
+                        </label>
+                      <label id="l11b">
+                      Step 11(b):
+                      <input 
+                        id = "u11b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -468,6 +556,14 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                          {/* LEVEL 12 MERGE */}
+                      <label id="l12a">
+                      Step 12(a):
+                      <input 
+                        id = "u12a"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -480,6 +576,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                      {/* LEVEL 13 MERGE */}
+                      <label id="l13a">
+                      Step 13(a):
+                      <input 
+                        id = "u13a"
+                      />
+                        </label>
+                      <label id="l13b">
+                      Step 13(b):
+                      <input 
+                        id = "u13b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -524,6 +634,44 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                      {/* LEVEL 16 MERGE */}
+                      <label id="l15">
+                      Leftover Array 15:
+                      <input 
+                        id = "u15"
+                      />
+                        </label>
+                      <label id="l14">
+                      Leftover Array 14:
+                      <input 
+                        id = "u14"
+                      />
+                        </label>
+                      <label id="l16a">
+                      Step 16(a):
+                      <input 
+                        id = "u16a"
+                      />
+                        </label>
+                      <label id="l16b">
+                      Step 16(b):
+                      <input 
+                        id = "u16b"
+                      />
+                        </label>
+                        <label id="l16c">
+                      Step 16(c):
+                      <input 
+                        id = "u16c"
+                      />
+                        </label>
+                      <label id="l16d">
+                      Step 16(d):
+                      <input 
+                        id = "u16d"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -538,6 +686,68 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                      {/* LEVEL 17 MERGE */}
+                        <label id = "l10">
+                      Leftover Array 10:
+                        <input
+                          id = "u10"
+                        />
+                      </label>
+                      <label id = "l16">
+                      Leftover Array 16:
+                        <input
+                          id = "u16"
+                        />
+                      </label>
+                      <label id = "l17a">
+                      17.(a):
+                        <input
+                          id = "u17a"
+                        />
+                      </label>
+                      <label id = "l17b">
+                      17.(b):
+                        <input
+                          id = "u17b"
+                        />
+                      </label>
+                      <label id = "l17c">
+                      17.(c):
+                        <input
+                          id = "u17c"
+                        />
+                      </label>
+                      <label id = "l17d">
+                      17.(d):
+                        <input
+                          id = "u17d"
+                        />
+                      </label>
+                      <label id = "l17e">
+                      17.(e):
+                        <input
+                          id = "u17e"
+                        />
+                      </label>
+                      <label id = "l17f">
+                      17.(f):
+                        <input
+                          id = "u17f"
+                        />
+                      </label>
+                      <label id = "l17g">
+                      17.(g):
+                        <input
+                          id = "u17g"
+                        />
+                      </label>
+                      <label id = "l17h">
+                      17.(h):
+                        <input
+                          id = "u17h"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -580,6 +790,20 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                        {/* LEVEL 20 MERGE */}
+                        <label id="l20a">
+                      Step 20(a):
+                      <input 
+                        id = "u20a"
+                      />
+                        </label>
+                      <label id="l20b">
+                      Step 20(b):
+                      <input 
+                        id = "u20b"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -594,6 +818,14 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                        {/* LEVEL 21 MERGE */}
+                        <label id="l21a">
+                      Step 21(a):
+                      <input 
+                        id = "u21a"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -606,6 +838,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                      {/* LEVEL 22 MERGE */}
+                      <label id="l22a">
+                      Step 22(a):
+                      <input 
+                        id = "u22a"
+                      />
+                        </label>
+                      <label id="l22b">
+                      Step 22(b):
+                      <input 
+                        id = "u22b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -651,6 +897,44 @@ export default class MergeSortComponent3 extends Component {
 
                       />
                         </label>
+
+                    {/* LEVEL 25 MERGE */}
+                    <label id="l23">
+                      Leftover Array 23:
+                      <input 
+                        id = "u23"
+                      />
+                        </label>
+                      <label id="l24">
+                      Leftover Array 24:
+                      <input 
+                        id = "u24"
+                      />
+                        </label>
+                      <label id="l25a">
+                      Step 25(a):
+                      <input 
+                        id = "u25a"
+                      />
+                        </label>
+                      <label id="l25b">
+                      Step 25(b):
+                      <input 
+                        id = "u25b"
+                      />
+                        </label>
+                        <label id="l25c">
+                      Step 25(c):
+                      <input 
+                        id = "u25c"
+                      />
+                        </label>
+                      <label id="l25d">
+                      Step 25(d):
+                      <input 
+                        id = "u25d"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -663,6 +947,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                      {/* LEVEL 26 MERGE */}
+                      <label id="l26a">
+                      Step 26(a):
+                      <input 
+                        id = "u26a"
+                      />
+                        </label>
+                      <label id="l26b">
+                      Step 26(b):
+                      <input 
+                        id = "u26b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -679,6 +977,14 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                      {/* LEVEL 27 MERGE */}
+                      <label id="l27a">
+                      Step 27(a):
+                      <input 
+                        id = "u27a"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -691,6 +997,20 @@ export default class MergeSortComponent3 extends Component {
                         type="text" 
                         name="userInput"
                         className="boxSize"
+                      />
+                        </label>
+
+                      {/* LEVEL 28 MERGE */}
+                      <label id="l28a">
+                      Step 28(a):
+                      <input 
+                        id = "u28a"
+                      />
+                        </label>
+                      <label id="l28b">
+                      Step 28(b):
+                      <input 
+                        id = "u28b"
                       />
                         </label>
                         <button class="check-button" type="submit">Check your answer</button>
@@ -735,6 +1055,44 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                    {/* LEVEL 31 MERGE */}
+                    <label id="l29">
+                      Leftover Array 29:
+                      <input 
+                        id = "u29"
+                      />
+                        </label>
+                      <label id="l30">
+                      Leftover Array 30:
+                      <input 
+                        id = "u30"
+                      />
+                        </label>
+                      <label id="l31a">
+                      Step 31(a):
+                      <input 
+                        id = "u31a"
+                      />
+                        </label>
+                      <label id="l31b">
+                      Step 31(b):
+                      <input 
+                        id = "u31b"
+                      />
+                        </label>
+                        <label id="l31c">
+                      Step 31(c):
+                      <input 
+                        id = "u31c"
+                      />
+                        </label>
+                      <label id="l31d">
+                      Step 31(d):
+                      <input 
+                        id = "u31d"
+                      />
+                        </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
@@ -749,6 +1107,68 @@ export default class MergeSortComponent3 extends Component {
                         className="boxSize"
                       />
                         </label>
+
+                        {/* LEVEL 32 MERGE */}
+                        <label id = "l25">
+                      Leftover Array 25:
+                        <input
+                          id = "u25"
+                        />
+                      </label>
+                      <label id = "l31">
+                      Leftover Array 31:
+                        <input
+                          id = "u31"
+                        />
+                      </label>
+                      <label id = "l32a">
+                      32.(a):
+                        <input
+                          id = "u32a"
+                        />
+                      </label>
+                      <label id = "l32b">
+                      32.(b):
+                        <input
+                          id = "u32b"
+                        />
+                      </label>
+                      <label id = "l32c">
+                      32.(c):
+                        <input
+                          id = "u32c"
+                        />
+                      </label>
+                      <label id = "l32d">
+                      32.(d):
+                        <input
+                          id = "u32d"
+                        />
+                      </label>
+                      <label id = "l32e">
+                      32.(e):
+                        <input
+                          id = "u32e"
+                        />
+                      </label>
+                      <label id = "l32f">
+                      32.(f):
+                        <input
+                          id = "u32f"
+                        />
+                      </label>
+                      <label id = "l32g">
+                      32.(g):
+                        <input
+                          id = "u32g"
+                        />
+                      </label>
+                      <label id = "l32h">
+                      32.(h):
+                        <input
+                          id = "u32h"
+                        />
+                      </label>
                         <button class="check-button" type="submit">Check your answer</button>
                     </form>
                   </div>
