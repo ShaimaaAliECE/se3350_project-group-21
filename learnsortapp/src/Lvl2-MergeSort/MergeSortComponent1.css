@@ -913,6 +913,10 @@
     display: none;
 }
 
+#u50 {
+    width: 100px;
+}
+
 .check-button{
     position: absolute;
     top: 130px;

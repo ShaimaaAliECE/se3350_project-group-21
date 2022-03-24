@@ -135,35 +135,6 @@ _onAction(e) {
       answer.push(value);
     }
 
-    if(this.state.textIndex == 3){
-      console.log((event.target.extra.value));
-    }
-    
-
-    // if(this.state.textIndex == 2 | this.state.textIndex == 3 | this.state.textIndex == 4 |
-    //   this.state.textIndex == 7 | this.state.textIndex == 8 | this.state.textIndex == 9 | this.state.textIndex == 11 |
-    //   this.state.textIndex == 13 | this.state.textIndex == 14) {
-
-      // if(event.target.extra.value == null | event.target.extra1.value == null) {
-      //     this.playWrongAudio();
-      // }
-
-    //   else if(this.state.textIndex == 3) {
-    //     let response = document.getElementById('l4').innerHTML;
-    //       if(response == null){
-    //         this.playWrongAudio();
-    //       }
-    //   }
-
-    //   else if(this.state.textIndex == 4) {
-    //     let response = document.getElementById('l5').innerHTML;
-    //     let response1 = document.getElementById('l6').innerHTML;
-    //       if(response == null & response1 == null){
-    //         this.playWrongAudio();
-    //       }
-    //   }
-    // }
-
     var popupC = document.getElementById("myPopupC");
 
     var popupI = document.getElementById("myPopupI");
@@ -173,39 +144,91 @@ _onAction(e) {
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
     var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+    if(this.state.textIndex == 3 | this.state.textIndex == 4 | this.state.textIndex == 4 | this.state.textIndex == 8 |
+      this.state.textIndex == 9 | this.state.textIndex == 10 | this.state.textIndex == 11 | this.state.textIndex == 14) {
+        // beginning of step 3
+        if(this.state.textIndex == 3){
+          let response = event.target.extra.value;
+          let response1 = event.target.extra1.value;
+          let response2 = event.target.userInput.value;
 
-    if(event.target.userInput.value == answer.toString()){
-      popupC.style.visibility = "visible"; 
-      this.playCorrectAudio();
+          if(response != answer[0].toString() | response1 != answer[1].toString() | response2 != answer.toString()){
+            if(response != answer[0].toString()) {
+              document.getElementById('u2').style.background = "red";
+            }
+            if(response1 != answer[1].toString()){
+              document.getElementById('u3').style.background = "red";
+            }
 
-      if (this.state.textIndex > 14) {
-        document.getElementById('next-button1').style.display = 'none';
-        document.getElementById('next-level-button1').style.display = 'block';
-        this.setState({complete: 1});
-      }
-    }
+            if(response2 != answer.toString()){
+              document.getElementById('u50').style.background = "red";
+            }
 
-    else {
-      this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+            this.setState({attempts: this.state.attempts + 1});
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio();
+          }
+          else {
+            popupC.style.visibility = "visible"; 
+            document.getElementById('u2').style.background = "white";
+            document.getElementById('u3').style.background = "white";
+            document.getElementById('u50').style.background = "white";
+            this.playCorrectAudio();
+          }
+        }
+        // end of step 3
       }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+
+    else
+     if(event.target.userInput.value == answer.toString()){
+        popupC.style.visibility = "visible"; 
+        this.playCorrectAudio();
+  
+        if (this.state.textIndex > 14) {
+          document.getElementById('next-button1').style.display = 'none';
+          document.getElementById('next-level-button1').style.display = 'block';
+          this.setState({complete: 1});
+        }
       }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-        popupI.style.visibility = "visible"; 
+  
+      else {
+        this.setState({attempts: this.state.attempts + 1});
+        console.log(this.state.attempts);
+        if(this.state.attempts == 0){
+          incorrect1.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 1){
+          incorrect2.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts == 2){
+          incorrect3.style.visibility = "visible";
+          popupI.style.visibility = "visible"; 
+        }
+        if(this.state.attempts >= 3){
+          incorrectOptionsBox.style.visibility = "visible";
+        }
+        this.playWrongAudio();
       }
-      if(this.state.attempts >= 3){
-        incorrectOptionsBox.style.visibility = "visible";
-      }
-      this.playWrongAudio();
-    }  
-    
   }
 
   render() {
@@ -340,7 +363,7 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-                        id = "u1"
+                        id = "u50"
                       />
                         </label>
                         <label id="l2">
