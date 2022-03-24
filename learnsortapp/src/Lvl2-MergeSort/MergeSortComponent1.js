@@ -639,13 +639,9 @@ _onAction(e) {
                         <label id = "l42">
                       4.(a):
                         <input
-<<<<<<< HEAD
-                          id = "u42"
-=======
                           type = "text"
                           name = "extra"
                           id = "u4"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                         </label>
                         <button class="check-button22" type="submit">Check your answer</button>
@@ -659,36 +655,24 @@ _onAction(e) {
                       <input 
                         type="text" 
                         name="userInput"
-<<<<<<< HEAD
-                        id = "u12"
-=======
                         id = "u52"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                       />
                         </label>
                       
                       <label id = "l52">
                       5.(a):
                       <input
-<<<<<<< HEAD
-                          id = "u52"
-=======
                           type = "text"
                           name = "extra"
                           id = "u5"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                       </label>
                       <label id = "l62">
                       5.(b):
                         <input
-<<<<<<< HEAD
-                          id = "u62"
-=======
                           type = "text"
                           name = "extra1"
                           id = "u6"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                       </label>
                         <button class="check-button22" type="submit">Check your answer</button>
@@ -813,25 +797,17 @@ _onAction(e) {
                         <label id = "l72">
                       9.(a):
                       <input
-<<<<<<< HEAD
-                          id = "u72"
-=======
                           type = "text"
                           name = "extra"
                           id = "u7"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                       </label>
                       <label id = "l82">
                       9.(b):
                         <input
-<<<<<<< HEAD
-                          id = "u82"
-=======
                           type = "text"
                           name = "extra1"
                           id = "u8"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                       </label>
                         <button class="check-button22" type="submit">Check your answer</button>
@@ -851,13 +827,9 @@ _onAction(e) {
                         <label id = "l92">
                       10.(a):
                         <input
-<<<<<<< HEAD
-                          id = "u92"
-=======
                           type = "text"
                           name = "extra"
                           id = "u9"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                         </label>
                         <button class="check-button22" type="submit">Check your answer</button>
@@ -877,25 +849,17 @@ _onAction(e) {
                         <label id = "l102">
                       11.(a):
                         <input
-<<<<<<< HEAD
-                          id = "u102"
-=======
                           type = "text"
                           name = "extra"
                           id = "u10"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                         </label>
                         <label id = "l112">
                       11.(b):
                         <input
-<<<<<<< HEAD
-                          id = "u112"
-=======
                           type = "text"
                           name = "extra1"
                           id = "u11"
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                         />
                         </label>
                         <button class="check-button22" type="submit">Check your answer</button>
@@ -1018,9 +982,6 @@ _onAction(e) {
 
                       />
                         </label>
-<<<<<<< HEAD
-                        <button class="check-button22" type="submit">Check your answer</button>
-=======
 
                         <label id = "l30">
                       15.(a):
@@ -1083,7 +1044,6 @@ _onAction(e) {
                         />
                       </label>
                         <button class="check-button" type="submit">Check your answer</button>
->>>>>>> fb9a0813a32959345ddafffc72d3b1d1f26d65e8
                     </form>
                   </div>
 
