@@ -152,6 +152,8 @@ export default class MergeSortComponent3 extends Component {
     var incorrect2 = document.getElementById("IncorrectAttempt2");
     var incorrect3 = document.getElementById("IncorrectAttempt3");
 
+    var incorrectOptionsBox = document.getElementById("incorrectOptionsBox");
+
     if(event.target.userInput.value == answer.toString()){
       popupC.style.visibility = "visible"; 
       this.playCorrectAudio();
@@ -165,18 +167,26 @@ export default class MergeSortComponent3 extends Component {
 
     else {
       this.setState({attempts: this.state.attempts + 1});
-      console.log(this.state.attempts);
-      if(this.state.attempts == 0){
-        incorrect1.style.visibility = "visible";
-      }
-      if(this.state.attempts == 1){
-        incorrect2.style.visibility = "visible";
-      }
-      if(this.state.attempts == 2){
-        incorrect3.style.visibility = "visible";
-      }
-      popupI.style.visibility = "visible"; 
-      this.playWrongAudio(); 
+            console.log(this.state.attempts);
+
+            if(this.state.attempts == 0){
+              incorrect1.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+
+            if(this.state.attempts == 1){
+              incorrect2.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            
+            if(this.state.attempts == 2){
+              incorrect3.style.visibility = "visible";
+              popupI.style.visibility = "visible"; 
+            }
+            if(this.state.attempts >= 3){
+              incorrectOptionsBox.style.visibility = "visible";
+            }
+            this.playWrongAudio(); 
     }  
     
   }
@@ -263,7 +273,7 @@ export default class MergeSortComponent3 extends Component {
                   debounce={250}
                   timeout={this.state.timeout}  
                   />
-              <div className = "outliner1">
+              <div className = "outliner">
                   
                     {/* // will show the initial values (created by random number generator) */}
                     <div className="your-values1">
@@ -805,14 +815,39 @@ export default class MergeSortComponent3 extends Component {
                 </div>
                 </div>
                 
-                <div className='incorrect1' id='IncorrectAttempt1'>
-                  <h1 >X</h1>
+                <div className='incorrectOptions4' id='incorrectOptionsBox'>
+                  <br></br>
+                  <h1>3 Strikes!</h1>
+                  <h2>Please choose one of the following options:</h2>
+                  <br></br>
+                  <button onClick={refreshPage} className='incorrectOptionButton4'>Restart This Level</button>
+                  <br></br>
+                  <br></br>
+                  <Link to='/Level3'>
+                    <button className='incorrectOptionButton4'>Go Back to Level 3</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to=''>
+                    <button className='incorrectOptionButton4'>Switch to Another Algorithm (Coming Soon)</button>
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link to='/'>
+                    <button className='incorrectOptionButton4'>Quit</button>
+                  </Link>
                 </div>
-                <div className='incorrect2' id='IncorrectAttempt2'>
-                  <h1 >X</h1>
-                </div>
-                <div className='incorrect3' id='IncorrectAttempt3'>
-                  <h1 >X</h1>
+
+                <div className='incorrectGrid4'>
+                  <div className='incorrect14' id='IncorrectAttempt1'>
+                    X
+                  </div>
+                  <div className='incorrect24' id='IncorrectAttempt2'>
+                    X
+                  </div>
+                  <div className='incorrect34' id='IncorrectAttempt3'>
+                    X
+                  </div>
                 </div>
     
 

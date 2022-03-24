@@ -56,10 +56,12 @@ var UserProfile = (function() {
             if(levelOneTimeSpentMin == null || (levelOneTimeSpentMin == 0 && levelOneTimeSpentSec == 0)){
                levelOneTimeSpentMin = newTimeMin;
                levelOneTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelOneTimeSpentMin >= newTimeMin){
                if(levelOneTimeSpentSec >= newTimeSeconds){
                   levelOneTimeSpentMin = newTimeMin;
                   levelOneTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -67,10 +69,12 @@ var UserProfile = (function() {
             if(levelTwoTimeSpentMin == null || (levelTwoTimeSpentMin == 0 && levelTwoTimeSpentSec == 0)){
                levelTwoTimeSpentMin = newTimeMin;
                levelTwoTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelTwoTimeSpentMin >= newTimeMin){
                if(levelTwoTimeSpentSec >= newTimeSeconds){
                   levelTwoTimeSpentMin = newTimeMin;
                   levelTwoTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -78,10 +82,12 @@ var UserProfile = (function() {
             if(levelThreeTimeSpentMin == null || (levelThreeTimeSpentMin == 0 && levelThreeTimeSpentSec == 0)){
                levelThreeTimeSpentMin = newTimeMin;
                levelThreeTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelThreeTimeSpentMin >= newTimeMin){
                if(levelThreeTimeSpentSec >= newTimeSeconds){
                   levelThreeTimeSpentMin = newTimeMin;
                   levelThreeTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -89,10 +95,12 @@ var UserProfile = (function() {
             if(levelFourTimeSpentMin == null || (levelFourTimeSpentMin == 0 && levelFourTimeSpentSec == 0)){
                levelFourTimeSpentMin = newTimeMin;
                levelFourTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelFourTimeSpentMin >= newTimeMin){
                if(levelFourTimeSpentSec >= newTimeSeconds){
                   levelFourTimeSpentMin = newTimeMin;
                   levelFourTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -100,10 +108,12 @@ var UserProfile = (function() {
             if(levelFiveTimeSpentMin == null || (levelFiveTimeSpentMin == 0 && levelCustomTimeSpentSec == 0)){
                levelFiveTimeSpentMin = newTimeMin;
                levelFiveTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelFiveTimeSpentMin >= newTimeMin){
                if(levelFiveTimeSpentSec >= newTimeSeconds){
                   levelFiveTimeSpentMin = newTimeMin;
                   levelFiveTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -111,10 +121,12 @@ var UserProfile = (function() {
             if(levelCustomTimeSpentMin == null || (levelCustomTimeSpentMin == 0 && levelCustomTimeSpentSec == 0)){
                levelCustomTimeSpentMin = newTimeMin;
                levelCustomTimeSpentSec = newTimeSeconds;
+               populateLocalStorageTimes();
             }else if(levelCustomTimeSpentMin >= newTimeMin){
                if(levelCustomTimeSpentSec >= newTimeSeconds){
                   levelCustomTimeSpentMin = newTimeMin;
                   levelCustomTimeSpentSec = newTimeSeconds;
+                  populateLocalStorageTimes();
                }
             }
             break;
@@ -198,6 +210,11 @@ var UserProfile = (function() {
       
    }
 
+   var clearLocalStorageTimes = function(){
+      localStorage.clear();
+      clearTimes();
+   }
+
    var userLoggedOut = function() {
       populateLocalStorageTimes();
       setEmail("");
@@ -261,7 +278,7 @@ var UserProfile = (function() {
     userLoggedOut : userLoggedOut,
     outputTime : outputTime,
     userAuthenticated : userAuthenticated,
-    clearTimes : clearTimes,
+    clearLocalStorageTimes : clearLocalStorageTimes
   }
 
 })();
