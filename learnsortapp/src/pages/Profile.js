@@ -20,6 +20,26 @@ function Profile() {
       setLevelCustomTime(UserProfile.outputTime(6));
    }
 
+   function draw(){
+
+      var n = document.getElementById("num").value;
+      var graphValues = n.split(',');
+
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+
+      var width = 100;
+      var X = 50;
+
+      ctx.fillStyle = '#ffffff';
+      
+      for(var i = 0; i<graphValues.length; i++) {
+         var h = graphValues[i];
+         ctx.fillRect(X, canvas.height - h,width,h);
+         X += width + 15;
+      }
+   }
+
     return (
         <>
             <div class="profile-contents">
@@ -69,6 +89,49 @@ function Profile() {
                         <h3 class="profile-LevelOutline">{levelCustomTime}</h3>
                      </li>
                   </ul>
+                  <h2>User Analytics</h2>
+                  
+                     <section>
+                        <div class="box">
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelOneTime}</div>
+                              </div>
+                              <div class="name">Level 1</div>
+                           </div> 
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelTwoTime}</div>
+                              </div>
+                              <div class="name">Level 2</div>
+                           </div>
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelThreeTime}</div>
+                              </div>
+                              <div class="name">Level 3</div>
+                           </div>
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelFourTime}</div>
+                              </div>
+                              <div class="name">Level 4</div>
+                           </div>
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelFiveTime}</div>
+                              </div>
+                              <div class="name">Level 5</div>
+                           </div>
+                           <div class ="skill">
+                              <div class="graph">
+                                 <div class="percent">{levelCustomTime}</div>
+                              </div>
+                              <div class="name">Custom</div>
+                           </div> 
+                        </div>
+                     </section>
+                  
                 </div>
                 </div>
             </div>
