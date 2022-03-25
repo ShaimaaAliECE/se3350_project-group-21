@@ -141,7 +141,7 @@ export default class MergeSortComponent3 extends Component {
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       //comment this line out if you want to speed through without correct answers  
-      //answer.push(value);
+      answer.push(value);
     }
 
     var popupC = document.getElementById("myPopupC");
