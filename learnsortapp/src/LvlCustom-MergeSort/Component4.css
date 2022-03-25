@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@600&display=swap');
 
 .boxSize{
     width: 60px;
@@ -48,7 +48,7 @@
     font-size: x-small;
 
 }
-/* 6 */
+
 .userInput10-4 {
     display: none;
     margin-left: 230px;
@@ -56,7 +56,7 @@
     font-size: x-small;
    
 }
-/* 7 */
+
 .userInput11-4 {
     display: none;
     margin-left: 360px;
@@ -64,7 +64,7 @@
     font-size: x-small;
    
 }
-/* 8 */
+
 .userInput6-4 {
     display: none;
     margin-left: 120px;
@@ -72,7 +72,7 @@
     font-size: x-small;
 }
 
-/* 9 */
+
 .userInput7-4 {
     display: none;
     margin-left: 5px;
@@ -83,7 +83,6 @@
 
 
 
-/* 10 */
 .userInput8-4 {
     display: none;
     margin-left: 115px;
@@ -94,21 +93,20 @@
 
 
 
-/* 11 */
 .userInput9-4 {
     display: none;
     margin-left: 85px;
     margin-top: 20px;
     font-size: x-small;
 }
-/* 12 */
+
 .userInput12-4 {
     display: none;
     margin-left: 360px;
     margin-top: 10px;
     font-size: x-small;
 }
-/* 13 */
+
 .userInput13-4 {
     display: none;
     margin-left: 225px;
@@ -116,7 +114,7 @@
     font-size: x-small;
 }
 
-/* 14 */
+
 .userInput14-4 {
     display: none;
     margin-left: 360px;
@@ -152,7 +150,7 @@
     font-size: x-small;
     
 }
-/* i had to switch over to id names instead of classnames because it stopped working */
+
 .userInput19-4 {
     display: none;
     margin-left: 485px;
@@ -338,4 +336,4 @@
 .incorrectOptionButton4:hover {
     transform: scale(1.07);
     transition: all 0.2s ease-out;
-}
+} */

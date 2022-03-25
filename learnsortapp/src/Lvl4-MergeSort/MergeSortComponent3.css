@@ -6,11 +6,11 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 910px;
+    margin-right: 920px;
 }
 #u5a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 
@@ -18,48 +18,48 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 860px;
+    margin-right: 870px;
     
 }
 #u5b{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l6a{
     position: absolute;
     top: 315px;
     right: -50px;
-    margin-right: 860px;
+    margin-right: 890px;
     
 }
 #u6a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l7a{
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 740px;
+    margin-right: 770px;
     
 }
 #u7a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l7b{
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 680px;
+    margin-right: 720px;
     
 }
 #u7b{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 
@@ -96,7 +96,7 @@
     top: 315px;
     right: 20px;
     margin-right: 870px;
-    margin-top: 90px;
+    margin-top: 120px;
     
 }
 #u10c{
@@ -110,7 +110,7 @@
     top: 315px;
     right: 20px;
     margin-right: 780px;
-    margin-top: 90px;
+    margin-top: 120px;
     
 }
 #u10d{
@@ -123,12 +123,12 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 680px;
+    margin-right: 670px;
     
 }
 #u11a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l11b{
@@ -140,7 +140,7 @@
 }
 #u11b{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 
 }
@@ -148,43 +148,44 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 560px;
+    margin-right: 570px;
     
 }
 #u12a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l13a{
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 510px;
+    margin-right: 520px;
     
 }
 #u13a{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l13b{
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 460px;
+    margin-right: 470px;
     
 }
 #u13b{
     /* Change width depending on how many numbers go in that step */
-    width: 20px;
+    width: 10px;
     margin-left: 5px;
 }
 #l16a{
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 460px;
+    margin-right: 640px;
+    margin-top: 60px;
     
 }
 #u16a{
@@ -198,7 +199,7 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 780px;
+    margin-right: 520px;
     margin-top: 60px;
     
 }
@@ -212,9 +213,8 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 870px;
-    margin-top: 90px;
-    
+    margin-right: 640px;
+    margin-top: 120px;
 }
 #u16c{
     /* Change width depending on how many numbers go in that step */
@@ -226,25 +226,669 @@
     position: absolute;
     top: 315px;
     right: 20px;
-    margin-right: 780px;
-    margin-top: 90px;
+    margin-right: 520px;
+    margin-top: 120px;
     
 }
-#u10d{
+#u16d{
     /* Change width depending on how many numbers go in that step */
     width: 30px;
     font-size: x-small;
     margin-left: 5px;
 }
+#l17a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 730px;
+    margin-top: 150px;
+    
+}
+#u17a{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 620px;
+    margin-top: 150px;
+    
+}
+#u17b{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17c{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 730px;
+    margin-top: 180px;
+    
+}
+#u17c{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17d{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 620px;
+    margin-top: 180px;
+    
+}
+#u17d{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17e{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 730px;
+    margin-top: 210px;
+    
+}
+#u17e{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17f{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 620px;
+    margin-top: 210px;
+    
+}
+#u17f{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17g{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 730px;
+    margin-top: 240px;
+    
+}
+#u17g{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l17h{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 620px;
+    margin-top: 240px;
+    
+}
+#u17h{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l10-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 835px;
+    margin-top: 240px;
+    
+}
+
+#u10-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l8-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 880px;
+    margin-top: 80px;
+    
+}
+
+#u8-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+
+}
+
+#l14-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 630px;
+    margin-top: 80px;
+    
+    
+}
+
+#u14-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l15-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 490px;
+    margin-top: 80px;
+    
+}
+
+#u15-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l16-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 510px;
+    margin-top: 230px;
+    
+}
+
+#u16-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l23-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 410px;
+    margin-top: 80px;
+    
+}
+
+#u23-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l24-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 280px;
+    margin-top: 80px;
+    
+}
+
+#u24-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l25-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 410px;
+    margin-top: 230px;
+    
+}
+#u25-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+
+#u29-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l29-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    margin-top: 80px;
+    
+}
+
+#u30-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l30-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: -10px;
+    margin-top: 80px;
+    
+}
+
+#u30-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l31-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 60px;
+    margin-top: 230px;
+    
+}
+
+#u31-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l9-4{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 750px;
+    margin-top: 80px;
+    
+}
+
+#u9-4{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
 
 
-
+#l20a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 420px;
+    
+}
+#u20a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l20b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 370px;
+    
+}
+#u20b{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l21a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 320px;
+    
+}
+#u21a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l22a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 270px;
+    
+}
+#u22a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l22b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 220px;
+    
+}
+#u22b{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l25a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 390px;
+    margin-top: 60px;
+    
+}
+#u25a{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l25b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 310px;
+    margin-top: 60px;
+    
+}
+#u25b{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l25c{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 390px;
+    margin-top: 120px;
+    
+}
+#u25c{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l25d{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 310px;
+    margin-top: 120px;
+    
+}
+#u25d{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l26a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    
+}
+#u26a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l26b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 120px;
+    
+}
+#u26b{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l27a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 70px;
+    
+}
+#u27a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l28a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 20px;
+    
+}
+#u28a{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l28b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: -30px;
+    
+}
+#u28b{
+    /* Change width depending on how many numbers go in that step */
+    width: 10px;
+    margin-left: 5px;
+}
+#l31a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 160px;
+    margin-top: 60px;
+    
+}
+#u31a{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l31b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 20px;
+    margin-top: 60px;
+    
+}
+#u31b{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l31c{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 160px;
+    margin-top: 120px;
+    
+}
+#u31c{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l31d{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 20px;
+    margin-top: 120px;
+    
+}
+#u31d{
+    /* Change width depending on how many numbers go in that step */
+    width: 30px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32a{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 280px;
+    margin-top: 150px;
+    
+}
+#u32a{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32b{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    margin-top: 150px;
+    
+}
+#u32b{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32c{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 280px;
+    margin-top: 180px;
+    
+}
+#u32c{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32d{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    margin-top: 180px;
+    
+}
+#u32d{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32e{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 280px;
+    margin-top: 210px;
+    
+}
+#u32e{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32f{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    margin-top: 210px;
+    
+}
+#u32f{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32g{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 280px;
+    margin-top: 240px;
+    
+}
+#u32g{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+#l32h{
+    position: absolute;
+    top: 315px;
+    right: 20px;
+    margin-right: 170px;
+    margin-top: 240px;
+    
+}
+#u32h{
+    /* Change width depending on how many numbers go in that step */
+    width: 60px;
+    font-size: x-small;
+    margin-left: 5px;
+}
 .boxSize{
     width: 60px;
     font-size: x-small;
 }
 .userInput0-4 {
-    /* display: none; */
+    display: none;
     margin-left: 180px;
     margin-top: 10px;
     font-size: x-small;
@@ -253,14 +897,14 @@
 }
 
 .userInput1-4 {
-    /* display: none; */
+    display: none;
     margin-left: 670px;
     margin-top: -15px;
     font-size: x-small;
 }
 
 .userInput2-4 {
-    /* display: none; */
+    display: none;
     margin-left: 65px;
     margin-top: 20px;
     font-size: x-small;
@@ -268,20 +912,20 @@
 
 
 .userInput3-4 {
-    /* display: none; */
+    display: none;
     margin-left: 290px;
     margin-top: -20px;
     font-size: x-small;
 }
 .userInput4-4 {
-    /* display: none; */
+    display: none;
     margin-left: 5px;
     margin-top: 20px;
     font-size: x-small; 
 }
 
 .userInput5-4 {
-    /* display: none; */
+    display: none;
     margin-left: 120px;
     margin-top: -20px;
     font-size: x-small;
@@ -289,15 +933,15 @@
 }
 /* 6 */
 .userInput10-4 {
-    /* display: none; */
+    display: none;
     margin-left: 230px;
-    margin-top: -190px;
+    margin-top: -210px;
     font-size: x-small;
    
 }
 /* 7 */
 .userInput11-4 {
-    /* display: none; */
+    display: none;
     margin-left: 360px;
     margin-top: -23px;
     font-size: x-small;
@@ -305,7 +949,7 @@
 }
 /* 8 */
 .userInput6-4 {
-    /* display: none; */
+    display: none;
     margin-left: 150px;
     margin-top: 5px;
     font-size: x-small;
@@ -313,7 +957,7 @@
 
 /* 9 */
 .userInput7-4 {
-    /* display: none; */
+    display: none;
     margin-left: 5px;
     margin-top: 45px;
     font-size: x-small;
@@ -324,7 +968,7 @@
 
 /* 10 */
 .userInput8-4 {
-    /* display: none; */
+    display: none;
     margin-left: 115px;
     margin-top: -15px;
     font-size: x-small;
@@ -335,21 +979,21 @@
 
 /* 11 */
 .userInput9-4 {
-    /* display: none; */
-    margin-left: 55px;
-    margin-top: 60px;
+    display: none;
+    margin-left: 30px;
+    margin-top: 90px;
     font-size: x-small;
 }
 /* 12 */
 .userInput12-4 {
-    /* display: none; */
+    display: none;
     margin-left: 380px;
     margin-top: 10px;
     font-size: x-small;
 }
 /* 13 */
 .userInput13-4 {
-    /* display: none; */
+    display: none;
     margin-left: 235px;
     margin-top: 50px;
     font-size: x-small;
@@ -357,138 +1001,138 @@
 
 /* 14 */
 .userInput14-4 {
-    /* display: none; */
+    display: none;
     margin-left: 360px;
     margin-top: -18px;
     font-size: x-small;
     
 }
 .userInput15-4 {
-    /* display: none; */
-    margin-left: 290px;
-    margin-top: 18px;
+    display: none;
+    margin-left: 350px;
+    margin-top: 90px;
     font-size: x-small;
     
 }
 .userInput16-4 {
-    /* display: none; */
+    display: none;
     margin-left: 190px;
-    margin-top: 18px;
+    margin-top: 130px;
     font-size: x-small;
     
 }
 .userInput17-4 {
-    /* display: none; */
+    display: none;
     margin-left: 555px;
-    margin-top: -190px;
+    margin-top: -400px;
     font-size: x-small;
     
 }
 .userInput18-4 {
-    /* display: none; */
-    margin-left: 800px;
+    display: none;
+    margin-left: 780px;
     margin-top: -18px;
     font-size: x-small;
     
 }
 /* i had to switch over to id names instead of classnames because it stopped working */
 .userInput19-4 {
-    /* display: none; */
+    display: none;
     margin-left: 485px;
     margin-top: 20px;
     font-size: x-small;
     
 }
 .userInput20-4 {
-    /* display: none; */
+    display: none;
     margin-left: 610px;
-    margin-top: -20px;
+    margin-top: -25px;
     font-size: x-small;
     
 }
 .userInput25-4 {
-    /* display: none; */
+    display: none;
     margin-left: 725px;
-    margin-top: -115px;
+    margin-top: -225px;
     font-size: x-small;
     
 }
 .userInput26-4 {
-    /* display: none; */
-    margin-left: 875px;
-    margin-top: -20px;
-    font-size: x-small;
-    
-}
-.userInput21-4 {
-    /* display: none; */
-    margin-left: 610px;
-    margin-top: 20px;
-    font-size: x-small;
-    
-}
-.userInput22-4 {
-    /* display: none; */
-    margin-left: 480px;
-    margin-top: 8px;
-    font-size: x-small;
-    
-}
-.userInput23-4 {
-    /* display: none; */
-    margin-left: 610px;
+    display: none;
+    margin-left: 855px;
     margin-top: -15px;
     font-size: x-small;
     
 }
-.userInput24-4 {
-    /* display: none; */
-    margin-left: 540px;
-    margin-top: 15px;
-    font-size: x-small;
-    
-}
-.userInput27-4 {
-    /* display: none; */
-    margin-left: 875px;
-    margin-top: 20px;
-    font-size: x-small;
-    
-}
-.userInput28-4 {
-    /* display: none; */
-    margin-left: 725px;
+.userInput21-4 {
+    display: none;
+    margin-left: 630px;
     margin-top: 10px;
     font-size: x-small;
     
 }
+.userInput22-4 {
+    display: none;
+    margin-left: 480px;
+    margin-top: 48px;
+    font-size: x-small;
+    
+}
+.userInput23-4 {
+    display: none;
+    margin-left: 610px;
+    margin-top: -20px;
+    font-size: x-small;
+    
+}
+.userInput24-4 {
+    display: none;
+    margin-left: 470px;
+    margin-top: 100px;
+    font-size: x-small;
+    
+}
+.userInput27-4 {
+    display: none;
+    margin-left: 875px;
+    margin-top: 10px;
+    font-size: x-small;
+    
+}
+.userInput28-4 {
+    display: none;
+    margin-left: 725px;
+    margin-top: 40px;
+    font-size: x-small;
+    
+}
 .userInput29-4 {
-    /* display: none; */
+    display: none;
     margin-left: 875px;
     margin-top: -15px;
     font-size: x-small;
     
 }
 .userInput30-4 {
-    /* display: none; */
+    display: none;
     margin-left: 800px;
-    margin-top: 13px;
+    margin-top: 103px;
     font-size: x-small;
     
 }
 .userInput31-4 {
-    /* display: none; */
-    margin-left: 670px;
-    margin-top: 18px;
+    display: none;
+    margin-left: 650px;
+    margin-top: 130px;
     font-size: x-small;
     
 }
 
 .userInput32-4 {
-    /* display: none; */
+    display: none;
     font-size: x-small;
-    margin-top: 50px;
-    margin-left: 450px;
+    margin-top: -20px;
+    margin-left: 410px;
 }
 
 .test16-4{

@@ -141,7 +141,7 @@ export default class MergeSortComponent3 extends Component {
     for(let i = 0; i < length; i++){
       let value = document.getElementById(fragmentNo).getElementsByClassName('number')[i].innerHTML;
       //comment this line out if you want to speed through without correct answers  
-      answer.push(value);
+      //answer.push(value);
     }
 
     var popupC = document.getElementById("myPopupC");
@@ -478,18 +478,19 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                       {/* LEVEL 10 MERGE */}
-                      <label id="l8">
-                      Leftover Array 8:
+                      <label id="l8-4">
+                      Leftover Array 8:<br/>
                       <input 
-                        id = "u8"
+                        id = "u8-4"
                       />
                         </label>
-                      <label id="l9">
-                      Leftover Array 9:
+                      <label id="l9-4">
+                      Leftover Array 9:<br/>
                       <input 
-                        id = "u9"
+                        id = "u9-4"
                       />
                         </label>
+
                       <label id="l10a">
                       10(a):
                       <input 
@@ -635,17 +636,17 @@ export default class MergeSortComponent3 extends Component {
                       />
                         </label>
 
-                      {/* LEVEL 16 MERGE */}
-                      <label id="l15">
-                      Leftover Array 15:
+                     {/* LEVEL 16 MERGE */}
+                     <label id="l15-4">
+                      Leftover Array 15:<br/>
                       <input 
-                        id = "u15"
+                        id = "u15-4"
                       />
                         </label>
-                      <label id="l14">
-                      Leftover Array 14:
+                      <label id="l14-4">
+                      Leftover Array 14:<br/>
                       <input 
-                        id = "u14"
+                        id = "u14-4"
                       />
                         </label>
                       <label id="l16a">
@@ -688,16 +689,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                       {/* LEVEL 17 MERGE */}
-                        <label id = "l10">
-                      Leftover Array 10:
+                        <label id = "l10-4">
+                      Leftover Array 10:<br/>
                         <input
-                          id = "u10"
+                          id = "u10-4"
                         />
                       </label>
-                      <label id = "l16">
-                      Leftover Array 16:
+                      <label id = "l16-4">
+                      Leftover Array 16:<br/>
                         <input
-                          id = "u16"
+                          id = "u16-4"
                         />
                       </label>
                       <label id = "l17a">
@@ -899,16 +900,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                     {/* LEVEL 25 MERGE */}
-                    <label id="l23">
-                      Leftover Array 23:
+                    <label id="l23-4">
+                      Leftover Array 23:<br/>
                       <input 
-                        id = "u23"
+                        id = "u23-4"
                       />
                         </label>
-                      <label id="l24">
-                      Leftover Array 24:
+                      <label id="l24-4">
+                      Leftover Array 24:<br/>
                       <input 
-                        id = "u24"
+                        id = "u24-4"
                       />
                         </label>
                       <label id="l25a">
@@ -1057,16 +1058,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                     {/* LEVEL 31 MERGE */}
-                    <label id="l29">
-                      Leftover Array 29:
+                    <label id="l29-4">
+                      Leftover Array 29:<br/>
                       <input 
-                        id = "u29"
+                        id = "u29-4"
                       />
                         </label>
-                      <label id="l30">
-                      Leftover Array 30:
+                      <label id="l30-4">
+                      Leftover Array 30:<br/>
                       <input 
-                        id = "u30"
+                        id = "u30-4"
                       />
                         </label>
                       <label id="l31a">
@@ -1088,7 +1089,7 @@ export default class MergeSortComponent3 extends Component {
                       />
                         </label>
                       <label id="l31d">
-                      Step 31(d):
+                      31(d):
                       <input 
                         id = "u31d"
                       />
@@ -1109,16 +1110,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                         {/* LEVEL 32 MERGE */}
-                        <label id = "l25">
-                      Leftover Array 25:
+                        <label id = "l25-4">
+                      Leftover Array 25:<br/>
                         <input
-                          id = "u25"
+                          id = "u25-4"
                         />
                       </label>
-                      <label id = "l31">
-                      Leftover Array 31:
+                      <label id = "l31-4">
+                      Leftover Array 31:<br/>
                         <input
-                          id = "u31"
+                          id = "u31-4"
                         />
                       </label>
                       <label id = "l32a">
