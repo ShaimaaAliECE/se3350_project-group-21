@@ -12,6 +12,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 
 #l5b{
@@ -25,6 +26,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l6a{
     position: absolute;
@@ -37,6 +39,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l7a{
     position: absolute;
@@ -49,6 +52,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l7b{
     position: absolute;
@@ -61,6 +65,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 
 #l10a{
@@ -75,6 +80,7 @@
     width: 30px;
     font-size: x-small;
     margin-left: 5px;
+    
 }
 
 #l10b{
@@ -90,6 +96,7 @@
     width: 30px;
     font-size: x-small;
     margin-left: 5px;
+    
 }
 #l10c{
     position: absolute;
@@ -130,6 +137,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l11b{
     position: absolute;
@@ -142,6 +150,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 
 }
 #l12a{
@@ -155,6 +164,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l13a{
     position: absolute;
@@ -167,6 +177,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l13b{
     position: absolute;
@@ -179,6 +190,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l16a{
     position: absolute;
@@ -550,6 +562,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l20b{
     position: absolute;
@@ -562,6 +575,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l21a{
     position: absolute;
@@ -574,6 +588,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l22a{
     position: absolute;
@@ -586,6 +601,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l22b{
     position: absolute;
@@ -666,6 +682,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l26b{
     position: absolute;
@@ -678,6 +695,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l27a{
     position: absolute;
@@ -690,6 +708,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l28a{
     position: absolute;
@@ -702,6 +721,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l28b{
     position: absolute;
@@ -714,6 +734,7 @@
     /* Change width depending on how many numbers go in that step */
     width: 10px;
     margin-left: 5px;
+    font-size: x-small;
 }
 #l31a{
     position: absolute;
