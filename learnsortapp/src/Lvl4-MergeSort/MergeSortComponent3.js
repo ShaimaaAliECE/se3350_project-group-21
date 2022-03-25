@@ -373,13 +373,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 5 MERGE */}
                       <label id="l5a">
-                      Step 5(a):
+                        5(a):
                       <input 
                         id = "u5a"
                       />
                         </label>
                       <label id="l5b">
-                      Step 5(b):
+                        5(b):
                       <input 
                         id = "u5b"
                       />
@@ -401,7 +401,7 @@ export default class MergeSortComponent3 extends Component {
 
                         {/* LEVEL 6 MERGE */}
                       <label id="l6a">
-                      Step 6(a):
+                      6(a):
                       <input 
                         id = "u6a"
                       />
@@ -423,13 +423,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 7 MERGE */}
                       <label id="l7a">
-                      Step 7(a):
+                      7(a):
                       <input 
                         id = "u7a"
                       />
                         </label>
                       <label id="l7b">
-                      Step 7(b):
+                      7(b):
                       <input 
                         id = "u7b"
                       />
@@ -478,38 +478,39 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                       {/* LEVEL 10 MERGE */}
-                      <label id="l8">
-                      Leftover Array 8:
+                      <label id="l8-4">
+                      Leftover Array 8:<br/>
                       <input 
-                        id = "u8"
+                        id = "u8-4"
                       />
                         </label>
-                      <label id="l9">
-                      Leftover Array 9:
+                      <label id="l9-4">
+                      Leftover Array 9:<br/>
                       <input 
-                        id = "u9"
+                        id = "u9-4"
                       />
                         </label>
+
                       <label id="l10a">
-                      Step 10(a):
+                      10(a):
                       <input 
                         id = "u10a"
                       />
                         </label>
                       <label id="l10b">
-                      Step 10(b):
+                      10(b):
                       <input 
                         id = "u10b"
                       />
                         </label>
                         <label id="l10c">
-                      Step 10(c):
+                      10(c):
                       <input 
                         id = "u10c"
                       />
                         </label>
                       <label id="l10d">
-                      Step 10(d):
+                      10(d):
                       <input 
                         id = "u10d"
                       />
@@ -531,13 +532,13 @@ export default class MergeSortComponent3 extends Component {
 
                         {/* LEVEL 11 MERGE */}
                       <label id="l11a">
-                      Step 11(a):
+                      11(a):
                       <input 
                         id = "u11a"
                       />
                         </label>
                       <label id="l11b">
-                      Step 11(b):
+                      11(b):
                       <input 
                         id = "u11b"
                       />
@@ -559,7 +560,7 @@ export default class MergeSortComponent3 extends Component {
 
                           {/* LEVEL 12 MERGE */}
                       <label id="l12a">
-                      Step 12(a):
+                      12(a):
                       <input 
                         id = "u12a"
                       />
@@ -581,13 +582,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 13 MERGE */}
                       <label id="l13a">
-                      Step 13(a):
+                      13(a):
                       <input 
                         id = "u13a"
                       />
                         </label>
                       <label id="l13b">
-                      Step 13(b):
+                      13(b):
                       <input 
                         id = "u13b"
                       />
@@ -635,39 +636,39 @@ export default class MergeSortComponent3 extends Component {
                       />
                         </label>
 
-                      {/* LEVEL 16 MERGE */}
-                      <label id="l15">
-                      Leftover Array 15:
+                     {/* LEVEL 16 MERGE */}
+                     <label id="l15-4">
+                      Leftover Array 15:<br/>
                       <input 
-                        id = "u15"
+                        id = "u15-4"
                       />
                         </label>
-                      <label id="l14">
-                      Leftover Array 14:
+                      <label id="l14-4">
+                      Leftover Array 14:<br/>
                       <input 
-                        id = "u14"
+                        id = "u14-4"
                       />
                         </label>
                       <label id="l16a">
-                      Step 16(a):
+                      16(a):
                       <input 
                         id = "u16a"
                       />
                         </label>
                       <label id="l16b">
-                      Step 16(b):
+                      16(b):
                       <input 
                         id = "u16b"
                       />
                         </label>
                         <label id="l16c">
-                      Step 16(c):
+                      16(c):
                       <input 
                         id = "u16c"
                       />
                         </label>
                       <label id="l16d">
-                      Step 16(d):
+                      16(d):
                       <input 
                         id = "u16d"
                       />
@@ -688,16 +689,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                       {/* LEVEL 17 MERGE */}
-                        <label id = "l10">
-                      Leftover Array 10:
+                        <label id = "l10-4">
+                      Leftover Array 10:<br/>
                         <input
-                          id = "u10"
+                          id = "u10-4"
                         />
                       </label>
-                      <label id = "l16">
-                      Leftover Array 16:
+                      <label id = "l16-4">
+                      Leftover Array 16:<br/>
                         <input
-                          id = "u16"
+                          id = "u16-4"
                         />
                       </label>
                       <label id = "l17a">
@@ -793,13 +794,13 @@ export default class MergeSortComponent3 extends Component {
 
                         {/* LEVEL 20 MERGE */}
                         <label id="l20a">
-                      Step 20(a):
+                      20(a):
                       <input 
                         id = "u20a"
                       />
                         </label>
                       <label id="l20b">
-                      Step 20(b):
+                      20(b):
                       <input 
                         id = "u20b"
                       />
@@ -821,7 +822,7 @@ export default class MergeSortComponent3 extends Component {
 
                         {/* LEVEL 21 MERGE */}
                         <label id="l21a">
-                      Step 21(a):
+                      21(a):
                       <input 
                         id = "u21a"
                       />
@@ -843,13 +844,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 22 MERGE */}
                       <label id="l22a">
-                      Step 22(a):
+                      22(a):
                       <input 
                         id = "u22a"
                       />
                         </label>
                       <label id="l22b">
-                      Step 22(b):
+                      22(b):
                       <input 
                         id = "u22b"
                       />
@@ -899,38 +900,38 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                     {/* LEVEL 25 MERGE */}
-                    <label id="l23">
-                      Leftover Array 23:
+                    <label id="l23-4">
+                      Leftover Array 23:<br/>
                       <input 
-                        id = "u23"
+                        id = "u23-4"
                       />
                         </label>
-                      <label id="l24">
-                      Leftover Array 24:
+                      <label id="l24-4">
+                      Leftover Array 24:<br/>
                       <input 
-                        id = "u24"
+                        id = "u24-4"
                       />
                         </label>
                       <label id="l25a">
-                      Step 25(a):
+                      25(a):
                       <input 
                         id = "u25a"
                       />
                         </label>
                       <label id="l25b">
-                      Step 25(b):
+                      25(b):
                       <input 
                         id = "u25b"
                       />
                         </label>
                         <label id="l25c">
-                      Step 25(c):
+                      25(c):
                       <input 
                         id = "u25c"
                       />
                         </label>
                       <label id="l25d">
-                      Step 25(d):
+                      25(d):
                       <input 
                         id = "u25d"
                       />
@@ -952,13 +953,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 26 MERGE */}
                       <label id="l26a">
-                      Step 26(a):
+                      26(a):
                       <input 
                         id = "u26a"
                       />
                         </label>
                       <label id="l26b">
-                      Step 26(b):
+                      26(b):
                       <input 
                         id = "u26b"
                       />
@@ -980,7 +981,7 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 27 MERGE */}
                       <label id="l27a">
-                      Step 27(a):
+                      27(a):
                       <input 
                         id = "u27a"
                       />
@@ -1002,13 +1003,13 @@ export default class MergeSortComponent3 extends Component {
 
                       {/* LEVEL 28 MERGE */}
                       <label id="l28a">
-                      Step 28(a):
+                      28(a):
                       <input 
                         id = "u28a"
                       />
                         </label>
                       <label id="l28b">
-                      Step 28(b):
+                      28(b):
                       <input 
                         id = "u28b"
                       />
@@ -1057,38 +1058,38 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                     {/* LEVEL 31 MERGE */}
-                    <label id="l29">
-                      Leftover Array 29:
+                    <label id="l29-4">
+                      Leftover Array 29:<br/>
                       <input 
-                        id = "u29"
+                        id = "u29-4"
                       />
                         </label>
-                      <label id="l30">
-                      Leftover Array 30:
+                      <label id="l30-4">
+                      Leftover Array 30:<br/>
                       <input 
-                        id = "u30"
+                        id = "u30-4"
                       />
                         </label>
                       <label id="l31a">
-                      Step 31(a):
+                      31(a):
                       <input 
                         id = "u31a"
                       />
                         </label>
                       <label id="l31b">
-                      Step 31(b):
+                      31(b):
                       <input 
                         id = "u31b"
                       />
                         </label>
                         <label id="l31c">
-                      Step 31(c):
+                      31(c):
                       <input 
                         id = "u31c"
                       />
                         </label>
                       <label id="l31d">
-                      Step 31(d):
+                      31(d):
                       <input 
                         id = "u31d"
                       />
@@ -1109,16 +1110,16 @@ export default class MergeSortComponent3 extends Component {
                         </label>
 
                         {/* LEVEL 32 MERGE */}
-                        <label id = "l25">
-                      Leftover Array 25:
+                        <label id = "l25-4">
+                      Leftover Array 25:<br/>
                         <input
-                          id = "u25"
+                          id = "u25-4"
                         />
                       </label>
-                      <label id = "l31">
-                      Leftover Array 31:
+                      <label id = "l31-4">
+                      Leftover Array 31:<br/>
                         <input
-                          id = "u31"
+                          id = "u31-4"
                         />
                       </label>
                       <label id = "l32a">
