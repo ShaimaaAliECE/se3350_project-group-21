@@ -50,6 +50,29 @@ var UserProfile = (function() {
    levelCustomTimeSpentSec = 0;
 }
 
+var getLevelTimeMin =function(level){
+   switch(level){
+      case 1:
+         return levelOneTimeSpentMin;
+         break;
+      case 2:
+         return levelTwoTimeSpentMin;
+         break;
+      case 3:
+         return levelThreeTimeSpentMin;
+         break;
+      case 4:
+         return levelFourTimeSpentMin;
+         break;
+      case 5:
+         return levelFiveTimeSpentMin;
+         break;
+      case 6:
+         return levelCustomTimeSpentMin;
+         break;
+   }
+}
+
   var updateRecordTime = function(level, newTimeMin, newTimeSeconds){  
       switch(level){
          case 1:
@@ -278,7 +301,8 @@ var UserProfile = (function() {
     userLoggedOut : userLoggedOut,
     outputTime : outputTime,
     userAuthenticated : userAuthenticated,
-    clearLocalStorageTimes : clearLocalStorageTimes
+    clearLocalStorageTimes : clearLocalStorageTimes,
+    getLevelTimeMin : getLevelTimeMin
   }
 
 })();
