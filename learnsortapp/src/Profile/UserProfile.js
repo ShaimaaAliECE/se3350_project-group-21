@@ -73,6 +73,29 @@ var getLevelTimeMin =function(level){
    }
 }
 
+var getLevelTimeSec =function(level){
+   switch(level){
+      case 1:
+         return levelOneTimeSpentSec;
+         break;
+      case 2:
+         return levelTwoTimeSpentSec;
+         break;
+      case 3:
+         return levelThreeTimeSpentMin;
+         break;
+      case 4:
+         return levelFourTimeSpentSec;
+         break;
+      case 5:
+         return levelFiveTimeSpentSec;
+         break;
+      case 6:
+         return levelCustomTimeSpentSec;
+         break;
+   }
+}
+
   var updateRecordTime = function(level, newTimeMin, newTimeSeconds){  
       switch(level){
          case 1:
@@ -302,7 +325,8 @@ var getLevelTimeMin =function(level){
     outputTime : outputTime,
     userAuthenticated : userAuthenticated,
     clearLocalStorageTimes : clearLocalStorageTimes,
-    getLevelTimeMin : getLevelTimeMin
+    getLevelTimeMin : getLevelTimeMin,
+    getLevelTimeSec : getLevelTimeSec
   }
 
 })();

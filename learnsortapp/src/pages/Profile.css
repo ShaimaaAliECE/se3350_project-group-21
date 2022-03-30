@@ -199,22 +199,12 @@ section{
    background: #1C768F;
 }
 
-.box .skill .graph:after{
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 50%;
-   height: 100%;
-   background: #1C768F;
-}
-
 .box .skill .graph .percent{
    position: absolute;
-   top: 0;
+   top: -15px;
    left: 50%;
    transform: translate(-50%);
    text-align: center;
-   color:  #1C768F;
+   color:  black;
    font-weight: bold;
 }
