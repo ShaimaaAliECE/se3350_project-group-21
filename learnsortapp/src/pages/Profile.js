@@ -10,6 +10,7 @@ function Profile() {
    const [levelFourTime, setLevelFourTime] = useState(UserProfile.outputTime(4));
    const [levelFiveTime, setLevelFiveTime] = useState(UserProfile.outputTime(5));
    const [levelCustomTime, setLevelCustomTime] = useState(UserProfile.outputTime(6));
+   const type = "Merge";
 
    function getTimes(){
       setLevelOneTime(UserProfile.outputTime(1));
@@ -18,6 +19,92 @@ function Profile() {
       setLevelFourTime(UserProfile.outputTime(4));
       setLevelFiveTime(UserProfile.outputTime(5));
       setLevelCustomTime(UserProfile.outputTime(6));
+   }
+
+   function DisplayTimeLevelOne(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+
+         return(levelOneTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function DisplayTimeLevelTwo(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+         return(levelTwoTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function DisplayTimeLevelThree(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+         return(levelThreeTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function DisplayTimeLevelFour(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+         return(levelFourTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function DisplayTimeLevelFive(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+         return(levelFiveTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function DisplayTimeCustomLevel(type){
+      const undifined = "INCOMPLETE";
+      if (type == "Merge"){
+         return(levelCustomTime);
+      }
+      if (type == "Bubble"){
+         return(undifined);
+      }
+      if (type == "Quick"){
+         return(undifined);
+      }
+   }
+
+   function ConvertTime(whole, decimal){
+      whole = whole * 10;
+      decimal = (decimal/60)*10;
+      var num = whole + decimal
+      return(num);
    }
 
    function draw(){
@@ -64,9 +151,7 @@ function Profile() {
                   <div class="dropdown">
                      <button class="dropbtn">Select Algorithm</button>
                      <div class="dropdown-content">
-                        <a href="#">Merge Sort</a>
-                        <a href="#">Bubble Sort</a>
-                        <a href="#">Quick Sort</a>
+                        <a>Merge Sort</a>
                      </div>               
                   </div>
                   <ul class= "profile-grid">
@@ -81,51 +166,51 @@ function Profile() {
                      </li>
                      <li>
                         <h2>Top Time</h2>
-                        <h3 class="profile-LevelOutline">{levelOneTime}</h3>
-                        <h3 class="profile-LevelOutline">{levelTwoTime}</h3>
-                        <h3 class="profile-LevelOutline">{levelThreeTime}</h3>
-                        <h3 class="profile-LevelOutline">{levelFourTime}</h3>
-                        <h3 class="profile-LevelOutline">{levelFiveTime}</h3>
-                        <h3 class="profile-LevelOutline">{levelCustomTime}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeLevelOne(type)}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeLevelTwo(type)}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeLevelThree(type)}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeLevelFour(type)}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeLevelFive(type)}</h3>
+                        <h3 class="profile-LevelOutline">{DisplayTimeCustomLevel(type)}</h3>
                      </li>
                   </ul>
                   <h2>User Analytics</h2>
                   
-                     <section>
+                  <section>
                         <div class="box">
                            <div class ="skill">
-                              <div class="graph" >
-                                 <div class="percent">{levelOneTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(1)), Number(UserProfile.getLevelTimeSec(1)))}}>
+                                 <div class="percent">{DisplayTimeLevelOne(type)}</div>
                               </div>
                               <div class="name">Level 1</div>
                            </div> 
                            <div class ="skill">
-                              <div class="graph">
-                                 <div class="percent">{levelTwoTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(2)), Number(UserProfile.getLevelTimeSec(2)))}}>
+                                 <div class="percent">{DisplayTimeLevelTwo(type)}</div>
                               </div>
                               <div class="name">Level 2</div>
                            </div>
                            <div class ="skill">
-                              <div class="graph">
-                                 <div class="percent">{levelThreeTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(3)),Number(UserProfile.getLevelTimeSec(3)))}}>
+                                 <div class="percent">{DisplayTimeLevelThree(type)}</div>
                               </div>
                               <div class="name">Level 3</div>
                            </div>
                            <div class ="skill">
-                              <div class="graph">
-                                 <div class="percent">{levelFourTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(4)), Number(UserProfile.getLevelTimeSec(4)))}}>
+                                 <div class="percent">{DisplayTimeLevelFour(type)}</div>
                               </div>
                               <div class="name">Level 4</div>
                            </div>
                            <div class ="skill">
-                              <div class="graph">
-                                 <div class="percent">{levelFiveTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(5)), Number(UserProfile.getLevelTimeSec(5)))}}>
+                                 <div class="percent">{DisplayTimeLevelFive(type)}</div>
                               </div>
                               <div class="name">Level 5</div>
                            </div>
                            <div class ="skill">
-                              <div class="graph">
-                                 <div class="percent">{levelCustomTime}</div>
+                              <div class="graph" style={{height: ConvertTime(Number(UserProfile.getLevelTimeMin(6)), Number(UserProfile.getLevelTimeSec(6)))}}>
+                                 <div class="percent">{DisplayTimeCustomLevel(type)}</div>
                               </div>
                               <div class="name">Custom</div>
                            </div> 

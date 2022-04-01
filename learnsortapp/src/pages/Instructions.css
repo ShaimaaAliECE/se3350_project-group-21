@@ -32,8 +32,8 @@
    margin-right: auto;
    position: absolute;
    width: 1000px;
-   height: 950px;
-   margin-top: 1100px;
+   height: 1100px;
+   margin-top: 1250px;
    border: 6px solid #1C768F;
    box-sizing: border-box;
 }
@@ -43,7 +43,7 @@
    margin-left: auto;
    margin-right: auto;
    width: 950px;
-   height: 900px;
+   height: 1050px;
    background: #FBF3F2;
    text-align: center;
    box-sizing: border-box;

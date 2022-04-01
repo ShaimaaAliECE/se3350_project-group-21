@@ -14,12 +14,27 @@ function Custom() {
             <div class = "Outline5">
                 <div class = "BackgroundRectangle5">
                     <h1>Custom Level</h1>
-                    <h2>Coming Soon!</h2>
+                    <p>Choose the length of array to implement the merge sort algorithm.</p>
                 </div>
 
-               <Link to='/Levels' class = "continue-link1">
-                  <div class = "BackBox5">
-                     <h3 class = "BackText5">Back to levels page</h3>
+               <Link to='/Component3' class = "link1">
+                  <div class = "backBox51">
+                     <h3 class = "backText51">10</h3>
+                  </div>
+               </Link>
+               <Link to='/Component4' class = "link1">
+                  <div class = "backBox52">
+                     <h3 class = "backText52">20</h3>
+                  </div>
+               </Link>
+               <Link to='/Component5' class = "link1">
+                  <div class = "backBox53">
+                     <h3 class = "backText53">50</h3>
+                  </div>
+               </Link>
+               <Link to='/Levels' class = "continue-link">
+                  <div class = "backBox5">
+                     <h3 class = "backText5">Levels Page</h3>
                   </div>
                </Link>
             </div>

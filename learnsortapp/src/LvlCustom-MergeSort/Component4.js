@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { MergeSort3 } from './MergeSort3';
-import { Partition3 } from './Partition3';
+import { MergeSort5 } from './MergeSort5';
+import { Partition5 } from './Partition5';
 import { Link } from 'react-router-dom';
-import './MergeSortComponent3.css'
+import './Component4.css'
 import correctAudio from '../audio/correct_audio_2.mp3';
 import wrongAudio from '../audio/wrong_audio_2.wav';
 
@@ -25,7 +25,7 @@ export default class MergeSortComponent3 extends Component {
         attempts: 0,
         complete: 0
     };
-    this.mergeSort3 = new MergeSort3();
+    this.mergeSort3 = new MergeSort5();
 
     this.idleTimer = null
     this.onAction = this._onAction.bind(this)
@@ -117,7 +117,7 @@ export default class MergeSortComponent3 extends Component {
 
   // start running the algorithm
   runAlgorithm = () => {
-    let partition = new Partition3(0, this.unsorted);
+    let partition = new Partition5(0, this.unsorted);
     this.mergeSort3.mergeSort(partition);
     this.setState({partitions: this.mergeSort3.partitions});
 

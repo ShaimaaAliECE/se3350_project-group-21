@@ -101,6 +101,13 @@ export default class MergeSortComponent extends Component {
     let instructionBox = document.getElementById("instruction-box");
     let instructionID = i[this.state.arrayIndex];
     instructionBox.innerHTML = instructionID;
+
+    if (elementID !== "test8" && elementID !== "test9" && elementID !== "test10" && elementID !== "test11" && elementID !== "test12"
+    && elementID !== "test24" && elementID !== "test25" && elementID !== "test26" && elementID !== "test27" && elementID !== "test28") {
+      document.getElementById("go-back").style.display = 'block';
+    } else {
+      document.getElementById("go-back").style.display = 'none';
+    }
  
     if (elementID !== "test5" && elementID !== "test6" && elementID !== "test7" && elementID !== "test8" 
         && elementID !== "test9" && elementID !== "test10" && elementID !== "test11" && elementID !== "test12"
@@ -116,12 +123,15 @@ export default class MergeSortComponent extends Component {
       document.getElementById("test28").style.backgroundColor = 'white';
 
     } else if (elementID === "test5") {
+      document.getElementById("stepFiveArray").style.display = 'block';
       document.getElementById("stepFiveArray").style.animation = 'pulse 1s';
       document.getElementById("stepFiveArray").style.fontSize = '20px';    
     } else if (elementID === "test6") {
+      document.getElementById("stepSixArray").style.display = 'block';
       document.getElementById("stepSixArray").style.animation = 'pulse 1s';
       document.getElementById("stepSixArray").style.fontSize = '20px'; 
     } else if (elementID === "test7") {
+      document.getElementById("stepSevenArray").style.display = 'block';
       document.getElementById("stepSevenArray").style.animation = 'pulse 1s';
       document.getElementById("stepSevenArray").style.fontSize = '20px';   
     } 
@@ -303,12 +313,15 @@ export default class MergeSortComponent extends Component {
 
     // right half
     else if (elementID === "test21") {
+      document.getElementById("step11Array").style.display = 'block';
       document.getElementById("step11Array").style.animation = 'pulse 1s';
       document.getElementById("step11Array").style.fontSize = '20px';    
     } else if (elementID === "test22") {
+      document.getElementById("step12Array").style.display = 'block';
       document.getElementById("step12Array").style.animation = 'pulse 1s';
       document.getElementById("step12Array").style.fontSize = '20px'; 
     } else if (elementID === "test23") {
+      document.getElementById("step13Array").style.display = 'block';
       document.getElementById("step13Array").style.animation = 'pulse 1s';
       document.getElementById("step13Array").style.fontSize = '20px';   
     } 
@@ -512,73 +525,93 @@ export default class MergeSortComponent extends Component {
 
     // split the fragments into individual numbers (will probably require hard coding)
     if(this.state.arrayIndex === 5){
+        document.getElementById('test8').innerHTML = "";
         document.getElementById('test8').innerHTML += answer[0];
         document.getElementById('test8').value = answer[0];
 
+        document.getElementById('test9').innerHTML = "";
         document.getElementById('test9').innerHTML += answer[1];
         document.getElementById('test9').value = answer[1];
     }
 
     if(this.state.arrayIndex === 6){
+      document.getElementById('test10').innerHTML = "";
       document.getElementById('test10').innerHTML += answer[0];
       document.getElementById('test10').value = answer[0];
 
+      document.getElementById('test11').innerHTML = "";
       document.getElementById('test11').innerHTML += answer[1];
       document.getElementById('test11').value = answer[1];
 
+      document.getElementById('test12').innerHTML = "";
       document.getElementById('test12').innerHTML += answer[2];
       document.getElementById('test12').value = answer[2];
     }
 
     if(this.state.arrayIndex === 7){
+      document.getElementById('test13').innerHTML = "";
       document.getElementById('test13').innerHTML += answer[0];
       document.getElementById('test13').value = answer[0];
 
+      document.getElementById('test14').innerHTML = "";
       document.getElementById('test14').innerHTML += answer[1];
       document.getElementById('test14').value = answer[1];
 
+      document.getElementById('test15').innerHTML = "";
       document.getElementById('test15').innerHTML += answer[2];
       document.getElementById('test15').value = answer[2];
 
+      document.getElementById('test16').innerHTML = "";
       document.getElementById('test16').innerHTML += answer[3];
       document.getElementById('test16').value = answer[3];
 
+      document.getElementById('test17').innerHTML = "";
       document.getElementById('test17').innerHTML += answer[4];
       document.getElementById('test17').value = answer[4];
     }
 
     if(this.state.arrayIndex === 21){
+      document.getElementById('test24').innerHTML = "";
       document.getElementById('test24').innerHTML += answer[0];
       document.getElementById('test24').value = answer[0];
 
+      document.getElementById('test25').innerHTML = "";
       document.getElementById('test25').innerHTML += answer[1];
       document.getElementById('test25').value = answer[1];
     }
 
     if(this.state.arrayIndex === 22){
+      document.getElementById('test26').innerHTML = "";
       document.getElementById('test26').innerHTML += answer[0];
       document.getElementById('test26').value = answer[0];
 
+      document.getElementById('test27').innerHTML = "";
       document.getElementById('test27').innerHTML += answer[1];
       document.getElementById('test27').value = answer[1];
 
+      document.getElementById('test28').innerHTML = "";
       document.getElementById('test28').innerHTML += answer[2];
       document.getElementById('test28').value = answer[2];
     }
 
     if(this.state.arrayIndex === 23){
+      document.getElementById('test29').innerHTML = "";
       document.getElementById('test29').innerHTML += answer[0];
       document.getElementById('test29').value = answer[0];
 
+      document.getElementById('test30').innerHTML = "";
       document.getElementById('test30').innerHTML += answer[1];
       document.getElementById('test30').value = answer[1];
 
+      document.getElementById('test31').innerHTML = "";
       document.getElementById('test31').innerHTML += answer[2];
       document.getElementById('test31').value = answer[2];
 
+      document.getElementById('test32').innerHTML = "";
       document.getElementById('test32').innerHTML += answer[3];
       document.getElementById('test32').value = answer[3];
 
+      document.getElementById('test33').innerHTML = "";
       document.getElementById('test33').innerHTML += answer[4];
       document.getElementById('test33').value = answer[4];
     }
@@ -637,7 +670,20 @@ export default class MergeSortComponent extends Component {
 
       instructionBox.innerHTML = instructionID;
 
-      this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+      if (elementID === "test5" || elementID === "test6" || elementID === "test7") {
+        document.getElementById("stepFiveArray").style.display = 'none';
+        document.getElementById("stepSixArray").style.display = 'none';
+        document.getElementById("stepSevenArray").style.display = 'none';
+        this.setState({ arrayIndex: 5 });
+      } else if (elementID === "test21" || elementID === "test22" || elementID === "test23") {
+        document.getElementById("step11Array").style.display = 'none';
+        document.getElementById("step12Array").style.display = 'none';
+        document.getElementById("step13Array").style.display = 'none';
+        this.setState({ arrayIndex: 21 });
+      }
+      else {
+        this.setState({ arrayIndex: this.state.arrayIndex - 1 });
+      }
     }
   }
 
@@ -722,7 +768,7 @@ export default class MergeSortComponent extends Component {
                       </h1></div> : null
                   }
         
-                  <div onClick={this.nextStep} id="test-button" className="continue-button">Run Algorithm</div>
+                  <div onClick={this.nextStep} id="test-button" className="continue-button">Start!</div>
                   <div id="next-button" class="next-button" onClick={this.IncrementItem}>Next Step</div>
                   <Link to='/Level2'>
                     <div id="next-level-button" class="next-level-button">Next Level!</div>
@@ -792,7 +838,7 @@ export default class MergeSortComponent extends Component {
                   <div className="test14" id="test34"><strong>Sorted Array:</strong>{stepsArray[14]}</div>
                   <br/><br/>
                   
-                  <div  className="back-button" onClick={this.DecrementItem}>Go Back</div>
+                  <div  className="back-button" id="go-back" onClick={this.DecrementItem}>Go Back</div>
                   <Link to='/Levels'>
                     <div id="return-button" className="return-button">Levels Page</div>
                   </Link>

@@ -21,6 +21,9 @@ import MergeSortComponent3 from './Lvl4-MergeSort/MergeSortComponent3';
 import Level5 from './Lvl5-MergeSort/Level5'
 import MergeSortComponent4 from './Lvl5-MergeSort/MergeSortComponent4';
 import Custom from './LvlCustom-MergeSort/Custom'
+import Component5 from './LvlCustom-MergeSort/Component5';
+import Component4 from './LvlCustom-MergeSort/Component4';
+import Component3 from './LvlCustom-MergeSort/Component3';
 import AboutUs from './pages/AboutUs';
 import LogOut from './pages/LogOut';
 
@@ -52,6 +55,10 @@ function App() {
           <Route path='/Level5' element={<Level5 />} />
           <Route path='/MergeSortComponent4' element={<MergeSortComponent4 />} />
           <Route path='/Custom' element={<Custom />} />
+          <Route path='/Component5' element={<Component5 />} />
+          <Route path='/Component4' element={<Component4 />} />
+          <Route path='/Component3' element={<Component3 />} />
+          
           <Route path='/AboutUs' element={<AboutUs />} />
           <Route path='/LogOut' element={<LogOut />} />
 
